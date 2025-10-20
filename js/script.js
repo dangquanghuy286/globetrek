@@ -4,10 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const border = document.querySelector(".border-progress");
 
   window.addEventListener("scroll", () => {
+    // Đã cuộn
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    //Tổng số px có thể cuộn
     const docHeight =
       document.documentElement.scrollHeight - window.innerHeight;
+    //% trang đã cuộn
     const scrollPercent = (scrollTop / docHeight) * 100;
+    // Đổi % sang độ
     const borderAngle = (scrollPercent / 100) * 360;
 
     // Góc quay border
