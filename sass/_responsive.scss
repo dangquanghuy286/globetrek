@@ -1,0 +1,42 @@
+/* --------------------------------------------------------------
+   MEDIA QUERIES
+   -------------------------------------------------------------- */
+
+/* ====== MAX-WIDTH (Mobile First) ====== */
+@media (max-width: 1600px) {}
+
+@media (max-width: 1440px) {}
+
+@media (max-width: 1199px) {}
+
+@media (max-width: 1023px) {}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 575px) {}
+
+@media (max-width: 425px) {}
+
+/* ====== MIN-WIDTH (Desktop First) ====== */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1440px) {}
+
+@media (min-width: 1600px) {}
+
+/* ====== RANGE (Optional Specific Ranges) ====== */
+@media (min-width: 768px) and (max-width: 1200px) {}
+
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+@media (min-width: 767px) and (max-width: 1199px) {}
