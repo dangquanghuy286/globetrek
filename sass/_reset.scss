@@ -1694,3 +1694,17 @@ h6,
 .aspect-3-1 {
     aspect-ratio: 3 / 1;
 }
+
+//============== Text===========
+.title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.subtitle {
+    color: var(--text-color);
+    text-transform: capitalize;
+    line-height: 28px;
+}
