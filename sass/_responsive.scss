@@ -5,17 +5,96 @@
 /* ====== MAX-WIDTH (Mobile First) ====== */
 @media (max-width: 1600px) {}
 
-@media (max-width: 1440px) {}
+@media (max-width: 1440px) {
+   .header {
+      .menu-nav {
+         gap: 20px;
+      }
 
-@media (max-width: 1199px) {}
+      .header-ct-right {
+         .wrap-login-menu {
+            ul {
+               gap: 20px;
+            }
+         }
+      }
+   }
+
+}
+
+@media (max-width: 1199px) {
+   .header {
+
+      .menu-nav {
+         gap: 10px;
+
+      }
+
+      .header-ct-right {
+         .wrap-login-menu {
+            ul {
+               gap: 10px;
+            }
+         }
+      }
+   }
+}
 
 @media (max-width: 1023px) {}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+   .header {
+      .list-nav {
+         display: none;
+      }
 
-@media (max-width: 767px) {}
+      .header-ct-right {
+         .wrap-login-menu {
+            ul {
+               gap: 20px;
+            }
+         }
+      }
 
-@media (max-width: 575px) {}
+      .toggle-mobile {
+         display: block;
+      }
+   }
+
+}
+
+@media (max-width: 767px) {
+   .header {
+      .header-ct-left {
+         a {
+            img {
+               max-width: 176px;
+               height: auto;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 575px) {
+   .header {
+      .header-ct-right {
+         gap: 5px;
+
+         .wrap-login-menu {
+
+            .heart,
+            .search {
+               display: none;
+            }
+
+            .login {
+               font-size: 14px;
+            }
+         }
+      }
+   }
+}
 
 @media (max-width: 425px) {}
 

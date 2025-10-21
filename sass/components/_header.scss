@@ -1,6 +1,6 @@
 @use "../abstracts/index.scss" as *;
 
-#header {
+.header {
     width: 100%;
     z-index: 999;
     position: relative;
@@ -8,7 +8,6 @@
     line-height: 140%;
     font-size: 16px;
     color: var(--heading-color);
-    @include transition4;
     padding: 15px 0;
 
     .style-1 {
@@ -17,8 +16,9 @@
         border-bottom: 1px solid var(--stoke-color);
     }
 
+    .style-2 {}
+
     .header-wrap {
-        padding: 3px 0;
         display: flex;
         align-items: center;
     }
@@ -27,7 +27,7 @@
     .header-ct-center,
     .header-ct-right {
         flex-grow: 1;
-        height: 100%;
+
     }
 
     .header-ct-center {
@@ -116,7 +116,7 @@
     }
 }
 
-#menu-nav .menu {
+.menu-nav {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -155,5 +155,21 @@
                 }
             }
         }
+    }
+}
+
+.toggle-mobile {
+    cursor: pointer;
+    display: none;
+    @include transition4;
+
+    .icon {
+        font-size: 24px;
+        align-items: center;
+
+    }
+
+    &:hover {
+        color: var(--primary-color);
     }
 }
