@@ -16,7 +16,17 @@
         border-bottom: 1px solid var(--stoke-color);
     }
 
-    .style-2 {}
+    .style-2 {
+        padding: 34px 0;
+
+        .list-nav {
+            border: 1px solid var(--border-header);
+            background: var(--background-dark);
+            border-radius: 16px;
+            backdrop-filter: blur(4px);
+            padding: 0 5px;
+        }
+    }
 
     .header-wrap {
         display: flex;

@@ -12,6 +12,7 @@
   --note-color: #A8ABAE;
   --terms-color: #5c5e61;
   --star-color: ##F1913D;
+  --border-header: #FFFFFF1A;
   --heading-color: #24272C;
   --heart-color: #FF4F23;
   --background-black: #171816;
@@ -357,6 +358,16 @@
   box-shadow: none;
   border-bottom: 1px solid var(--stoke-color);
 }
+.header .style-2 {
+  padding: 34px 0;
+}
+.header .style-2 .list-nav {
+  border: 1px solid var(--border-header);
+  background: var(--background-dark);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  padding: 0 5px;
+}
 .header .header-wrap {
   display: flex;
   align-items: center;
@@ -621,6 +632,13 @@ body {
 
 .container {
   max-width: 1320px;
+  padding: 0 15px;
+  width: 100%;
+  margin: auto;
+}
+
+.container-2 {
+  max-width: 1790px;
   padding: 0 15px;
   width: 100%;
   margin: auto;
