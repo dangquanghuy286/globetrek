@@ -1,0 +1,40 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    a {
+        opacity: 0.8;
+        transition: opacity 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+    }
+
+    // Phân cách
+    .dot {
+        span {
+            opacity: 0.6;
+            user-select: none;
+            color: var(--white);
+        }
+    }
+
+    // Trang hiện tại
+    .current {
+        color: var(--white);
+        opacity: 1;
+        font-weight: 500;
+    }
+
+}
