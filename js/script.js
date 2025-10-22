@@ -82,3 +82,60 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+// ==================== Toggle MENU ===================
+const toggleBtn = document.querySelector(".toggle-mobile");
+const menu = document.querySelector(".mobile-menu");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-btn");
+
+// Khi click vào nút mở menu
+toggleBtn.addEventListener("click", () => {
+  menu.classList.add("active");
+  overlay.classList.add("active");
+  closeBtn.classList.add("active");
+});
+
+// Khi click overlay hoặc nút đóng thì đóng menu
+[overlay, closeBtn].forEach((el) => {
+  el.addEventListener("click", () => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    closeBtn.classList.remove("active");
+  });
+});
+// =====================SUBMENU=================================//
+document.querySelectorAll(".mobile-dropdown").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const parent = e.currentTarget.parentElement;
+    const subMenu = parent.querySelector(".mb-sub-menu");
+    const icon = parent.querySelector(".mb-icon");
+
+    if (subMenu) {
+      document.querySelectorAll(".nav-item.active").forEach((otherItem) => {
+        if (otherItem !== parent) {
+          otherItem.classList.remove("active");
+
+          const otherIcon = otherItem.querySelector(".mb-icon");
+          if (otherIcon) {
+            otherIcon.classList.remove("icon-CaretUp");
+            otherIcon.classList.add("icon-CaretDown");
+          }
+        }
+      });
+
+      // Toggle trên parent thay vì subMenu
+      const isActive = parent.classList.toggle("active");
+
+      if (icon) {
+        if (isActive) {
+          icon.classList.remove("icon-CaretDown");
+          icon.classList.add("icon-CaretUp");
+        } else {
+          icon.classList.remove("icon-CaretUp");
+          icon.classList.add("icon-CaretDown");
+        }
+      }
+    }
+  });
+});

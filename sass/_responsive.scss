@@ -96,7 +96,15 @@
    }
 }
 
-@media (max-width: 425px) {}
+@media (max-width: 425px) {
+   .header {
+      .wrap-login-menu {
+         .login {
+            display: none;
+         }
+      }
+   }
+}
 
 /* ====== MIN-WIDTH (Desktop First) ====== */
 @media (min-width: 576px) {}
