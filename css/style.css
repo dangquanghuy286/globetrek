@@ -2630,6 +2630,12 @@ h5 {
   .header .header-ct-right .wrap-login-menu .login {
     font-size: 14px;
   }
+  .backtotop {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (max-width: 425px) {
   .header .wrap-login-menu .login {
