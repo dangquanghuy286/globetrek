@@ -186,6 +186,1567 @@
         </div>
       </div>
     </header>
+    <section class="hero" role="main">
+      <div class="container">
+        <div class="hero__content d-flex">
+          <div class="hero__text d-flex">
+            <h1
+              id="hero-heading"
+              class="hero__title wow animate__animated animate__fadeInUp animationtext slide"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              Find Your
+              <span class="cd-words-wrapper" style="width: 550px">
+                <span class="item-text is-visible">Dream Home</span>
+                <span class="item-text is-hidden">Perfect Home</span>
+              </span>
+            </h1>
+            <p
+              class="hero__subtitle wow animate__animated animate__fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              We are a real estate agency that will help you find the best
+              residence you dream of,<br />let's discuss for your dream house?
+            </p>
+          </div>
+          <form class="hero__search d-flex" aria-label="Property search form">
+            <div
+              class="hero__tabs"
+              role="tablist"
+              aria-label="Property type selection"
+            >
+              <div
+                class="hero__tab hero__tab-active d-flex"
+                role="tab"
+                id="for-rent-tab"
+                aria-selected="true"
+              >
+                <button class="hero__tab-button" type="button">
+                  <span class="hero__tab-text">For rent</span>
+                </button>
+              </div>
+              <div
+                class="hero__tab d-flex"
+                role="tab"
+                aria-selected="false"
+                id="for-sale-tab"
+              >
+                <button class="hero__tab-button" type="button">
+                  <span class="hero__tab-text">For sale</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="hero__form rounded-cycle"
+              role="search"
+              aria-labelledby="for-rent-tab"
+              id="search-form"
+            >
+              <div class="hero__form-content">
+                <div class="hero__form-group">
+                  <label class="hero__label" id="property-type-label"
+                    >Type</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <div class="hero__dropdown">
+                      <div class="hero__dropdown-selected">All type</div>
+                      <ul class="hero__dropdown-menu">
+                        <li class="hero__dropdown-item" data-value="">
+                          All type
+                        </li>
+                        <li class="hero__dropdown-item" data-value="villa">
+                          Villa
+                        </li>
+                        <li class="hero__dropdown-item" data-value="studio">
+                          Studio
+                        </li>
+                        <li class="hero__dropdown-item" data-value="office">
+                          Office
+                        </li>
+                        <li class="hero__dropdown-item" data-value="house">
+                          House
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="icon-CaretDown"></span>
+                  </div>
+                </div>
+                <div
+                  class="hero__separator"
+                  role="separator"
+                  aria-hidden="true"
+                ></div>
+                <div class="hero__form-group">
+                  <label class="hero__label" for="location-search"
+                    >Location</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <input
+                      class="hero__input"
+                      type="text"
+                      id="location-search"
+                      name="location"
+                      placeholder="Search Location"
+                      aria-label="Enter location to search"
+                    />
+                    <span class="icon-Crosshair"></span>
+                  </div>
+                </div>
+                <div
+                  class="hero__separator"
+                  role="separator"
+                  aria-hidden="true"
+                ></div>
+                <div class="hero__form-group">
+                  <label class="hero__label" for="keyword-search"
+                    >Keyword</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <input
+                      class="hero__input"
+                      type="text"
+                      id="keyword-search"
+                      name="keyword"
+                      placeholder="Search Keyword"
+                      aria-label="Enter search keywords"
+                    />
+                  </div>
+                </div>
+                <div class="hero__actions d-flex">
+                  <button
+                    type="button"
+                    class="hero__advanced-button d-flex"
+                    aria-label="Open advanced search options"
+                    aria-expanded="false"
+                  >
+                    <span class="hero__advanced-text">Search advanced</span>
+                    <img
+                      class="hero__advanced-icon"
+                      src="./images/logo/sort.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <button
+                    type="submit"
+                    class="hero__search-button d-flex"
+                    aria-label="Search properties"
+                  >
+                    <span class="hero__search-text">Search</span>
+                    <span class="icon-search"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero__advanced-dropdown" id="advancedDropdown">
+              <!-- Price Range -->
+              <div class="advanced__flex-container">
+                <div class="advanced__group">
+                  <label
+                    >Price Range
+                    <span id="priceRangeText">from $100 to $650000</span></label
+                  >
+                  <div class="range-wrapper">
+                    <div class="range-progress" id="priceProgress"></div>
+                    <input
+                      type="range"
+                      id="priceMin"
+                      class="range-min"
+                      min="100"
+                      max="650000"
+                      value="100"
+                    />
+                    <input
+                      type="range"
+                      id="priceMax"
+                      class="range-max"
+                      min="100"
+                      max="650000"
+                      value="650000"
+                    />
+                  </div>
+                </div>
+                <div class="advanced__group">
+                  <label
+                    >Size Range
+                    <span id="sizeRangeText"
+                      >from 20 SqFt to 2,000 SqFt</span
+                    ></label
+                  >
+                  <div class="range-wrapper">
+                    <div class="range-progress" id="sizeProgress"></div>
+                    <input
+                      type="range"
+                      id="sizeMin"
+                      class="range-min"
+                      min="20"
+                      max="2000"
+                      value="20"
+                    />
+                    <input
+                      type="range"
+                      id="sizeMax"
+                      class="range-max"
+                      min="20"
+                      max="2000"
+                      value="2000"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Select Boxes -->
+              <div class="advanced__row">
+                <div class="advanced__field">
+                  <label for="rooms">Rooms</label>
+                  <select id="rooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="bathrooms">Bathrooms</label>
+                  <select id="bathrooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="bedrooms">Bedrooms</label>
+                  <select id="bedrooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="type">Type</label>
+                  <select id="type">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Amenities -->
+              <div class="advanced__group">
+                <label>Amenities:</label>
+                <div class="advanced__amenities">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="air_condition"
+                      checked
+                    />
+                    Air Condition
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="disabled_access"
+                    />
+                    Disabled Access
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="floor"
+                      checked
+                    />
+                    Floor
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="heating" />
+                    Heating
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="renovation"
+                    />
+                    Renovation
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="window_type"
+                    />
+                    Window Type
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="cable_tv" />
+                    Cable TV
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="elevator"
+                      checked
+                    />
+                    Elevator
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="furnishing"
+                    />
+                    Furnishing
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="intercom" />
+                    Intercom
+                  </label>
+                  <label>
+                    <input
+                      checked
+                      type="checkbox"
+                      name="amenities"
+                      value="security"
+                    />
+                    Security
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="search_property"
+                    />
+                    Search property
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="ceiling_height"
+                    />
+                    Ceiling Height
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="fence" />
+                    Fence
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="garage"
+                      checked
+                    />
+                    Garage
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="parking" />
+                    Parking
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="swimming_pool"
+                    />
+                    Swimming Pool
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="construction_year"
+                    />
+                    Construction Year
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="fireplace" />
+                    Fireplace
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="garden" />
+                    Garden
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="pet_friendly"
+                    />
+                    Pet Friendly
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="wifi" />
+                    WiFi
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End-Hero -->
+    <section class="hero" role="main">
+      <div class="container">
+        <div class="hero__content d-flex">
+          <div class="hero__text d-flex">
+            <h1
+              id="hero-heading"
+              class="hero__title wow animate__animated animate__fadeInUp animationtext slide"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              Find Your
+              <span class="cd-words-wrapper" style="width: 550px">
+                <span class="item-text is-visible">Dream Home</span>
+                <span class="item-text is-hidden">Perfect Home</span>
+              </span>
+            </h1>
+            <p
+              class="hero__subtitle wow animate__animated animate__fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              We are a real estate agency that will help you find the best
+              residence you dream of,<br />let's discuss for your dream house?
+            </p>
+          </div>
+          <form class="hero__search d-flex" aria-label="Property search form">
+            <div
+              class="hero__tabs"
+              role="tablist"
+              aria-label="Property type selection"
+            >
+              <div
+                class="hero__tab hero__tab-active d-flex"
+                role="tab"
+                id="for-rent-tab"
+                aria-selected="true"
+              >
+                <button class="hero__tab-button" type="button">
+                  <span class="hero__tab-text">For rent</span>
+                </button>
+              </div>
+              <div
+                class="hero__tab d-flex"
+                role="tab"
+                aria-selected="false"
+                id="for-sale-tab"
+              >
+                <button class="hero__tab-button" type="button">
+                  <span class="hero__tab-text">For sale</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="hero__form rounded-cycle"
+              role="search"
+              aria-labelledby="for-rent-tab"
+              id="search-form"
+            >
+              <div class="hero__form-content">
+                <div class="hero__form-group">
+                  <label class="hero__label" id="property-type-label"
+                    >Type</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <div class="hero__dropdown">
+                      <div class="hero__dropdown-selected">All type</div>
+                      <ul class="hero__dropdown-menu">
+                        <li class="hero__dropdown-item" data-value="">
+                          All type
+                        </li>
+                        <li class="hero__dropdown-item" data-value="villa">
+                          Villa
+                        </li>
+                        <li class="hero__dropdown-item" data-value="studio">
+                          Studio
+                        </li>
+                        <li class="hero__dropdown-item" data-value="office">
+                          Office
+                        </li>
+                        <li class="hero__dropdown-item" data-value="house">
+                          House
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="icon-CaretDown"></span>
+                  </div>
+                </div>
+                <div
+                  class="hero__separator"
+                  role="separator"
+                  aria-hidden="true"
+                ></div>
+                <div class="hero__form-group">
+                  <label class="hero__label" for="location-search"
+                    >Location</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <input
+                      class="hero__input"
+                      type="text"
+                      id="location-search"
+                      name="location"
+                      placeholder="Search Location"
+                      aria-label="Enter location to search"
+                    />
+                    <span class="icon-Crosshair"></span>
+                  </div>
+                </div>
+                <div
+                  class="hero__separator"
+                  role="separator"
+                  aria-hidden="true"
+                ></div>
+                <div class="hero__form-group">
+                  <label class="hero__label" for="keyword-search"
+                    >Keyword</label
+                  >
+                  <div class="hero__input-group d-flex">
+                    <input
+                      class="hero__input"
+                      type="text"
+                      id="keyword-search"
+                      name="keyword"
+                      placeholder="Search Keyword"
+                      aria-label="Enter search keywords"
+                    />
+                  </div>
+                </div>
+                <div class="hero__actions d-flex">
+                  <button
+                    type="button"
+                    class="hero__advanced-button d-flex"
+                    aria-label="Open advanced search options"
+                    aria-expanded="false"
+                  >
+                    <span class="hero__advanced-text">Search advanced</span>
+                    <img
+                      class="hero__advanced-icon"
+                      src="./images/logo/sort.png"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <button
+                    type="submit"
+                    class="hero__search-button d-flex"
+                    aria-label="Search properties"
+                  >
+                    <span class="hero__search-text">Search</span>
+                    <span class="icon-search"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero__advanced-dropdown" id="advancedDropdown">
+              <!-- Price Range -->
+              <div class="advanced__flex-container">
+                <div class="advanced__group">
+                  <label
+                    >Price Range
+                    <span id="priceRangeText">from $100 to $650000</span></label
+                  >
+                  <div class="range-wrapper">
+                    <div class="range-progress" id="priceProgress"></div>
+                    <input
+                      type="range"
+                      id="priceMin"
+                      class="range-min"
+                      min="100"
+                      max="650000"
+                      value="100"
+                    />
+                    <input
+                      type="range"
+                      id="priceMax"
+                      class="range-max"
+                      min="100"
+                      max="650000"
+                      value="650000"
+                    />
+                  </div>
+                </div>
+                <div class="advanced__group">
+                  <label
+                    >Size Range
+                    <span id="sizeRangeText"
+                      >from 20 SqFt to 2,000 SqFt</span
+                    ></label
+                  >
+                  <div class="range-wrapper">
+                    <div class="range-progress" id="sizeProgress"></div>
+                    <input
+                      type="range"
+                      id="sizeMin"
+                      class="range-min"
+                      min="20"
+                      max="2000"
+                      value="20"
+                    />
+                    <input
+                      type="range"
+                      id="sizeMax"
+                      class="range-max"
+                      min="20"
+                      max="2000"
+                      value="2000"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Select Boxes -->
+              <div class="advanced__row">
+                <div class="advanced__field">
+                  <label for="rooms">Rooms</label>
+                  <select id="rooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="bathrooms">Bathrooms</label>
+                  <select id="bathrooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="bedrooms">Bedrooms</label>
+                  <select id="bedrooms">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+                <div class="advanced__field">
+                  <label for="type">Type</label>
+                  <select id="type">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Amenities -->
+              <div class="advanced__group">
+                <label>Amenities:</label>
+                <div class="advanced__amenities">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="air_condition"
+                      checked
+                    />
+                    Air Condition
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="disabled_access"
+                    />
+                    Disabled Access
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="floor"
+                      checked
+                    />
+                    Floor
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="heating" />
+                    Heating
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="renovation"
+                    />
+                    Renovation
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="window_type"
+                    />
+                    Window Type
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="cable_tv" />
+                    Cable TV
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="elevator"
+                      checked
+                    />
+                    Elevator
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="furnishing"
+                    />
+                    Furnishing
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="intercom" />
+                    Intercom
+                  </label>
+                  <label>
+                    <input
+                      checked
+                      type="checkbox"
+                      name="amenities"
+                      value="security"
+                    />
+                    Security
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="search_property"
+                    />
+                    Search property
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="ceiling_height"
+                    />
+                    Ceiling Height
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="fence" />
+                    Fence
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="garage"
+                      checked
+                    />
+                    Garage
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="parking" />
+                    Parking
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="swimming_pool"
+                    />
+                    Swimming Pool
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="construction_year"
+                    />
+                    Construction Year
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="fireplace" />
+                    Fireplace
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="garden" />
+                    Garden
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="amenities"
+                      value="pet_friendly"
+                    />
+                    Pet Friendly
+                  </label>
+                  <label>
+                    <input type="checkbox" name="amenities" value="wifi" />
+                    WiFi
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End-Hero -->
+    <!-- Feature -->
+    <section class="flat-section flat-recommended">
+      <div class="container">
+        <div
+          class="box-title text-center wow animate__animated animate__fadeInUp"
+          data-wow-duration="1s"
+          data-wow-delay="0.2s"
+        >
+          <div class="text-subtitle text-primary">Featured Properties</div>
+          <h3 class="title mt_4">Recommended For You</h3>
+        </div>
+        <div class="flat-tab-recommended">
+          <ul
+            class="nav-tab-recommended flat-animate-tab wow animate__animated animate__fadeInUp"
+          >
+            <li class="nav-tab-item">
+              <a class="nav-link-item active" href="#content-all">View All</a>
+            </li>
+            <li class="nav-tab-item">
+              <a class="nav-link-item" href="#content-apartment">Apartment</a>
+            </li>
+            <li class="nav-tab-item">
+              <a class="nav-link-item" href="#content-villa">Villa</a>
+            </li>
+            <li class="nav-tab-item">
+              <a class="nav-link-item" href="#content-studio">Studio</a>
+            </li>
+            <li class="nav-tab-item">
+              <a class="nav-link-item" href="#content-house">House</a>
+            </li>
+            <li class="nav-tab-item">
+              <a class="nav-link-item" href="#content-office">Office</a>
+            </li>
+          </ul>
+          <div
+            class="tf-grid-layout tf-col-3 lg-col-2 sm-col-1 wow animate__animated animate__fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0.4s"
+            role="list"
+            aria-label="Featured properties"
+          >
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-1.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-1.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-2.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-2.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-3.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-3.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-4.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-4.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-5.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-5.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="property-card" role="listitem">
+              <div class="property-image">
+                <a href="#feature1">
+                  <img
+                    src="./images/feature-item/feature-6.png"
+                    alt="Casa Lomas"
+                    class="image-overlay"
+                  />
+                </a>
+                <div class="property-tags">
+                  <span class="tag active">Featured</span>
+                  <span class="tag">For Sale</span>
+                </div>
+                <div class="property-location">
+                  <span class="icon-location"></span>
+                  <p class="location-text">
+                    145 Brooklyn Ave, Califonia, New York
+                  </p>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-main">
+                  <h6 class="property-name">
+                    <a href="#" class="property-link"
+                      >Casa Lomas De Machalí Machas</a
+                    >
+                  </h6>
+                  <div class="property-description">
+                    <div class="desc-item">
+                      <span class="icon-Icon-11"></span>
+                      <span class="desc-label">Beds:</span>
+                      <span class="desc-value">4</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-1"></span>
+                      <span class="desc-label">Baths:</span>
+                      <span class="desc-value">2</span>
+                    </div>
+                    <div class="desc-item">
+                      <span class="icon-Icon-2"></span>
+                      <span class="desc-label">Sqft:</span>
+                      <span class="desc-value">1150</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-info">
+                  <div class="user">
+                    <img
+                      src="./images/user/user-6.png"
+                      alt="Arlene McCoy"
+                      class="user-img"
+                    />
+                    <span class="user-name">Arlene McCoy</span>
+                  </div>
+                  <span class="price">$7,250.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="text-center mt_50 wow animate__animated animate__fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s"
+          >
+            <a href="#" class="tf-btn btn-view primary size-1 hover-btn-view">
+              View All Properties
+              <span class="icon icon-arrow-right2"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End-Feature -->
+    <!-- Explore -->
+    <section class="explore-cities px_10">
+      <!-- Tiêu đề Section -->
+      <div
+        class="box-title text-center wow animate__animated animate__fadeInUp"
+        data-wow-duration="1s"
+        data-wow-delay="0.2s"
+      >
+        <div class="text-subtitle text-primary">Explore Cities</div>
+        <h3 class="title mt_4">Our Location For You</h3>
+      </div>
+      <div
+        class="wow animate__animated animate__fadeIn"
+        data-wow-delay="0.3s"
+        data-wow-duration="1s"
+      >
+        <div
+          dir="ltr"
+          class="swiper tf-sw-location"
+          data-preview="6"
+          data-tablet="3"
+          data-mobile-sm="2"
+          data-mobile="1"
+          data-space-lg="8"
+          data-space-md="8"
+          data-space="8"
+          data-pagination="1"
+          data-pagination-sm="2"
+          data-pagination-md="3"
+          data-pagination-lg="3"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-20.png"
+                    src="./images/feature-item/feature-20.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Naperville</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-21.png"
+                    src="./images/feature-item/feature-21.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Pembroke Pines</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-22.png"
+                    src="./images/feature-item/feature-22.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Toledo</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-23.png"
+                    src="./images/feature-item/feature-23.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Orange</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-24.png"
+                    src="./images/feature-item/feature-24.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Fairfield</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-25.png"
+                    src="./images/feature-item/feature-25.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Naperville</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-20.png"
+                    src="./images/feature-item/feature-20.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Austin</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-21.png"
+                    src="./images/feature-item/feature-21.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Pembroke Pines</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-22.png"
+                    src="./images/feature-item/feature-22.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Toledo</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-23.png"
+                    src="./images/feature-item/feature-23.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Orange</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-24.png"
+                    src="./images/feature-item/feature-24.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Fairfield</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box-location">
+                <a href="topmap-grid.html" class="image img-style">
+                  <img
+                    class="lazyload"
+                    data-src="./images/feature-item/feature-25.png"
+                    src="./images/feature-item/feature-25.png"
+                    alt="image-location"
+                  />
+                </a>
+                <div class="content">
+                  <div class="inner-left">
+                    <span class="sub-title fw-6">321 Property</span>
+                    <h6 class="title text-line-clamp-1 link">Naperville</h6>
+                  </div>
+                  <a href="topmap-grid.html" class="box-icon line w-44 round">
+                    <i class="icon icon-arrow-right2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sw-pagination sw-pagination-location text-center"></div>
+        </div>
+      </div>
+    </section>
     <button class="backtotop" id="backtotop">
       <span class="border-progress"></span>
       <span class="icon icon-arrow-up"></span>

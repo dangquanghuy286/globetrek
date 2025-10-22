@@ -3,15 +3,13 @@
 .header {
     width: 100%;
     z-index: 999;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     font-weight: 500;
     line-height: 140%;
     font-size: 16px;
     color: var(--heading-color);
-
-
-
-
 
     .header-wrap {
         display: flex;
@@ -153,7 +151,7 @@
 
     .sub-menu {
         position: absolute;
-        top: calc(100% + 15px);
+        top: calc(100% + 19px);
         left: 0;
         min-width: 222px;
         background: var(--white);
@@ -199,5 +197,23 @@
 
     &:hover {
         color: var(--primary-color);
+    }
+}
+
+.header.scrolled {
+    position: fixed;
+    background: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-bottom: 1px solid var(--stoke-color);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
