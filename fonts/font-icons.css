@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.eot?gpahw1");
-  src: url("icomoon.eot?gpahw1#iefix") format("embedded-opentype"),
-    url("icomoon.ttf?gpahw1") format("truetype"),
-    url("icomoon.woff?gpahw1") format("woff"),
-    url("icomoon.svg?gpahw1#icomoon") format("svg");
+  src: url("icomoon.eot?uypsmq");
+  src: url("icomoon.eot?uypsmq#iefix") format("embedded-opentype"),
+    url("icomoon.ttf?uypsmq") format("truetype"),
+    url("icomoon.woff?uypsmq") format("woff"),
+    url("icomoon.svg?uypsmq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -52,6 +52,21 @@
 .icon-facebook:before {
   content: "\e902";
   color: #f1faee;
+}
+.icon-Profile:before {
+  content: "\e916";
+}
+.icon-Heart:before {
+  content: "\e917";
+}
+.icon-Category:before {
+  content: "\e918";
+}
+.icon-Search:before {
+  content: "\e919";
+}
+.icon-Home:before {
+  content: "\e91a";
 }
 .icon-star:before {
   content: "\e901";

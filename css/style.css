@@ -762,6 +762,98 @@
   flex: 1;
 }
 
+.tf-toolbar-bottom {
+  overflow: visible;
+  position: fixed;
+  z-index: 200;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 10px;
+  background: var(--white);
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  display: none;
+  margin-top: 70px;
+}
+.tf-toolbar-bottom .toolbar-list {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item a .toolbar-icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item a .toolbar-label {
+  position: absolute;
+  color: var(--heading-color);
+  font-weight: 400;
+  font-style: 16px;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item.active a .toolbar-icon {
+  transform: translateY(-35px);
+  color: var(--white);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item.active a .toolbar-label {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item:nth-child(1).active ~ .indicator {
+  transform: translateX(0px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item:nth-child(2).active ~ .indicator {
+  transform: translateX(70px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item:nth-child(3).active ~ .indicator {
+  transform: translateX(140px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item:nth-child(4).active ~ .indicator {
+  transform: translateX(210px);
+}
+.tf-toolbar-bottom .toolbar-list .toolbar-item:nth-child(5).active ~ .indicator {
+  transform: translateX(280px);
+}
+
+.indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -50%;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  transition: 0.5s;
+  left: 7%;
+}
+
 /* --------------------------------------------------------------
    CSS RESET (Eric Meyer’s Reset + HTML5 elements)
    -------------------------------------------------------------- */
@@ -2670,8 +2762,11 @@ h5 {
   .header .header-ct-right .wrap-login-menu .login {
     font-size: 14px;
   }
+  .tf-toolbar-bottom {
+    display: block;
+  }
   .backtotop {
-    bottom: 20px;
+    bottom: 100px;
     right: 10px;
     width: 40px;
     height: 40px;

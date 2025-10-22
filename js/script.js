@@ -103,7 +103,7 @@ toggleBtn.addEventListener("click", () => {
     closeBtn.classList.remove("active");
   });
 });
-// =====================SUBMENU=================================//
+// =====================SUBMENU=================================
 document.querySelectorAll(".mobile-dropdown").forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
@@ -124,7 +124,7 @@ document.querySelectorAll(".mobile-dropdown").forEach((item) => {
         }
       });
 
-      // Toggle trên parent thay vì subMenu
+      // Toggle
       const isActive = parent.classList.toggle("active");
 
       if (icon) {
@@ -138,4 +138,16 @@ document.querySelectorAll(".mobile-dropdown").forEach((item) => {
       }
     }
   });
+});
+// ===================Active-menu==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const list = document.querySelectorAll(".toolbar-item");
+
+  function activeLink(e) {
+    e.preventDefault();
+    list.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+  }
+
+  list.forEach((item) => item.addEventListener("click", activeLink));
 });
