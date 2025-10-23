@@ -113,7 +113,7 @@
 .tf-btn {
   font-size: 16px;
   font-weight: 600;
-  display: inline-block;
+  display: inline-flex;
   border-radius: 14px;
   line-height: 22.6px;
   padding: 16px 46px;
@@ -517,6 +517,8 @@
   transform: translateY(12px);
   transition: all 0.3s ease;
   z-index: 999;
+  pointer-events: none;
+  visibility: hidden;
 }
 .menu-nav .sub-menu {
   left: 0;
@@ -907,6 +909,7 @@
   background-color: var(--background-black);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .footer .top-footer .content-top-footer {
   gap: 20px;
@@ -934,6 +937,10 @@
 .footer .inner-footer {
   padding: 40px 0;
   border-bottom: 1px solid var(--border-icon);
+}
+.footer .inner-footer .widget-box {
+  width: 100%;
+  height: 100%;
 }
 .footer .inner-footer .widget-info {
   gap: 16px;
@@ -1065,6 +1072,8 @@
 .footer .inner-footer .widget-newseletter .action-download a {
   background-color: var(--border-header);
   border: var(--border-header);
+  padding: 12px 20px !important;
+  min-width: 150px !important;
 }
 .footer .inner-footer .widget-newseletter .action-download a img {
   flex-shrink: 0;
@@ -3317,6 +3326,9 @@ h5 {
   .header .toggle-mobile {
     display: block;
   }
+  .footer .widget-box {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 767px) {
   .header .header-ct-left a img {
@@ -3365,23 +3377,27 @@ h5 {
 @media (min-width: 576px) {
   .col-sm-6 {
     flex: 0 0 auto;
-    width: 50%;
+    width: 50% !important;
   }
   .col-sm-12 {
     flex: 0 0 auto;
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (min-width: 768px) {
   .col-md-6 {
     flex: 0 0 auto;
-    width: 50%;
+    width: 50% !important;
+  }
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 66.6666667% !important;
   }
 }
 @media (min-width: 992px) {
   .col-lg-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 33.33333333% !important;
   }
 }
 
