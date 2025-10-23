@@ -169,17 +169,17 @@
                 }
 
                 input[type="checkbox"] {
-                    appearance: none;
                     -webkit-appearance: none;
                     -moz-appearance: none;
+                    appearance: none;
                     width: 16px;
                     height: 16px;
                     border: 1px solid var(--border-icon);
                     border-radius: 4px;
                     background-color: transparent;
                     cursor: pointer;
-                    position: relative;
                     transition: all 0.2s ease;
+                    position: relative;
 
                     &:checked {
                         background-color: var(--primary-color);
@@ -187,9 +187,9 @@
                     }
 
                     &:checked::after {
-                        content: "";
+                        content: '';
                         position: absolute;
-                        left: 4px;
+                        left: 5px;
                         top: 1px;
                         width: 4px;
                         height: 8px;
@@ -202,6 +202,8 @@
             }
 
             .action-download {
+
+
                 a {
                     background-color: var(--border-header);
                     border: var(--border-header);
