@@ -139,6 +139,31 @@ document.querySelectorAll(".mobile-dropdown").forEach((item) => {
     }
   });
 });
+document.querySelectorAll(".sub-link.has-sub").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const parent = e.currentTarget.closest(".sub-item");
+    const subSubMenu = parent.querySelector(".mb-sub-sub-menu");
+
+    if (subSubMenu) {
+      parent
+        .closest(".mb-sub-menu")
+        .querySelectorAll(".sub-item.open")
+        .forEach((otherItem) => {
+          if (otherItem !== parent) {
+            otherItem.classList.remove("open");
+            const nested = otherItem.querySelector(".mb-sub-sub-menu");
+            if (nested) nested.style.display = "none";
+          }
+        });
+
+      // Toggle submenu con
+      const isOpen = parent.classList.toggle("open");
+      subSubMenu.style.display = isOpen ? "flex" : "none";
+    }
+  });
+});
+
 // ===================Active-menu==============================
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelectorAll(".toolbar-item");
