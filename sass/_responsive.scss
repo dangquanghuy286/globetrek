@@ -119,6 +119,17 @@
          }
       }
    }
+
+   .tf-toolbar-bottom {
+      padding: 10px;
+
+      .indicator {
+         width: 60px;
+         height: 60px;
+         left: calc((100% - 340px) / 2);
+         top: -40%;
+      }
+   }
 }
 
 /* ====== MIN-WIDTH (Desktop First) ====== */
