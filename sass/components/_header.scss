@@ -383,6 +383,10 @@
     }
 }
 
+.mobile-menu.active {
+    left: 0;
+}
+
 // =============Animate========================
 @keyframes slideDown {
     from {
@@ -396,9 +400,7 @@
     }
 }
 
-.mobile-menu.active {
-    left: 0;
-}
+
 
 .overlay {
     position: fixed;

@@ -1196,6 +1196,10 @@ h5 {
     margin-top: 32px;
 }
 
+.mt-10 {
+    margin-top: 40px;
+}
+
 .mt-12 {
     margin-top: 48px;
 }
@@ -1370,6 +1374,10 @@ h5 {
 
 .gap-30 {
     gap: 30px;
+}
+
+.gap-list {
+    gap: 16px 30px;
 }
 
 // =========RADIUS=============
@@ -1703,6 +1711,15 @@ h5 {
     font-style: italic;
 }
 
+// =====================Text color=============================
+.text-white {
+    color: var(--white);
+}
+
+.text-note {
+    color: var(--note-color);
+}
+
 // ======================Transition & Animation==================
 .transition {
     transition: all 0.3s ease;
@@ -1853,4 +1870,9 @@ h5 {
     color: var(--text-color);
     text-transform: capitalize;
     line-height: 28px;
+}
+
+// ============Background================
+.bg-transparent {
+    background-color: transparent !important;
 }
