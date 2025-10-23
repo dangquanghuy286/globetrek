@@ -1,6 +1,8 @@
 @charset "UTF-8";
 :root {
   --primary-color: #DCA546;
+  --secondary-color: #FFF8DC;
+  --three-color: #fdedb2;
   --white: #FFFFFF;
   --success: #7ed321;
   --text-color: #5F615E;
@@ -642,6 +644,8 @@
   display: none;
   flex-direction: column;
   padding: 0 16px;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
 }
 .mobile-menu .inner-menu .nav-item .mb-sub-menu li {
   padding: 5px 0;
@@ -672,6 +676,8 @@
   display: none;
   flex-direction: column;
   padding-left: 16px;
+  background-color: var(--three-color);
+  border-radius: 8px;
 }
 .mobile-menu .inner-menu .nav-item .mb-sub-menu .sub-item .mb-sub-sub-menu li {
   padding: 4px 0;

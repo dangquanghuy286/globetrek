@@ -290,6 +290,7 @@
                 cursor: pointer;
                 transition: color 0.3s ease;
 
+
                 &:hover {
                     color: var(--primary-color);
                 }
@@ -299,7 +300,8 @@
                 display: none;
                 flex-direction: column;
                 padding: 0 16px;
-
+                background-color: var(--secondary-color);
+                border-radius: 16px;
 
                 li {
                     padding: 5px 0;
@@ -336,6 +338,8 @@
                         display: none;
                         flex-direction: column;
                         padding-left: 16px;
+                        background-color: var(--three-color);
+                        border-radius: 8px;
 
                         li {
                             padding: 4px 0;
@@ -379,6 +383,7 @@
     }
 }
 
+// =============Animate========================
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -410,6 +415,7 @@
     visibility: visible;
 }
 
+// =================Close Button==================
 .close-btn {
     position: fixed;
     top: 20px;
@@ -435,7 +441,7 @@
     visibility: visible;
 }
 
-// Info
+// ==================Info===================
 .inner-info {
     padding-bottom: 50px;
 
