@@ -862,7 +862,7 @@
   position: absolute;
   color: var(--heading-color);
   font-weight: 400;
-  font-style: 16px;
+  font-size: 16px;
   letter-spacing: 0.05em;
   transition: 0.5s;
   opacity: 0;
@@ -999,6 +999,9 @@
   font-size: 16px;
   color: var(--note-color);
   line-height: 22.4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .footer .inner-footer .widget-tour .tour-item a .icon {
   color: var(--primary-color);
@@ -3365,6 +3368,7 @@ h5 {
   }
   .tf-toolbar-bottom {
     padding: 10px;
+    height: 60px;
   }
   .tf-toolbar-bottom .indicator {
     width: 60px;
