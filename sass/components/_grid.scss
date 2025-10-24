@@ -1,6 +1,6 @@
     .tf-grid-layout {
         display: grid !important;
-        gap: 30px;
+        gap: 40px;
 
         &.tf-col-2 {
             grid-template-columns: repeat(2, 1fr);

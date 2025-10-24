@@ -466,7 +466,7 @@ h5 {
 }
 
 .link:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     cursor: pointer;
 }
 
@@ -1519,6 +1519,10 @@ h5 {
 .flex-center {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.justify-content-center {
     justify-content: center;
 }
 
