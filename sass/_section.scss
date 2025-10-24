@@ -2,3 +2,34 @@
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
+//========== Box title==========
+.box-title {
+    margin-bottom: 50px;
+    max-width: 645px;
+
+
+    &.style-1 {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    &.style-2 {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.style-3 {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        text-transform: capitalize;
+        font-weight: 800;
+    }
+
+    .desc {
+        margin-top: 20px;
+    }
+}

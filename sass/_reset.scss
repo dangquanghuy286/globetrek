@@ -315,7 +315,7 @@ input[type="color"] {
 
     &:hover,
     &:focus {
-        border-color: var(--place-holder);
+        border-color: var(--primary-color);
     }
 
     &.style-2 {
@@ -939,7 +939,7 @@ h5 {
 
 /* Padding Bottom */
 .pb-0 {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
 }
 
 .pb-1 {
@@ -1388,6 +1388,11 @@ h5 {
     gap: 16px 30px;
 }
 
+// =========Border=============
+.bb-1 {
+    border-bottom: 1px solid var(--stoke-color);
+}
+
 // =========RADIUS=============
 /* === All corners === */
 .round-none {
@@ -1524,6 +1529,10 @@ h5 {
 
 .justify-content-center {
     justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
 }
 
 .flex-end {
@@ -1887,6 +1896,10 @@ h5 {
     aspect-ratio: 5 / 4;
 }
 
+.aspect-5-3 {
+    aspect-ratio: 5 / 3;
+}
+
 .aspect-8-5 {
     aspect-ratio: 8 / 5;
 }
@@ -1916,4 +1929,8 @@ h5 {
 // ============Background================
 .bg-transparent {
     background-color: transparent !important;
+}
+
+.o-cover {
+    object-fit: cover;
 }
