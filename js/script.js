@@ -60,12 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isLast) {
       breadcrumbHTML += `
-        <div class="breadcrumb-item dot"><span> > </span></div>
+        <div class="breadcrumb-item dot"><span class="icon-CaretRight"></span></div>
         <a class="breadcrumb-item" href="${part}">${name}</a>
       `;
     } else {
       breadcrumbHTML += `
-        <div class="breadcrumb-item dot"><span> > </span></div>
+        <div class="breadcrumb-item dot"><span class="icon-CaretRight"></span></div>
         <div class="breadcrumb-item current">${name}</div>
       `;
     }

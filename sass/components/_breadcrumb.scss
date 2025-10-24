@@ -3,10 +3,10 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--white);
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
     background-color: transparent;
     padding: 0;
     margin: 0;
@@ -24,15 +24,17 @@
     // Phân cách
     .dot {
         span {
+            font-size: 8px;
+            font-weight: 600;
             opacity: 0.6;
             user-select: none;
-            color: var(--white);
+            color: var(--text-color);
         }
     }
 
     // Trang hiện tại
     .current {
-        color: var(--white);
+        color: var(--text-color);
         opacity: 1;
         font-weight: 500;
     }

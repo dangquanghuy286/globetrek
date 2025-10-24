@@ -141,12 +141,20 @@ body {
     margin: auto;
 }
 
+.container-3 {
+    max-width: 1918px;
+    padding: 0 15px;
+    width: 100%;
+    margin: auto;
+}
+
 /* Lists */
 ol,
 ul {
-    list-style: none;
+    list-style: none !important;
     margin: 0;
     padding: 0;
+
 }
 
 /* Blockquotes & quotes */
@@ -1492,6 +1500,10 @@ h5 {
     display: inline-block;
 }
 
+.d-inline-flex {
+    display: inline-flex;
+}
+
 .d-flex {
     display: flex;
 }
@@ -1524,6 +1536,10 @@ h5 {
     flex-grow: 0;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-left {
     display: flex;
     align-items: center;
@@ -1538,6 +1554,19 @@ h5 {
 
 .flex-col {
     flex-direction: column;
+}
+
+.item-center {
+    align-items: center;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
 }
 
 // Row
@@ -1718,6 +1747,14 @@ h5 {
 
 .text-note {
     color: var(--note-color);
+}
+
+.text-black {
+    color: var(--heading-color);
+}
+
+.text-color {
+    color: var(--text-color);
 }
 
 // ======================Transition & Animation==================

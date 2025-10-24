@@ -129,9 +129,16 @@
 
    .tf-toolbar-bottom {
       padding: 10px;
-
       height: 60px;
 
+      .toolbar-icon {
+         line-height: 50px !important;
+
+      }
+
+      .toolbar-label {
+         display: none;
+      }
 
       .indicator {
          width: 60px;
@@ -173,6 +180,11 @@
    .col-lg-4 {
       flex: 0 0 auto;
       width: 33.33333333% !important;
+   }
+
+   .col-lg-8 {
+      flex: 0 0 auto;
+      width: 66.6666667%;
    }
 }
 
