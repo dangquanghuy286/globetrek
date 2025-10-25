@@ -20,13 +20,11 @@
     @include transition3;
 
 
-    svg path {
-        @include transition3;
-    }
-
+    svg path,
     img {
         @include transition3;
     }
+
 
     svg {
         width: 20px;
@@ -38,9 +36,18 @@
         flex-shrink: 0;
     }
 
-    &:hover {
+    &.hover-1:hover {
         color: var(--white);
         background-color: var(--primary-color);
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &.hover-2:hover {
+        color: var(--white);
+        background-color: transparent;
 
         img {
             filter: brightness(0) invert(1);
