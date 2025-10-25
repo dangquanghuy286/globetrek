@@ -263,9 +263,9 @@ input[type="checkbox"],
 input[type="radio"] {
     overflow: hidden;
     padding: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
     cursor: pointer;
     vertical-align: sub;
 }
@@ -304,7 +304,7 @@ input[type="color"] {
     box-shadow: none;
     font-size: 16px;
     line-height: 20px;
-    border-radius: 6px;
+    border-radius: 16px;
     padding: 14px 20px;
     width: 100%;
     background: var(--white);
@@ -315,7 +315,7 @@ input[type="color"] {
 
     &:hover,
     &:focus {
-        border-color: var(--primary-color);
+        border-color: var(--primary-color) !important;
     }
 
     &.style-2 {
