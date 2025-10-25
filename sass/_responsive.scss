@@ -87,6 +87,13 @@
       margin-top: 40px;
    }
 
+   .flat-blog-detail {
+      h1 {
+         font-size: 30px;
+         line-height: 100%;
+      }
+   }
+
    .footer {
       .widget-box {
          margin-bottom: 30px;
@@ -162,6 +169,17 @@
       }
    }
 
+   .flat-blog-detail {
+      h1 {
+         font-size: 24px;
+         line-height: 100%;
+      }
+
+      .meta-blog {
+         gap: 10px;
+      }
+   }
+
    .close-btn {
       right: 10px;
    }
@@ -192,6 +210,33 @@
          height: 60px;
          left: calc((100% - 340px) / 2);
          top: -40%;
+      }
+   }
+
+   .flat-blog-list {
+      .flat-blog-item {
+         .content-box {
+            .post-author {
+               span {
+                  font-size: 10px;
+                  gap: 5px;
+               }
+
+               span:not(:first-child) {
+                  margin-left: 0;
+               }
+
+            }
+
+            .description {
+               font-size: 14px;
+            }
+
+            .title {
+               font-size: 20px;
+               line-height: 100%;
+            }
+         }
       }
    }
 }

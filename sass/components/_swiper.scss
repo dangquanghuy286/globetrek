@@ -1,0 +1,52 @@
+.sw-pagination {
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--stoke-color);
+        opacity: 1;
+        position: relative;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        margin-top: 40px !important;
+        margin-bottom: 1px !important;
+
+
+        &::before {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            content: "";
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--primary-color);
+            overflow: visible;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--primary-color) !important;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+
+}
+
+.swiper {
+    .flat-blog-item {
+        margin-bottom: 0;
+    }
+}

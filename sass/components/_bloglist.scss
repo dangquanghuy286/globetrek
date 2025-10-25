@@ -19,8 +19,6 @@
     }
 
     h1 {
-        text-align: center;
-        color: var(--heading-color);
         letter-spacing: 2px;
         margin-top: 16px;
         line-height: 100%;
@@ -151,7 +149,7 @@
 
         .description {
             margin-top: 12px;
-            color: var(--text-label);
+            color: var(--text-color);
         }
     }
 
@@ -740,14 +738,9 @@
 
     .form-control,
     textarea {
-        width: 100%;
-        border: 1px solid var(--stoke-color);
         border-radius: 16px;
-        padding: 12px 20px;
-        outline: none;
         transition: border-color 0.3s ease;
         background-color: var(--white);
-        font-size: 16px;
     }
 
     textarea {
