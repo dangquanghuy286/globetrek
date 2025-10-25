@@ -3989,6 +3989,10 @@ h5 {
   aspect-ratio: 4/3;
 }
 
+.aspect-4-5 {
+  aspect-ratio: 4/5;
+}
+
 .aspect-3-2 {
   aspect-ratio: 3/2;
 }
@@ -4135,8 +4139,6 @@ h5 {
   .backtotop {
     bottom: 100px;
     right: 10px;
-    width: 40px;
-    height: 40px;
   }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 12px;
