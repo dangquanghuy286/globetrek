@@ -529,18 +529,8 @@
 .menu-nav .sub-menu .sub-item {
   padding: 8px 16px;
 }
-.menu-nav .sub-menu .sub-item a {
-  display: block;
-  color: var(--heading-color);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
 .menu-nav .sub-menu .sub-item a:hover {
   color: var(--primary-color);
-  transform: translateX(4px);
 }
 .menu-nav .mega-menu {
   left: 50%;
@@ -1922,6 +1912,28 @@
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text-color);
+}
+
+.action-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  opacity: 0.8;
+}
+.action-btn.active span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.action-btn.active img {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(96%) saturate(1204%) hue-rotate(318deg) brightness(87%) contrast(97%);
+}
+
+.unlike-btn.active span {
+  color: var(--heart-color);
+  font-weight: 600;
+}
+.unlike-btn.active img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(75%) saturate(1559%) hue-rotate(346deg) brightness(103%) contrast(101%);
 }
 
 .wd-navigation {
@@ -4063,6 +4075,9 @@ h5 {
   .tf-toolbar-bottom {
     display: block;
   }
+  .footer {
+    margin-bottom: 70px;
+  }
   .backtotop {
     bottom: 100px;
     right: 10px;
@@ -4101,6 +4116,9 @@ h5 {
     height: 60px;
     left: calc((100% - 340px) / 2);
     top: -40%;
+  }
+  .footer {
+    margin-bottom: 60px;
   }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 10px;

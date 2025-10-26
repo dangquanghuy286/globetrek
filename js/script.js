@@ -176,3 +176,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   list.forEach((item) => item.addEventListener("click", activeLink));
 });
+// =====================Like ,Unlike===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const actions = document.querySelectorAll(".action");
+
+  actions.forEach((action) => {
+    const likeBtn = action.querySelector(".like-btn");
+    const unlikeBtn = action.querySelector(".unlike-btn");
+
+    // Kiểm tra tồn tại rồi mới gắn sự kiện
+    if (likeBtn && unlikeBtn) {
+      likeBtn.addEventListener("click", () => {
+        likeBtn.classList.toggle("active");
+        if (likeBtn.classList.contains("active")) {
+          unlikeBtn.classList.remove("active");
+        }
+      });
+
+      unlikeBtn.addEventListener("click", () => {
+        unlikeBtn.classList.toggle("active");
+        if (unlikeBtn.classList.contains("active")) {
+          likeBtn.classList.remove("active");
+        }
+      });
+    }
+  });
+});
