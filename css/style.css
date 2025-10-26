@@ -15,7 +15,7 @@
   --input-color: #e4e4e4;
   --note-color: #A8ABAE;
   --terms-color: #5c5e61;
-  --star-color: ##F1913D;
+  --star-color: #F1913D;
   --border-header: #FFFFFF1A;
   --border-icon: #5F6C5A33;
   --heading-color: #24272C;
@@ -1824,12 +1824,6 @@
   font-size: 14px;
   color: var(--text-color);
 }
-.list-review-item .content .content-top .inner-right .list-star {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: center;
-}
 .list-review-item .action {
   display: flex;
   align-items: center;
@@ -1870,6 +1864,20 @@
   font-weight: 700;
   display: inline-block;
   border-bottom: 1px solid var(--stoke-color);
+}
+
+.list-star {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+.list-star .icon {
+  color: var(--star-color);
+  font-size: 16px;
+}
+.list-star .icon img {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
 }
 
 .flat-quote {
@@ -2007,8 +2015,6 @@
   margin-bottom: 0;
 }
 
-/* Preload 
-------------------------------------------- */
 .preload-container {
   display: flex;
   width: 100%;
@@ -2026,15 +2032,15 @@
 }
 
 .preload-logo img {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
 }
 
 .spinner {
   width: 90px;
   height: 90px;
-  border: 3px solid transparent;
-  border-top: 3px solid var(--primary-color);
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-color);
   border-radius: 100%;
   position: absolute;
   top: 0;
@@ -4051,6 +4057,9 @@ h5 {
   .header .header-ct-left a img {
     max-width: 176px;
     height: auto;
+  }
+  .flat-blog-detail .flat-quote {
+    padding: 15px;
   }
 }
 @media (max-width: 575px) {

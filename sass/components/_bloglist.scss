@@ -547,14 +547,7 @@
                 }
             }
 
-            .inner-right {
-                .list-star {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 4px;
-                    align-items: center;
-                }
-            }
+
         }
 
     }
@@ -607,6 +600,22 @@
         font-weight: 700;
         display: inline-block;
         border-bottom: 1px solid var(--stoke-color);
+    }
+}
+
+.list-star {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+
+    .icon {
+        color: var(--star-color);
+        font-size: 16px;
+
+        img {
+            filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
+        }
     }
 }
 

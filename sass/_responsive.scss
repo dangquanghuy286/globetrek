@@ -113,6 +113,12 @@
          }
       }
    }
+
+   .flat-blog-detail {
+      .flat-quote {
+         padding: 15px;
+      }
+   }
 }
 
 @media (max-width: 575px) {
