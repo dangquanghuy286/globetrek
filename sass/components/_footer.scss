@@ -55,11 +55,6 @@
             .widget-contact {
                 display: flex;
                 flex-direction: row;
-                display: -webkit-box;
-                display: -moz-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
                 align-items: center;
                 gap: 16px;
 
@@ -103,7 +98,7 @@
                     p {
                         color: var(--white);
                         font-size: 16px;
-                        line-height: 400;
+                        font-weight: 400;
                         line-height: 22.4px;
                     }
                 }

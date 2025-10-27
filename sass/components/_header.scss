@@ -90,7 +90,6 @@
     .nav-link {
         height: 100%;
         font-size: 16px;
-        color: var(--text-dark);
         font-weight: 600;
     }
 
@@ -116,7 +115,6 @@
     border-bottom: 1px solid var(--stoke-color);
 
     .header-wrap {
-        display: flex;
         align-items: center;
         padding: 15px 0;
     }
@@ -195,9 +193,7 @@
 
 
         .mega-title {
-            font-weight: 700;
             font-size: 18px;
-            color: var(--heading-color);
             margin-bottom: 12px;
         }
 

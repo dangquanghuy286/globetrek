@@ -454,7 +454,6 @@
 .header .nav-link {
   height: 100%;
   font-size: 16px;
-  color: var(--text-dark);
   font-weight: 600;
 }
 .header .nav-link::before {
@@ -477,7 +476,6 @@
   border-bottom: 1px solid var(--stoke-color);
 }
 .style-1 .header-wrap {
-  display: flex;
   align-items: center;
   padding: 15px 0;
 }
@@ -543,9 +541,7 @@
   padding: 32px 40px;
 }
 .menu-nav .mega-menu .mega-title {
-  font-weight: 700;
   font-size: 18px;
-  color: var(--heading-color);
   margin-bottom: 12px;
 }
 .menu-nav .mega-menu .mega-col ul li a {
@@ -940,11 +936,6 @@
 .footer .inner-footer .widget-info .widget-contact {
   display: flex;
   flex-direction: row;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   align-items: center;
   gap: 16px;
 }
@@ -982,7 +973,7 @@
 .footer .inner-footer .widget-info .widget-contact .content p {
   color: var(--white);
   font-size: 16px;
-  line-height: 400;
+  font-weight: 400;
   line-height: 22.4px;
 }
 .footer .inner-footer .widget-tour .tour-item a {
