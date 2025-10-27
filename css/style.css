@@ -510,14 +510,23 @@
 .menu-nav .sub-menu,
 .menu-nav .mega-menu {
   position: absolute;
-  top: calc(100% + 19px);
+  top: calc(100% + 28px);
   background: var(--white);
-  border-radius: 0 0 12px 12px;
+  border-radius: 12px;
   opacity: 0;
   transform: translateY(12px);
   transition: all 0.3s ease;
   z-index: 999;
   visibility: hidden;
+}
+.menu-nav .mega-menu::before,
+.menu-nav .sub-menu::before {
+  content: "";
+  position: absolute;
+  border-top: 15px solid var(--white);
+  border-right: 15px solid transparent;
+  transform: rotate(45deg);
+  bottom: calc(100% - 9px);
 }
 .menu-nav .sub-menu {
   left: 0;
@@ -530,6 +539,10 @@
 }
 .menu-nav .sub-menu .sub-item a:hover {
   color: var(--primary-color);
+  transform: translateX(4px);
+}
+.menu-nav .sub-menu::before {
+  left: 20px;
 }
 .menu-nav .mega-menu {
   left: 50%;
@@ -558,6 +571,9 @@
 .menu-nav .mega-menu .mega-col ul li a:hover {
   color: var(--primary-color);
   transform: translateX(4px);
+}
+.menu-nav .mega-menu::before {
+  left: 49%;
 }
 .menu-nav .menu-item:hover .mega-menu {
   opacity: 1;

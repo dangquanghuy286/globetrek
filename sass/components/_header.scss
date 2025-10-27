@@ -152,14 +152,25 @@
     .sub-menu,
     .mega-menu {
         position: absolute;
-        top: calc(100% + 19px);
+        top: calc(100% + 28px);
         background: var(--white);
-        border-radius: 0 0 12px 12px;
+        border-radius: 12px;
         opacity: 0;
         transform: translateY(12px);
         transition: all 0.3s ease;
         z-index: 999;
         visibility: hidden;
+    }
+
+    .mega-menu::before,
+    .sub-menu::before {
+        content: "";
+        position: absolute;
+        border-top: 15px solid var(--white);
+        border-right: 15px solid transparent;
+        transform: rotate(45deg);
+        bottom: calc(100% - 9px);
+
     }
 
     .sub-menu {
@@ -174,10 +185,14 @@
             a {
                 &:hover {
                     color: var(--primary-color);
-
+                    transform: translateX(4px);
                 }
             }
         }
+    }
+
+    .sub-menu::before {
+        left: 20px;
     }
 
     .mega-menu {
@@ -210,6 +225,12 @@
         }
 
     }
+
+    .mega-menu::before {
+        left: 49%;
+    }
+
+
 
     .menu-item:hover .mega-menu {
         opacity: 1;
