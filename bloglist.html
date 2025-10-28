@@ -30,6 +30,7 @@
         <img src="./images/logo/destination.png" alt="logo-loading" />
       </div>
     </div>
+    <!-- Header -->
     <header id="header" class="header style-1">
       <div class="container">
         <div class="header-wrap relative w-full">
@@ -190,9 +191,19 @@
 
                 <li class="login">
                   <span class="icon icon-user"></span>
-                  <a href="#modalLogin">Login</a>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalLogin"
+                    >Login</a
+                  >
                   /
-                  <a href="#modalRegister">Register</a>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalRegister"
+                    >Register</a
+                  >
                 </li>
               </ul>
             </div>
@@ -946,6 +957,7 @@
       </div>
     </div>
     <!-- End Blog List -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="top-footer">
         <div class="container">
@@ -1158,6 +1170,188 @@
         </div>
       </div>
     </footer>
+    <!-- Login -->
+    <div
+      class="modal modal-account fade"
+      id="modalLogin"
+      aria-modal="true"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <div class="banner-account">
+              <img src="images/backgronud/bg-login.png" alt="banner" />
+              <img
+                src="images/logo/logo-3.png"
+                alt="logo"
+                class="logo-overlay"
+              />
+            </div>
+            <form class="form-account">
+              <div class="title-box">
+                <h1>Login</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+              <div class="box">
+                <fieldset class="box-fieldset">
+                  <label>Email</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/mail.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your email"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="box-fieldset">
+                  <label>Password</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/icon-lock.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your password"
+                    />
+                  </div>
+                  <div class="text-forgot text-end">
+                    <a href="#">Forgot password</a>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="box box-btn">
+                <a href="#" class="tf-btn primary w-100">Login</a>
+                <div class="text text-center">
+                  Don’t you have an account?
+                  <a
+                    href="#modalRegister"
+                    data-bs-toggle="modal"
+                    class="text-primary"
+                    >Register</a
+                  >
+                </div>
+              </div>
+              <p class="box text-center caption-2">or login with</p>
+              <div class="group-btn">
+                <a href="#" class="btn-social">
+                  <img src="images/icons/gg.png" alt="img" />
+                  Google
+                </a>
+                <a href="#" class="btn-social">
+                  <img src="images/icons/fb.png" alt="img" />
+                  Facebook
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register -->
+    <div class="modal modal-account fade" id="modalRegister">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <div class="banner-account">
+              <img src="images/backgronud/bg-register.png" alt="banner" />
+              <img
+                src="images/logo/logo-3.png"
+                alt="logo"
+                class="logo-overlay"
+              />
+            </div>
+            <form class="form-account">
+              <div class="title-box">
+                <h1>Register</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+              <div class="box">
+                <fieldset class="box-fieldset">
+                  <label>Email address</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/mail.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email address"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="box-fieldset">
+                  <label>Password</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/icon-lock.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Your password"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="box-fieldset">
+                  <label>Confirm password</label>
+                  <div class="ip-field">
+                    <img
+                      src="images/icons/icon-lock.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Confirm password"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+              <div class="box box-btn">
+                <a href="dashboard.html" class="tf-btn primary w-100"
+                  >Sign Up</a
+                >
+                <div class="text text-center">
+                  Don’t you have an account?
+                  <a
+                    href="#modalLogin"
+                    data-bs-toggle="modal"
+                    class="text-primary"
+                    >Sign In</a
+                  >
+                </div>
+              </div>
+              <p class="box text-center caption-2">or login with</p>
+              <div class="group-btn">
+                <a href="#" class="btn-social">
+                  <img src="images/icons/gg.png" alt="img" />Google
+                </a>
+                <a href="#" class="btn-social">
+                  <img src="images/icons/fb.png" alt="img" />Facebook
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Menu Bottom -->
     <div class="tf-toolbar-bottom">
       <ul class="toolbar-list flex-center">
         <li class="toolbar-item active">
