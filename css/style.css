@@ -895,6 +895,7 @@
   position: absolute;
   width: 70px;
   height: 70px;
+  pointer-events: none;
   top: -50%;
   background: var(--primary-color);
   border-radius: 50%;

@@ -169,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelectorAll(".toolbar-item");
 
   function activeLink(e) {
-    e.preventDefault();
     list.forEach((item) => item.classList.remove("active"));
     this.classList.add("active");
   }
