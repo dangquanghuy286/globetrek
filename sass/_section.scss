@@ -75,8 +75,141 @@
             -ms-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
-
-
         }
+    }
+}
+
+// =============Modal Account=================
+.modal-account .modal-dialog .modal-content {
+    border-radius: 16px;
+    border: 0;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.flat-account {
+    display: flex;
+
+    .banner-account {
+        max-width: 380px;
+        width: 100%;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .form-account {
+        flex-grow: 1;
+        padding: 40px;
+
+        .box {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .title-box {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+                font-size: 24px;
+                cursor: pointer;
+
+            }
+        }
+
+        .box-fieldset {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            label {
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+
+            .text-forgot {
+                margin-top: 18px;
+                color: var(--primary-color);
+            }
+        }
+
+        .ip-field {
+            position: relative;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(77%) sepia(7%) saturate(117%) hue-rotate(60deg) brightness(92%) contrast(83%);
+            }
+
+            .icon {
+                position: absolute;
+                left: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+            }
+
+            input {
+                padding-left: 46px;
+            }
+        }
+    }
+
+    .box-btn {
+        .text {
+            margin-top: 18px;
+        }
+    }
+
+    .close-modal {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+        background-color: var(--input-color);
+        color: var(--primary-color);
+        transform: rotate(90deg);
+    }
+
+    .group-btn {
+        display: flex;
+        gap: 10px;
+
+        .btn-social {
+            width: 50%;
+            font-weight: 600;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px;
+            border: 1px solid var(--stoke-color);
+            border-radius: 16px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                border-color: var(--primary-color);
+            }
+        }
+
     }
 }

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
+    <link href="css/boostrap.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/favicon.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png" />
@@ -191,7 +191,12 @@
 
                 <li class="login">
                   <span class="icon icon-user"></span>
-                  <a href="#modalLogin">Login</a>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalLogin"
+                    >Login</a
+                  >
                   /
                   <a href="#modalRegister">Register</a>
                 </li>
@@ -808,6 +813,88 @@
         </div>
       </div>
     </footer>
+    <div
+      class="modal modal-account fade"
+      id="modalLogin"
+      aria-modal="true"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <div class="banner-account">
+              <img src="images/backgronud/bg-login.png" alt="banner" />
+            </div>
+            <form class="form-account">
+              <div class="title-box">
+                <h1>Login</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+              <div class="box">
+                <fieldset class="box-fieldset">
+                  <label>Email</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/mail.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your email"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="box-fieldset">
+                  <label>Password</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/icon-lock.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your password"
+                    />
+                  </div>
+                  <div class="text-forgot text-end">
+                    <a href="#">Forgot password</a>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="box box-btn">
+                <a href="#" class="tf-btn primary w-100">Login</a>
+                <div class="text text-center">
+                  Don’t you have an account?
+                  <a
+                    href="#modalRegister"
+                    data-bs-toggle="modal"
+                    class="text-primary"
+                    >Register</a
+                  >
+                </div>
+              </div>
+              <p class="box text-center caption-2">or login with</p>
+              <div class="group-btn">
+                <a href="#" class="btn-social">
+                  <img src="images/icons/gg.png" alt="img" />
+                  Google
+                </a>
+                <a href="#" class="btn-social">
+                  <img src="images/icons/fb.png" alt="img" />
+                  Facebook
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="tf-toolbar-bottom">
       <ul class="toolbar-list flex-center">
         <li class="toolbar-item active">
@@ -859,6 +946,7 @@
     </button>
 
     <!-- Load thư viện  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- WOW.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

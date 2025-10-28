@@ -112,7 +112,7 @@ section {
 
 body {
 
-    font-family: $font-main;
+    font-family: $font-main !important;
     font-size: 100%;
     font-style: inherit;
     font-weight: inherit;
@@ -153,7 +153,7 @@ ol,
 ul {
     list-style: none !important;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
 
 }
 
@@ -199,7 +199,7 @@ textarea {
 
 /* Anchor default */
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: inherit;
 }
 
@@ -371,6 +371,8 @@ h6 {
     text-rendering: optimizeLegibility;
     color: var(--heading-color);
     font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -395,7 +397,7 @@ h4 {
 }
 
 h5 {
-    line-height: 100%;
+    line-height: 1 !important;
     font-size: 18px;
 }
 
@@ -1509,9 +1511,7 @@ h5 {
     display: inline-flex;
 }
 
-.d-flex {
-    display: flex;
-}
+
 
 .d-grid {
     display: grid;
