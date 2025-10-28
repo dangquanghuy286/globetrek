@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :root {
   --primary-color: #DCA546;
-  --secondary-color: #FFF8DC;
-  --three-color: #fdedb2;
+  --secondary-color: #FDF8F1;
+  --three-color: #fceebc;
   --four-color: #fdf8f1;
   --quote-color: #F7F7F6;
   --white: #FFFFFF;
@@ -653,7 +653,7 @@
   border-radius: 16px;
 }
 .mobile-menu .inner-menu .nav-item .mb-sub-menu li {
-  padding: 5px;
+  padding: 5px 10px;
 }
 .mobile-menu .inner-menu .nav-item .mb-sub-menu .sub-link {
   padding: 8px 0;
