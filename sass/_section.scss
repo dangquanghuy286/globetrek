@@ -76,6 +76,38 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
         }
+
+        .group-meta {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 5;
+
+            .tf-btn {
+                padding: 14px 24px;
+                background-color: var(--border-header);
+                border: var(--border-header);
+                backdrop-filter: blur(4px);
+                color: var(--white);
+                transition: all 0.3s ease;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: var(--white);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -222,5 +254,89 @@
             }
         }
 
+    }
+}
+
+
+
+.tf-single {
+    .meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        .inner-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+
+            .rate {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                font-size: 14px;
+
+                .rating {
+                    .icon {
+                        font-size: 14px;
+                    }
+                }
+
+                .rating-text {
+                    color: var(--heading-color);
+                    font-weight: 700;
+                }
+
+                .review {
+                    color: var(--place-holder);
+                    font-weight: 400;
+                }
+            }
+
+            .destination {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                span {
+                    font-size: 14px;
+                    line-height: 140%;
+                    font-weight: 400;
+                    color: var(--text-color);
+                }
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+
+
+            }
+        }
+
+        .inner-right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+
+            .action-btn {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 100%;
+                color: var(--text-color);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
     }
 }

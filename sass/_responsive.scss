@@ -41,7 +41,6 @@
 
 }
 
-@media (max-width: 1023px) {}
 
 @media (max-width: 991px) {
    .header {
@@ -103,7 +102,33 @@
          grid-column: span 2;
       }
 
+      .destination-post {
+         .group-meta {
+            left: 12px !important;
 
+            .tf-btn {
+               padding: 10px !important;
+               font-size: 12px;
+            }
+         }
+      }
+
+   }
+
+   .tf-single {
+      h1 {
+         font-size: 30px;
+      }
+
+      .meta {
+         flex-direction: column;
+         align-items: flex-start !important;
+         justify-content: flex-start !important;
+
+         .inner-left {
+            gap: 12px !important;
+         }
+      }
    }
 
    .flat-account .banner-account {
@@ -166,6 +191,22 @@
       margin-bottom: 70px;
    }
 
+
+   .tf-single {
+      h1 {
+         font-size: 20px;
+      }
+
+      .meta {
+         .inner-left {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            gap: 12px !important;
+         }
+      }
+   }
+
    .backtotop {
       bottom: 100px;
       right: 10px;
@@ -223,6 +264,9 @@
          grid-column: span 3;
       }
 
+      .destination-post {
+         .group-meta {}
+      }
 
    }
 
