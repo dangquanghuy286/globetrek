@@ -4164,7 +4164,7 @@ h5 {
   }
 }
 @media (max-width: 425px) {
-  .header .wrap-login-menu .login {
+  .header .wrap-login-menu .login span {
     display: none;
   }
   .tf-toolbar-bottom {
@@ -4346,6 +4346,9 @@ h5 {
 .flat-account .form-account .box-fieldset .text-forgot {
   margin-top: 18px;
   color: var(--primary-color);
+}
+.flat-account .form-account .box-fieldset .text-forgot:hover {
+  text-decoration: underline;
 }
 .flat-account .form-account .ip-field {
   position: relative;

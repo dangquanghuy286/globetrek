@@ -179,6 +179,10 @@
             .text-forgot {
                 margin-top: 18px;
                 color: var(--primary-color);
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
 

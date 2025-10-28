@@ -264,9 +264,7 @@
          grid-column: span 3;
       }
 
-      .destination-post {
-         .group-meta {}
-      }
+
 
    }
 
@@ -279,7 +277,9 @@
    .header {
       .wrap-login-menu {
          .login {
-            display: none;
+            span {
+               display: none;
+            }
          }
       }
    }
