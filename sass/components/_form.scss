@@ -1,3 +1,4 @@
+// ===============Send email=================
 .tf-sendEmail {
     p {
         color: var(--place-holder);
@@ -105,4 +106,53 @@
 
     }
 
+}
+
+// ==============Form search================
+.tf-formSearch {
+
+
+
+    .search-box {
+        width: 100%;
+        padding: 19px 0 16px 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        position: absolute;
+
+
+        .search-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .search-inner {
+                width: 236px;
+                padding: 24px;
+                position: relative;
+                gap: 8px;
+                border: none;
+                background: var(--white);
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                .title-field {
+                    color: var(--heading-color);
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 100%;
+
+                }
+
+            }
+        }
+    }
 }

@@ -24,6 +24,10 @@
 
     }
 
+    .header-ct-left {
+        padding: 14px 0;
+    }
+
     .header-ct-center {
         .inner-center {
             display: flex;
@@ -55,7 +59,7 @@
 
     .menu-item {
         color: var(--heading-color);
-        padding: 16px 0;
+        padding: 33px 0;
         position: relative;
 
         &:hover>a .icon {
@@ -98,7 +102,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: 12px;
+        bottom: 30px;
         width: 0;
         height: 2px;
         background-color: var(--primary-color);
@@ -133,7 +137,7 @@
 
     .header-wrap {
         align-items: center;
-        padding: 15px 0;
+
     }
 }
 
@@ -169,7 +173,7 @@
     .sub-menu,
     .mega-menu {
         position: absolute;
-        top: calc(100% + 28px);
+        top: calc(100% + 14px);
         background: var(--white);
         border-radius: 12px;
         opacity: 0;
@@ -276,9 +280,10 @@
 .header.scrolled {
     position: fixed;
     background: var(--white);
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: 0px 4px 18px 0px #00000014;
     border-bottom: 1px solid var(--stoke-color);
     animation: slideDown 0.3s ease;
+    @include transition3;
 }
 
 

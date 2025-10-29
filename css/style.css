@@ -348,6 +348,42 @@
   visibility: visible;
 }
 
+.tf-formSearch .search-box {
+  width: 100%;
+  padding: 19px 0 16px 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  position: absolute;
+}
+.tf-formSearch .search-box .search-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tf-formSearch .search-box .search-group .search-inner {
+  width: 236px;
+  padding: 24px;
+  position: relative;
+  gap: 8px;
+  border: none;
+  background: var(--white);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tf-formSearch .search-box .search-group .search-inner .title-field {
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -400,6 +436,9 @@
   flex-grow: 1;
   height: 100%;
 }
+.header .header-ct-left {
+  padding: 14px 0;
+}
 .header .header-ct-center .inner-center {
   display: flex;
   align-items: center;
@@ -422,7 +461,7 @@
 }
 .header .menu-item {
   color: var(--heading-color);
-  padding: 16px 0;
+  padding: 33px 0;
   position: relative;
 }
 .header .menu-item:hover > a .icon {
@@ -460,7 +499,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 12px;
+  bottom: 30px;
   width: 0;
   height: 2px;
   background-color: var(--primary-color);
@@ -493,7 +532,6 @@
 }
 .style-1 .header-wrap {
   align-items: center;
-  padding: 15px 0;
 }
 
 .style-2 {
@@ -525,7 +563,7 @@
 .menu-nav .sub-menu,
 .menu-nav .mega-menu {
   position: absolute;
-  top: calc(100% + 28px);
+  top: calc(100% + 14px);
   background: var(--white);
   border-radius: 12px;
   opacity: 0;
@@ -616,9 +654,14 @@
 .header.scrolled {
   position: fixed;
   background: var(--white);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.0784313725);
   border-bottom: 1px solid var(--stoke-color);
   animation: slideDown 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .mobile-menu {
@@ -2089,6 +2132,7 @@
 .hero {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 .slider-default {

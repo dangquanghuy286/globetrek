@@ -43,13 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const heroSwiper = document.querySelector(".mySwiper");
   if (heroSwiper) {
-    // Lấy dữ liệu từ data attribute
     const preview = parseInt(heroSwiper.dataset.preview) || 1;
     const autoplay = heroSwiper.dataset.autoplay === "true";
     const loop = heroSwiper.dataset.loop === "true";
     const speed = parseInt(heroSwiper.dataset.speed) || 1000;
 
-    // Khởi tạo Swiper
     new Swiper(".mySwiper", {
       slidesPerView: preview,
       spaceBetween: 0,
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       speed: speed,
       autoplay: autoplay
         ? {
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false,
           }
         : false,

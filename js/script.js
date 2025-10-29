@@ -4,20 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const border = document.querySelector(".border-progress");
 
   window.addEventListener("scroll", () => {
-    // Đã cuộn
+    // Scrolled
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    //Tổng số px có thể cuộn
+    //total px
     const docHeight =
       document.documentElement.scrollHeight - window.innerHeight;
-    //% trang đã cuộn
+    //percent page scrolled
     const scrollPercent = (scrollTop / docHeight) * 100;
-    // Đổi % sang độ
+    // convert percent to deg
     const borderAngle = (scrollPercent / 100) * 360;
 
-    // Góc quay border
     border.style.setProperty("--progress-angle", `${borderAngle}deg`);
 
-    // Hiển thị ẩn bật nút
     if (scrollTop > 100) {
       gotop.classList.add("show");
     } else {
@@ -37,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const breadcrumbContainer = document.getElementById("breadcrumb");
   if (!breadcrumbContainer) return;
 
-  // Lay dia chi path ,chia chuoi va loc cac phan tu rong
+  // get path
   const path = window.location.pathname;
   const parts = path.split("/").filter(Boolean);
 
-  // Hàm viết hoa chữ cái đầu tiên
+  // To capital
   const capitalizeWords = (str) => {
     return str
       .split(" ")
@@ -88,14 +86,13 @@ const menu = document.querySelector(".mobile-menu");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector(".close-btn");
 
-// Khi click vào nút mở menu
 toggleBtn.addEventListener("click", () => {
   menu.classList.add("active");
   overlay.classList.add("active");
   closeBtn.classList.add("active");
 });
 
-// Khi click overlay hoặc nút đóng thì đóng menu
+// ischecked overplay
 [overlay, closeBtn].forEach((el) => {
   el.addEventListener("click", () => {
     menu.classList.remove("active");
@@ -183,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const likeBtn = action.querySelector(".like-btn");
     const unlikeBtn = action.querySelector(".unlike-btn");
 
-    // Kiểm tra tồn tại rồi mới gắn sự kiện
+    // is checked variable value
     if (likeBtn && unlikeBtn) {
       likeBtn.addEventListener("click", () => {
         likeBtn.classList.toggle("active");
@@ -207,16 +204,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ".menu-nav .nav-link, .sub-menu a, .mega-menu a"
   );
 
-  // Xóa active cũ
+  //  Remove active
   navLinks.forEach((i) => i.classList.remove("active"));
   document
     .querySelectorAll(".menu-item")
     .forEach((item) => item.classList.remove("active"));
 
-  // Lấy đường dẫn hiện tại
+  // Get current pạt
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
-  // Active đúng link theo URL
+  // Active for ref
   navLinks.forEach((link) => {
     const href = (link.getAttribute("href") || "").split("/").pop();
     if (href === currentPath) {
