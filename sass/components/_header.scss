@@ -90,7 +90,7 @@
     .nav-link {
         height: 100%;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
 
     }
 
@@ -98,7 +98,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: 10px;
+        bottom: 12px;
         width: 0;
         height: 2px;
         background-color: var(--primary-color);
@@ -110,6 +110,10 @@
     .sub-menu a.active,
     .mega-menu a.active {
         color: var(--primary-color) !important;
+
+        .icon {
+            rotate: calc(180deg);
+        }
     }
 
     .menu-item.active>.nav-link::before,
@@ -125,7 +129,7 @@
 .style-1 {
     background: transparent;
     box-shadow: none;
-    border-bottom: 1px solid var(--stoke-color);
+    border-bottom: 1px solid var(--border-header);
 
     .header-wrap {
         align-items: center;
@@ -136,7 +140,7 @@
 .style-2 {
     background: transparent;
     box-shadow: none;
-    border-bottom: 1px solid var(--stoke-color);
+    border-bottom: 1px solid var(--border-header);
 
     .header-wrap {
         display: flex;
