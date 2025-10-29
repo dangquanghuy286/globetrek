@@ -3,9 +3,6 @@
 .header {
     width: 100%;
     z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
     font-weight: 500;
     line-height: 140%;
     font-size: 16px;
@@ -24,9 +21,7 @@
 
     }
 
-    .header-ct-left {
-        padding: 14px 0;
-    }
+
 
     .header-ct-center {
         .inner-center {
@@ -139,9 +134,15 @@
     box-shadow: none;
     border-bottom: 1px solid var(--border-header);
 
+
+
     .header-wrap {
         align-items: center;
+        display: flex;
 
+        .header-ct-left {
+            padding: 14px 0;
+        }
     }
 }
 
@@ -153,7 +154,20 @@
     .header-wrap {
         display: flex;
         align-items: center;
-        padding: 34px 0;
+
+        .menu-nav {
+            .menu-item {
+                padding: 15px 0;
+            }
+        }
+
+        .header-ct-left {
+            padding: 28px 0;
+        }
+    }
+
+    .nav-link::before {
+        bottom: 14px;
     }
 
     .list-nav {
@@ -283,9 +297,11 @@
 
 .header.scrolled {
     position: fixed;
+    top: 0;
+    left: 0;
     background: var(--white);
     box-shadow: 0px 4px 18px 0px #00000014;
-    border-bottom: 1px solid var(--stoke-color);
+    border-bottom: 1px solid var(--border-header);
     animation: slideDown 0.3s ease;
     @include transition3;
 }

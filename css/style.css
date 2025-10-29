@@ -21,7 +21,7 @@
   --heading-color: #24272C;
   --heart-color: #FF4F23;
   --background-black: #171816;
-  --background-dark: #0000004D;
+  --background-dark: #FFFFFF0D;
 }
 
 .hover-img .img-style {
@@ -418,9 +418,6 @@
 .header {
   width: 100%;
   z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
   font-weight: 500;
   line-height: 140%;
   font-size: 16px;
@@ -435,9 +432,6 @@
 .header .header-ct-right {
   flex-grow: 1;
   height: 100%;
-}
-.header .header-ct-left {
-  padding: 14px 0;
 }
 .header .header-ct-center .inner-center {
   display: flex;
@@ -535,6 +529,10 @@
 }
 .style-1 .header-wrap {
   align-items: center;
+  display: flex;
+}
+.style-1 .header-wrap .header-ct-left {
+  padding: 14px 0;
 }
 
 .style-2 {
@@ -545,7 +543,15 @@
 .style-2 .header-wrap {
   display: flex;
   align-items: center;
-  padding: 34px 0;
+}
+.style-2 .header-wrap .menu-nav .menu-item {
+  padding: 15px 0;
+}
+.style-2 .header-wrap .header-ct-left {
+  padding: 28px 0;
+}
+.style-2 .nav-link::before {
+  bottom: 14px;
 }
 .style-2 .list-nav {
   border: 1px solid var(--border-header);
@@ -656,9 +662,11 @@
 
 .header.scrolled {
   position: fixed;
+  top: 0;
+  left: 0;
   background: var(--white);
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.0784313725);
-  border-bottom: 1px solid var(--stoke-color);
+  border-bottom: 1px solid var(--border-header);
   animation: slideDown 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1467,7 +1475,7 @@
 }
 .flat-latest-hero {
   padding: 123px 0;
-  margin: 100px 18px 0 18px;
+  margin: 0 18px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
