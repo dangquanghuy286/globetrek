@@ -128,6 +128,10 @@
     .menu-item:hover>.nav-link::before {
         width: 100%;
     }
+
+    .menu-item:hover>.nav-link {
+        color: var(--primary-color);
+    }
 }
 
 .style-1 {

@@ -524,6 +524,9 @@
 .header .menu-item:hover > .nav-link::before {
   width: 100%;
 }
+.header .menu-item:hover > .nav-link {
+  color: var(--primary-color);
+}
 
 .style-1 {
   background: transparent;
