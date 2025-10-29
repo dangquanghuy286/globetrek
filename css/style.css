@@ -466,6 +466,16 @@
   background-color: var(--primary-color);
   transition: width 0.8s ease;
 }
+.header .menu-item.active > .nav-link,
+.header .menu-nav .nav-link.active,
+.header .sub-menu a.active,
+.header .mega-menu a.active {
+  color: var(--primary-color) !important;
+}
+.header .menu-item.active > .nav-link::before,
+.header .menu-nav .nav-link.active::before {
+  width: 100% !important;
+}
 .header .menu-item:hover > .nav-link::before {
   width: 100%;
 }

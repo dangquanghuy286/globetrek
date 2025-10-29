@@ -91,6 +91,7 @@
         height: 100%;
         font-size: 16px;
         font-weight: 600;
+
     }
 
     .nav-link::before {
@@ -102,6 +103,18 @@
         height: 2px;
         background-color: var(--primary-color);
         transition: width 0.8s ease;
+    }
+
+    .menu-item.active>.nav-link,
+    .menu-nav .nav-link.active,
+    .sub-menu a.active,
+    .mega-menu a.active {
+        color: var(--primary-color) !important;
+    }
+
+    .menu-item.active>.nav-link::before,
+    .menu-nav .nav-link.active::before {
+        width: 100% !important;
     }
 
     .menu-item:hover>.nav-link::before {

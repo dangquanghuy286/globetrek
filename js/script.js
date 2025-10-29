@@ -201,3 +201,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// ====================Active Nav menu=========================
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(
+    ".menu-nav .nav-link, .sub-menu a, .mega-menu a"
+  );
+
+  // Xóa active cũ
+  navLinks.forEach((i) => i.classList.remove("active"));
+  document
+    .querySelectorAll(".menu-item")
+    .forEach((item) => item.classList.remove("active"));
+
+  // Lấy đường dẫn hiện tại
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  // Active đúng link theo URL
+  navLinks.forEach((link) => {
+    const href = (link.getAttribute("href") || "").split("/").pop();
+    if (href === currentPath) {
+      link.classList.add("active");
+      const parentMenu = link.closest(".menu-item");
+      if (parentMenu) parentMenu.classList.add("active");
+    }
+  });
+});
