@@ -68,25 +68,7 @@
             transform: rotate(180deg);
         }
 
-        .sub-item {
-            @include transition3;
-            cursor: pointer;
 
-            &:hover {
-
-                background-color: var(--primary-color);
-
-                a {
-                    color: var(--white);
-
-                    &.active {
-                        color: var(--white) !important;
-                    }
-                }
-
-
-            }
-        }
 
         a {
             display: flex;
@@ -242,10 +224,29 @@
         padding: 8px 0 !important;
 
         .sub-item {
-            padding: 16px 24px;
+            @include transition3;
+            cursor: pointer;
+
+            a {
+                padding: 16px 24px;
+
+                &:hover {
+
+                    background-color: var(--primary-color);
+
+
+                    color: var(--white);
+
+                    &.active {
+                        color: var(--white) !important;
+                    }
+                }
+            }
 
 
         }
+
+
     }
 
     .sub-menu::before {

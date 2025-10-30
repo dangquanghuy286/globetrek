@@ -46,7 +46,7 @@
   z-index: 1;
 }
 .hover-img:hover .img-style img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .hover-img:hover .img-style::after {
   background: rgba(0, 0, 0, 0.4);
@@ -480,23 +480,6 @@
 .header .menu-item:hover > a .icon {
   transform: rotate(180deg);
 }
-.header .menu-item .sub-item {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.header .menu-item .sub-item:hover {
-  background-color: var(--primary-color);
-}
-.header .menu-item .sub-item:hover a {
-  color: var(--white);
-}
-.header .menu-item .sub-item:hover a.active {
-  color: var(--white) !important;
-}
 .header .menu-item a {
   display: flex;
   align-items: center;
@@ -629,7 +612,22 @@
   padding: 8px 0 !important;
 }
 .menu-nav .sub-menu .sub-item {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.menu-nav .sub-menu .sub-item a {
   padding: 16px 24px;
+}
+.menu-nav .sub-menu .sub-item a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.menu-nav .sub-menu .sub-item a:hover.active {
+  color: var(--white) !important;
 }
 .menu-nav .sub-menu::before {
   left: 20px;
