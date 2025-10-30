@@ -13,14 +13,7 @@
             transition: transform 1.5s cubic-bezier(0, 0, 0.44, 1.18);
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0);
-            transition: background 0.4s ease;
-            z-index: 1;
-        }
+
     }
 
     &:hover {
