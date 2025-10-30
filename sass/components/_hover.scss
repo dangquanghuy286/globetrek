@@ -11,16 +11,29 @@
             height: 100%;
             object-fit: cover;
             transition: transform 1.5s cubic-bezier(0, 0, 0.44, 1.18);
+        }
 
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.4s ease;
+            z-index: 1;
         }
     }
 
     &:hover {
-        img {
-            transform: scale(1.05);
-            filter: brightness(60%);
-        }
+        .img-style {
+            img {
+                transform: scale(1.05);
+            }
 
+            &::after {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
     }
 
     &.not-overlay {
@@ -42,8 +55,7 @@
         .img-hv {
             width: 100%;
             object-fit: cover;
-            transition: all 1s cubic-bezier(0.3, 1, 0.35, 1) 0s;
-            transition: transform 500ms ease;
+            transition: all 1s cubic-bezier(0.3, 1, 0.35, 1), transform 0.5s ease;
         }
     }
 }
