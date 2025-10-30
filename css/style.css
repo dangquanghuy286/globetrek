@@ -461,11 +461,24 @@
   justify-content: center;
   gap: 30px;
 }
+.header .header-ct-right .wrap-login-menu ul li {
+  position: relative;
+}
 .header .header-ct-right .wrap-login-menu ul a:hover {
   color: var(--primary-color);
 }
 .header .header-ct-right .wrap-login-menu ul .icon {
   font-size: 24px;
+}
+.header .header-ct-right .wrap-login-menu ul .heart::after,
+.header .header-ct-right .wrap-login-menu ul .search::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  background-color: var(--stoke-color);
+  top: 5px;
+  bottom: 5px;
+  right: -15px;
 }
 .header .header-ct-right .wrap-login-menu ul .login {
   display: flex;
