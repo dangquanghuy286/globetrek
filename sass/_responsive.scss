@@ -167,7 +167,7 @@
 @media (max-width: 575px) {
    .header {
       .header-ct-right {
-         gap: 5px;
+         gap: 10px;
 
          .wrap-login-menu {
 
@@ -274,11 +274,24 @@
 }
 
 @media (max-width: 425px) {
+
    .header {
       .wrap-login-menu {
          .login {
             span {
                display: none;
+            }
+         }
+      }
+
+      .header-ct-right {
+         gap: 5px;
+
+         .wrap-login-menu {
+            ul {
+               .login {
+                  gap: 3px;
+               }
             }
          }
       }

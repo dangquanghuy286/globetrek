@@ -4298,7 +4298,7 @@ h5 {
 }
 @media (max-width: 575px) {
   .header .header-ct-right {
-    gap: 5px;
+    gap: 10px;
   }
   .header .header-ct-right .wrap-login-menu .heart,
   .header .header-ct-right .wrap-login-menu .search {
@@ -4361,6 +4361,12 @@ h5 {
 @media (max-width: 425px) {
   .header .wrap-login-menu .login span {
     display: none;
+  }
+  .header .header-ct-right {
+    gap: 5px;
+  }
+  .header .header-ct-right .wrap-login-menu ul .login {
+    gap: 3px;
   }
   .tf-toolbar-bottom {
     padding: 0;
