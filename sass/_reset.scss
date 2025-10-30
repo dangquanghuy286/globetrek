@@ -1,5 +1,23 @@
 @use "./abstracts/index" as *;
 
+::-webkit-scrollbar {
+    width: 6px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--three-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+    transform: scaleX(1.2);
+}
+
+
+
+
 /* --------------------------------------------------------------
    CSS RESET (Eric Meyer’s Reset + HTML5 elements)
    -------------------------------------------------------------- */
