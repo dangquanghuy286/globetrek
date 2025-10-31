@@ -436,11 +436,9 @@
 .tf-formSearch .tf-search-form-inner .search-box .search-group .search-inner input,
 .tf-formSearch .tf-search-form-inner .search-box .search-group .search-inner select {
   border: none;
-  outline: none;
   font-size: 14px;
   width: 100%;
   color: var(--text-color);
-  background: transparent;
   padding: 0 !important;
   border-radius: 0px !important;
 }
@@ -558,29 +556,6 @@
   align-items: center;
   gap: 8px;
 }
-.header .menu-item {
-  color: var(--heading-color);
-  padding: 33px 0;
-  position: relative;
-}
-.header .menu-item:hover > a .icon {
-  transform: rotate(180deg);
-}
-.header .menu-item a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--heading-color);
-}
-.header .menu-item .icon {
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
-.header .menu-item:hover > .sub-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
 .header .nav-link {
   height: 100%;
   font-size: 16px;
@@ -595,6 +570,14 @@
   height: 2px;
   background-color: var(--primary-color);
   transition: width 0.8s ease;
+}
+.header .menu-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
 }
 .header .menu-item.active > .nav-link,
 .header .menu-nav .nav-link.active,
@@ -658,16 +641,37 @@
   padding: 0 5px;
 }
 
-.menu-nav {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
-  align-items: center;
-  gap: 32px;
-  white-space: nowrap;
+.menu-item {
+  color: var(--heading-color);
+  padding: 33px 0;
+  position: relative;
 }
-.menu-nav .sub-menu,
-.menu-nav .mega-menu {
+.menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--heading-color);
+}
+.menu-item .icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+.menu-item:hover > a .icon {
+  transform: rotate(180deg);
+}
+.menu-item:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.menu-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.sub-menu,
+.mega-menu {
   position: absolute;
   top: calc(100% + 14px);
   background: var(--white);
@@ -682,8 +686,9 @@
   z-index: 999;
   visibility: hidden;
 }
-.menu-nav .mega-menu::before,
-.menu-nav .sub-menu::before {
+
+.sub-menu::before,
+.mega-menu::before {
   content: "";
   position: absolute;
   border-top: 15px solid var(--white);
@@ -691,13 +696,17 @@
   transform: rotate(45deg);
   bottom: calc(100% - 8px);
 }
-.menu-nav .sub-menu {
+
+.sub-menu {
   left: 0;
   min-width: 280px;
   list-style: none;
   padding: 8px 0 !important;
 }
-.menu-nav .sub-menu .sub-item {
+.sub-menu::before {
+  left: 20px;
+}
+.sub-menu .sub-item {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -705,20 +714,18 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.menu-nav .sub-menu .sub-item a {
+.sub-menu .sub-item a {
   padding: 16px 24px;
 }
-.menu-nav .sub-menu .sub-item a:hover {
+.sub-menu .sub-item a:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
-.menu-nav .sub-menu .sub-item a:hover.active {
+.sub-menu .sub-item a:hover.active {
   color: var(--white) !important;
 }
-.menu-nav .sub-menu::before {
-  left: 20px;
-}
-.menu-nav .mega-menu {
+
+.mega-menu {
   left: 215px;
   transform: translateX(-50%) translateY(12px);
   width: 1280px;
@@ -727,31 +734,26 @@
   grid-template-columns: repeat(4, 1fr);
   padding: 32px 0px;
 }
-.menu-nav .mega-menu .mega-title {
+.mega-menu::before {
+  left: 35%;
+}
+.mega-menu .mega-title {
   margin-bottom: 16px;
   padding: 0 24px;
 }
-.menu-nav .mega-menu .mega-col ul li:hover {
+.mega-menu .mega-col ul li:hover {
   background-color: var(--primary-color);
 }
-.menu-nav .mega-menu .mega-col ul li:hover a {
+.mega-menu .mega-col ul li:hover a {
   color: var(--white);
 }
-.menu-nav .mega-menu .mega-col ul li:hover a.active {
+.mega-menu .mega-col ul li:hover a.active {
   color: var(--white) !important;
 }
-.menu-nav .mega-menu .mega-col ul li a {
+.mega-menu .mega-col ul li a {
   display: block;
   padding: 16px 24px;
   color: var(--heading-color);
-}
-.menu-nav .mega-menu::before {
-  left: 35%;
-}
-.menu-nav .menu-item:hover .mega-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
 }
 
 .toggle-mobile {
@@ -2261,9 +2263,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-}
-.slider-default .swiper-slide {
-  width: 100%;
 }
 .slider-default .swiper-slide.home-1 .box-banner {
   background-size: cover;

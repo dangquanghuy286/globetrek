@@ -185,6 +185,8 @@
                         .default-title {
                             font-size: 14px;
                             line-height: 140%;
+
+
                         }
 
                         .icon {
@@ -199,15 +201,14 @@
 
 
 
-
                     input,
                     select {
                         border: none;
-                        outline: none;
+
                         font-size: 14px;
                         width: 100%;
                         color: var(--text-color);
-                        background: transparent;
+
                         padding: 0 !important;
                         border-radius: 0px !important;
                     }
