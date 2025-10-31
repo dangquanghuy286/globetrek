@@ -59,16 +59,26 @@
         color: var(--white);
         border-color: var(--primary-color);
 
-        &:hover {
-            background-color: transparent;
+        &.hover-1:hover {
             color: var(--primary-color);
+            background-color: var(--white);
 
             img {
-                filter: brightness(0) saturate(100%) invert(79%) sepia(80%) saturate(878%) hue-rotate(324deg) brightness(93%) contrast(84%);
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        &.hover-2:hover {
+            color: var(--white);
+            background-color: transparent;
+
+            img {
+                filter: brightness(0) invert(1);
             }
         }
 
         .icon {
+
             color: var(--white);
         }
     }

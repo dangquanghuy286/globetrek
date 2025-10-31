@@ -298,7 +298,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 
-
 textarea,
 input[type="text"],
 input[type="password"],
@@ -327,7 +326,6 @@ input[type="color"] {
     width: 100%;
     background: var(--white);
     color: var(--place-holder);
-    height: 50px;
     font-weight: 400;
     @include transition3;
 

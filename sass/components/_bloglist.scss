@@ -394,7 +394,14 @@
         color: var(--icon-color);
         top: 50%;
         transform: translateY(-50%);
-        left: 18px;
+
+        &.style-1 {
+            left: 18px;
+        }
+
+        &.style-2 {
+            right: 18px;
+        }
     }
 
 
