@@ -41,14 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // =============== Hero Swiper ===========================
 document.addEventListener("DOMContentLoaded", () => {
-  const heroSwiper = document.querySelector(".mySwiper");
-  if (heroSwiper) {
-    const preview = parseInt(heroSwiper.dataset.preview) || 1;
-    const autoplay = heroSwiper.dataset.autoplay === "true";
-    const loop = heroSwiper.dataset.loop === "true";
-    const speed = parseInt(heroSwiper.dataset.speed) || 1000;
+  const heroSwiperEl = document.querySelector(".mySwiper");
+  const indicatorEl = document.querySelector(".slide-number");
 
-    new Swiper(".mySwiper", {
+  if (heroSwiperEl) {
+    const preview = parseInt(heroSwiperEl.dataset.preview) || 1;
+    const autoplay = heroSwiperEl.dataset.autoplay === "true";
+    const loop = heroSwiperEl.dataset.loop === "true";
+    const speed = parseInt(heroSwiperEl.dataset.speed) || 1000;
+
+    const swiper = new Swiper(".mySwiper", {
       slidesPerView: preview,
       spaceBetween: 0,
       loop: loop,
@@ -65,6 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       effect: "fade",
       fadeEffect: { crossFade: true },
+
+      on: {
+        init: function () {
+          updateSlideIndicator(this);
+        },
+        slideChange: function () {
+          updateSlideIndicator(this);
+        },
+      },
     });
+
+    function updateSlideIndicator(swiperInstance) {
+      if (!indicatorEl) return;
+      const current = swiperInstance.realIndex + 1;
+      indicatorEl.textContent = `${current} / 3`;
+    }
   }
 });
