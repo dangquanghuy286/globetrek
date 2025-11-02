@@ -194,7 +194,7 @@
 
                 a {
                     background-color: var(--border-header);
-                    border: var(--border-header);
+                    border: 1px solid var(--border-header);
                     padding: 12px 20px !important;
                     min-width: 150px !important;
 
@@ -206,9 +206,7 @@
                     }
 
                     &:hover {
-                        img {
-                            filter: brightness(0) saturate(100%) invert(68%) sepia(63%) saturate(425%) hue-rotate(357deg) brightness(90%) contrast(91%);
-                        }
+                        border: 1px solid var(--primary-color);
                     }
                 }
 
