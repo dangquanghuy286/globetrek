@@ -344,3 +344,74 @@
         }
     }
 }
+
+// =========Partner============================
+.tf-partner {
+    margin-top: 114px;
+
+    .box-content {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .inner-left {
+            width: 40%;
+
+            span {
+                color: var(--heading-color);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+            }
+
+            ul {
+                li {
+                    .box-icon {
+                        color: var(--heading-color);
+
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.partner {
+    .partners-list {
+        display: flex;
+        gap: 30px;
+        width: max-content;
+        animation: scroll 30s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .partners-item {
+            width: 180px;
+            height: 76px;
+            object-fit: cover;
+            transition: filter 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(63%) sepia(33%) saturate(725%) hue-rotate(359deg) brightness(100%) contrast(94%);
+            }
+        }
+
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
