@@ -371,10 +371,10 @@
                         margin-top: 4px;
                         opacity: 0;
                         box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-
+                        overflow-y: auto;
                         pointer-events: none;
                         position: absolute;
-                        top: calc(100% + 28px);
+                        top: calc(100% + 20px);
                         left: 0px;
                         transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
                         z-index: 99;
@@ -395,7 +395,7 @@
                             opacity: 1;
                             pointer-events: auto;
                             max-height: 400px;
-                            padding: 8px 0 !important;
+                            padding: 5px 0 !important;
 
 
                         }
