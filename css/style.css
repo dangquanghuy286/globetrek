@@ -524,31 +524,21 @@
   margin-top: 4px;
   opacity: 0;
   box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-  overflow: auto;
   pointer-events: none;
   position: absolute;
-  top: calc(100% + 24px);
+  top: calc(100% + 28px);
   left: 0px;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 99;
   width: 100%;
   min-width: 280px;
-  padding: 5px 0;
   font-size: 16px;
-}
-.form-search .inner-group .form-group .group-select .select-items .list::before {
-  content: "";
-  position: absolute;
-  border-top: 15px solid var(--white);
-  border-right: 15px solid transparent;
-  transform: rotate(45deg);
-  bottom: calc(100% - 8px);
 }
 .form-search .inner-group .form-group .group-select .select-items .list.active {
   opacity: 1;
   pointer-events: auto;
   max-height: 400px;
-  padding: 8px 0;
+  padding: 8px 0 !important;
 }
 .form-search .inner-group .form-group .group-select .select-items .list .option {
   list-style: none;
@@ -562,7 +552,7 @@
   padding: 16px 24px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   transition: background-color 0.2s ease;
   color: var(--heading-color);
 }
@@ -597,8 +587,8 @@
 }
 .form-search .inner-group .form-group .group-select .select-items .list .option a .content .country {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 140%;
   color: var(--text-color);
   transition: color 0.2s ease;
 }
