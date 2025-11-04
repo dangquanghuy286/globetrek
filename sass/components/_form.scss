@@ -295,3 +295,200 @@
         }
     }
 }
+
+// ==============Form Select================
+
+.form-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 16px 24px;
+    box-shadow: 0px 4px 26px 0px #42474C14;
+    gap: 48px;
+    flex-direction: row;
+
+
+    .inner-group {
+
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+
+
+        .form-group {
+            padding: 0 24px;
+            border-right: 1px solid var(--stoke-color);
+            position: relative;
+
+            label {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: var(--heading-color);
+
+            }
+
+            input {
+                padding: 0;
+                border: none;
+                border-radius: 0px;
+                font-size: 14px;
+                line-height: 140%;
+            }
+
+            .group-select {
+
+
+                .select-items {
+
+
+                    .current {
+                        font-weight: 400;
+                        line-height: 140%;
+                        font-size: 14px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        white-space: nowrap;
+                        width: 100%;
+                        color: var(--text-color);
+                        position: relative;
+                        cursor: pointer;
+                        gap: 20px;
+
+                        .icon {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .list {
+                        background-color: var(--white);
+                        border-radius: 5px;
+                        box-sizing: border-box;
+                        margin-top: 4px;
+                        opacity: 0;
+                        box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+                        overflow: auto;
+                        pointer-events: none;
+                        position: absolute;
+                        top: calc(100% + 24px);
+                        left: 0px;
+                        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+                        z-index: 99;
+                        width: 100%;
+                        min-width: 280px;
+                        padding: 5px 0;
+                        font-size: 16px;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            border-top: 15px solid var(--white);
+                            border-right: 15px solid transparent;
+                            transform: rotate(45deg);
+                            bottom: calc(100% - 8px);
+                        }
+
+                        &.active {
+                            opacity: 1;
+                            pointer-events: auto;
+                            max-height: 400px;
+                            padding: 8px 0;
+                        }
+
+                        .option {
+                            list-style: none;
+
+                            .selected {
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 100%;
+
+                            }
+
+                            a {
+                                padding: 16px 24px;
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                transition: background-color 0.2s ease;
+                                color: var(--heading-color);
+
+
+
+                                &:hover {
+                                    background-color: var(--primary-color);
+
+                                    .content {
+
+                                        .place,
+                                        .country,
+                                        .type {
+                                            color: var(--white);
+                                        }
+                                    }
+
+                                    img {
+                                        filter: brightness(0) invert(1);
+
+                                    }
+                                }
+
+                                .icon {
+                                    width: 20px;
+                                    height: 20px;
+                                    flex-shrink: 0;
+                                }
+
+                                .content {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 4px;
+
+                                    .place,
+                                    .type {
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        line-height: 100%;
+                                        color: var(--heading-color);
+                                        transition: color 0.2s ease;
+                                    }
+
+                                    .country {
+                                        font-weight: 400;
+                                        font-size: 13px;
+                                        line-height: 1.4;
+                                        color: var(--text-color);
+                                        transition: color 0.2s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-group:first-child {
+            padding-left: 0;
+        }
+
+    }
+
+    .box-btn-filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+
+        .tf-btn {
+            cursor: pointer;
+            padding: 17px;
+            min-width: 54px;
+
+        }
+    }
+}

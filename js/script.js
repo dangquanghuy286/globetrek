@@ -224,3 +224,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // ===================Active Sub Menu=========================
+document.addEventListener("DOMContentLoaded", function () {
+  // Lấy tất cả các select dropdown trong form
+  const dropdowns = document.querySelectorAll(".group-select .select-items");
+
+  dropdowns.forEach((dropdown) => {
+    const current = dropdown.querySelector(".current");
+    const list = dropdown.querySelector(".list");
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+
+    // Khi click vào
+    current?.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // Đóng tất cả dropdown
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) {
+          other.querySelector(".list")?.classList.remove("active");
+          other.querySelector(".dropdown-menu")?.classList.remove("active");
+        }
+      });
+
+      list?.classList.toggle("active");
+      dropdownMenu?.classList.toggle("active");
+    });
+  });
+
+  document.addEventListener("click", () => {
+    dropdowns.forEach((dropdown) => {
+      dropdown.querySelector(".list")?.classList.remove("active");
+      dropdown.querySelector(".dropdown-menu")?.classList.remove("active");
+    });
+  });
+});
