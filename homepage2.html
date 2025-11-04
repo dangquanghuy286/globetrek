@@ -607,7 +607,52 @@
                         </div>
                         <div class="form-group">
                           <label>Date</label>
-                          <input type="date" />
+                          <div class="group-select">
+                            <div class="select-items">
+                              <div class="current">
+                                <input
+                                  type="text"
+                                  class="date-input"
+                                  placeholder="dd/mm/yyyy"
+                                  readonly
+                                />
+                                <img
+                                  src="./images/icons/calendar.svg"
+                                  alt="icon"
+                                />
+
+                                <div class="list">
+                                  <div class="datepicker-header">
+                                    <button type="button" class="prev-month">
+                                      <i class="icon icon-CaretRight"></i>
+                                    </button>
+                                    <div class="datepicker-title">
+                                      November 24
+                                    </div>
+                                    <button type="button" class="next-month">
+                                      <i class="icon icon-CaretLeft"></i>
+                                    </button>
+                                  </div>
+
+                                  <div class="datepicker-weekdays">
+                                    <div class="datepicker-weekday weekend">
+                                      Su
+                                    </div>
+                                    <div class="datepicker-weekday">Mo</div>
+                                    <div class="datepicker-weekday">Tu</div>
+                                    <div class="datepicker-weekday">We</div>
+                                    <div class="datepicker-weekday">Th</div>
+                                    <div class="datepicker-weekday">Fr</div>
+                                    <div class="datepicker-weekday weekend">
+                                      Sa
+                                    </div>
+                                  </div>
+
+                                  <div class="datepicker-days"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="form-group">
                           <label>Tour Type</label>
@@ -647,17 +692,49 @@
                           <label>People</label>
                           <div class="group-select">
                             <div class="select-items">
-                              <span class="current">
-                                2 Adults - 3 children
+                              <span class="current guest-text">
+                                <img
+                                  src="./images/icons/users.svg"
+                                  alt="icon"
+                                />
+
                                 <i class="icon icon-CaretDown"></i>
                               </span>
-                              <div class="dropdown-menu">
-                                <div class="dropdown-item">
+                              <div class="list">
+                                <div class="guest-item">
                                   <span>Adult</span>
                                   <div class="counter">
-                                    <button class="minus">−</button>
-                                    <input type="number" data-value="0" />
-                                    <button class="plus">+</button>
+                                    <button type="button" class="minus">
+                                      −
+                                    </button>
+                                    <input type="number" value="0" />
+                                    <button type="button" class="plus">
+                                      +
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="guest-item">
+                                  <span>Children</span>
+                                  <div class="counter">
+                                    <button type="button" class="minus">
+                                      −
+                                    </button>
+                                    <input type="number" value="0" />
+                                    <button type="button" class="plus">
+                                      +
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="guest-item">
+                                  <span>Infants</span>
+                                  <div class="counter">
+                                    <button type="button" class="minus">
+                                      −
+                                    </button>
+                                    <input type="number" value="0" />
+                                    <button type="button" class="plus">
+                                      +
+                                    </button>
                                   </div>
                                 </div>
                               </div>

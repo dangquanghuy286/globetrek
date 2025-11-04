@@ -223,9 +223,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 // ===================Active Sub Menu=========================
 document.addEventListener("DOMContentLoaded", function () {
-  // Lấy tất cả các select dropdown trong form
   const dropdowns = document.querySelectorAll(".group-select .select-items");
 
   dropdowns.forEach((dropdown) => {
@@ -233,27 +233,99 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = dropdown.querySelector(".list");
     const dropdownMenu = dropdown.querySelector(".dropdown-menu");
 
-    // Khi click vào
     current?.addEventListener("click", (e) => {
       e.stopPropagation();
 
-      // Đóng tất cả dropdown
       dropdowns.forEach((other) => {
         if (other !== dropdown) {
           other.querySelector(".list")?.classList.remove("active");
           other.querySelector(".dropdown-menu")?.classList.remove("active");
+          other.querySelector(".current")?.classList.remove("active");
         }
       });
 
       list?.classList.toggle("active");
       dropdownMenu?.classList.toggle("active");
+      current?.classList.toggle("active");
     });
+
+    // Counter Logic
+    const guestItems = dropdown.querySelectorAll(".guest-item");
+
+    if (guestItems.length > 0) {
+      guestItems.forEach((item) => {
+        const minus = item.querySelector(".minus");
+        const plus = item.querySelector(".plus");
+        const input = item.querySelector("input");
+
+        minus?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          let value = parseInt(input.value) || 0;
+          if (value > 0) {
+            input.value = value - 1;
+            updateCurrent();
+          }
+        });
+
+        plus?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          let value = parseInt(input.value) || 0;
+          input.value = value + 1;
+          updateCurrent();
+        });
+
+        input?.addEventListener("change", () => {
+          if (input.value < 0) input.value = 0;
+          updateCurrent();
+        });
+      });
+
+      // Update current logic
+      function updateCurrent() {
+        const adults =
+          parseInt(guestItems[0]?.querySelector("input").value) || 0;
+        const children =
+          parseInt(guestItems[1]?.querySelector("input").value) || 0;
+        const infants =
+          parseInt(guestItems[2]?.querySelector("input").value) || 0;
+
+        let parts = [];
+        if (adults > 0) parts.push(`${adults} Adult${adults > 1 ? "s" : ""}`);
+        if (children > 0)
+          parts.push(`${children} Child${children > 1 ? "ren" : ""}`);
+        if (infants > 0)
+          parts.push(`${infants} Infant${infants > 1 ? "s" : ""}`);
+
+        let text = parts.length > 0 ? parts.join(" - ") : "Select guests";
+
+        // save i
+        const icon = current.querySelector("i");
+        const img = current.querySelector("img");
+
+        // remove
+        current.innerHTML = "";
+
+        // Add img -> text -> icon
+        if (img) {
+          current.appendChild(img.cloneNode(true));
+        }
+        current.appendChild(document.createTextNode(" " + text + " "));
+        if (icon) {
+          current.appendChild(icon.cloneNode(true));
+        }
+      }
+
+      // Khởi tạo
+      updateCurrent();
+    }
   });
 
   document.addEventListener("click", () => {
     dropdowns.forEach((dropdown) => {
       dropdown.querySelector(".list")?.classList.remove("active");
       dropdown.querySelector(".dropdown-menu")?.classList.remove("active");
+      dropdown.querySelector(".current")?.classList.remove("active");
     });
   });
 });
+//==========Load Day=========================

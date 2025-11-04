@@ -486,6 +486,10 @@
   padding: 0 24px;
   border-right: 1px solid var(--stoke-color);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
 }
 .form-search .inner-group .form-group label {
   font-weight: 600;
@@ -499,6 +503,101 @@
   border-radius: 0px;
   font-size: 14px;
   line-height: 140%;
+  min-width: 80px;
+  width: 100%;
+}
+.form-search .inner-group .form-group input:hover {
+  border-color: var(--primary-color);
+}
+.form-search .inner-group .form-group .datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 12px 12px 0 12px;
+}
+.form-search .inner-group .form-group .datepicker-header .datepicker-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+.form-search .inner-group .form-group .datepicker-header button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 20px;
+  color: var(--icon-color);
+}
+.form-search .inner-group .form-group .datepicker-header button:hover {
+  background: #f5f5f5;
+}
+.form-search .inner-group .form-group .datepicker-header button .icon {
+  font-size: 16px;
+}
+.form-search .inner-group .form-group .datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0 12px;
+}
+.form-search .inner-group .form-group .datepicker-weekdays .datepicker-weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 8px 0;
+}
+.form-search .inner-group .form-group .datepicker-weekdays .datepicker-weekday.weekend {
+  color: var(--primary-color);
+}
+.form-search .inner-group .form-group .datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day {
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  min-height: 40px;
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day.weekend {
+  color: var(--primary-color);
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day.today,
+.form-search .inner-group .form-group .datepicker-days .datepicker-day .selected {
+  background: var(--primary-color);
+  color: var(--white);
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day.other-month {
+  color: var(--input-color);
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day .datepicker-day.disabled {
+  color: var(--terms-color);
+  cursor: not-allowed;
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day .datepicker-day.other-month:hover {
+  background: #f9f9f9;
+}
+.form-search .inner-group .form-group .datepicker-days .datepicker-day:hover:not(.disabled):not(.selected) {
+  background: #f5f5f5;
 }
 .form-search .inner-group .form-group .group-select .select-items .current {
   font-weight: 400;
@@ -512,28 +611,44 @@
   color: var(--text-color);
   position: relative;
   cursor: pointer;
-  gap: 20px;
+  gap: 10px;
 }
 .form-search .inner-group .form-group .group-select .select-items .current .icon {
   font-size: 16px;
+  transition: transform 0.3s ease;
+}
+.form-search .inner-group .form-group .group-select .select-items .current img {
+  width: 16px;
+  height: 16px;
+}
+.form-search .inner-group .form-group .group-select .select-items .current.active .icon {
+  transform: rotate(180deg);
 }
 .form-search .inner-group .form-group .group-select .select-items .list {
   background-color: var(--white);
-  border-radius: 5px;
+  border-radius: 16px;
   box-sizing: border-box;
   margin-top: 4px;
   opacity: 0;
-  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-  overflow-y: auto;
+  box-shadow: 0px 4px 26px 0px rgba(66, 71, 76, 0.08);
   pointer-events: none;
   position: absolute;
-  top: calc(100% + 20px);
+  top: calc(100% + 36px);
   left: 0px;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 99;
   width: 100%;
-  min-width: 280px;
+  min-width: 250px;
   font-size: 16px;
+}
+.form-search .inner-group .form-group .group-select .select-items .list::before {
+  content: "";
+  position: absolute;
+  border-top: 15px solid var(--white);
+  border-right: 15px solid transparent;
+  transform: rotate(45deg);
+  bottom: calc(100% - 9px);
+  left: 20px;
 }
 .form-search .inner-group .form-group .group-select .select-items .list.active {
   opacity: 1;
@@ -550,7 +665,7 @@
   line-height: 100%;
 }
 .form-search .inner-group .form-group .group-select .select-items .list .option a {
-  padding: 16px 24px;
+  padding: 24px;
   display: flex;
   gap: 8px;
   transition: background-color 0.2s ease;
@@ -591,6 +706,60 @@
   line-height: 140%;
   color: var(--text-color);
   transition: color 0.2s ease;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 8px 24px;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item span {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 140%;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid var(--stoke-color);
+  gap: 10px;
+  border-radius: 16px;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter button:hover {
+  opacity: 0.7;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  color: var(--text-color);
+  background: transparent;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input::-webkit-outer-spin-button, .form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input[type=number] {
+  -moz-appearance: textfield;
 }
 .form-search .inner-group .form-group:first-child {
   padding-left: 0;
@@ -2418,7 +2587,6 @@
 .hero .flat-hero .content-left .box-title {
   display: flex;
   justify-content: flex-start;
-  margin: 55px 0 0 0;
   padding: 0 0 0 215px;
   align-items: center;
   flex-direction: column;

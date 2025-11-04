@@ -322,6 +322,10 @@
             padding: 0 24px;
             border-right: 1px solid var(--stoke-color);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
 
             label {
                 font-weight: 600;
@@ -337,7 +341,127 @@
                 border-radius: 0px;
                 font-size: 14px;
                 line-height: 140%;
+                min-width: 80px;
+                width: 100%;
+
+                &:hover {
+                    border-color: var(--primary-color);
+                }
             }
+
+
+            .datepicker-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 24px;
+                padding: 12px 12px 0 12px;
+
+
+                .datepicker-title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: var(--heading-color);
+                }
+
+
+
+                button {
+                    background: none;
+                    border: none;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s;
+                    font-size: 20px;
+                    color: var(--icon-color);
+
+                    &:hover {
+                        background: #f5f5f5;
+                    }
+
+                    .icon {
+                        font-size: 16px;
+                    }
+                }
+
+            }
+
+            .datepicker-weekdays {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 8px;
+                margin-bottom: 8px;
+                padding: 0 12px;
+
+                .datepicker-weekday {
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: var(--text-color);
+                    padding: 8px 0;
+
+                    &.weekend {
+                        color: var(--primary-color);
+                    }
+                }
+
+            }
+
+            .datepicker-days {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 8px;
+
+                .datepicker-day {
+                    aspect-ratio: 1;
+                    border: none;
+                    background: none;
+                    border-radius: 50%;
+                    font-size: 14px;
+                    color: var(--text-color);
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 500;
+                    min-height: 40px;
+
+                    &.weekend {
+                        color: var(--primary-color);
+                    }
+
+                    &.today,
+                    .selected {
+                        background: var(--primary-color);
+                        color: var(--white);
+                    }
+
+                    &.other-month {
+                        color: var(--input-color);
+                    }
+
+                }
+
+                .datepicker-day .datepicker-day.disabled {
+                    color: var(--terms-color);
+                    cursor: not-allowed;
+                }
+
+                .datepicker-day .datepicker-day.other-month:hover {
+                    background: #f9f9f9;
+                }
+
+                .datepicker-day:hover:not(.disabled):not(.selected) {
+                    background: #f5f5f5;
+                }
+            }
+
 
             .group-select {
 
@@ -357,47 +481,55 @@
                         color: var(--text-color);
                         position: relative;
                         cursor: pointer;
-                        gap: 20px;
+                        gap: 10px;
 
                         .icon {
                             font-size: 16px;
+                            transition: transform 0.3s ease;
+                        }
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        &.active .icon {
+                            transform: rotate(180deg);
                         }
                     }
 
                     .list {
                         background-color: var(--white);
-                        border-radius: 5px;
+                        border-radius: 16px;
                         box-sizing: border-box;
                         margin-top: 4px;
                         opacity: 0;
-                        box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-                        overflow-y: auto;
+                        box-shadow: 0px 4px 26px 0px rgba(66, 71, 76, 0.08);
                         pointer-events: none;
                         position: absolute;
-                        top: calc(100% + 20px);
+                        top: calc(100% + 36px);
                         left: 0px;
                         transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
                         z-index: 99;
                         width: 100%;
-                        min-width: 280px;
+                        min-width: 250px;
                         font-size: 16px;
 
-                        // &::before {
-                        //     content: "";
-                        //     position: absolute;
-                        //     border-top: 15px solid var(--white);
-                        //     border-right: 15px solid transparent;
-                        //     transform: rotate(45deg);
-                        //     bottom: calc(100% - 8px);
-                        // }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            border-top: 15px solid var(--white);
+                            border-right: 15px solid transparent;
+                            transform: rotate(45deg);
+                            bottom: calc(100% - 9px);
+                            left: 20px;
+                        }
 
                         &.active {
                             opacity: 1;
                             pointer-events: auto;
                             max-height: 400px;
                             padding: 5px 0 !important;
-
-
                         }
 
                         .option {
@@ -411,9 +543,8 @@
                             }
 
                             a {
-                                padding: 16px 24px;
+                                padding: 24px;
                                 display: flex;
-
                                 gap: 8px;
                                 transition: background-color 0.2s ease;
                                 color: var(--heading-color);
@@ -468,6 +599,73 @@
                                 }
                             }
                         }
+
+                        .guest-item {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            padding: 12px 24px 8px 24px;
+
+                            span {
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: var(--text-color);
+                                line-height: 140%;
+
+                            }
+
+                            .counter {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                padding: 18px;
+                                border: 1px solid var(--stoke-color);
+                                gap: 10px;
+                                border-radius: 16px;
+
+                                button {
+                                    width: 16px;
+                                    height: 16px;
+                                    border: none;
+                                    background: transparent;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    color: var(--text-color);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+                                }
+
+                                input {
+                                    min-width: 24px;
+                                    width: 24px;
+                                    height: 24px;
+                                    text-align: center;
+                                    border: none;
+                                    font-size: 16px;
+                                    color: var(--text-color);
+                                    background: transparent;
+
+
+                                    &::-webkit-outer-spin-button,
+                                    &::-webkit-inner-spin-button {
+                                        -webkit-appearance: none;
+                                        margin: 0;
+                                    }
+
+                                    &[type=number] {
+                                        -moz-appearance: textfield;
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
             }
