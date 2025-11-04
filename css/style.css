@@ -552,7 +552,6 @@
 .form-search .inner-group .form-group .group-select .select-items .list .option a {
   padding: 16px 24px;
   display: flex;
-  align-items: center;
   gap: 8px;
   transition: background-color 0.2s ease;
   color: var(--heading-color);
