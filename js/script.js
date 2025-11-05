@@ -318,6 +318,149 @@ document.addEventListener("DOMContentLoaded", function () {
       // Khởi tạo
       updateCurrent();
     }
+
+    // ============ DATEPICKER LOGIC ============
+    const dateInput = dropdown.querySelector(".date-input");
+    const datepickerDays = dropdown.querySelector(".datepicker-days");
+    const datepickerTitle = dropdown.querySelector(".datepicker-title");
+    const prevBtn = dropdown.querySelector(".prev-month");
+    const nextBtn = dropdown.querySelector(".next-month");
+
+    if (dateInput && datepickerDays) {
+      let currentDate = new Date();
+      let selectedDate = null;
+
+      // Render calendar
+      function renderCalendar(year, month) {
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+        const prevLastDay = new Date(year, month, 0);
+
+        const firstDayIndex = firstDay.getDay();
+        const lastDate = lastDay.getDate();
+        const prevLastDate = prevLastDay.getDate();
+
+        // Update title
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        datepickerTitle.textContent = `${monthNames[month]} ${year}`;
+
+        // Clear days
+        datepickerDays.innerHTML = "";
+
+        // Previous month days
+        for (let i = firstDayIndex; i > 0; i--) {
+          const day = document.createElement("button");
+          day.type = "button";
+          day.className = "datepicker-day other-month";
+          day.textContent = prevLastDate - i + 1;
+          day.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectDate(new Date(year, month - 1, prevLastDate - i + 1));
+          });
+          datepickerDays.appendChild(day);
+        }
+
+        // Current month days
+        const today = new Date();
+        for (let i = 1; i <= lastDate; i++) {
+          const day = document.createElement("button");
+          day.type = "button";
+          day.className = "datepicker-day";
+          day.textContent = i;
+
+          // Check if today
+          if (
+            i === today.getDate() &&
+            month === today.getMonth() &&
+            year === today.getFullYear()
+          ) {
+            day.classList.add("today");
+          }
+
+          // Check if selected
+          if (
+            selectedDate &&
+            i === selectedDate.getDate() &&
+            month === selectedDate.getMonth() &&
+            year === selectedDate.getFullYear()
+          ) {
+            day.classList.add("selected");
+          }
+
+          // Check if weekend
+          const dayOfWeek = new Date(year, month, i).getDay();
+          if (dayOfWeek === 0 || dayOfWeek === 6) {
+            day.classList.add("weekend");
+          }
+
+          day.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectDate(new Date(year, month, i));
+          });
+
+          datepickerDays.appendChild(day);
+        }
+
+        // Next month days
+        const remainingDays = 42 - datepickerDays.children.length;
+        for (let i = 1; i <= remainingDays; i++) {
+          const day = document.createElement("button");
+          day.type = "button";
+          day.className = "datepicker-day other-month";
+          day.textContent = i;
+          day.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectDate(new Date(year, month + 1, i));
+          });
+          datepickerDays.appendChild(day);
+        }
+      }
+
+      // Select date
+      function selectDate(date) {
+        selectedDate = date;
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const year = date.getFullYear();
+        dateInput.value = `${day}/${month}/${year}`;
+
+        // Re-render to show selected
+        renderCalendar(date.getFullYear(), date.getMonth());
+
+        // Close dropdown
+        list?.classList.remove("active");
+        current?.classList.remove("active");
+      }
+
+      // Navigation
+      prevBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
+      });
+
+      nextBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
+      });
+
+      // Initialize calendar
+      renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    }
   });
 
   document.addEventListener("click", () => {
