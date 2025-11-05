@@ -2906,7 +2906,7 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 255px;
+  margin-top: 235px;
   width: 100%;
 }
 .tf-meta .contact-info {
@@ -3037,8 +3037,8 @@
 .flex-direction-nav {
   position: absolute;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  transform: translateY(-40%);
   display: flex;
   z-index: 200;
 }
