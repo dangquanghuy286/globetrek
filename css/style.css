@@ -2949,7 +2949,19 @@
 }
 .tf-meta .contact-info .user-avatars .user-count {
   position: absolute;
-  right: 16px;
+  right: 0px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 .tf-meta .contact-info .box-icon {
   color: var(--white);
