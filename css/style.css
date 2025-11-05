@@ -2768,6 +2768,7 @@
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
 }
 .slider-default .swiper-slide .box-title .wrap-search-link .categories-list {
   display: flex;
@@ -2874,7 +2875,7 @@
   background-image: url("../images/herobanner/banner-11.png");
 }
 .slider-default .swiper-slide.home-4 .box-title {
-  padding: 290px 0px 353px 0;
+  padding: 290px 0px 50px 0;
   margin-bottom: 90px;
 }
 .slider-default .swiper-slide.home-4 .box-title h3 {
@@ -2894,6 +2895,67 @@
 .slider-default .swiper-slide.home-4 .box-title .wrap-search-link {
   margin-top: 70px;
 }
+.tf-meta {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 255px;
+  width: 100%;
+}
+.tf-meta .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tf-meta .contact-info .d-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tf-meta .contact-info .divider {
+  width: 70px;
+  height: 1px;
+  color: var(--white);
+  opacity: 30%;
+}
+.tf-meta .contact-info span {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 140%;
+  white-space: nowrap;
+}
+.tf-meta .contact-info .user-avatars {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  padding: 6px 0px 6px 6px;
+}
+.tf-meta .contact-info .user-avatars img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-left: -24px;
+}
+.tf-meta .contact-info .user-avatars img:first-child {
+  margin-left: 0;
+}
+.tf-meta .contact-info .user-avatars .user-count {
+  position: absolute;
+  right: 16px;
+}
+.tf-meta .contact-info .box-icon {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1607843137);
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+.tf-meta .contact-info .box-icon:hover {
+  background-color: var(--primary-color);
+}
+
 .slide-indicator {
   position: absolute;
   width: auto;
@@ -2918,20 +2980,24 @@
 .box-meta {
   position: absolute;
   width: auto;
-  top: 470px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 34px;
   color: var(--white);
-  left: 80px;
   z-index: 200;
+}
+.box-meta.pos-1 {
+  left: 80px;
+  top: 470px;
+  flex-direction: column;
 }
 .box-meta .flow-us {
   font-size: 12px;
   font-weight: 700;
   line-height: 140%;
   letter-spacing: 0.75em;
+}
+.box-meta .flow-us.rotate {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -2956,6 +3022,10 @@
 }
 .divider.h-145 {
   height: 145px;
+}
+.divider.horizontal {
+  width: 70px;
+  height: 1px;
 }
 
 .flex-direction-nav {
