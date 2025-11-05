@@ -365,7 +365,7 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 24px;
-                padding: 12px 12px 0 12px;
+                padding: 10px 10px 0 10px;
 
 
                 .datepicker-title {
@@ -406,7 +406,7 @@
                 grid-template-columns: repeat(7, 1fr);
                 gap: 8px;
                 margin-bottom: 8px;
-                padding: 0 12px;
+                padding: 0 10px;
 
                 .datepicker-weekday {
                     text-align: center;
@@ -426,7 +426,7 @@
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
                 gap: 8px;
-                padding: 0 12px;
+                padding: 0 10px;
 
                 .datepicker-day {
                     aspect-ratio: 1;
@@ -544,7 +544,7 @@
                         }
 
                         &:has(.datepicker-header) {
-                            min-width: 380px;
+                            min-width: 300px;
                             width: auto;
 
 
@@ -707,6 +707,36 @@
             cursor: pointer;
             padding: 16px;
             min-width: 54px;
+
+        }
+    }
+}
+
+.advanced-form {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    @include transition3;
+    opacity: 0;
+
+    &.show {
+        display: unset;
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .box-title-price {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        margin-bottom: 10px;
+
+        span {
+            font-weight: 600;
 
         }
     }
