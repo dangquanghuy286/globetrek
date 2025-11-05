@@ -302,13 +302,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--white);
+
     border-radius: 16px;
     padding: 16px 24px;
     box-shadow: 0px 4px 26px 0px #42474C14;
     gap: 48px;
     flex-direction: row;
 
+    &.bg-white {
+        background: var(--white);
+    }
+
+    &.bg-dark {
+        backdrop-filter: blur(4px);
+        background-color: #00000080;
+    }
 
     .inner-group {
 
@@ -324,8 +332,10 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 8px;
             width: 100%;
+            z-index: 10000;
+
 
             label {
                 font-weight: 600;
@@ -438,7 +448,7 @@
                     }
 
                     &.today,
-                    .selected {
+                    &.selected {
                         background: var(--primary-color);
                         color: var(--white);
                     }
@@ -447,12 +457,14 @@
                         color: var(--input-color);
                     }
 
+                    &.disabled {
+                        color: var(--note-color);
+                        cursor: not-allowed;
+                    }
+
                 }
 
-                .datepicker-day .datepicker-day.disabled {
-                    color: var(--terms-color);
-                    cursor: not-allowed;
-                }
+
 
                 .datepicker-day .datepicker-day.other-month:hover {
                     background: #f9f9f9;
@@ -503,7 +515,6 @@
                         background-color: var(--white);
                         border-radius: 16px;
                         box-sizing: border-box;
-
                         opacity: 0;
                         box-shadow: 0px 4px 26px 0px rgba(66, 71, 76, 0.08);
                         pointer-events: none;
@@ -535,6 +546,7 @@
                         &:has(.datepicker-header) {
                             min-width: 380px;
                             width: auto;
+
 
                         }
 
@@ -693,7 +705,7 @@
 
         .tf-btn {
             cursor: pointer;
-            padding: 17px;
+            padding: 16px;
             min-width: 54px;
 
         }

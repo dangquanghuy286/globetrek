@@ -90,6 +90,26 @@
         }
     }
 
+    &.transparent {
+        background-color: transparent;
+        border: 1px solid #FFFFFF26;
+        color: var(--white);
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+
+        &:hover {
+            background-color: var(--white);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+
+            img {
+                filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
+            }
+        }
+    }
+
     &.size-1 {
         min-width: 200px;
         padding: 16px 56px;
