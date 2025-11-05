@@ -63,14 +63,22 @@
             color: var(--primary-color);
             background-color: var(--white);
 
+            .icon {
+                color: var(--primary-color);
+            }
+
             img {
                 filter: brightness(0) invert(1);
             }
         }
 
         &.hover-2:hover {
-            color: var(--white);
+            color: var(--primary-color);
             background-color: transparent;
+
+            .icon {
+                color: var(--primary-color);
+            }
 
             img {
                 filter: brightness(0) invert(1);
@@ -78,7 +86,6 @@
         }
 
         .icon {
-
             color: var(--white);
         }
     }

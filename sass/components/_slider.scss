@@ -139,6 +139,7 @@
             .rotating-badge {
                 top: 300px;
                 left: 430px;
+                transform: translate(-50%, -50%);
             }
 
 
@@ -149,10 +150,10 @@
         position: absolute;
         bottom: 0px;
         left: 50%;
-        transform: translate(-50%, -50%);
         width: 180px;
         height: 180px;
-        z-index: 10;
+        z-index: 200;
+        transform: translateX(-50%);
 
         .circle {
             position: relative;
@@ -265,11 +266,9 @@
                 }
 
                 .wrap-search-link {
-
-                    margin-top: 230px;
                     display: flex;
                     align-items: center;
-                    gap: 20px;
+                    gap: 30px;
                     flex-wrap: wrap;
                     justify-content: center;
 
@@ -385,6 +384,10 @@
                         color: var(--white);
                         font-weight: 500;
                     }
+
+                    .wrap-search-link {
+                        margin-top: 230px;
+                    }
                 }
             }
 
@@ -404,7 +407,8 @@
                 }
 
                 .box-title {
-                    padding: 290px 0px 114px 0;
+                    padding: 290px 0px 353px 0;
+                    margin-bottom: 90px;
 
                     h3 {
                         color: var(--white);
@@ -419,11 +423,13 @@
                     h1 {
                         font-size: 64px;
                         font-weight: 600;
-                        margin-bottom: 24px;
                         line-height: 100%;
                         color: var(--white);
                     }
 
+                    .wrap-search-link {
+                        margin-top: 70px;
+                    }
 
                 }
             }

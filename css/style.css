@@ -174,12 +174,18 @@
   color: var(--primary-color);
   background-color: var(--white);
 }
+.tf-btn.primary.hover-1:hover .icon {
+  color: var(--primary-color);
+}
 .tf-btn.primary.hover-1:hover img {
   filter: brightness(0) invert(1);
 }
 .tf-btn.primary.hover-2:hover {
-  color: var(--white);
+  color: var(--primary-color);
   background-color: transparent;
+}
+.tf-btn.primary.hover-2:hover .icon {
+  color: var(--primary-color);
 }
 .tf-btn.primary.hover-2:hover img {
   filter: brightness(0) invert(1);
@@ -2651,16 +2657,17 @@
 .hero .flat-hero .rotating-badge {
   top: 300px;
   left: 430px;
+  transform: translate(-50%, -50%);
 }
 
 .rotating-badge {
   position: absolute;
   bottom: 0px;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 180px;
   height: 180px;
-  z-index: 10;
+  z-index: 200;
+  transform: translateX(-50%);
 }
 .rotating-badge .circle {
   position: relative;
@@ -2756,10 +2763,9 @@
   padding: 15.5px 38px;
 }
 .slider-default .swiper-slide .box-title .wrap-search-link {
-  margin-top: 230px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -2855,6 +2861,9 @@
   color: var(--white);
   font-weight: 500;
 }
+.slider-default .swiper-slide.home-3 .box-title .wrap-search-link {
+  margin-top: 230px;
+}
 .slider-default .swiper-slide.home-4 .box-banner.box-banner-9 {
   background-image: url("../images/herobanner/banner-9.png");
 }
@@ -2865,7 +2874,8 @@
   background-image: url("../images/herobanner/banner-11.png");
 }
 .slider-default .swiper-slide.home-4 .box-title {
-  padding: 290px 0px 114px 0;
+  padding: 290px 0px 353px 0;
+  margin-bottom: 90px;
 }
 .slider-default .swiper-slide.home-4 .box-title h3 {
   color: var(--white);
@@ -2878,9 +2888,11 @@
 .slider-default .swiper-slide.home-4 .box-title h1 {
   font-size: 64px;
   font-weight: 600;
-  margin-bottom: 24px;
   line-height: 100%;
   color: var(--white);
+}
+.slider-default .swiper-slide.home-4 .box-title .wrap-search-link {
+  margin-top: 70px;
 }
 .slide-indicator {
   position: absolute;
@@ -3162,6 +3174,13 @@ body {
 
 .container-3 {
   max-width: 1740px;
+  padding: 0 15px;
+  width: 100%;
+  margin: auto;
+}
+
+.container-4 {
+  max-width: 850px;
   padding: 0 15px;
   width: 100%;
   margin: auto;
