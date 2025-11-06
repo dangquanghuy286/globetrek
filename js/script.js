@@ -493,3 +493,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //==========Search=========================
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".form-s1 form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Location
+    const locationValue = form
+      .querySelector(".form-group:nth-child(1) .current")
+      .getAttribute("data-value");
+
+    // Date
+    const dateValue = form.querySelector(".date-input").value;
+
+    // Tour type
+    const tourType = form
+      .querySelector(".form-group:nth-child(3) .current")
+      .getAttribute("data-value");
+
+    // Number of guests
+    const guestInputs = form.querySelectorAll(".guest-item input");
+    const guests = {
+      adults: guestInputs[0]?.value || 0,
+      children: guestInputs[1]?.value || 0,
+      infants: guestInputs[2]?.value || 0,
+    };
+  });
+});
