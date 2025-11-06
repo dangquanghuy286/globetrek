@@ -249,6 +249,27 @@ document.addEventListener("DOMContentLoaded", function () {
       current?.classList.toggle("active");
     });
 
+    // =========== Value Selection =============
+    const options = dropdown.querySelectorAll(".option");
+    options.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const value = option.getAttribute("data-value");
+        const text = option.querySelector(".content")?.innerText.trim();
+
+        current.innerHTML = `
+        ${text || "Select options"}
+        <i class="icon fa-solid fa-chevron-down"></i>
+      `;
+
+        current.setAttribute("data-value", value || "");
+
+        list?.classList.remove("active");
+        current?.classList.remove("active");
+      });
+    });
     // Counter Logic
     const guestItems = dropdown.querySelectorAll(".guest-item");
 
@@ -471,4 +492,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-//==========Load Day=========================
+//==========Search=========================

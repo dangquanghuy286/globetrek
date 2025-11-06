@@ -525,6 +525,7 @@
   font-size: 16px;
   line-height: 100%;
   color: var(--heading-color);
+  white-space: nowrap;
 }
 .form-search .inner-group .form-group input {
   padding: 0;
