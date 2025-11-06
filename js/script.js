@@ -498,26 +498,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    // Get location
+    const locationDropdown = form.querySelector(
+      ".form-group:nth-child(1) .current"
+    );
+    const locationValue = locationDropdown?.getAttribute("data-value") || "";
 
-    // Location
-    const locationValue = form
-      .querySelector(".form-group:nth-child(1) .current")
-      .getAttribute("data-value");
+    // Get date
+    const dateValue = form.querySelector(".date-input")?.value || "";
 
-    // Date
-    const dateValue = form.querySelector(".date-input").value;
+    // Get tour type
+    const tourTypeDropdown = form.querySelector(
+      ".form-group:nth-child(3) .current"
+    );
+    const tourType = tourTypeDropdown?.getAttribute("data-value") || "";
 
-    // Tour type
-    const tourType = form
-      .querySelector(".form-group:nth-child(3) .current")
-      .getAttribute("data-value");
-
-    // Number of guests
+    // Get guests
     const guestInputs = form.querySelectorAll(".guest-item input");
     const guests = {
-      adults: guestInputs[0]?.value || 0,
-      children: guestInputs[1]?.value || 0,
-      infants: guestInputs[2]?.value || 0,
+      adults: guestInputs[0]?.value || "0",
+      children: guestInputs[1]?.value || "0",
+      infants: guestInputs[2]?.value || "0",
     };
+    // Create search params
+    const queryString = new URLSearchParams({
+      location: locationValue,
+      date: dateValue,
+      type: tourType,
+      adults: guests.adults,
+      children: guests.children,
+      infants: guests.infants,
+    }).toString();
+
+    // Redirect to search results
+    window.location.href = `/search.html?${queryString}`;
   });
 });
