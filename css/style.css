@@ -3042,7 +3042,7 @@
   margin-top: 70px;
 }
 .slider-default .swiper-slide.home-4 .advanced-form::before {
-  left: 65%;
+  left: 65.2%;
 }
 .slider-default .swiper-slide {
   /* === HOME 4 === */
@@ -3095,7 +3095,7 @@
   backdrop-filter: none;
 }
 .slider-default .swiper-slide.home-5 .advanced-form::before {
-  left: 65%;
+  left: 65.2%;
 }
 
 .tf-meta {
@@ -3307,7 +3307,7 @@
 /* ============ Updated noUiSlider CSS ============ */
 .noUi-target {
   direction: ltr;
-  background: #E7F0FF !important;
+  background: rgba(95, 108, 90, 0.1490196078) !important;
   height: 4px !important;
 }
 
@@ -3326,13 +3326,15 @@
 
 /* Handles */
 .noUi-handle {
-  width: 18px !important;
-  height: 18px !important;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50% !important;
   background: var(--primary-color) !important;
   border: 2px solid var(--white) !important;
   cursor: pointer !important;
+  right: -24px !important;
   z-index: 2;
+  padding: 1px !important;
   transform: translate(-50%, -50%) !important;
   top: 50% !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;

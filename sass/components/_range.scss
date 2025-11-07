@@ -4,7 +4,7 @@
 
 .noUi-target {
     direction: ltr;
-    background: #E7F0FF !important;
+    background: #5F6C5A26 !important;
     height: 4px !important;
 }
 
@@ -24,13 +24,15 @@
 
 /* Handles */
 .noUi-handle {
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
     border-radius: 50% !important;
     background: var(--primary-color) !important;
     border: 2px solid var(--white) !important;
     cursor: pointer !important;
+    right: -24px !important;
     z-index: 2;
+    padding: 1px !important;
     transform: translate(-50%, -50%) !important;
     top: 50% !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
