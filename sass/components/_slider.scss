@@ -428,6 +428,12 @@
                         margin-top: 70px;
                     }
                 }
+
+                .advanced-form {
+                    &::before {
+                        left: 65%;
+                    }
+                }
             }
 
             /* === HOME 4 === */
@@ -510,6 +516,12 @@
                                 backdrop-filter: none
                             }
                         }
+                    }
+                }
+
+                .advanced-form {
+                    &::before {
+                        left: 65%;
                     }
                 }
             }

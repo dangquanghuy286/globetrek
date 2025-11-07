@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="css/boostrap.css" rel="stylesheet" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+    />
+
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/favicon.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png" />
@@ -842,7 +847,271 @@
                                   </button>
                                 </div>
                               </div>
-                              <div class="selected-form"></div>
+                              <div class="advanced-form">
+                                <div class="group-price">
+                                  <div class="box-title-price">
+                                    <span class="title-price">Price</span>
+                                    <div class="caption-price">
+                                      <span id="slider-range-value1"> $0 </span>
+                                      <span>-</span>
+                                      <span id="slider-range-value2">
+                                        $10,000
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div
+                                    id="slider-range"
+                                    class="slider-range"
+                                  ></div>
+                                  <div class="slider-labels">
+                                    <div>
+                                      <input
+                                        type="hidden"
+                                        name="min-value"
+                                        value=""
+                                      />
+                                      <input
+                                        type="hidden"
+                                        name="max-value"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-checkbox">
+                                  <div class="title-checkbox">Amentities</div>
+                                  <div class="group-amentities">
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-1"
+                                        />
+                                        <label
+                                          for="item-1"
+                                          class="text-amenities"
+                                          >Convenience</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-2"
+                                        />
+                                        <label
+                                          for="item-2"
+                                          class="text-amenities"
+                                          >Cost-effective</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-3"
+                                        />
+                                        <label
+                                          for="item-3"
+                                          class="text-amenities"
+                                          >Social Interaction</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-4"
+                                        />
+                                        <label
+                                          for="item-4"
+                                          class="text-amenities"
+                                          >Safety and Security</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-5"
+                                        />
+                                        <label
+                                          for="item-5"
+                                          class="text-amenities"
+                                          >Variety of Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-6"
+                                        />
+                                        <label
+                                          for="item-6"
+                                          class="text-amenities"
+                                          >Less Stress</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-7"
+                                        />
+                                        <label
+                                          for="item-7"
+                                          class="text-amenities"
+                                          >Hassle-Free Travel</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-8"
+                                        />
+                                        <label
+                                          for="item-8"
+                                          class="text-amenities"
+                                          >Cultural Immersion</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-9"
+                                        />
+                                        <label
+                                          for="item-9"
+                                          class="text-amenities"
+                                          >Time Efficiency</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-10"
+                                        />
+                                        <label
+                                          for="item-10"
+                                          class="text-amenities"
+                                          >Unique Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-11"
+                                        />
+                                        <label
+                                          for="item-11"
+                                          class="text-amenities"
+                                          >Peace of Mind</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-12"
+                                        />
+                                        <label
+                                          for="item-12"
+                                          class="text-amenities"
+                                          >Educational Value</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-13"
+                                        />
+                                        <label
+                                          for="item-13"
+                                          class="text-amenities"
+                                          >Group Discounts</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-18"
+                                        />
+                                        <label
+                                          for="item-18"
+                                          class="text-amenities"
+                                          >Romantic Atmosphere</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-14"
+                                        />
+                                        <label
+                                          for="item-14"
+                                          class="text-amenities"
+                                          >Flexibility</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-15"
+                                        />
+                                        <label
+                                          for="item-15"
+                                          class="text-amenities"
+                                          >Stress Relief</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-17"
+                                        />
+                                        <label
+                                          for="item-17"
+                                          class="text-amenities"
+                                          >Scenic Views</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-16"
+                                        />
+                                        <label
+                                          for="item-16"
+                                          class="text-amenities"
+                                          >Expert Guidance</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </form>
                           </div>
                         </div>
@@ -916,7 +1185,7 @@
                 </div>
               </div>
             </div>
-            <!-- Slide-1 -->
+            <!-- Slide-2 -->
             <div class="swiper-slide home-5">
               <div class="box-banner box-banner-13">
                 <div class="container-2">
@@ -1208,7 +1477,271 @@
                                   </button>
                                 </div>
                               </div>
-                              <div class="selected-form"></div>
+                              <div class="advanced-form">
+                                <div class="group-price">
+                                  <div class="box-title-price">
+                                    <span class="title-price">Price</span>
+                                    <div class="caption-price">
+                                      <span id="slider-range-value1"> $0 </span>
+                                      <span>-</span>
+                                      <span id="slider-range-value2">
+                                        $10,000
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div
+                                    id="slider-range"
+                                    class="slider-range"
+                                  ></div>
+                                  <div class="slider-labels">
+                                    <div>
+                                      <input
+                                        type="hidden"
+                                        name="min-value"
+                                        value=""
+                                      />
+                                      <input
+                                        type="hidden"
+                                        name="max-value"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-checkbox">
+                                  <div class="title-checkbox">Amentities</div>
+                                  <div class="group-amentities">
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-19"
+                                        />
+                                        <label
+                                          for="item-19"
+                                          class="text-amenities"
+                                          >Convenience</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-20"
+                                        />
+                                        <label
+                                          for="item-20"
+                                          class="text-amenities"
+                                          >Cost-effective</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-21"
+                                        />
+                                        <label
+                                          for="item-21"
+                                          class="text-amenities"
+                                          >Social Interaction</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-22"
+                                        />
+                                        <label
+                                          for="item-22"
+                                          class="text-amenities"
+                                          >Safety and Security</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-23"
+                                        />
+                                        <label
+                                          for="item-23"
+                                          class="text-amenities"
+                                          >Variety of Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-24"
+                                        />
+                                        <label
+                                          for="item-24"
+                                          class="text-amenities"
+                                          >Less Stress</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-25"
+                                        />
+                                        <label
+                                          for="item-25"
+                                          class="text-amenities"
+                                          >Hassle-Free Travel</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-26"
+                                        />
+                                        <label
+                                          for="item-26"
+                                          class="text-amenities"
+                                          >Cultural Immersion</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-27"
+                                        />
+                                        <label
+                                          for="item-27"
+                                          class="text-amenities"
+                                          >Time Efficiency</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-28"
+                                        />
+                                        <label
+                                          for="item-28"
+                                          class="text-amenities"
+                                          >Unique Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-29"
+                                        />
+                                        <label
+                                          for="item-29"
+                                          class="text-amenities"
+                                          >Peace of Mind</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-30"
+                                        />
+                                        <label
+                                          for="item-30"
+                                          class="text-amenities"
+                                          >Educational Value</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-31"
+                                        />
+                                        <label
+                                          for="item-31"
+                                          class="text-amenities"
+                                          >Group Discounts</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-32"
+                                        />
+                                        <label
+                                          for="item-32"
+                                          class="text-amenities"
+                                          >Romantic Atmosphere</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-33"
+                                        />
+                                        <label
+                                          for="item-33"
+                                          class="text-amenities"
+                                          >Flexibility</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-34"
+                                        />
+                                        <label
+                                          for="item-34"
+                                          class="text-amenities"
+                                          >Stress Relief</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-35"
+                                        />
+                                        <label
+                                          for="item-35"
+                                          class="text-amenities"
+                                          >Scenic Views</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-36"
+                                        />
+                                        <label
+                                          for="item-36"
+                                          class="text-amenities"
+                                          >Expert Guidance</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </form>
                           </div>
                         </div>
@@ -1574,7 +2107,271 @@
                                   </button>
                                 </div>
                               </div>
-                              <div class="selected-form"></div>
+                              <div class="advanced-form">
+                                <div class="group-price">
+                                  <div class="box-title-price">
+                                    <span class="title-price">Price</span>
+                                    <div class="caption-price">
+                                      <span id="slider-range-value1"> $0 </span>
+                                      <span>-</span>
+                                      <span id="slider-range-value2">
+                                        $10,000
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div
+                                    id="slider-range"
+                                    class="slider-range"
+                                  ></div>
+                                  <div class="slider-labels">
+                                    <div>
+                                      <input
+                                        type="hidden"
+                                        name="min-value"
+                                        value=""
+                                      />
+                                      <input
+                                        type="hidden"
+                                        name="max-value"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-checkbox">
+                                  <div class="title-checkbox">Amentities</div>
+                                  <div class="group-amentities">
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-37"
+                                        />
+                                        <label
+                                          for="item-37"
+                                          class="text-amenities"
+                                          >Convenience</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-38"
+                                        />
+                                        <label
+                                          for="item-38"
+                                          class="text-amenities"
+                                          >Cost-effective</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-39"
+                                        />
+                                        <label
+                                          for="item-39"
+                                          class="text-amenities"
+                                          >Social Interaction</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-40"
+                                        />
+                                        <label
+                                          for="item-40"
+                                          class="text-amenities"
+                                          >Safety and Security</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-41"
+                                        />
+                                        <label
+                                          for="item-41"
+                                          class="text-amenities"
+                                          >Variety of Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-42"
+                                        />
+                                        <label
+                                          for="item-42"
+                                          class="text-amenities"
+                                          >Less Stress</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-43"
+                                        />
+                                        <label
+                                          for="item-43"
+                                          class="text-amenities"
+                                          >Hassle-Free Travel</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-44"
+                                        />
+                                        <label
+                                          for="item-44"
+                                          class="text-amenities"
+                                          >Cultural Immersion</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-45"
+                                        />
+                                        <label
+                                          for="item-45"
+                                          class="text-amenities"
+                                          >Time Efficiency</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-46"
+                                        />
+                                        <label
+                                          for="item-46"
+                                          class="text-amenities"
+                                          >Unique Experiences</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-47"
+                                        />
+                                        <label
+                                          for="item-47"
+                                          class="text-amenities"
+                                          >Peace of Mind</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-48"
+                                        />
+                                        <label
+                                          for="item-48"
+                                          class="text-amenities"
+                                          >Educational Value</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-49"
+                                        />
+                                        <label
+                                          for="item-49"
+                                          class="text-amenities"
+                                          >Group Discounts</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-50"
+                                        />
+                                        <label
+                                          for="item-50"
+                                          class="text-amenities"
+                                          >Romantic Atmosphere</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-51"
+                                        />
+                                        <label
+                                          for="item-51"
+                                          class="text-amenities"
+                                          >Flexibility</label
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="box-amentities">
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-52"
+                                        />
+                                        <label
+                                          for="item-52"
+                                          class="text-amenities"
+                                          >Stress Relief</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-53"
+                                        />
+                                        <label
+                                          for="item-53"
+                                          class="text-amenities"
+                                          >Scenic Views</label
+                                        >
+                                      </div>
+                                      <div class="amenities-item">
+                                        <input
+                                          type="checkbox"
+                                          class="tf-checkbox"
+                                          id="item-54"
+                                        />
+                                        <label
+                                          for="item-16"
+                                          class="text-amenities"
+                                          >Expert Guidance</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </form>
                           </div>
                         </div>
@@ -2302,6 +3099,8 @@
       new WOW({ live: true, mobile: true, offset: 0 }).init();
     </script>
     <!-- Load  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/swiper.js"></script>
     <script src="./js/script.js"></script>

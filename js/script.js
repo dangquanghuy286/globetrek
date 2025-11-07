@@ -493,18 +493,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ========== Advanced Form Toggle ==========
-  const advancedBtn = document.querySelector(
-    ".box-btn-filter .box-filter .tf-btn"
+  const advancedBtns = document.querySelectorAll(
+    ".box-btn-filter .box-filter "
   );
-  const advancedForm = document.querySelector(".advanced-form");
 
-  if (advancedBtn && advancedForm) {
-    advancedBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      advancedForm.classList.toggle("show");
-    });
-  }
+  advancedBtns.forEach((advancedBtn, index) => {
+    const formS1 = advancedBtn.closest(".form-s1");
+    const advancedForm = formS1 ? formS1.querySelector(".advanced-form") : null;
+
+    if (advancedBtn && advancedForm) {
+      advancedBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        advancedForm.classList.toggle("show");
+
+        document.querySelectorAll(".advanced-form").forEach((form) => {
+          if (form !== advancedForm) form.classList.remove("show");
+        });
+      });
+    }
+  });
 });
 
 //==========Search=========================
@@ -567,41 +575,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ============ Price Range Slider =================
 document.addEventListener("DOMContentLoaded", function () {
-  const noUiHandles = document.querySelectorAll(".noUi-handle");
-  noUiHandles.forEach(function (handle) {
-    handle.addEventListener("click", function () {
-      this.style.width = "50px";
-    });
-  });
-
-  // Khởi tạo slider
-  const rangeSlider = document.getElementById("slider-range");
-
+  const rangeSliders = document.querySelectorAll(".slider-range");
   const moneyFormat = wNumb({
     decimals: 0,
     thousand: ",",
     prefix: "$",
   });
 
-  noUiSlider.create(rangeSlider, {
-    start: [0, 10000],
-    step: 1,
-    range: {
-      min: [0],
-      max: [10000],
-    },
-    format: moneyFormat,
-    connect: true,
-  });
+  rangeSliders.forEach((slider) => {
+    noUiSlider.create(slider, {
+      start: [0, 10000],
+      step: 1,
+      range: {
+        min: [0],
+        max: [10000],
+      },
+      format: moneyFormat,
+      connect: true, // Đúng rồi, tạo thanh connect
+    });
 
-  rangeSlider.noUiSlider.on("update", function (values, handle) {
-    document.getElementById("slider-range-value1").innerHTML = values[0];
-    document.getElementById("slider-range-value2").innerHTML = values[1];
+    // Di chuyển listener handles VÀO ĐÂY, sau khi tạo
+    const noUiHandles = slider.querySelectorAll(".noUi-handle");
+    noUiHandles.forEach(function (handle) {
+      handle.addEventListener("click", function () {
+        this.style.width = "50px"; // Lưu ý: Override CSS 18px của bạn; bỏ nếu không cần
+      });
+    });
 
-    const minInput = document.getElementsByName("min-value")[0];
-    const maxInput = document.getElementsByName("max-value")[0];
-
-    if (minInput) minInput.value = moneyFormat.from(values[0]);
-    if (maxInput) maxInput.value = moneyFormat.from(values[1]);
+    // Event update giữ nguyên
+    slider.noUiSlider.on("update", function (values, handle) {
+      const value1 = slider.parentElement.querySelector("#slider-range-value1");
+      const value2 = slider.parentElement.querySelector("#slider-range-value2");
+      const minInput = slider.parentElement.querySelector("[name='min-value']");
+      const maxInput = slider.parentElement.querySelector("[name='max-value']");
+      if (value1) value1.textContent = values[0];
+      if (value2) value2.textContent = values[1];
+      if (minInput) minInput.value = moneyFormat.from(values[0]);
+      if (maxInput) maxInput.value = moneyFormat.from(values[1]);
+    });
   });
 });
