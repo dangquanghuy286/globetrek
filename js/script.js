@@ -491,13 +491,29 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdown.querySelector(".current")?.classList.remove("active");
     });
   });
+
+  // ========== Advanced Form Toggle ==========
+  const advancedBtn = document.querySelector(
+    ".box-btn-filter .box-filter .tf-btn"
+  );
+  const advancedForm = document.querySelector(".advanced-form");
+
+  if (advancedBtn && advancedForm) {
+    advancedBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      advancedForm.classList.toggle("show");
+    });
+  }
 });
+
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     // Get location
     const locationDropdown = form.querySelector(
       ".form-group:nth-child(1) .current"
@@ -520,6 +536,17 @@ document.addEventListener("DOMContentLoaded", function () {
       children: guestInputs[1]?.value || "0",
       infants: guestInputs[2]?.value || "0",
     };
+
+    // Get price from advanced form
+    const minPrice = form.querySelector('input[name="min-value"]')?.value || "";
+    const maxPrice = form.querySelector('input[name="max-value"]')?.value || "";
+
+    // Get amenities from checkboxes
+    const amenityCheckboxes = form.querySelectorAll(".tf-checkbox:checked");
+    const amenities = Array.from(amenityCheckboxes)
+      .map((cb) => cb.id)
+      .join(",");
+
     // Create search params
     const queryString = new URLSearchParams({
       location: locationValue,
@@ -528,9 +555,53 @@ document.addEventListener("DOMContentLoaded", function () {
       adults: guests.adults,
       children: guests.children,
       infants: guests.infants,
+      minPrice: minPrice,
+      maxPrice: maxPrice,
+      amenities: amenities,
     }).toString();
 
     // Redirect to search results
     window.location.href = `/search.html?${queryString}`;
+  });
+});
+
+// ============ Price Range Slider =================
+document.addEventListener("DOMContentLoaded", function () {
+  const noUiHandles = document.querySelectorAll(".noUi-handle");
+  noUiHandles.forEach(function (handle) {
+    handle.addEventListener("click", function () {
+      this.style.width = "50px";
+    });
+  });
+
+  // Khởi tạo slider
+  const rangeSlider = document.getElementById("slider-range");
+
+  const moneyFormat = wNumb({
+    decimals: 0,
+    thousand: ",",
+    prefix: "$",
+  });
+
+  noUiSlider.create(rangeSlider, {
+    start: [0, 10000],
+    step: 1,
+    range: {
+      min: [0],
+      max: [10000],
+    },
+    format: moneyFormat,
+    connect: true,
+  });
+
+  rangeSlider.noUiSlider.on("update", function (values, handle) {
+    document.getElementById("slider-range-value1").innerHTML = values[0];
+    document.getElementById("slider-range-value2").innerHTML = values[1];
+
+    const minInput = document.getElementsByName("min-value")[0];
+    const maxInput = document.getElementsByName("max-value")[0];
+
+    if (minInput) minInput.value = moneyFormat.from(values[0]);
+    if (maxInput) maxInput.value = moneyFormat.from(values[1]);
   });
 });
