@@ -126,6 +126,7 @@
 
     .form-s1 {
         position: relative;
+        width: 100%;
     }
 
     .form-search {
@@ -149,6 +150,8 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
 
     &.bg-white {
         background: var(--white);
@@ -165,6 +168,7 @@
         flex-grow: 1;
         display: flex;
         flex-direction: row;
+        width: 100%;
 
         &.inner-1 {
             gap: 12px;
@@ -178,8 +182,11 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            width: 100%;
-            z-index: 10000;
+            box-sizing: border-box;
+            flex: 1;
+            min-width: 0;
+
+
 
             &.fg-1 {
                 background-color: var(--white);
@@ -567,20 +574,28 @@
         flex-direction: row;
         align-items: center;
         gap: 12px;
+        flex-shrink: 0;
+        width: auto;
 
         .tf-btn {
             cursor: pointer;
-            padding: 16px;
             min-width: 54px;
 
-            &.btn-1 {
-                padding: 36px;
 
-                .icon {
-                    font-size: 24px;
-                }
+            img {
+                width: 24px;
+                height: 24px;
             }
 
+            &.btn-1 {
+                padding: 34px;
+
+
+            }
+
+            .icon {
+                font-size: 24px;
+            }
         }
     }
 }
@@ -618,7 +633,8 @@
 .advanced-form {
     position: absolute;
     z-index: 10;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     background: var(--white);
     border-radius: 16px;
     padding: 24px;

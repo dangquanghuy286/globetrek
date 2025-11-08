@@ -276,7 +276,7 @@
             .categories-list {
                 display: flex;
                 gap: 16px;
-
+                flex-wrap: wrap;
 
 
                 a {
@@ -292,11 +292,13 @@
                     background-color: var(--border-header);
                     backdrop-filter: blur(4px);
                     @include transition3;
+                    white-space: nowrap;
 
                     .icon {
                         font-size: 20px;
                         color: var(--white);
                         @include flex(center, center);
+                        flex-shrink: 0;
                     }
 
                     &:hover {
