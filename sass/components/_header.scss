@@ -257,6 +257,7 @@
     @include transition3;
     z-index: 999;
     visibility: hidden;
+
 }
 
 .sub-menu::before,
@@ -273,7 +274,7 @@
     left: 0;
     min-width: 280px;
     list-style: none;
-    padding: 8px 0 !important;
+    padding: 12px 0 !important;
 
     &::before {
         left: 20px;

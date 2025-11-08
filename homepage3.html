@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="css/boostrap.css" rel="stylesheet" />
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
     />
@@ -738,76 +738,407 @@
         </div>
 
         <!-- Form -->
-        <div class="tf-formSearch">
-          <div class="container">
-            <div class="tf-search-form-inner">
-              <div class="search-box">
-                <form action="/search" method="get">
-                  <div class="search-group">
-                    <div class="search-inner">
-                      <label for="" class="title-field">Location</label>
-                      <div class="inner-selected">
-                        <div class="default-title">Where are you going</div>
-                        <span class="icon icon-CaretDown"></span>
-                        <!-- <ul class="sub-menu">
-                          <li class="sub-item active">-Where are you going-</li>
-
-                          <li class="sub-item"><a href="#">New York</a></li>
-                          <li class="sub-item"><a href="#">New York</a></li>
-                          <li class="sub-item"><a href="#">New York</a></li>
-                          <li class="sub-item"><a href="#">New York</a></li>
-                        </ul> -->
-                      </div>
-                    </div>
-                    <div class="search-inner">
-                      <label for="" class="title-field">Tour Type</label>
-                      <div class="inner-selected">
-                        <div class="default-title">Select Type</div>
-                        <span class="icon icon-CaretDown"></span>
-                        <!-- <ul class="sub-menu">
-                          <li class="sub-item active">-Tour Type-</li>
-                          <li class="sub-item"><a href="#">Camping</a></li>
-                          <li class="sub-item"><a href="#">Beach</a></li>
-                          <li class="sub-item"><a href="#">Climbing</a></li>
-                          <li class="sub-item"><a href="#">Discovery</a></li>
-                        </ul> -->
-                      </div>
-                    </div>
-                    <!-- Date -->
-                    <div class="search-inner">
-                      <label for="" class="title-field">Date</label>
-                      <input
-                        type="date"
-                        class="form-control date-input"
-                        placeholder="dd/mm/yyyy"
-                      />
-                    </div>
-                    <!-- People -->
-                    <div class="search-inner people-inner">
-                      <label for="" class="title-field">People</label>
-                      <div class="inner-selected">
-                        <div class="default-title">
-                          <span class="d-flex flex-row align-items-center gap-2"
-                            ><img
-                              src="./images/icons/users.svg"
-                              alt="icon"
-                              class="icon"
-                            />2 Adults - 0 Children
-                          </span>
+        <div class="tab-content pos-1">
+          <div class="face active show" role="tabpanel">
+            <div class="container">
+              <div class="form-s1">
+                <form action="/search" method="post">
+                  <div class="form-search transparent style-2">
+                    <div class="inner-group inner-1">
+                      <div class="form-group fg-1">
+                        <label>Location</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current">Where are you going</span>
+                            <ul class="list w-1">
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <span class="icon icon-CaretDown"></span>
-                        <!-- <ul class="inner-dropdown"> <li class="inner-dropdown-item"> 1 Adult - 0 Children </li> <li class="inner-dropdown-item active"> 2 Adults - 0 Children </li> <li class="inner-dropdown-item">2 Adults - 1 Child</li> <li class="inner-dropdown-item"> 3 Adults - 2 Children </li> </ul> -->
+                      </div>
+                      <div class="form-group fg-1">
+                        <label>Date</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <div class="current">
+                              <input
+                                type="text"
+                                class="date-input"
+                                placeholder="dd/mm/yyyy"
+                                readonly
+                              />
+                              <img
+                                src="./images/icons/calendar.svg"
+                                alt="icon"
+                              />
+                            </div>
+                            <div class="list w-1">
+                              <div class="datepicker-header">
+                                <button type="button" class="prev-month">
+                                  <i class="icon icon-CaretLeft"></i>
+                                </button>
+                                <div class="datepicker-title">November 24</div>
+                                <button type="button" class="next-month">
+                                  <i class="icon icon-CaretRight"></i>
+                                </button>
+                              </div>
+
+                              <div class="datepicker-weekdays">
+                                <div class="datepicker-weekday weekend">Su</div>
+                                <div class="datepicker-weekday">Mo</div>
+                                <div class="datepicker-weekday">Tu</div>
+                                <div class="datepicker-weekday">We</div>
+                                <div class="datepicker-weekday">Th</div>
+                                <div class="datepicker-weekday">Fr</div>
+                                <div class="datepicker-weekday weekend">Sa</div>
+                              </div>
+
+                              <div class="datepicker-days"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group fg-1">
+                        <label>Tour Type</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current"
+                              >Select Type
+                              <i class="icon icon-CaretDown"></i>
+                            </span>
+                            <ul class="list w-1">
+                              <li data-value="adventure" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Adventure</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="beach" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Beach</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="camping" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Camping</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group fg-1">
+                        <label>People</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current guest-text">
+                              <img src="./images/icons/users.svg" alt="icon" />
+
+                              <i class="icon icon-CaretDown"></i>
+                            </span>
+                            <div class="list w-1">
+                              <div class="guest-item">
+                                <span>Adult</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                              <div class="guest-item">
+                                <span>Children</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                              <div class="guest-item">
+                                <span>Infants</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="search-inner search_advanced_field">
-                      <img src="./images/icons/advanced.svg" alt="icon" />
-                    </div>
-                    <button type="submit" class="btn-search">
-                      <div class="tf-btn primary hover-1">
-                        <span class="icon-search"></span>
+                    <div class="box-btn-filter">
+                      <div class="box-filter">
+                        <div href="#" class="tf-btn hover-1 btn-1">
+                          <img src="./images/icons/advanced.svg" alt="icon" />
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="tf-btn primary hover-1 btn-1"
+                      >
+                        <i class="icon icon-search"></i>
                         <span>Search</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="advanced-form left-1">
+                    <div class="group-price">
+                      <div class="box-title-price">
+                        <span class="title-price">Price</span>
+                        <div class="caption-price">
+                          <span id="slider-range-value1"> $0 </span>
+                          <span>-</span>
+                          <span id="slider-range-value2"> $10,000 </span>
+                        </div>
                       </div>
-                    </button>
+                      <div id="slider-range" class="slider-range"></div>
+                      <div class="slider-labels">
+                        <div>
+                          <input type="hidden" name="min-value" value="" />
+                          <input type="hidden" name="max-value" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group-checkbox">
+                      <div class="title-checkbox">Amentities</div>
+                      <div class="group-amentities">
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-1"
+                            />
+                            <label for="item-1" class="text-amenities"
+                              >Convenience</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-2"
+                            />
+                            <label for="item-2" class="text-amenities"
+                              >Cost-effective</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-3"
+                            />
+                            <label for="item-3" class="text-amenities"
+                              >Social Interaction</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-4"
+                            />
+                            <label for="item-4" class="text-amenities"
+                              >Safety and Security</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-5"
+                            />
+                            <label for="item-5" class="text-amenities"
+                              >Variety of Experiences</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-6"
+                            />
+                            <label for="item-6" class="text-amenities"
+                              >Less Stress</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-7"
+                            />
+                            <label for="item-7" class="text-amenities"
+                              >Hassle-Free Travel</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-8"
+                            />
+                            <label for="item-8" class="text-amenities"
+                              >Cultural Immersion</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-9"
+                            />
+                            <label for="item-9" class="text-amenities"
+                              >Time Efficiency</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-10"
+                            />
+                            <label for="item-10" class="text-amenities"
+                              >Unique Experiences</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-11"
+                            />
+                            <label for="item-11" class="text-amenities"
+                              >Peace of Mind</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-12"
+                            />
+                            <label for="item-12" class="text-amenities"
+                              >Educational Value</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-13"
+                            />
+                            <label for="item-13" class="text-amenities"
+                              >Group Discounts</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-18"
+                            />
+                            <label for="item-18" class="text-amenities"
+                              >Romantic Atmosphere</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-14"
+                            />
+                            <label for="item-14" class="text-amenities"
+                              >Flexibility</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-15"
+                            />
+                            <label for="item-15" class="text-amenities"
+                              >Stress Relief</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-17"
+                            />
+                            <label for="item-17" class="text-amenities"
+                              >Scenic Views</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-16"
+                            />
+                            <label for="item-16" class="text-amenities"
+                              >Expert Guidance</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -1456,6 +1787,8 @@
       new WOW({ live: true, mobile: true, offset: 0 }).init();
     </script>
     <!-- Load  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/swiper.js"></script>
     <script src="./js/script.js"></script>
