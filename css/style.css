@@ -570,6 +570,7 @@
   position: relative;
   cursor: pointer;
   gap: 10px;
+  padding: 0 6px 0 0;
 }
 .form-search .inner-group .form-group .group-select .select-items .current .icon {
   font-size: 16px;
@@ -752,45 +753,10 @@
   font-size: 24px;
 }
 
-.tf-checkbox {
-  width: 20px !important;
-  height: 20px !important;
-  border: 1px solid var(--input-color);
-  border-radius: 6px !important;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: var(--white);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tf-checkbox:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  position: relative;
-}
-.tf-checkbox:checked::before {
-  content: "\e91b";
-  font-family: "icomoon";
-  font-size: 16px;
-  line-height: 12px;
-  color: var(--white);
-}
-
 .advanced-form {
   position: absolute;
   z-index: 10;
-  max-width: 1280px;
-  width: 100%;
+  width: 1280px;
   background: var(--white);
   border-radius: 16px;
   padding: 24px;
@@ -812,7 +778,7 @@
   border-right: 15px solid transparent;
   transform: rotate(45deg);
   bottom: calc(100% - 9px);
-  left: 54.1%;
+  left: 56.2%;
 }
 .advanced-form.left-1::before {
   left: 82.5%;
@@ -869,6 +835,40 @@
   cursor: pointer;
   font-weight: 400;
   line-height: 140%;
+}
+
+.tf-checkbox {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid var(--input-color);
+  border-radius: 6px !important;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--white);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tf-checkbox:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  position: relative;
+}
+.tf-checkbox:checked::before {
+  content: "\e91b";
+  font-family: "icomoon";
+  font-size: 16px;
+  line-height: 12px;
+  color: var(--white);
 }
 
 .breadcrumb {
