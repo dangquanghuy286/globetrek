@@ -616,6 +616,7 @@
     visibility: hidden;
     left: 0;
 
+
     &::before {
         content: "";
         position: absolute;
@@ -673,6 +674,7 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 16px;
+
 
             .box-amentities {
                 display: grid;

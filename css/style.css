@@ -3083,34 +3083,48 @@
 .tf-meta .contact-info .user-avatars {
   display: flex;
   align-items: center;
-  position: relative;
-  border-radius: 50px;
-  padding: 6px 0px 6px 6px;
 }
 .tf-meta .contact-info .user-avatars img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  margin-left: -24px;
+  object-fit: cover;
+  margin-left: -20px;
 }
 .tf-meta .contact-info .user-avatars img:first-child {
   margin-left: 0;
 }
+.tf-meta .contact-info .user-avatars img:hover {
+  margin-left: 0;
+  transform: scale(1.1);
+  z-index: 10;
+}
 .tf-meta .contact-info .user-avatars .user-count {
-  position: absolute;
-  right: 0px;
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 16px;
+  overflow: hidden;
+  margin-left: -20px;
+}
+.tf-meta .contact-info .user-avatars .user-count img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+}
+.tf-meta .contact-info .user-avatars .user-count span {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 .tf-meta .contact-info .box-icon {
   color: var(--white);
@@ -5313,8 +5327,12 @@ h5 {
   .header .header-ct-right .wrap-login-menu ul .search::before {
     right: -5px;
   }
-  .tab-content .form-search .box-btn-filter .tf-btn {
-    min-width: 130px;
+  .header.style-2 .list-nav {
+    padding: 0 16px;
+  }
+  .box-title .tf-meta {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 @media (max-width: 991px) {
@@ -5358,6 +5376,9 @@ h5 {
   .slider-default .swiper-slide.home-3 .wrap-search-link {
     margin-top: 100px !important;
   }
+  .slider-default .swiper-slide.home-4 .box-title {
+    padding: 200px 0 90px;
+  }
   .slider-default .box-title {
     margin-bottom: 300px;
   }
@@ -5370,11 +5391,18 @@ h5 {
   .slider-default .box-title h3 {
     font-size: 36px !important;
   }
-  .slider-default .box-meta {
+  .slider-default .box-meta,
+  .slider-default .slide-indicator {
     display: none;
+  }
+  .tab-content {
+    width: 100%;
   }
   .tab-content.pos-1 {
     bottom: 0px;
+  }
+  .flex-direction-nav {
+    top: 27%;
   }
   .flex-direction-nav a {
     width: 40px;
@@ -5394,15 +5422,26 @@ h5 {
   .form-search {
     flex-direction: column;
   }
+  .form-search.style-1 {
+    gap: 24px !important;
+  }
   .form-search .inner-group {
-    width: 100%;
     flex-direction: column;
+    gap: 10px;
+    padding: 12px 0;
+    border: 1px solid var(--stoke-color);
+  }
+  .form-search .inner-group .form-group {
+    border: none;
   }
   .form-search .inner-group .form-group .list.w-1 {
     top: calc(100% + 10px) !important;
   }
+  .form-search .inner-group .form-group:first-child {
+    padding-left: 24px;
+  }
   .advanced-form .group-checkbox .group-amentities {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   .tf-destination .item:nth-child(2),
   .tf-destination .item:nth-child(3),
@@ -5469,6 +5508,10 @@ h5 {
   .header .header-ct-right .wrap-login-menu .login {
     font-size: 14px;
   }
+  .advanced-form {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
   .categories-list {
     gap: 8px;
   }
@@ -5480,6 +5523,30 @@ h5 {
   .categories-list a .icon {
     font-size: 16px;
   }
+  .box-title .tf-meta {
+    margin-top: 100px;
+  }
+  .box-title .tf-meta .contact-info ul li a {
+    width: 36px;
+    height: 36px;
+  }
+  .box-title .tf-meta .contact-info ul li a .icon {
+    font-size: 14px;
+  }
+  .box-title .tf-meta .contact-info .user-avatars img {
+    width: 36px;
+    height: 36px;
+  }
+  .box-title .tf-meta .contact-info .user-avatars .user-count {
+    width: 36px;
+    height: 36px;
+  }
+  .box-title .tf-meta .divider {
+    display: none;
+  }
+  .box-title .tf-meta span {
+    font-size: 12px;
+  }
   .tf-toolbar-bottom {
     display: block;
   }
@@ -5487,7 +5554,7 @@ h5 {
     margin-bottom: 70px;
   }
   .advanced-form .group-checkbox .group-amentities {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr) !important;
   }
   .tf-single h1 {
     font-size: 20px;

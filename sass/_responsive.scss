@@ -49,19 +49,18 @@
             }
          }
       }
+
+      &.style-2 {
+         .list-nav {
+            padding: 0 16px;
+         }
+      }
    }
 
-   .tab-content {
-
-      .form-search {
-
-         .box-btn-filter {
-
-
-            .tf-btn {
-               min-width: 130px;
-            }
-         }
+   .box-title {
+      .tf-meta {
+         flex-direction: column;
+         gap: 10px;
       }
    }
 
@@ -136,6 +135,12 @@
             }
          }
 
+         &.home-4 {
+            .box-title {
+               padding: 200px 0 90px;
+            }
+         }
+
       }
 
       .box-title {
@@ -156,7 +161,8 @@
 
       }
 
-      .box-meta {
+      .box-meta,
+      .slide-indicator {
          display: none;
       }
 
@@ -164,12 +170,16 @@
    }
 
    .tab-content {
+      width: 100%;
+
       &.pos-1 {
          bottom: 0px;
       }
    }
 
    .flex-direction-nav {
+      top: 27%;
+
       a {
          width: 40px;
          height: 40px;
@@ -193,16 +203,30 @@
    .form-search {
       flex-direction: column;
 
+      &.style-1 {
+         gap: 24px !important;
+      }
+
       .inner-group {
-         width: 100%;
          flex-direction: column;
+         gap: 10px;
+         padding: 12px 0;
+         border: 1px solid var(--stoke-color);
 
          .form-group {
+            border: none;
+
             .list {
                &.w-1 {
                   top: calc(100% + 10px) !important;
                }
             }
+
+            &:first-child {
+               padding-left: 24px;
+            }
+
+
          }
       }
    }
@@ -210,7 +234,7 @@
    .advanced-form {
       .group-checkbox {
          .group-amentities {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr) !important;
          }
       }
    }
@@ -327,6 +351,11 @@
       }
    }
 
+   .advanced-form {
+      max-height: 80vh;
+      overflow-y: auto;
+   }
+
    .categories-list {
       gap: 8px;
 
@@ -337,6 +366,48 @@
 
          .icon {
             font-size: 16px;
+         }
+      }
+   }
+
+   .box-title {
+      .tf-meta {
+         margin-top: 100px;
+
+         .contact-info {
+            ul {
+               li {
+                  a {
+                     width: 36px;
+                     height: 36px;
+
+                     .icon {
+                        font-size: 14px;
+                     }
+                  }
+               }
+            }
+
+            .user-avatars {
+               img {
+                  width: 36px;
+                  height: 36px;
+               }
+
+               .user-count {
+                  width: 36px;
+                  height: 36px;
+               }
+            }
+
+         }
+
+         .divider {
+            display: none;
+         }
+
+         span {
+            font-size: 12px;
          }
       }
    }
@@ -352,7 +423,7 @@
    .advanced-form {
       .group-checkbox {
          .group-amentities {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(1, 1fr) !important;
          }
       }
    }
