@@ -5428,8 +5428,6 @@ h5 {
   .form-search .inner-group {
     flex-direction: column;
     gap: 10px;
-    padding: 12px 0;
-    border: 1px solid var(--stoke-color);
   }
   .form-search .inner-group .form-group {
     border: none;
