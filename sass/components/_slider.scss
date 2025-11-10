@@ -84,6 +84,11 @@
                     left: 215px;
                     top: 490px;
 
+                    .advanced-form {
+                        &::before {
+                            left: 84.5%;
+                        }
+                    }
                 }
 
             }
@@ -152,7 +157,7 @@
         left: 50%;
         width: 180px;
         height: 180px;
-        z-index: 100;
+        z-index: 10;
         transform: translateX(-50%);
 
         .circle {
@@ -435,7 +440,7 @@
 
                 .advanced-form {
                     &::before {
-                        left: 65.2%;
+                        left: 86.6%;
                     }
                 }
             }
@@ -511,6 +516,12 @@
                             .icon {
                                 font-size: 24px;
                             }
+                        }
+                    }
+
+                    .advanced-form {
+                        &::before {
+                            left: 86.6%;
                         }
                     }
 

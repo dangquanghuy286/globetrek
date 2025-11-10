@@ -755,8 +755,8 @@
 
 .advanced-form {
   position: absolute;
-  z-index: 10;
-  width: 1280px;
+  z-index: 100;
+  width: 100%;
   background: var(--white);
   border-radius: 16px;
   padding: 24px;
@@ -2704,6 +2704,9 @@
   left: 215px;
   top: 490px;
 }
+.hero .flat-hero .content-left .tab-content .advanced-form::before {
+  left: 84.5%;
+}
 .hero .flat-hero .content-right {
   width: 53%;
   display: flex;
@@ -2755,7 +2758,7 @@
   left: 50%;
   width: 180px;
   height: 180px;
-  z-index: 100;
+  z-index: 10;
   transform: translateX(-50%);
 }
 .rotating-badge .circle {
@@ -2987,7 +2990,7 @@
   margin-top: 70px;
 }
 .slider-default .swiper-slide.home-4 .advanced-form::before {
-  left: 65.2%;
+  left: 86.6%;
 }
 .slider-default .swiper-slide {
   /* === HOME 4 === */
@@ -3035,6 +3038,9 @@
 }
 .slider-default .swiper-slide.home-5 .box-title .box-btn-filter .tf-btn .icon {
   font-size: 24px;
+}
+.slider-default .swiper-slide.home-5 .box-title .advanced-form::before {
+  left: 86.6%;
 }
 .slider-default .swiper-slide.home-5 .box-title .tf-meta .categories-list a {
   backdrop-filter: none;
@@ -4873,6 +4879,10 @@ h5 {
 
 .d-grid {
   display: grid;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr) !important;
 }
 
 .d-none {

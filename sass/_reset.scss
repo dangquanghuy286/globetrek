@@ -1544,6 +1544,10 @@ h5 {
     display: grid;
 }
 
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
 .d-none {
     display: none;
 }
