@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       speed: speed,
       autoplay: autoplay
         ? {
-            delay: 30000,
+            delay: 3000,
             disableOnInteraction: false,
           }
         : false,
