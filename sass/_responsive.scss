@@ -64,6 +64,21 @@
       }
    }
 
+   .slider-default {
+      .swiper-slide {
+
+
+         &.home-4 {
+            .box-title {
+               padding: 290px 0 90px;
+            }
+         }
+
+      }
+
+
+
+   }
 
 }
 
@@ -209,9 +224,6 @@
 
       .inner-group {
          flex-direction: column;
-         gap: 10px;
-
-
 
          .form-group {
             border: none;
@@ -227,6 +239,14 @@
             }
 
 
+         }
+      }
+
+      .box-btn-filter {
+         .tf-btn {
+            &.btn-1 {
+               padding: 24px;
+            }
          }
       }
    }
@@ -356,6 +376,12 @@
    .advanced-form {
       max-height: 80vh;
       overflow-y: auto;
+   }
+
+
+   .title {
+      font-size: 45px;
+      line-height: 100%;
    }
 
    .categories-list {

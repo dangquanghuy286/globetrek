@@ -40,57 +40,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // =============== Hero Swiper ===========================
-document.addEventListener("DOMContentLoaded", () => {
-  const heroSwiperEl = document.querySelector(".mySwiper");
-  const indicatorEl = document.querySelector(".slide-number");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const heroSwiperEl = document.querySelector(".mySwiper");
+//   const indicatorEl = document.querySelector(".slide-number");
 
-  if (heroSwiperEl) {
-    const preview = parseInt(heroSwiperEl.dataset.preview) || 1;
-    const autoplay = heroSwiperEl.dataset.autoplay === "true";
-    const loop = heroSwiperEl.dataset.loop === "true";
-    const speed = parseInt(heroSwiperEl.dataset.speed) || 1000;
+//   if (heroSwiperEl) {
+//     const preview = parseInt(heroSwiperEl.dataset.preview) || 1;
+//     const autoplay = heroSwiperEl.dataset.autoplay === "true";
+//     const loop = heroSwiperEl.dataset.loop === "true";
+//     const speed = parseInt(heroSwiperEl.dataset.speed) || 1000;
 
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: preview,
-      spaceBetween: 0,
-      loop: loop,
-      speed: speed,
-      autoplay: autoplay
-        ? {
-            delay: 3000,
-            disableOnInteraction: false,
-          }
-        : false,
-      navigation: {
-        nextEl: ".flex-next",
-        prevEl: ".flex-prev",
-      },
-      simulateTouch: false,
-      allowTouchMove: false,
-      effect: "fade",
-      fadeEffect: { crossFade: true },
+//     const swiper = new Swiper(".mySwiper", {
+//       slidesPerView: preview,
+//       spaceBetween: 0,
+//       loop: loop,
+//       speed: speed,
+//       autoplay: autoplay
+//         ? {
+//             delay: 3000,
+//             disableOnInteraction: false,
+//           }
+//         : false,
+//       navigation: {
+//         nextEl: ".flex-next",
+//         prevEl: ".flex-prev",
+//       },
+//       simulateTouch: false,
+//       allowTouchMove: false,
+//       effect: "fade",
+//       fadeEffect: { crossFade: true },
 
-      on: {
-        init: function () {
-          updateSlideIndicator(this);
-        },
-        slideChange: function () {
-          updateSlideIndicator(this);
-        },
-      },
-    });
+//       on: {
+//         init: function () {
+//           updateSlideIndicator(this);
+//         },
+//         slideChange: function () {
+//           updateSlideIndicator(this);
+//         },
+//       },
+//     });
 
-    heroSwiperEl.addEventListener("mouseenter", () => {
-      swiper.autoplay?.stop();
-    });
+//     heroSwiperEl.addEventListener("mouseenter", () => {
+//       swiper.autoplay?.stop();
+//     });
 
-    heroSwiperEl.addEventListener("mouseleave", () => {
-      swiper.autoplay?.start();
-    });
-    function updateSlideIndicator(swiperInstance) {
-      if (!indicatorEl) return;
-      const current = swiperInstance.realIndex + 1;
-      indicatorEl.textContent = `${current} / 3`;
-    }
-  }
-});
+//     heroSwiperEl.addEventListener("mouseleave", () => {
+//       swiper.autoplay?.start();
+//     });
+//     function updateSlideIndicator(swiperInstance) {
+//       if (!indicatorEl) return;
+//       const current = swiperInstance.realIndex + 1;
+//       indicatorEl.textContent = `${current} / 3`;
+//     }
+//   }
+// });
