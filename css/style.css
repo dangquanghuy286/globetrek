@@ -3210,7 +3210,7 @@
 .flex-direction-nav {
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 41%;
   transform: translateY(-40%);
   display: flex;
   z-index: 200;
@@ -5332,6 +5332,7 @@ h5 {
   .box-title .tf-meta {
     flex-direction: column;
     gap: 10px;
+    margin-top: 100px;
   }
   .slider-default .swiper-slide.home-4 .box-title {
     padding: 290px 0 90px;
@@ -5404,11 +5405,11 @@ h5 {
     bottom: 0px;
   }
   .flex-direction-nav {
-    top: 27%;
+    top: 25%;
   }
   .flex-direction-nav a {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   .flex-direction-nav a img {
     width: 18px;
@@ -5441,6 +5442,24 @@ h5 {
   }
   .form-search .box-btn-filter .tf-btn.btn-1 {
     padding: 24px;
+  }
+  .home-4 .wrap-search-link .inner-group,
+  .home-5 .wrap-search-link .inner-group {
+    gap: 12px;
+  }
+  .home-4 .wrap-search-link .inner-group .form-group,
+  .home-5 .wrap-search-link .inner-group .form-group {
+    padding: 0;
+  }
+  .home-4 .wrap-search-link .inner-group .form-group .current,
+  .home-5 .wrap-search-link .inner-group .form-group .current {
+    padding: 12px !important;
+    border: 1px solid var(--stoke-color);
+    border-radius: 999px;
+  }
+  .home-4 .wrap-search-link .inner-group .form-group .list,
+  .home-5 .wrap-search-link .inner-group .form-group .list {
+    top: calc(100% + 12px) !important;
   }
   .advanced-form .group-checkbox .group-amentities {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -5528,9 +5547,6 @@ h5 {
   }
   .categories-list a .icon {
     font-size: 16px;
-  }
-  .box-title .tf-meta {
-    margin-top: 100px;
   }
   .box-title .tf-meta .contact-info ul li a {
     width: 36px;

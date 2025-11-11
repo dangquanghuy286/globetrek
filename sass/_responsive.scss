@@ -61,6 +61,7 @@
       .tf-meta {
          flex-direction: column;
          gap: 10px;
+         margin-top: 100px;
       }
    }
 
@@ -193,11 +194,11 @@
    }
 
    .flex-direction-nav {
-      top: 27%;
+      top: 25%;
 
       a {
-         width: 40px;
-         height: 40px;
+         width: 50px;
+         height: 50px;
 
          img {
             width: 18px;
@@ -246,6 +247,29 @@
          .tf-btn {
             &.btn-1 {
                padding: 24px;
+            }
+         }
+      }
+   }
+
+   .home-4,
+   .home-5 {
+      .wrap-search-link {
+         .inner-group {
+            gap: 12px;
+
+            .form-group {
+               padding: 0;
+
+               .current {
+                  padding: 12px !important;
+                  border: 1px solid var(--stoke-color);
+                  border-radius: 999px;
+               }
+
+               .list {
+                  top: calc(100% + 12px) !important;
+               }
             }
          }
       }
@@ -400,7 +424,6 @@
 
    .box-title {
       .tf-meta {
-         margin-top: 100px;
 
          .contact-info {
             ul {
