@@ -5537,6 +5537,9 @@ h5 {
     font-size: 45px;
     line-height: 100%;
   }
+  .flex-direction-nav {
+    display: none;
+  }
   .categories-list {
     gap: 8px;
   }
