@@ -16,7 +16,7 @@
     }
 
     &:hover {
-        img {
+        img:not(.icon) {
             transform: scale(1.05);
             filter: brightness(60%);
         }

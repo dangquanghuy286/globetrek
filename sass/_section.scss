@@ -1,3 +1,5 @@
+@use "abstracts/index.scss" as *;
+
 .flat-section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -6,8 +8,6 @@
 //========== Box title==========
 .box-title {
     margin-bottom: 50px;
-
-
 
     &.style-1 {
         margin-bottom: 40px;
@@ -26,11 +26,13 @@
 
     .title {
         text-transform: capitalize;
-        font-weight: 800;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
     }
 
     .desc {
-        margin-top: 20px;
+        margin-top: 12px;
     }
 }
 
@@ -413,6 +415,227 @@
 
         100% {
             transform: translateX(-50%);
+        }
+    }
+}
+
+// ============Tour=============================
+.flat-tab-recommend {
+    .item {
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--stoke-color);
+
+        .images-group {
+            aspect-ratio: 3/ 2;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .archive-bottom {
+            padding: 24px;
+
+            .content-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+
+                .list-star {
+                    .icon {
+                        font-size: 14px;
+                    }
+                }
+
+
+            }
+
+            .tour-title {
+                margin-bottom: 18px;
+            }
+
+            .content-info-middle {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                padding-bottom: 16px;
+                border-bottom: 1px solid var(--stoke-color);
+
+                .info {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    color: var(--text-color);
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        line-height: 140%;
+                    }
+                }
+            }
+
+            .content-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 16px;
+
+                .address {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 8px;
+
+                    .icon {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    .location {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        color: var(--text-color);
+                    }
+                }
+
+                .price {
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+
+
+        .group-meta {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .tag-meta {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+
+                .flag-tag {
+                    display: flex;
+                    align-items: center;
+                    padding: 6px 12px;
+                    background-color: var(--primary-color);
+                    color: var(--white);
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 100%;
+                    border-radius: 99px;
+                }
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    padding: 6px 12px;
+                    background-color: #0000004D;
+                    backdrop-filter: blur(4px);
+                    gap: 6px;
+                    border-radius: 99px;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+
+                    }
+
+                    span {
+                        color: var(--white);
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 100%;
+                    }
+
+                    &:hover {
+                        background-color: var(--primary-color);
+                        color: var(--white);
+
+                        img {
+                            filter: brightness(0) invert(1);
+
+                        }
+
+                    }
+                }
+            }
+
+            .btn-wished {
+                @include flex(center, center);
+                background-color: var(--white);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                    filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(967%) hue-rotate(179deg) brightness(90%) contrast(89%);
+                }
+            }
+        }
+    }
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+
+    .list-star {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+
+        .icon {
+            color: var(--star-color);
+            font-size: 16px;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
+            }
+        }
+    }
+
+    .rate {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        justify-content: center;
+        text-align: center;
+
+        .total-rate {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            color: var(--heading-color);
+        }
+
+        .review {
+            font-size: 14px;
+            line-height: 140%;
+            font-weight: 400;
+            color: var(--place-holder);
         }
     }
 }
