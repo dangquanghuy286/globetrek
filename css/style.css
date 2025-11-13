@@ -5545,6 +5545,9 @@ h5 {
   .advanced-form .group-checkbox .group-amentities {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+  .banner-section {
+    padding: 150px 0 !important;
+  }
   .tf-single h1 {
     font-size: 30px;
   }
@@ -5663,6 +5666,12 @@ h5 {
     bottom: 100px;
     right: 10px;
   }
+  .banner-section {
+    padding: 80px 0 !important;
+  }
+  .banner-section .box-title .title {
+    font-size: 32px;
+  }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 12px;
   }
@@ -5688,7 +5697,7 @@ h5 {
     gap: 0 !important;
   }
   .tf-destination .swiper-slide {
-    height: auto !important;
+    height: 338px !important;
   }
   .tf-sw-mobile .sw-pagination {
     display: block !important;
@@ -6510,6 +6519,55 @@ h5 {
 }
 .flat-perfect-tour .item:hover {
   box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.tf-best-trip {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.tf-best-trip .tf-scroll-text {
+  position: relative;
+}
+.tf-best-trip .tf-scroll-text .heading {
+  font-weight: 600;
+  font-size: 182px;
+  line-height: 120%;
+  text-align: center;
+}
+.tf-best-trip .tf-scroll-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tf-best-trip .tf-scroll-text .tag-image {
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  position: absolute;
+}
+.tf-best-trip .tf-scroll-text .tag-1 {
+  width: 139px;
+  height: 139px;
+  left: 11%;
+  bottom: -29%;
+}
+.tf-best-trip .tf-scroll-text .tag-2 {
+  width: 96px;
+  height: 96px;
+  left: 36%;
+  top: -23%;
+}
+.tf-best-trip .tf-scroll-text .tag-3 {
+  width: 63px;
+  height: 63px;
+  left: 66%;
+  bottom: -5%;
+}
+.tf-best-trip .tf-scroll-text .tag-4 {
+  width: 260px;
+  height: 260px;
+  right: 6%;
+  top: -75%;
 }
 
 /*# sourceMappingURL=style.css.map */

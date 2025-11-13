@@ -406,26 +406,9 @@
    }
 
 
-   // .tf-destination {
-
-   //    .item:nth-child(2),
-   //    .item:nth-child(3),
-   //    .item:nth-child(5) {
-   //       grid-column: span 2;
-   //    }
-
-   //    .destination-post {
-   //       .group-meta {
-   //          left: 12px !important;
-
-   //          .tf-btn {
-   //             padding: 10px !important;
-   //             font-size: 12px;
-   //          }
-   //       }
-   //    }
-
-   // }
+   .banner-section {
+      padding: 150px 0 !important;
+   }
 
 
 
@@ -628,6 +611,17 @@
       right: 10px;
    }
 
+   .banner-section {
+      padding: 80px 0 !important;
+
+      .box-title {
+         .title {
+            font-size: 32px;
+
+         }
+      }
+   }
+
    .flat-blog-list {
       .flat-blog-item {
          .content-box {
@@ -674,7 +668,7 @@
       gap: 0 !important;
 
       .swiper-slide {
-         height: auto !important;
+         height: 338px !important;
       }
 
 

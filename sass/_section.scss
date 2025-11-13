@@ -965,3 +965,62 @@
         }
     }
 }
+
+// ==============Text -Heading===============
+
+.tf-best-trip {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .tf-scroll-text {
+        position: relative;
+
+        .heading {
+            font-weight: 600;
+            font-size: 182px;
+            line-height: 120%;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag-image {
+            box-shadow: 0px 30px 60px 0px #00000033;
+            border-radius: 16px;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .tag-1 {
+            width: 139px;
+            height: 139px;
+            left: 11%;
+            bottom: -29%;
+        }
+
+        .tag-2 {
+            width: 96px;
+            height: 96px;
+            left: 36%;
+            top: -23%;
+        }
+
+        .tag-3 {
+            width: 63px;
+            height: 63px;
+            left: 66%;
+            bottom: -5%;
+        }
+
+        .tag-4 {
+            width: 260px;
+            height: 260px;
+            right: 6%;
+            top: -75%;
+        }
+    }
+}
