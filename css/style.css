@@ -5270,6 +5270,7 @@ h5 {
 .title {
   font-size: 70px;
   line-height: 120%;
+  color: var(--heading-color);
 }
 
 .subtitle {
@@ -6028,6 +6029,10 @@ h5 {
   color: var(--primary-color);
 }
 
+.partner {
+  width: 100%;
+  overflow: hidden;
+}
 .partner .partners-list {
   display: flex;
   gap: 40px;
@@ -6329,6 +6334,65 @@ h5 {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
+}
+
+.tf-benefit {
+  background: url("../images/backgronud/bg-transperent.png") no-repeat center center;
+  background-size: cover;
+  background-color: var(--primary-color);
+}
+.tf-benefit .box-icon {
+  padding: 48px 32px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.tf-benefit .box-icon:hover .wrap-icon {
+  background-color: var(--primary-color);
+}
+.tf-benefit .box-icon:hover .wrap-icon .icon {
+  transform: rotateY(360deg);
+  filter: brightness(0) invert(1);
+}
+.tf-benefit .box-icon .wrap-icon {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+}
+.tf-benefit .box-icon .wrap-icon .icon {
+  width: 64px;
+  height: 64px;
+  filter: brightness(0) saturate(100%) invert(70%) sepia(55%) saturate(503%) hue-rotate(351deg) brightness(90%) contrast(91%);
+  transition: transform 0.6s ease-in-out;
+}
+.tf-benefit .box-icon .content {
+  text-align: center;
+}
+.tf-benefit .box-icon .content .title {
+  font-size: 24px;
+  line-height: 100%;
+  margin-bottom: 12px;
+}
+.tf-benefit .box-icon .content .desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--text-color);
+}
+.tf-benefit .partner {
+  margin-top: 80px;
+}
+.tf-benefit .partner .partners-item {
+  filter: brightness(0) invert(1);
+}
+.tf-benefit .partner .partners-item:hover {
+  filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=style.css.map */
