@@ -6319,9 +6319,8 @@ h5 {
 .banner-section .content .box-title .title {
   color: var(--white);
 }
-.banner-section .content .box-title .desc {
+.banner-section .content .box-title .subtitle {
   color: var(--white);
-  margin: 0 120px;
   font-size: 16px;
 }
 @keyframes ripple {
@@ -6393,6 +6392,35 @@ h5 {
 }
 .tf-benefit .partner .partners-item:hover {
   filter: brightness(0) invert(1);
+}
+
+.flat-testimonial .box-testimonial-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  max-width: 840px;
+  width: 100%;
+  margin: auto;
+}
+.flat-testimonial .box-testimonial-item .description {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text-color);
+  text-align: center;
+}
+.flat-testimonial .box-testimonial-item .box-avt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  text-align: center;
+}
+.flat-testimonial .box-testimonial-item .box-avt .info .position {
+  color: var(--text-color);
+  line-height: 140%;
+  font-size: 16px;
+  margin-top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

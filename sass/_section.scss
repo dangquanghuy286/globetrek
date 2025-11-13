@@ -727,9 +727,8 @@
                 color: var(--white);
             }
 
-            .desc {
+            .subtitle {
                 color: var(--white);
-                margin: 0 120px;
                 font-size: 16px;
             }
         }
@@ -822,4 +821,43 @@
             }
         }
     }
+}
+
+// ============Testinials=======================
+.flat-testimonial {
+    .box-testimonial-item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        flex-direction: column;
+        max-width: 840px;
+        width: 100%;
+        margin: auto;
+
+        .description {
+            font-weight: 400;
+            font-size: 24px;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .box-avt {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-direction: column;
+            text-align: center;
+
+            .info {
+                .position {
+                    color: var(--text-color);
+                    line-height: 140%;
+                    font-size: 16px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+
 }

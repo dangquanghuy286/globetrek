@@ -94,3 +94,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+// =============== Testinial=============================
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialEl = document.querySelector(".tf-sw-testimonial");
+
+  if (testimonialEl) {
+    const swTestimonial = new Swiper(".tf-sw-testimonial", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 1000,
+      navigation: {
+        clickable: true,
+        nextEl: ".nav-prev-testimonial",
+        prevEl: ".nav-next-testimonial",
+      },
+
+      loop: true,
+      breakpoints: {
+        575: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1440: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: false,
+        },
+      },
+    });
+  }
+});
