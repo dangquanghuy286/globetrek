@@ -6422,6 +6422,10 @@ h5 {
   font-size: 16px;
   margin-top: 2px;
 }
+.flat-testimonial .flex-direction-nav a {
+  width: 58px;
+  height: 58px;
+}
 .flat-testimonial .flex-direction-nav.style-hero-1 {
   padding: 0;
   top: 11%;

@@ -860,9 +860,15 @@
     }
 
     .flex-direction-nav {
+        a {
+            width: 58px;
+            height: 58px;
+        }
+
         &.style-hero-1 {
             padding: 0;
             top: 11%;
+
         }
     }
 }
