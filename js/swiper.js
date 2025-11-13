@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 1000,
       navigation: {
         clickable: true,
-        nextEl: ".nav-prev-testimonial",
-        prevEl: ".nav-next-testimonial",
+        nextEl: ".flex-next",
+        prevEl: ".flex-prev",
       },
 
       loop: true,
