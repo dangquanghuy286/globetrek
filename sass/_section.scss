@@ -904,3 +904,64 @@
         display: none;
     }
 }
+
+// ============Find my tour====================
+.flat-perfect-tour {
+    background-color: #DCA54614;
+
+
+
+    .item {
+        background-color: var(--white);
+
+        .archive-top {
+            position: relative;
+            padding-bottom: 12px;
+
+
+            .tag {
+                position: absolute;
+                bottom: 0px;
+                left: 32px;
+                top: auto !important;
+
+                .flag-total {
+                    background-color: var(--primary-color);
+                    color: var(--white);
+                    padding: 8px 26px;
+                    border-radius: 99px;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    font-weight: 500px;
+                    line-height: 140%;
+                    font-size: 16px;
+                    border: 1px solid var(--primary-color);
+
+                    &:hover {
+                        background: var(--white);
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        .archive-bottom {
+            padding: 32px;
+
+            .tour-title {
+                margin-bottom: 12px;
+            }
+
+            .subtitle {
+                line-height: 140%;
+
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 30px 30px 0px #0000001A;
+
+        }
+    }
+}
