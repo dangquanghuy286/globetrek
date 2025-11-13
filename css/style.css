@@ -2675,7 +2675,6 @@
 .hero .flat-hero .content-left .box-title .title {
   font-size: 100px;
   line-height: 100%;
-  font-weight: 600;
 }
 .hero .flat-hero .content-left .box-title .description {
   line-height: 140%;
@@ -5298,6 +5297,38 @@ h5 {
   .header .header-ct-right .wrap-login-menu ul {
     gap: 20px;
   }
+  .hero .flat-hero {
+    flex-direction: column;
+  }
+  .hero .flat-hero .content-left {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .hero .flat-hero .content-left .box-title {
+    padding: 0 !important;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .hero .flat-hero .content-left .box-title .title {
+    font-size: 80px;
+  }
+  .hero .flat-hero .content-left .tab-content {
+    left: 100px;
+    top: 800px;
+  }
+  .hero .flat-hero .content-right {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 40px;
+  }
+  .hero .flat-hero .content-right .inner-left {
+    flex: 0 0 48%;
+  }
+  .hero .flat-hero .rotating-badge {
+    top: 42%;
+    left: 49%;
+  }
 }
 @media (max-width: 1199px) {
   .header .menu-nav {
@@ -5319,6 +5350,35 @@ h5 {
     flex-direction: column;
     gap: 10px;
     margin-top: 100px;
+  }
+  .hero .flat-hero .content-left .box-title .title {
+    font-size: 60px;
+  }
+  .hero .flat-hero .content-left .tab-content {
+    left: 35%;
+    top: 600px;
+  }
+  .hero .flat-hero .content-left .tab-content .form-search {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hero .flat-hero .content-left .tab-content .form-search .inner-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero .flat-hero .content-left .tab-content .form-search .inner-group .form-group {
+    padding: 0;
+  }
+  .hero .flat-hero .content-left .tab-content .form-search .inner-group .form-group label {
+    text-align: center;
+  }
+  .hero .flat-hero .content-left .tab-content .form-search .inner-group .form-group .list {
+    top: calc(100% + 12px);
+  }
+  .hero .flat-hero .content-left .tab-content .form-search .inner-group .form-group .current {
+    padding: 14px;
+    border: 1px solid var(--stoke-color);
+    border-radius: 99px;
   }
   .slider-default .swiper-slide.home-4 .box-title {
     padding: 290px 0 90px;
@@ -5428,6 +5488,15 @@ h5 {
   }
   .form-search .box-btn-filter .tf-btn.btn-1 {
     padding: 24px;
+  }
+  .hero .flat-hero .content-left .box-title .title {
+    font-size: 40px;
+  }
+  .hero .flat-hero .content-left .box-title .description {
+    font-size: 15px;
+  }
+  .hero .flat-hero .content-left .tab-content {
+    left: 0;
   }
   .home-4 .wrap-search-link .inner-group,
   .home-5 .wrap-search-link .inner-group {
