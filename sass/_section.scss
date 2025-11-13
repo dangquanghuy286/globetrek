@@ -38,14 +38,35 @@
 
 //========= Destination=========
 .tf-destination {
-    width: 100%;
+
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 330px 330px;
     gap: 12px;
 
-    .item:first-child {
-        grid-row: span 2;
+    .swiper-slide {
+        height: 100%;
+
+        &:first-child {
+            grid-row: span 2;
+        }
+    }
+
+
+
+    .item {
+        height: 100%;
+    }
+
+    .img-style {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+
+        display: block;
     }
 
     .destination-post {
@@ -110,6 +131,12 @@
                 }
             }
         }
+    }
+}
+
+.tf-sw-mobile {
+    .sw-pagination {
+        display: none;
     }
 }
 
@@ -825,6 +852,7 @@
 
 // ============Testinials=======================
 .flat-testimonial {
+
     .box-testimonial-item {
         display: flex;
         align-items: center;
@@ -870,5 +898,9 @@
             top: 11%;
 
         }
+    }
+
+    .sw-pagination {
+        display: none;
     }
 }

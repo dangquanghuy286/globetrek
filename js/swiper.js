@@ -108,7 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: ".flex-next",
         prevEl: ".flex-prev",
       },
-
+      pagination: {
+        el: ".sw-pagination-tes",
+        clickable: true,
+      },
       loop: true,
       breakpoints: {
         575: {
@@ -126,5 +129,55 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+  }
+});
+// =================Mobile===========================
+document.addEventListener("DOMContentLoaded", function () {
+  const tfSwMobile = document.querySelector(".tf-sw-mobile");
+
+  if (tfSwMobile) {
+    let swiperMb;
+    const screenWidth = tfSwMobile.dataset.screen;
+
+    function initSwiperMb() {
+      if (
+        window.matchMedia(`only screen and (max-width: ${screenWidth}px)`)
+          .matches
+      ) {
+        if (!swiperMb) {
+          const preview = parseInt(tfSwMobile.dataset.preview, 10) || 1;
+          const spacing = parseInt(tfSwMobile.dataset.space, 10) || 0;
+
+          swiperMb = new Swiper(".tf-sw-mobile", {
+            slidesPerView: preview,
+            spaceBetween: spacing,
+            speed: 1000,
+            pagination: {
+              el: ".sw-pagination-topchose",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".nav-prev",
+              prevEl: ".nav-next",
+              clickable: true,
+            },
+          });
+        }
+      } else {
+        if (swiperMb) {
+          swiperMb.destroy(true, true);
+          swiperMb = null;
+
+          const wrapper = tfSwMobile.querySelector(".swiper-wrapper");
+          const slides = tfSwMobile.querySelectorAll(".swiper-slide");
+
+          if (wrapper) wrapper.removeAttribute("style");
+          slides.forEach((slide) => slide.removeAttribute("style"));
+        }
+      }
+    }
+
+    initSwiperMb();
+    window.addEventListener("resize", initSwiperMb);
   }
 });

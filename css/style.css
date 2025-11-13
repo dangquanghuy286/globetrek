@@ -5395,6 +5395,12 @@ h5 {
   .header .toggle-mobile {
     display: block;
   }
+  .flat-testimonial .flex-direction-nav {
+    display: none;
+  }
+  .flat-testimonial .sw-pagination {
+    display: block !important;
+  }
   .wd-navigation {
     gap: 8px;
   }
@@ -5519,18 +5525,6 @@ h5 {
   }
   .advanced-form .group-checkbox .group-amentities {
     grid-template-columns: repeat(3, 1fr) !important;
-  }
-  .tf-destination .item:nth-child(2),
-  .tf-destination .item:nth-child(3),
-  .tf-destination .item:nth-child(5) {
-    grid-column: span 2;
-  }
-  .tf-destination .destination-post .group-meta {
-    left: 12px !important;
-  }
-  .tf-destination .destination-post .group-meta .tf-btn {
-    padding: 10px !important;
-    font-size: 12px;
   }
   .tf-single h1 {
     font-size: 30px;
@@ -5670,13 +5664,15 @@ h5 {
   .flat-account .form-account {
     padding: 30px !important;
   }
-  .tf-destination .item:nth-child(1),
-  .tf-destination .item:nth-child(2),
-  .tf-destination .item:nth-child(3),
-  .tf-destination .item:nth-child(4),
-  .tf-destination .item:nth-child(5) {
-    grid-row: span 1;
-    grid-column: span 3;
+  .tf-destination {
+    display: flex !important;
+    gap: 0 !important;
+  }
+  .tf-destination .swiper-slide {
+    height: auto !important;
+  }
+  .tf-sw-mobile .sw-pagination {
+    display: block !important;
   }
   .close-btn {
     right: 10px;
@@ -5755,14 +5751,27 @@ h5 {
 }
 
 .tf-destination {
-  width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 330px 330px;
   gap: 12px;
 }
-.tf-destination .item:first-child {
+.tf-destination .swiper-slide {
+  height: 100%;
+}
+.tf-destination .swiper-slide:first-child {
   grid-row: span 2;
+}
+.tf-destination .item {
+  height: 100%;
+}
+.tf-destination .img-style {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tf-destination img {
+  display: block;
 }
 .tf-destination .destination-post {
   width: 100%;
@@ -5820,6 +5829,10 @@ h5 {
 }
 .tf-destination .destination-post .group-meta .tf-btn:hover img {
   filter: brightness(0) invert(1);
+}
+
+.tf-sw-mobile .sw-pagination {
+  display: none;
 }
 
 .modal-account .modal-dialog .modal-content {
@@ -6429,6 +6442,9 @@ h5 {
 .flat-testimonial .flex-direction-nav.style-hero-1 {
   padding: 0;
   top: 11%;
+}
+.flat-testimonial .sw-pagination {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
