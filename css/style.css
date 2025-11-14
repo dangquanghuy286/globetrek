@@ -6978,6 +6978,7 @@ h5 {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  transition: transform 1.5s cubic-bezier(0, 0, 0.44, 1.18), filter 1.5s cubic-bezier(0, 0, 0.44, 1.18);
 }
 .box-type .icon-box .icon img {
   width: 100%;
@@ -7113,6 +7114,27 @@ h5 {
 .box-type.style-02:hover .content .name,
 .box-type.style-02:hover .content .total-tour {
   color: var(--primary-color);
+}
+.box-type.style-03 {
+  border: none;
+  padding: 0 30px;
+}
+.box-type.style-03 .icon-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+}
+.box-type.style-03 .icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+.box-type.style-03:hover {
+  box-shadow: none;
+}
+.box-type.style-03:hover .icon-box img {
+  filter: brightness(60%);
 }
 
 /*# sourceMappingURL=style.css.map */

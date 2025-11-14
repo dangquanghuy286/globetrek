@@ -228,12 +228,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (swiperEl) {
     const preview = swiperEl.dataset.preview;
+    const desktopSm = swiperEl.dataset.desktopSm;
     const tablet = swiperEl.dataset.tablet;
     const mobile = swiperEl.dataset.mobile;
     const mobileSm = swiperEl.dataset.mobileSm;
 
     const spacing = swiperEl.dataset.space;
     const spacingMd = swiperEl.dataset.spaceMd;
+    const spacingXl = swiperEl.dataset.spaceXl;
     const spacingLg = swiperEl.dataset.spaceLg;
 
     new Swiper(".tf-sw-types", {
@@ -257,6 +259,10 @@ document.addEventListener("DOMContentLoaded", () => {
         768: {
           slidesPerView: parseInt(tablet),
           spaceBetween: parseInt(spacingMd),
+        },
+        1024: {
+          slidesPerView: parseInt(desktopSm),
+          spaceBetween: parseInt(spacingXl),
         },
         1200: {
           slidesPerView: parseInt(preview),
