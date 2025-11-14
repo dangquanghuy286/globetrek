@@ -908,10 +908,11 @@
 // ============Find my tour====================
 .flat-perfect-tour {
     background-color: #DCA54614;
+    overflow: hidden;
 
     .tf-perfect-tour {
         overflow: visible;
-        clip-path: inset(0 -33% 0 0);
+        clip-path: inset(0 -30% 0 0);
     }
 
 

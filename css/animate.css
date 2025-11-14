@@ -3974,3 +3974,52 @@
   transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
   opacity: 1;
 }
+/* Custom Animate */
+.animate-rtl {
+  -webkit-animation: animate-rtl 7s infinite ease-in-out alternate;
+  animation: animate-rtl 7s infinite ease-in-out alternate;
+}
+@keyframes animate-rtl {
+  0%,
+  100% {
+    transform: translateX(0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  50% {
+    transform: translateX(-10px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.animate-ltr {
+  -webkit-animation: ltr 7s infinite ease-in-out alternate;
+  animation: ltr 7s infinite ease-in-out alternate;
+}
+@keyframes ltr {
+  0%,
+  100% {
+    transform: translateX(0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  50% {
+    transform: translateX(10px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
