@@ -5317,6 +5317,10 @@ h5 {
   .header .header-ct-right .wrap-login-menu ul {
     gap: 20px;
   }
+  .tf-perfect-tour {
+    overflow: hidden !important;
+    clip-path: none !important;
+  }
   .hero .flat-hero {
     flex-direction: column;
   }
@@ -6479,7 +6483,7 @@ h5 {
   background-color: rgba(220, 165, 70, 0.0784313725);
 }
 .flat-perfect-tour .tf-perfect-tour {
-  overflow: visible !important;
+  overflow: visible;
   clip-path: inset(0 -33% 0 0);
 }
 .flat-perfect-tour .item {
@@ -6487,7 +6491,7 @@ h5 {
 }
 .flat-perfect-tour .item .archive-top {
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
 }
 .flat-perfect-tour .item .archive-top .tag {
   position: absolute;

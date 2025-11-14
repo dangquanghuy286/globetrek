@@ -910,7 +910,7 @@
     background-color: #DCA54614;
 
     .tf-perfect-tour {
-        overflow: visible !important;
+        overflow: visible;
         clip-path: inset(0 -33% 0 0);
     }
 
@@ -920,7 +920,7 @@
 
         .archive-top {
             position: relative;
-            padding-bottom: 12px;
+            padding-bottom: 24px;
 
 
             .tag {

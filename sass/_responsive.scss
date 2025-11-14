@@ -20,6 +20,11 @@
       }
    }
 
+   .tf-perfect-tour {
+      overflow: hidden !important;
+      clip-path: none !important;
+   }
+
    .hero {
       .flat-hero {
          flex-direction: column;
