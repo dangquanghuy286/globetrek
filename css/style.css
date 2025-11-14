@@ -6726,14 +6726,14 @@ h5 {
 .flat-img-with-text .content-left .inner-right img:first-child {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   aspect-ratio: 272/286;
   border-radius: 16px;
 }
 .flat-img-with-text .content-left .inner-right img:last-child {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   aspect-ratio: 272/207;
   border-radius: 16px;
 }
