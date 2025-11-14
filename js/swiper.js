@@ -222,4 +222,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-// ==
+// ==================Type==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperEl = document.querySelector(".tf-sw-types");
+
+  if (swiperEl) {
+    const preview = swiperEl.dataset.preview;
+    const tablet = swiperEl.dataset.tablet;
+    const mobile = swiperEl.dataset.mobile;
+    const mobileSm = swiperEl.dataset.mobileSm;
+
+    const spacing = swiperEl.dataset.space;
+    const spacingMd = swiperEl.dataset.spaceMd;
+    const spacingLg = swiperEl.dataset.spaceLg;
+
+    new Swiper(".tf-sw-types", {
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
+      speed: 1000,
+      navigation: {
+        clickable: true,
+        nextEl: ".nav-prev",
+        prevEl: ".nav-next",
+      },
+      pagination: {
+        el: ".sw-pagination-types",
+        clickable: true,
+      },
+      breakpoints: {
+        575: {
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacingMd),
+        },
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
+        },
+        1200: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
+        },
+      },
+    });
+  }
+});

@@ -503,6 +503,7 @@
                     img {
                         width: 16px;
                         height: 16px;
+                        filter: brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(146%) hue-rotate(56deg) brightness(96%) contrast(87%);
                     }
 
                     span {
@@ -1190,6 +1191,218 @@
                     .phone {
                         color: var(--primary-color);
                     }
+                }
+            }
+        }
+    }
+}
+
+// ==============Category Type=================
+.flat-types {
+    overflow: hidden;
+}
+
+.box-type {
+    padding: 30px 24px 24px 24px;
+    background-color: var(--white);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    @include transition3;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--stoke-color);
+    overflow: hidden;
+
+    .icon-box {
+        overflow: hidden;
+
+        &.ic-1 {
+            background-color: var(--secondary-color);
+            padding: 28px;
+            border-radius: 50%;
+
+            .icon {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            color: var(--primary-color);
+            @include transition3;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        img,
+        svg path {
+            filter: brightness(0) saturate(100%) invert(97%) sepia(74%) saturate(5030%) hue-rotate(318deg) brightness(89%) contrast(90%);
+            @include transition3;
+        }
+
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-direction: column;
+
+        .name {
+            color: var(--heading-color);
+            @include transition3;
+        }
+
+        .total-tour {
+            @include transition3;
+        }
+    }
+
+    &.active,
+    &:hover {
+        box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+
+        .icon-box {
+            .icon {
+                color: var(--white);
+            }
+
+            svg path {
+                fill: var(--white);
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+                transform: scale(1.05);
+            }
+        }
+
+        .content {
+
+            .name,
+            .total-tour {
+                color: var(--white);
+            }
+        }
+
+        &::before {
+            transform: scale(1, 1);
+            transform-origin: top center;
+        }
+
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: var(--primary-color);
+        transform: scale(1, 0);
+        transition: transform 400ms ease;
+        transform-origin: bottom center;
+        z-index: -1;
+        border-radius: 16px;
+    }
+
+    &.style-01 {
+        border: transparent;
+
+        &::before {
+            background-color: var(--white);
+        }
+
+        &:hover {
+            box-shadow: none;
+
+            .icon-box {
+                background-color: var(--primary-color);
+            }
+
+            .content {
+
+                .name {
+                    color: var(--primary-color);
+                }
+
+                .total-tour {
+                    color: var(--text-color);
+                }
+            }
+        }
+
+        padding: 0 30px;
+
+    }
+
+    &.style-02 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 180px 0 12px 0;
+        position: relative;
+
+        &::before {
+            content: none;
+        }
+
+        .content {
+
+            .name,
+            .total-tour {
+                color: var(--white);
+            }
+        }
+
+        &.bg-1 {
+            background-image: url('../images/backgronud/bg-register.png');
+        }
+
+        &.bg-2 {
+            background-image: url('../images/tours/tour-11.png');
+        }
+
+        &.bg-3 {
+            background-image: url('../images/tours/tour-19.png');
+        }
+
+        &.bg-4 {
+            background-image: url('../images/tours/tour-item/tour-3.png');
+        }
+
+        &.bg-5 {
+            background-image: url('../images/tours/tour-14.png');
+        }
+
+        &.bg-6 {
+            background-image: url('../images/tours/tour-item/tour-10.png');
+        }
+
+        &:hover {
+
+
+
+            .content {
+                position: relative;
+                z-index: 2;
+
+                .name,
+                .total-tour {
+                    color: var(--primary-color);
                 }
             }
         }
