@@ -909,6 +909,10 @@
 .flat-perfect-tour {
     background-color: #DCA54614;
 
+    .tf-perfect-tour {
+        overflow: visible !important;
+        clip-path: inset(0 -33% 0 0);
+    }
 
 
     .item {
