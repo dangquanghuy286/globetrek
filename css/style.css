@@ -5452,6 +5452,38 @@ h5 {
     height: 150px !important;
     top: -100% !important;
   }
+  .flat-img-with-text {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .flat-img-with-text .content-left,
+  .flat-img-with-text .content-right {
+    width: 100% !important;
+  }
+  .flat-img-with-text .content-left {
+    align-items: stretch !important;
+  }
+  .flat-img-with-text .content-left .inner-left {
+    margin-top: 0 !important;
+  }
+  .flat-img-with-text .content-left .inner-left,
+  .flat-img-with-text .content-left .inner-right {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  .flat-img-with-text .content-left .rotating-badge {
+    left: 50% !important;
+  }
+  .flat-img-with-text .content-right {
+    gap: 24px !important;
+  }
+  .flat-img-with-text .content-right .box-title .title {
+    font-size: 36px;
+    margin-bottom: 24px !important;
+  }
+  .flat-img-with-text .content-right .flat-service {
+    padding-bottom: 24px !important;
+  }
 }
 @media (max-width: 991px) {
   .header .list-nav {
@@ -5517,6 +5549,15 @@ h5 {
   .flat-blog-detail h1 {
     font-size: 30px;
     line-height: 100%;
+  }
+  .flat-img-with-text .content-right .box-title .title {
+    font-size: 32px;
+  }
+  .flat-img-with-text .content-right .box-title .subtitle {
+    font-size: 15px;
+  }
+  .flat-img-with-text .content-right .description {
+    font-size: 15px !important;
   }
   .slider-default .swiper-slide.home-3 .box-title {
     padding: 100px 0 250px !important;
@@ -5700,6 +5741,13 @@ h5 {
   .header .header-ct-right .wrap-login-menu .login {
     font-size: 14px;
   }
+  .action-download {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-download .tf-btn {
+    width: 100%;
+  }
   .advanced-form {
     max-height: 80vh;
     overflow-y: auto;
@@ -5791,6 +5839,29 @@ h5 {
   }
   .banner-section .box-title .title {
     font-size: 32px;
+  }
+  .flat-img-with-text .content-right {
+    gap: 16px !important;
+  }
+  .flat-img-with-text .content-right .box-title .title {
+    font-size: 24px;
+    margin-bottom: 16px !important;
+  }
+  .flat-img-with-text .content-right .box-title .subtitle {
+    font-size: 14px;
+  }
+  .flat-img-with-text .content-right .description {
+    font-size: 14px !important;
+  }
+  .flat-img-with-text .content-right .flat-service {
+    gap: 20px !important;
+  }
+  .flat-img-with-text .content-right .contact {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .flat-img-with-text .content-right .contact .tf-btn {
+    width: 100%;
   }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 12px;
@@ -6702,7 +6773,7 @@ h5 {
   display: flex;
   align-items: stretch;
   flex-direction: row;
-  gap: 72px;
+  gap: 78px;
 }
 .flat-img-with-text .content-left {
   width: 48%;
