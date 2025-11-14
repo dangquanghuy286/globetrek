@@ -318,3 +318,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// ================ Cover=============================
+document.addEventListener("DOMContentLoaded", () => {
+  const coverflowEls = document.querySelectorAll(".tf-find-tour");
+
+  coverflowEls.forEach((swiperEl) => {
+    new Swiper(swiperEl, {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      initialSlide: 2,
+      speed: 900,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 100,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+
+      // breakpoints: {
+      //   768: {
+      //     slidesPerView: perViewMd,
+      //     spaceBetween: spaceMd,
+      //   },
+      //   1200: {
+      //     slidesPerView: perView,
+      //     spaceBetween: space,
+      //   },
+      // },
+    });
+  });
+});
