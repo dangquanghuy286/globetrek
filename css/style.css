@@ -5317,6 +5317,26 @@ h5 {
   .header .header-ct-right .wrap-login-menu ul {
     gap: 20px;
   }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 120px !important;
+    line-height: 100% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-1 {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-2 {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-3 {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-4 {
+    width: 170px !important;
+    height: 170px !important;
+  }
   .tf-perfect-tour {
     overflow: hidden !important;
     clip-path: none !important;
@@ -5407,6 +5427,30 @@ h5 {
   .slider-default .swiper-slide.home-4 .box-title {
     padding: 290px 0 90px;
   }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 100px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-1 {
+    width: 80px !important;
+    height: 80px !important;
+    left: 10% !important;
+    bottom: -55% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-2 {
+    width: 70px !important;
+    height: 70px !important;
+    top: -50% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-3 {
+    width: 45px !important;
+    height: 45px !important;
+    bottom: -20% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-4 {
+    width: 150px !important;
+    height: 150px !important;
+    top: -100% !important;
+  }
 }
 @media (max-width: 991px) {
   .header .list-nav {
@@ -5417,6 +5461,33 @@ h5 {
   }
   .header .toggle-mobile {
     display: block;
+  }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 75px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-1 {
+    width: 60px !important;
+    height: 60px !important;
+    bottom: -65% !important;
+    border-radius: 12px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-2 {
+    width: 50px !important;
+    height: 50px !important;
+    top: -60% !important;
+    border-radius: 12px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-3 {
+    width: 35px !important;
+    height: 35px !important;
+    bottom: -30% !important;
+    border-radius: 8px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-4 {
+    width: 130px !important;
+    height: 130px !important;
+    top: -120% !important;
+    border-radius: 12px !important;
   }
   .flat-testimonial .flex-direction-nav {
     display: none;
@@ -5593,6 +5664,29 @@ h5 {
   .advanced-form .group-checkbox .group-amentities {
     grid-template-columns: repeat(2, 1fr);
   }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 55px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-1 {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 12px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-2 {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 8px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-3 {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 8px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-4 {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 12px !important;
+  }
 }
 @media (max-width: 575px) {
   .header .header-ct-right {
@@ -5647,6 +5741,27 @@ h5 {
   }
   .box-title .tf-meta span {
     font-size: 12px;
+  }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 42px !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-1 {
+    left: 17% !important;
+    bottom: -100% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-2 {
+    top: -100% !important;
+    left: 35% !important;
+  }
+  .tf-best-trip .tf-scroll-text .tag-3 {
+    bottom: -40% !important;
+    left: 62%;
+  }
+  .tf-best-trip .tf-scroll-text .tag-4 {
+    width: 70px !important;
+    height: 70px !important;
+    top: -130% !important;
+    border-radius: 12px !important;
   }
   .tf-toolbar-bottom {
     display: block;
@@ -5750,6 +5865,9 @@ h5 {
   .flat-blog-list .flat-blog-item .content-box .title {
     font-size: 20px;
     line-height: 100%;
+  }
+  .tf-best-trip .tf-scroll-text .heading {
+    font-size: 38px !important;
   }
 }
 .flat-section {
