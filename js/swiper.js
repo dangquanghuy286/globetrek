@@ -272,3 +272,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// ================= Explore===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperElements = document.querySelectorAll(".tf-sw-location");
+
+  swiperElements.forEach((swiperEl, index) => {
+    const preview = parseInt(swiperEl.dataset.preview);
+    const tablet = parseInt(swiperEl.dataset.tablet);
+    const mobile = parseInt(swiperEl.dataset.mobile);
+    const mobileSm = parseInt(swiperEl.dataset.mobileSm);
+    const spacing = parseInt(swiperEl.dataset.space);
+    const spacingMd = parseInt(swiperEl.dataset.spaceMd);
+    const spacingLg = parseInt(swiperEl.dataset.spaceLg);
+    const paginationEl = swiperEl.querySelector(".sw-pagination-location");
+    const nextEl = swiperEl.querySelector(".nav-next");
+    const prevEl = swiperEl.querySelector(".nav-prev");
+
+    new Swiper(swiperEl, {
+      slidesPerView: mobile,
+      spaceBetween: spacing,
+      speed: 1000,
+      pagination: {
+        el: paginationEl,
+        clickable: true,
+      },
+      navigation: {
+        clickable: true,
+        nextEl: nextEl,
+        prevEl: prevEl,
+      },
+      breakpoints: {
+        575: {
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacingMd),
+        },
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
+        },
+        1200: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
+        },
+      },
+    });
+  });
+});

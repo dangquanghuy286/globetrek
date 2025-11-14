@@ -38,21 +38,55 @@
 
 //========= Destination=========
 .tf-destination {
-
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 330px 330px;
     gap: 12px;
 
-    .swiper-slide {
-        height: 100%;
+    // Style 1
+    &.grid-1 {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 330px 330px;
 
-        &:first-child {
-            grid-row: span 2;
+        .swiper-slide {
+            &:first-child {
+                grid-row: span 2;
+            }
         }
     }
 
+    // Style 2
+    &.grid-2 {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 330px 330px;
+        grid-template-areas:
+            "item1 item1 item2 item2 item5 item5"
+            "item1 item1 item3 item4 item5 item5";
 
+        .swiper-slide {
+            &:nth-child(1) {
+                grid-area: item1;
+            }
+
+            &:nth-child(2) {
+                grid-area: item2;
+            }
+
+            &:nth-child(3) {
+                grid-area: item3;
+            }
+
+            &:nth-child(4) {
+                grid-area: item4;
+            }
+
+            &:nth-child(5) {
+                grid-area: item5;
+            }
+        }
+    }
+
+    .swiper-slide {
+        height: 100%;
+    }
 
     .item {
         height: 100%;
@@ -62,11 +96,6 @@
         display: block;
         width: 100%;
         height: 100%;
-    }
-
-    img {
-
-        display: block;
     }
 
     .destination-post {
@@ -82,10 +111,6 @@
             left: 50%;
             width: calc(100% - 16px);
             transform: translateX(-50%);
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -93,11 +118,78 @@
             background: var(--white);
             border-radius: 16px;
             padding: 16px;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
+
+        }
+
+        .group-meta {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 5;
+
+            .tf-btn {
+                padding: 14px 24px;
+                background-color: var(--border-header);
+                border: var(--border-header);
+                backdrop-filter: blur(4px);
+                color: var(--white);
+                transition: all 0.3s ease;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: var(--white);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =========Location=================
+.tf-sw-location {
+    .swiper-slide {
+        height: auto;
+    }
+
+    .img-style {
+        display: block;
+        width: 100%;
+        height: 420px;
+    }
+
+    .destination-post {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+
+        .content {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            width: calc(100% - 16px);
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 16px;
+            transition: all 0.3s ease;
+
         }
 
         .group-meta {
@@ -413,11 +505,13 @@
     width: 100%;
     overflow: hidden;
 
+
     .partners-list {
         display: flex;
         gap: 40px;
         width: max-content;
         animation: scroll 30s linear infinite;
+
 
         &:hover {
             animation-play-state: paused;
