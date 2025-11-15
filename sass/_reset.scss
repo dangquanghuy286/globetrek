@@ -1,18 +1,23 @@
 @use "./abstracts/index" as *;
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
     transition: all 0.3s ease;
+    height: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--three-color);
-    border-radius: 4px;
+    border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
+    background: linear-gradient(90deg, #FF930F, #FFF95B);
     transform: scaleX(1.2);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 
