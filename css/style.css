@@ -5579,10 +5579,10 @@ h5 {
   .tf-destination.grid-2 {
     grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5" !important;
   }
-  .flat-recommended .wrap-list .item.list-style-01 {
+  .flat-recommended .item.list-style-01 {
     display: block;
   }
-  .flat-recommended .wrap-list .item.list-style-01 .archive-top {
+  .flat-recommended .item.list-style-01 .archive-top {
     width: 100%;
   }
   .flat-recommended .nav-tab {

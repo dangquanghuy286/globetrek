@@ -310,17 +310,17 @@
    }
 
    .flat-recommended {
-      .wrap-list {
-         .item {
-            &.list-style-01 {
-               display: block;
 
-               .archive-top {
-                  width: 100%;
-               }
+      .item {
+         &.list-style-01 {
+            display: block;
+
+            .archive-top {
+               width: 100%;
             }
          }
       }
+
 
       .nav-tab {
          justify-content: flex-start;
