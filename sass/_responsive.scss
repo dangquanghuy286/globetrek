@@ -675,7 +675,9 @@
    }
 
    .tf-destination {
-      &.grid-2 {
+
+      &.grid-2,
+      &.grid-1 {
          grid-template-columns: 1fr 1fr !important;
          grid-template-rows: 200px 200px 200px !important;
 

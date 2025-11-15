@@ -66,12 +66,12 @@
 
     // Style 1
     &.grid-1 {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr);
 
 
         grid-template-areas:
             "item1 item1 item2 item3"
-            "item1 item1 item4 item5" !important;
+            "item1 item1 item4 item5";
     }
 
     // Style 2
