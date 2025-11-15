@@ -3,7 +3,6 @@
    -------------------------------------------------------------- */
 
 /* ====== MAX-WIDTH (Mobile First) ====== */
-@media (max-width: 1600px) {}
 
 @media (max-width: 1440px) {
    .header {
@@ -307,6 +306,46 @@
          grid-template-areas:
             "item1 item1 item2 item3"
             "item1 item1 item4 item5" !important;
+      }
+   }
+
+   .flat-recommended {
+      .wrap-list {
+         .item {
+            &.list-style-01 {
+               display: block;
+
+               .archive-top {
+                  width: 100%;
+               }
+            }
+         }
+      }
+
+      .nav-tab {
+         justify-content: flex-start;
+         overflow-x: auto;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+         scrollbar-width: thin;
+         scrollbar-color: var(--primary-color) transparent;
+
+         &::-webkit-scrollbar {
+            height: 2px;
+         }
+
+         &::-webkit-scrollbar-track {
+            background: transparent;
+         }
+
+         &::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 999px;
+         }
+
+         &::-webkit-scrollbar-thumb:hover {
+            background: var(--heading-color);
+         }
       }
    }
 }

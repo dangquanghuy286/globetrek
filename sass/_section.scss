@@ -634,8 +634,6 @@
             }
         }
 
-
-
         .group-meta {
             position: absolute;
             top: 8px;
@@ -710,6 +708,14 @@
                     height: 18px;
                     filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(967%) hue-rotate(179deg) brightness(90%) contrast(89%);
                 }
+            }
+        }
+
+        &.list-style-01 {
+            display: flex;
+
+            .archive-top {
+                width: 44%;
             }
         }
     }
