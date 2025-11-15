@@ -300,9 +300,9 @@
    }
 
    .tf-destination {
+      grid-template-rows: 250px 250px !important;
+
       &.grid-2 {
-         grid-template-columns: repeat(4, 1fr) !important;
-         grid-template-rows: 250px 250px !important;
 
          grid-template-areas:
             "item1 item1 item2 item3"
