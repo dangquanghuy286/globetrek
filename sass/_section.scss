@@ -1540,7 +1540,41 @@
     background-size: cover;
     background-color: var(--secondary-color);
 
+    .perfect-tour-wrapper {
+        position: relative;
+
+        .flex-direction-nav {
+            top: 50%;
+            transform: translateY(-50%);
+            justify-content: space-between;
+            left: -80px;
+            width: calc(100% + 160px);
+
+            a {
+                width: 58px;
+                height: 58px;
+                color: var(--primary-color);
+
+                img {
+                    filter: brightness(0) saturate(100%) invert(64%) sepia(100%) saturate(268%) hue-rotate(358deg) brightness(88%) contrast(97%);
+                }
+
+                &:hover {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+
+                }
+            }
+        }
+    }
+
     .tf-find-tour {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+
         .wrap-content {
             position: relative;
 
@@ -1552,18 +1586,15 @@
                 @include transition3;
 
                 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
                     border-radius: inherit;
+                    height: 604px;
                 }
 
             }
 
             .content {
                 position: absolute;
-                opacity: 1;
+                opacity: 0;
                 left: 50%;
                 transform: translateX(-50%);
                 width: calc(100% - 50px);
@@ -1571,8 +1602,9 @@
                 z-index: 10;
                 text-align: center;
                 @include transition3;
-
+                pointer-events: none;
                 width: 100%;
+                padding: 0 24px;
 
                 .name {
                     margin-bottom: 12px;
@@ -1585,5 +1617,12 @@
                 }
             }
         }
+
+        .swiper-slide-active .wrap-content .content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+
     }
 }

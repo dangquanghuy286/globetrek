@@ -326,28 +326,23 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper(swiperEl, {
       effect: "coverflow",
       grabCursor: true,
-      centeredSlides: true,
       slidesPerView: 3,
+      centeredSlides: true,
+      loop: false,
       initialSlide: 2,
+      navigation: {
+        clickable: true,
+        nextEl: ".flex-prev-findtour",
+        prevEl: ".flex-next-findtour",
+      },
       speed: 900,
       coverflowEffect: {
         rotate: 0,
-        stretch: 100,
+        stretch: 60,
         depth: 300,
         modifier: 1,
         slideShadows: true,
       },
-
-      // breakpoints: {
-      //   768: {
-      //     slidesPerView: perViewMd,
-      //     spaceBetween: spaceMd,
-      //   },
-      //   1200: {
-      //     slidesPerView: perView,
-      //     spaceBetween: space,
-      //   },
-      // },
     });
   });
 });

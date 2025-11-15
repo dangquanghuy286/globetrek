@@ -7243,6 +7243,33 @@ h5 {
   background-size: cover;
   background-color: var(--secondary-color);
 }
+.flat-tour-find .perfect-tour-wrapper {
+  position: relative;
+}
+.flat-tour-find .perfect-tour-wrapper .flex-direction-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: space-between;
+  left: -80px;
+  width: calc(100% + 160px);
+}
+.flat-tour-find .perfect-tour-wrapper .flex-direction-nav a {
+  width: 58px;
+  height: 58px;
+  color: var(--primary-color);
+}
+.flat-tour-find .perfect-tour-wrapper .flex-direction-nav a img {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(100%) saturate(268%) hue-rotate(358deg) brightness(88%) contrast(97%);
+}
+.flat-tour-find .perfect-tour-wrapper .flex-direction-nav a:hover img {
+  filter: brightness(0) invert(1);
+}
+.flat-tour-find .tf-find-tour {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
 .flat-tour-find .tf-find-tour .wrap-content {
   position: relative;
 }
@@ -7258,15 +7285,12 @@ h5 {
   transition: all 0.3s ease;
 }
 .flat-tour-find .tf-find-tour .wrap-content .image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
   border-radius: inherit;
+  height: 604px;
 }
 .flat-tour-find .tf-find-tour .wrap-content .content {
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 50px);
@@ -7278,7 +7302,9 @@ h5 {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  pointer-events: none;
   width: 100%;
+  padding: 0 24px;
 }
 .flat-tour-find .tf-find-tour .wrap-content .content .name {
   margin-bottom: 12px;
@@ -7287,6 +7313,10 @@ h5 {
 .flat-tour-find .tf-find-tour .wrap-content .content .description {
   color: var(--white);
   margin-bottom: 24px;
+}
+.flat-tour-find .tf-find-tour .swiper-slide-active .wrap-content .content {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
