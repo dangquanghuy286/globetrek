@@ -637,6 +637,18 @@
    }
 
    .tf-destination {
+
+      &.grid-2,
+      &.grid-1 {
+         grid-template-columns: 1fr 1fr !important;
+         grid-template-rows: 200px 200px 200px !important;
+
+         grid-template-areas:
+            "item1 item1"
+            "item2 item3"
+            "item4 item5" !important;
+      }
+
       .content {
          padding: 14px !important;
 
@@ -674,19 +686,6 @@
       margin-top: 450px !important;
    }
 
-   .tf-destination {
-
-      &.grid-2,
-      &.grid-1 {
-         grid-template-columns: 1fr 1fr !important;
-         grid-template-rows: 200px 200px 200px !important;
-
-         grid-template-areas:
-            "item1 item1"
-            "item2 item3"
-            "item4 item5" !important;
-      }
-   }
 
    .categories-list {
       justify-content: center;
