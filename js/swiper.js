@@ -285,8 +285,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const spacingMd = parseInt(swiperEl.dataset.spaceMd);
     const spacingLg = parseInt(swiperEl.dataset.spaceLg);
     const paginationEl = swiperEl.querySelector(".sw-pagination-location");
-    const nextEl = swiperEl.querySelector(".nav-next");
-    const prevEl = swiperEl.querySelector(".nav-prev");
+    const nextEl = swiperEl.querySelector(".nav-next-location");
+    const prevEl = swiperEl.querySelector(".nav-prev-location");
 
     new Swiper(swiperEl, {
       slidesPerView: mobile,

@@ -1,3 +1,5 @@
+@use "../abstracts/index.scss" as *;
+
 .sw-pagination {
     .swiper-pagination-bullet {
         width: 8px;
@@ -10,8 +12,6 @@
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
-        margin-top: 40px !important;
-        margin-bottom: 1px !important;
 
 
         &::before {
@@ -57,9 +57,7 @@
         -ms-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
-        margin-top: 40px !important;
-        margin-bottom: 1px !important;
-        border-radius: 99px;
+        border-radius: 999px;
 
     }
 
@@ -69,6 +67,48 @@
 
         &::before {
             opacity: 1;
+        }
+    }
+}
+
+.slider-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin: auto;
+    margin-top: 48px;
+    margin-bottom: 2px;
+
+    .sw-pagination {
+        width: auto !important;
+        position: static !important;
+    }
+
+    a {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        @include flex(center, center);
+
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.3s ease;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
