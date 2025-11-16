@@ -7410,6 +7410,14 @@ h5 {
 .flat-tour-find .perfect-tour-wrapper .flex-direction-nav a:hover img {
   filter: brightness(0) invert(1);
 }
+.flat-tour-find .tour-slide {
+  width: 480px;
+  height: 604px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .flat-tour-find .tf-find-tour {
   width: 100%;
   padding-left: 0;
@@ -7418,6 +7426,7 @@ h5 {
 }
 .flat-tour-find .tf-find-tour .wrap-content {
   position: relative;
+  pointer-events: none;
 }
 .flat-tour-find .tf-find-tour .wrap-content .image-wrap {
   border-radius: 16px;
@@ -7433,6 +7442,7 @@ h5 {
 .flat-tour-find .tf-find-tour .wrap-content .image-wrap img {
   border-radius: inherit;
   height: 604px;
+  width: 480px;
 }
 .flat-tour-find .tf-find-tour .wrap-content .content {
   position: absolute;

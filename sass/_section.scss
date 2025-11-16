@@ -1648,6 +1648,15 @@
         }
     }
 
+    .tour-slide {
+        width: 480px;
+        height: 604px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .tf-find-tour {
         width: 100%;
         padding-left: 0;
@@ -1656,6 +1665,7 @@
 
         .wrap-content {
             position: relative;
+            pointer-events: none;
 
             .image-wrap {
                 border-radius: 16px;
@@ -1667,6 +1677,7 @@
                 img {
                     border-radius: inherit;
                     height: 604px;
+                    width: 480px;
                 }
 
             }
