@@ -347,3 +347,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// =================Rating===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".tf-rating-card", {
+    effect: "cards",
+    grabCursor: true,
+    cardsEffect: {
+      rotate: false,
+      perSlideOffset: 10,
+      perSlideScale: 0.8,
+      slideShadows: false,
+    },
+    speed: 1000,
+  });
+});
+//
+// =============== Testinial=============================
+document.addEventListener("DOMContentLoaded", function () {
+  const reviewBox = document.querySelector(".tf-review-box");
+
+  if (reviewBox) {
+    const slides = document.querySelectorAll(".tf-review-box .card-review");
+    const avatars = Array.from(slides).map((slide) => slide.dataset.avatar);
+
+    const swTestimonial = new Swiper(".tf-review-box", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 1000,
+      pagination: {
+        el: ".avatar-navigation",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}">
+                    <img src="${avatars[index]}" alt="Avatar ${index + 1}" />
+                  </span>`;
+        },
+      },
+      loop: false,
+    });
+  }
+});

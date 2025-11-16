@@ -1375,7 +1375,34 @@
 
         }
 
+        .testimonial-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
 
+            .box-title {
+                margin-bottom: 32px;
+            }
+
+            .title {
+                margin-bottom: 12px;
+
+            }
+        }
+
+
+    }
+
+    .tf-review-box {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-review {
+        width: 100%;
+        overflow: hidden;
     }
 
     .box-benefit {
@@ -1458,6 +1485,62 @@
                 .phone {
                     color: var(--primary-color);
                 }
+            }
+        }
+    }
+
+    .card-wrapper {
+        width: 46%;
+        height: 550px;
+
+        .tf-rating-card {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            clip-path: inset(0 0 0 0);
+
+            .swiper-wrapper {
+                overflow: visible;
+            }
+
+            .card-review {
+                width: 510px;
+                border-radius: 16px;
+                transition: 0.3s ease;
+
+                img {
+                    border-radius: 16px;
+                }
+
+                .box-info {
+                    position: absolute;
+                    left: 8px;
+                    bottom: 8px;
+                    right: 8px;
+                    background-color: var(--white);
+                    padding: 16px;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(20px);
+                    transition: all 0.3s ease;
+
+                    .info {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 2px;
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            .swiper-slide-active .card-review .box-info {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
             }
         }
     }

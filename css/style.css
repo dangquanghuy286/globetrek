@@ -2633,6 +2633,35 @@
   filter: brightness(0) invert(1);
 }
 
+.avatar-navigation {
+  display: flex;
+  justify-content: start;
+  margin-top: 32px;
+  gap: 12px;
+}
+.avatar-navigation .swiper-pagination-bullet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.avatar-navigation .swiper-pagination-bullet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.avatar-navigation .swiper-pagination-bullet:hover {
+  opacity: 0.7;
+}
+.avatar-navigation .swiper-pagination-bullet-active {
+  opacity: 1;
+  border: 2px solid var(--primary-color);
+}
+
 .preload-container {
   display: flex;
   width: 100%;
@@ -7223,6 +7252,27 @@ h5 {
   padding-bottom: 32px;
   border-bottom: 1px solid var(--stoke-color);
 }
+.tf-vacation-hero .flat-img-with-text .testimonial-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.tf-vacation-hero .flat-img-with-text .testimonial-box .box-title {
+  margin-bottom: 32px;
+}
+.tf-vacation-hero .flat-img-with-text .testimonial-box .title {
+  margin-bottom: 12px;
+}
+.tf-vacation-hero .tf-review-box {
+  width: 100%;
+  overflow: hidden;
+}
+.tf-vacation-hero .card-review {
+  width: 100%;
+  overflow: hidden;
+}
 .tf-vacation-hero .box-benefit {
   display: flex;
   gap: 32px;
@@ -7288,6 +7338,54 @@ h5 {
 }
 .tf-vacation-hero .contact .box-info .content .phone {
   color: var(--primary-color);
+}
+.tf-vacation-hero .card-wrapper {
+  width: 46%;
+  height: 550px;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  clip-path: inset(0 0 0 0);
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .swiper-wrapper {
+  overflow: visible;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .card-review {
+  width: 510px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .card-review img {
+  border-radius: 16px;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .card-review .box-info {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--white);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .card-review .box-info .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  flex-direction: column;
+}
+.tf-vacation-hero .card-wrapper .tf-rating-card .swiper-slide-active .card-review .box-info {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .flat-types {
