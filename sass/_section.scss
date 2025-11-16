@@ -879,7 +879,31 @@
     background-size: cover;
     background-color: var(--primary-color);
 
+    &.bg-white {
+        background: none;
 
+        .wrap-benefit {
+            padding-bottom: 80px;
+            border-bottom: 1px solid var(--stoke-color);
+        }
+
+        .box-icon-benefits {
+            &:hover {
+                box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.07);
+            }
+        }
+
+        .partner {
+            .partners-item {
+                filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(1%) hue-rotate(344deg) brightness(87%) contrast(88%);
+
+                &:hover {
+                    filter: brightness(0) saturate(100%) invert(63%) sepia(33%) saturate(725%) hue-rotate(359deg) brightness(100%) contrast(94%);
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
 
     .partner {
         margin-top: 80px;
