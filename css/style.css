@@ -6097,6 +6097,10 @@ h5 {
   padding-bottom: 120px;
 }
 
+.flat-section-02 {
+  padding: 110px 56px;
+}
+
 .box-title {
   margin-bottom: 50px;
 }
@@ -6795,7 +6799,17 @@ h5 {
   background-size: cover;
   background-color: var(--primary-color);
 }
-.tf-benefit .box-icon {
+.tf-benefit .partner {
+  margin-top: 80px;
+}
+.tf-benefit .partner .partners-item {
+  filter: brightness(0) invert(1);
+}
+.tf-benefit .partner .partners-item:hover {
+  filter: brightness(0) invert(1);
+}
+
+.box-icon {
   padding: 48px 32px;
   background-color: var(--white);
   display: flex;
@@ -6805,48 +6819,39 @@ h5 {
   border-radius: 16px;
   transition: all 0.3s ease;
 }
-.tf-benefit .box-icon:hover .wrap-icon {
+.box-icon:hover .wrap-icon {
   background-color: var(--primary-color);
 }
-.tf-benefit .box-icon:hover .wrap-icon .icon {
+.box-icon:hover .wrap-icon .icon {
   transform: rotateY(360deg);
   filter: brightness(0) invert(1);
 }
-.tf-benefit .box-icon .wrap-icon {
+.box-icon .wrap-icon {
   padding: 20px;
   display: flex;
   align-items: center;
   background-color: var(--secondary-color);
   border-radius: 16px;
 }
-.tf-benefit .box-icon .wrap-icon .icon {
+.box-icon .wrap-icon .icon {
   width: 64px;
   height: 64px;
   filter: brightness(0) saturate(100%) invert(70%) sepia(55%) saturate(503%) hue-rotate(351deg) brightness(90%) contrast(91%);
   transition: transform 0.6s ease-in-out;
 }
-.tf-benefit .box-icon .content {
+.box-icon .content {
   text-align: center;
 }
-.tf-benefit .box-icon .content .title {
+.box-icon .content .title {
   font-size: 24px;
   line-height: 100%;
   margin-bottom: 12px;
 }
-.tf-benefit .box-icon .content .desc {
+.box-icon .content .desc {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: var(--text-color);
-}
-.tf-benefit .partner {
-  margin-top: 80px;
-}
-.tf-benefit .partner .partners-item {
-  filter: brightness(0) invert(1);
-}
-.tf-benefit .partner .partners-item:hover {
-  filter: brightness(0) invert(1);
 }
 
 .flat-testimonial .box-testimonial-item {
@@ -6989,7 +6994,75 @@ h5 {
   top: -75%;
 }
 
-.tf-img-text .bg-imgwtext {
+.tf-vacation-hero.style-01 {
+  background-color: var(--secondary-color);
+  padding: 110px 56px;
+  position: relative;
+}
+.tf-vacation-hero.style-01 .flat-service {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+.tf-vacation-hero.style-01 .flat-service .box-benefit {
+  background-color: var(--white);
+  padding: 48px 32px;
+  align-items: center;
+}
+.tf-vacation-hero.style-01 .flat-service .box-benefit .icon-box {
+  width: 102px;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: var(--secondary-color);
+}
+.tf-vacation-hero.style-01 .flat-service .box-benefit .icon-box .icon {
+  width: 64px;
+  height: 64px;
+}
+.tf-vacation-hero.style-01 .box-image {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: stretch;
+  height: 100%;
+  width: 50%;
+  gap: 16px;
+}
+.tf-vacation-hero.style-01 .box-image .image-left,
+.tf-vacation-hero.style-01 .box-image .image-right {
+  text-align: center;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+.tf-vacation-hero.style-01 .box-image .image-left img,
+.tf-vacation-hero.style-01 .box-image .image-right img {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 16px;
+  height: auto;
+}
+.tf-vacation-hero.style-01 .box-image .image-left img {
+  width: 323px;
+  aspect-ratio: 323/568;
+}
+.tf-vacation-hero.style-01 .box-image .image-right img {
+  width: 384px;
+  aspect-ratio: 384/568;
+}
+.tf-vacation-hero.style-01 .content-right {
+  align-items: flex-start !important;
+  margin-top: 56px;
+}
+.tf-vacation-hero .bg-imgwtext {
   background: url("../images/backgronud/transparent-2.png") no-repeat center center;
   background-size: cover;
   background-color: var(--secondary-color);
@@ -6998,10 +7071,10 @@ h5 {
   border-radius: 16px;
   overflow: visible;
 }
-.tf-img-text .bg-imgwtext .content-right {
+.tf-vacation-hero .bg-imgwtext .content-right {
   width: 50% !important;
 }
-.tf-img-text .bg-imgwtext .wrap-service {
+.tf-vacation-hero .bg-imgwtext .wrap-service {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -7013,12 +7086,12 @@ h5 {
   position: relative;
   z-index: 2;
 }
-.tf-img-text .bg-imgwtext .wrap-service .left {
+.tf-vacation-hero .bg-imgwtext .wrap-service .left {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 16px;
 }
-.tf-img-text .bg-imgwtext .wrap-service .box-benefit {
+.tf-vacation-hero .bg-imgwtext .wrap-service .box-benefit {
   background-color: var(--white);
   border-radius: 16px;
   border: 1px solid var(--stoke-color);
@@ -7027,30 +7100,30 @@ h5 {
   box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.07);
   height: 100%;
 }
-.tf-img-text .bg-imgwtext .wrap-service .box-benefit .icon-box {
+.tf-vacation-hero .bg-imgwtext .wrap-service .box-benefit .icon-box {
   width: 70px;
   height: 70px;
   border-radius: 16px;
   background-color: var(--secondary-color);
 }
-.tf-img-text .bg-imgwtext .wrap-service .box-benefit .icon-box .icon {
+.tf-vacation-hero .bg-imgwtext .wrap-service .box-benefit .icon-box .icon {
   width: 42px;
   height: 42px;
 }
-.tf-img-text .bg-imgwtext .wrap-service .box-benefit:hover .icon-box {
+.tf-vacation-hero .bg-imgwtext .wrap-service .box-benefit:hover .icon-box {
   background-color: var(--primary-color);
 }
-.tf-img-text .bg-imgwtext .wrap-service .box-benefit:hover .icon-box .icon {
+.tf-vacation-hero .bg-imgwtext .wrap-service .box-benefit:hover .icon-box .icon {
   filter: brightness(0) invert(1);
   color: var(--white);
 }
-.tf-img-text .flat-img-with-text {
+.tf-vacation-hero .flat-img-with-text {
   display: flex;
   align-items: stretch;
   flex-direction: row;
   gap: 78px;
 }
-.tf-img-text .flat-img-with-text .content-left {
+.tf-vacation-hero .flat-img-with-text .content-left {
   width: 48%;
   display: flex;
   align-items: flex-start;
@@ -7058,56 +7131,56 @@ h5 {
   gap: 12px;
   position: relative;
 }
-.tf-img-text .flat-img-with-text .content-left .rotating-badge {
+.tf-vacation-hero .flat-img-with-text .content-left .rotating-badge {
   bottom: 30%;
   left: 52%;
 }
-.tf-img-text .flat-img-with-text .content-left .inner-right {
+.tf-vacation-hero .flat-img-with-text .content-left .inner-right {
   display: flex;
   gap: 12px;
   align-items: center;
   flex-direction: column;
   flex: 0 0 272px;
 }
-.tf-img-text .flat-img-with-text .content-left .inner-right img:first-child {
+.tf-vacation-hero .flat-img-with-text .content-left .inner-right img:first-child {
   object-fit: cover;
   width: 100%;
   height: auto;
   aspect-ratio: 272/286;
   border-radius: 16px;
 }
-.tf-img-text .flat-img-with-text .content-left .inner-right img:last-child {
+.tf-vacation-hero .flat-img-with-text .content-left .inner-right img:last-child {
   object-fit: cover;
   width: 100%;
   height: auto;
   aspect-ratio: 272/207;
   border-radius: 16px;
 }
-.tf-img-text .flat-img-with-text .content-left .inner-left {
+.tf-vacation-hero .flat-img-with-text .content-left .inner-left {
   flex: 0 0 304px;
   margin-top: 90px;
 }
-.tf-img-text .flat-img-with-text .content-left .inner-left img {
+.tf-vacation-hero .flat-img-with-text .content-left .inner-left img {
   border-radius: 16px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   aspect-ratio: 304/481;
 }
-.tf-img-text .flat-img-with-text .content-right {
+.tf-vacation-hero .flat-img-with-text .content-right {
   width: 52%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 32px;
 }
-.tf-img-text .flat-img-with-text .box-title {
+.tf-vacation-hero .flat-img-with-text .box-title {
   margin-bottom: 0;
 }
-.tf-img-text .flat-img-with-text .box-title .title {
+.tf-vacation-hero .flat-img-with-text .box-title .title {
   margin-bottom: 32px;
 }
-.tf-img-text .flat-img-with-text .flat-service {
+.tf-vacation-hero .flat-img-with-text .flat-service {
   display: flex;
   align-items: flex-start;
   gap: 40px;
@@ -7115,12 +7188,12 @@ h5 {
   padding-bottom: 32px;
   border-bottom: 1px solid var(--stoke-color);
 }
-.tf-img-text .flat-img-with-text .box-benefit {
+.tf-vacation-hero .box-benefit {
   display: flex;
   gap: 32px;
   flex-direction: column;
 }
-.tf-img-text .flat-img-with-text .box-benefit .icon-box {
+.tf-vacation-hero .box-benefit .icon-box {
   width: 48px;
   height: 48px;
   transition: transform 0.6s ease;
@@ -7128,39 +7201,39 @@ h5 {
   justify-content: center;
   align-items: center;
 }
-.tf-img-text .flat-img-with-text .box-benefit .icon-box .icon {
+.tf-vacation-hero .box-benefit .icon-box .icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
-.tf-img-text .flat-img-with-text .box-benefit .content-box {
+.tf-vacation-hero .box-benefit .content-box {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.tf-img-text .flat-img-with-text .box-benefit .content-box .description {
+.tf-vacation-hero .box-benefit .content-box .description {
   font-size: 16px;
   color: var(--text-color);
   line-height: 140%;
 }
-.tf-img-text .flat-img-with-text .box-benefit:hover .icon {
+.tf-vacation-hero .box-benefit:hover .icon {
   transform: rotateY(360deg);
 }
-.tf-img-text .flat-img-with-text .contact {
+.tf-vacation-hero .contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: 24px;
 }
-.tf-img-text .flat-img-with-text .contact .box-info {
+.tf-vacation-hero .contact .box-info {
   display: flex;
   gap: 16px;
   flex-direction: row;
   flex-shrink: 0;
 }
-.tf-img-text .flat-img-with-text .contact .box-info .icon {
+.tf-vacation-hero .contact .box-info .icon {
   width: 48px;
   height: 48px;
   color: var(--white);
@@ -7172,13 +7245,13 @@ h5 {
   justify-content: center;
   flex-shrink: 0;
 }
-.tf-img-text .flat-img-with-text .contact .box-info .content {
+.tf-vacation-hero .contact .box-info .content {
   display: flex;
   flex-direction: column;
   gap: 4px;
   white-space: nowrap;
 }
-.tf-img-text .flat-img-with-text .contact .box-info .content .phone {
+.tf-vacation-hero .contact .box-info .content .phone {
   color: var(--primary-color);
 }
 
