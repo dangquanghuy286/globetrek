@@ -7841,14 +7841,14 @@ h5 {
   left: 1.5%;
   top: 32%;
   width: 68.769%;
-  height: 63.038%;
+  aspect-ratio: 1/1;
   z-index: 1;
   background-color: var(--white);
   border: 1px solid var(--stoke-color);
 }
 .tf-image-wrap.item-2 {
   top: 0;
-  left: 4.843%;
+  left: 31px;
   width: 86.585%;
   z-index: 2;
 }
