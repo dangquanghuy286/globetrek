@@ -46,3 +46,44 @@
         }
     }
 }
+
+.hover-img-wrap {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgb(0 0 0);
+        transition: 0.25s;
+        z-index: 3;
+        opacity: 0.1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: rgb(0 0 0);
+        transition: 0.25s;
+        z-index: 3;
+        opacity: 0.1;
+    }
+
+    &:hover {
+        &::after {
+            bottom: 0;
+            transition-delay: 0.25s;
+        }
+
+        &::before {
+            top: 0;
+        }
+    }
+}
