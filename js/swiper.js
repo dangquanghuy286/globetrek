@@ -360,7 +360,6 @@ document.addEventListener("DOMContentLoaded", () => {
       slideShadows: false,
     },
     speed: 1000,
-    allowTouchMove: false,
   });
 
   // =============== Testimonial  =============================
