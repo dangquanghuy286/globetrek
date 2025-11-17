@@ -5584,6 +5584,9 @@ h5 {
   .tf-promo-section .flat-img-with-text .content-right {
     width: 100% !important;
   }
+  .tf-image-box {
+    width: 100% !important;
+  }
 }
 @media (max-width: 1199px) {
   .header .menu-nav {
@@ -7836,12 +7839,12 @@ h5 {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  aspect-ratio: 1/1;
 }
 .tf-image-wrap.item-1 {
   left: 1.5%;
   top: 32%;
   width: 68.769%;
-  aspect-ratio: 1/1;
   z-index: 1;
   background-color: var(--white);
   border: 1px solid var(--stoke-color);
