@@ -7712,12 +7712,13 @@ h5 {
 }
 .tf-promo-section .banner-device {
   height: 100%;
-  margin: -145px 0 -235px -200px;
+  margin: -145px 0 -229px -200px;
   padding: 0;
 }
 .tf-promo-section .banner-device img {
   max-width: 850px;
-  max-height: 621px;
+  max-height: 613px;
+  object-fit: cover;
 }
 .tf-promo-section .content-right {
   padding: 100px 0;
