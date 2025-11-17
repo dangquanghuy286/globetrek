@@ -347,9 +347,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// =================Rating===========================
+// =============== Rating Card & Testimonial Sync =============================
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".tf-rating-card", {
+  // Images
+  const swiperThumbs = new Swiper(".tf-rating-card", {
     effect: "cards",
     grabCursor: true,
     cardsEffect: {
@@ -359,17 +360,17 @@ document.addEventListener("DOMContentLoaded", () => {
       slideShadows: false,
     },
     speed: 1000,
+    allowTouchMove: false,
   });
-});
-//
-// =============== Testinial=============================
-document.addEventListener("DOMContentLoaded", function () {
+
+  // =============== Testimonial  =============================
   const reviewBox = document.querySelector(".tf-review-box");
 
   if (reviewBox) {
     const slides = document.querySelectorAll(".tf-review-box .card-review");
     const avatars = Array.from(slides).map((slide) => slide.dataset.avatar);
 
+    // Content
     const swTestimonial = new Swiper(".tf-review-box", {
       slidesPerView: 1,
       spaceBetween: 0,
@@ -384,6 +385,17 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       loop: false,
+      // Sync thủ công
+      on: {
+        slideChange: function () {
+          swiperThumbs.slideTo(this.activeIndex);
+        },
+      },
+    });
+
+    // Sync ngược lại
+    swiperThumbs.on("slideChange", function () {
+      swTestimonial.slideTo(this.activeIndex);
     });
   }
 });
