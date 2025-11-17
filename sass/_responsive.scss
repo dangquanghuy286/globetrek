@@ -108,6 +108,26 @@
          }
       }
    }
+
+   .tf-promo-section {
+      .flat-img-with-text {
+         flex-direction: column !important;
+         gap: 120px !important;
+
+         .content-left {
+            width: 100% !important;
+
+            .banner-device {
+               margin: -145px auto;
+            }
+         }
+
+         .content-right {
+            width: 100% !important;
+         }
+      }
+
+   }
 }
 
 @media (max-width: 1199px) {

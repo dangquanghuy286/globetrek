@@ -5532,6 +5532,19 @@ h5 {
   .tf-destination .content .subtitle {
     font-size: 15px;
   }
+  .tf-promo-section .flat-img-with-text {
+    flex-direction: column !important;
+    gap: 120px !important;
+  }
+  .tf-promo-section .flat-img-with-text .content-left {
+    width: 100% !important;
+  }
+  .tf-promo-section .flat-img-with-text .content-left .banner-device {
+    margin: -145px auto;
+  }
+  .tf-promo-section .flat-img-with-text .content-right {
+    width: 100% !important;
+  }
 }
 @media (max-width: 1199px) {
   .header .menu-nav {
@@ -7697,46 +7710,44 @@ h5 {
 }
 
 .tf-promo-section {
+  border-radius: 16px;
   margin-bottom: 120px;
 }
 .tf-promo-section .flat-img-with-text {
   gap: 0;
+  padding: 100px 0;
 }
 .tf-promo-section .flat-img-with-text .box-title .title {
   margin-bottom: 12px;
 }
-.tf-promo-section .content-left {
-  height: 100%;
-  padding: 100px 0;
-  width: 60%;
-}
-.tf-promo-section .banner-device {
-  height: 100%;
-  margin: -145px 0 -229px -200px;
-  padding: 0;
-}
-.tf-promo-section .banner-device img {
-  max-width: 850px;
-  max-height: 613px;
-  object-fit: cover;
-}
-.tf-promo-section .content-right {
-  padding: 100px 0;
+.tf-promo-section .flat-img-with-text .content-right {
   justify-content: center;
   align-items: flex-start !important;
-  width: 40%;
 }
-.tf-promo-section .content-right .action-download {
+.tf-promo-section .flat-img-with-text .content-left {
+  height: 100%;
+}
+.tf-promo-section .action-download {
   align-items: center;
   justify-content: flex-start;
 }
-.tf-promo-section .content-right .action-download .tf-btn {
+.tf-promo-section .action-download .tf-btn {
   background-color: var(--heading-color);
   border-color: var(--heading-color);
   padding: 14px 12px;
 }
-.tf-promo-section .content-right .action-download .tf-btn:hover {
+.tf-promo-section .action-download .tf-btn:hover {
   border: 1px solid var(--primary-color);
+}
+.tf-promo-section .banner-device {
+  height: 100%;
+  margin: -145px 0 -153px -169px;
+  padding: 0;
+}
+.tf-promo-section .banner-device img {
+  max-width: 770px;
+  max-height: 545px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1922,55 +1922,56 @@
 // =============Promo-section======================
 .tf-promo-section {
 
-
+    border-radius: 16px;
     margin-bottom: 120px;
 
     .flat-img-with-text {
         gap: 0;
+        padding: 100px 0;
 
         .box-title .title {
             margin-bottom: 12px;
         }
+
+        .content-right {
+
+            justify-content: center;
+            align-items: flex-start !important;
+        }
+
+        .content-left {
+            height: 100%;
+        }
     }
 
-    .content-left {
-        height: 100%;
-        padding: 100px 0;
-        width: 60%;
+    .action-download {
+        align-items: center;
+        justify-content: flex-start;
+
+        .tf-btn {
+            background-color: var(--heading-color);
+            border-color: var(--heading-color);
+            padding: 14px 12px;
+
+            &:hover {
+                border: 1px solid var(--primary-color);
+            }
+        }
     }
+
 
     .banner-device {
         height: 100%;
-        margin: -145px 0 -229px -200px;
+        margin: -145px 0 -153px -169px;
         padding: 0;
 
 
         img {
-            max-width: 850px;
-            max-height: 613px;
+            max-width: 770px;
+            max-height: 545px;
             object-fit: cover;
         }
     }
 
-    .content-right {
-        padding: 100px 0;
-        justify-content: center;
-        align-items: flex-start !important;
-        width: 40%;
 
-        .action-download {
-            align-items: center;
-            justify-content: flex-start;
-
-            .tf-btn {
-                background-color: var(--heading-color);
-                border-color: var(--heading-color);
-                padding: 14px 12px;
-
-                &:hover {
-                    border: 1px solid var(--primary-color);
-                }
-            }
-        }
-    }
 }
