@@ -7604,11 +7604,6 @@ h5 {
   filter: brightness(60%);
 }
 
-.flat-tour-find {
-  background: url("../images/backgronud/transparent-2.png") no-repeat center center;
-  background-size: cover;
-  background-color: var(--secondary-color);
-}
 .flat-tour-find .perfect-tour-wrapper {
   position: relative;
 }
@@ -7693,6 +7688,54 @@ h5 {
 .flat-tour-find .tf-find-tour .swiper-slide-active .wrap-content .content {
   opacity: 1;
   pointer-events: auto;
+}
+
+.bg-second {
+  background: url("../images/backgronud/transparent-2.png") no-repeat center center;
+  background-size: cover;
+  background-color: var(--secondary-color);
+}
+
+.tf-promo-section {
+  margin-bottom: 120px;
+}
+.tf-promo-section .flat-img-with-text {
+  gap: 0;
+}
+.tf-promo-section .flat-img-with-text .box-title .title {
+  margin-bottom: 12px;
+}
+.tf-promo-section .content-left {
+  height: 100%;
+  padding: 100px 0;
+  width: 60%;
+}
+.tf-promo-section .banner-device {
+  height: 100%;
+  margin: -145px 0 -235px -200px;
+  padding: 0;
+}
+.tf-promo-section .banner-device img {
+  max-width: 850px;
+  max-height: 621px;
+}
+.tf-promo-section .content-right {
+  padding: 100px 0;
+  justify-content: center;
+  align-items: flex-start !important;
+  width: 40%;
+}
+.tf-promo-section .content-right .action-download {
+  align-items: center;
+  justify-content: flex-start;
+}
+.tf-promo-section .content-right .action-download .tf-btn {
+  background-color: var(--heading-color);
+  border-color: var(--heading-color);
+  padding: 14px 12px;
+}
+.tf-promo-section .content-right .action-download .tf-btn:hover {
+  border: 1px solid var(--primary-color);
 }
 
 /*# sourceMappingURL=style.css.map */

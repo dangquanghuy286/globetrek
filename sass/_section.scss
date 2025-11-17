@@ -912,8 +912,6 @@
 
     .partner {
         margin-top: 80px;
-
-
     }
 }
 
@@ -1815,9 +1813,7 @@
 
 // ============= Perfect Tour===================
 .flat-tour-find {
-    background: url("../images/backgronud/transparent-2.png") no-repeat center center;
-    background-size: cover;
-    background-color: var(--secondary-color);
+
 
     .perfect-tour-wrapper {
         position: relative;
@@ -1914,5 +1910,66 @@
         }
 
 
+    }
+}
+
+.bg-second {
+    background: url("../images/backgronud/transparent-2.png") no-repeat center center;
+    background-size: cover;
+    background-color: var(--secondary-color);
+}
+
+// =============Promo-section======================
+.tf-promo-section {
+
+
+    margin-bottom: 120px;
+
+    .flat-img-with-text {
+        gap: 0;
+
+        .box-title .title {
+            margin-bottom: 12px;
+        }
+    }
+
+    .content-left {
+        height: 100%;
+        padding: 100px 0;
+        width: 60%;
+    }
+
+    .banner-device {
+        height: 100%;
+        margin: -145px 0 -235px -200px;
+        padding: 0;
+
+
+        img {
+            max-width: 850px;
+            max-height: 621px;
+        }
+    }
+
+    .content-right {
+        padding: 100px 0;
+        justify-content: center;
+        align-items: flex-start !important;
+        width: 40%;
+
+        .action-download {
+            align-items: center;
+            justify-content: flex-start;
+
+            .tf-btn {
+                background-color: var(--heading-color);
+                border-color: var(--heading-color);
+                padding: 14px 12px;
+
+                &:hover {
+                    border: 1px solid var(--primary-color);
+                }
+            }
+        }
     }
 }
