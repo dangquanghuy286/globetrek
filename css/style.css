@@ -3025,7 +3025,6 @@ h5 {
 }
 .style-1 .header-wrap {
   align-items: center;
-  display: flex;
 }
 .style-1 .header-wrap .header-ct-left {
   padding: 14px 0;
@@ -4905,12 +4904,6 @@ h5 {
   width: 100%;
   z-index: 123;
 }
-.slider-default .swiper {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 .slider-default .swiper-slide .box-banner {
   background-size: cover;
   background-position: center;
@@ -5525,7 +5518,6 @@ h5 {
 }
 .box-title .title {
   text-transform: capitalize;
-  font-weight: 600;
   font-size: 40px;
   line-height: 120%;
 }
@@ -5562,11 +5554,6 @@ h5 {
   grid-template-areas: "item1 item1 item2 item2 item5 item5" "item1 item1 item3 item4 item5 item5";
 }
 .tf-destination .item {
-  height: 100%;
-}
-.tf-destination .img-style {
-  display: block;
-  width: 100%;
   height: 100%;
 }
 .tf-destination .destination-post {
@@ -5940,8 +5927,6 @@ h5 {
 }
 .flat-tab-recommend .item .images-group {
   aspect-ratio: 3/2;
-  width: 100%;
-  overflow: hidden;
 }
 .flat-tab-recommend .item .archive-bottom {
   padding: 24px;
@@ -6166,9 +6151,6 @@ h5 {
   padding: 28px;
   position: relative;
   width: 80px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .banner-section .content .tf-action .tf-btn::after, .banner-section .content .tf-action .tf-btn::before {
   position: absolute;
@@ -6378,9 +6360,7 @@ h5 {
   position: relative;
 }
 .tf-best-trip .tf-scroll-text .heading {
-  font-weight: 600;
   font-size: 182px;
-  line-height: 120%;
   text-align: center;
 }
 .tf-best-trip .tf-scroll-text img {
