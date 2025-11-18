@@ -6430,6 +6430,7 @@ h5 {
   transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
+  z-index: 10;
 }
 .tf-vacation-hero.style-01 .flat-service .box-benefit {
   background-color: var(--white);
@@ -7145,7 +7146,7 @@ h5 {
   width: 68.769%;
   z-index: 1;
   background-color: var(--white);
-  border: 1px solid var(--stoke-color);
+  border: 1px solid rgba(95, 108, 90, 0.2);
 }
 .tf-image-wrap.item-2 {
   top: 0;
