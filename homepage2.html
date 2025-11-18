@@ -34,12 +34,12 @@
   </head>
   <body>
     <!-- Loading -->
-    <div class="preload preload-container">
+    <!-- <div class="preload preload-container">
       <div class="preload-logo">
         <div class="spinner"></div>
         <img src="./images/logo/destination.png" alt="logo-loading" />
       </div>
-    </div>
+    </div> -->
     <!-- End-Loading -->
     <!-- Header -->
     <header id="header" class="header style-1 color-1">
@@ -1665,76 +1665,94 @@
     <div class="tf-vacation-hero mx-4 style-01">
       <div class="container flat-service">
         <div
-          class="tf-grid-layout tf-col-4 lg-col-2 sm-col-1 wow animate__animated animate__fadeIn"
-          data-wow-duration="1s"
-          data-wow-delay="0.2s"
+          class="tf-sw-mobile swiper"
+          data-screen="575"
+          data-preview="1"
+          data-space="15"
         >
-          <div class="box-icon-benefits">
-            <div class="wrap-icon">
-              <img
-                src="./images/icons/shopping-cart-icon.svg"
-                alt="icon"
-                class="icon"
-              />
+          <div
+            class="swiper-wrapper tf-grid-layout grid-mb tf-col-4 xl-col-2 wow animate__animated animate__fadeIn"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            <div class="swiper-slide">
+              <div class="box-icon-benefits">
+                <div class="wrap-icon">
+                  <img
+                    src="./images/icons/shopping-cart-icon.svg"
+                    alt="icon"
+                    class="icon"
+                  />
+                </div>
+                <div class="content">
+                  <h3 class="title link">
+                    <a href="#">Best Travel Agents</a>
+                  </h3>
+                  <p class="desc">
+                    Choose us, and you'll enjoy exclusive offers...
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="content">
-              <h3 class="title link">
-                <a href="#">Best Travel Agents</a>
-              </h3>
-              <p class="desc">
-                Choose us, and you'll enjoy exclusive offers and 24/7 dedicated
-                customer service
-              </p>
+
+            <div class="swiper-slide">
+              <div class="box-icon-benefits">
+                <div class="wrap-icon">
+                  <img
+                    src="./images/icons/shipper-icon.svg"
+                    alt="icon"
+                    class="icon"
+                  />
+                </div>
+                <div class="content">
+                  <h3 class="title link">
+                    <a href="#">Professional team</a>
+                  </h3>
+                  <p class="desc">With a professional team...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="box-icon-benefits">
+                <div class="wrap-icon">
+                  <img
+                    src="./images/icons/service-1.svg"
+                    alt="icon"
+                    class="icon"
+                  />
+                </div>
+                <div class="content">
+                  <h3 class="title link">
+                    <a href="#">New experience</a>
+                  </h3>
+                  <p class="desc">We turn your travel dreams...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="box-icon-benefits">
+                <div class="wrap-icon">
+                  <img src="./images/icons/trip.svg" alt="icon" class="icon" />
+                </div>
+                <div class="content">
+                  <h3 class="title link">
+                    <a href="#">Price and quality</a>
+                  </h3>
+                  <p class="desc">Explore the world with us...</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="box-icon-benefits">
-            <div class="wrap-icon">
-              <img
-                src="./images/icons/shipper-icon.svg"
-                alt="icon"
-                class="icon"
-              />
-            </div>
-            <div class="content">
-              <h3 class="title link">
-                <a href="#">Professional team</a>
-              </h3>
-              <p class="desc">
-                With a professional team, we are committed to bringing you
-                perfect vacations.
-              </p>
-            </div>
-          </div>
-          <div class="box-icon-benefits">
-            <div class="wrap-icon">
-              <img src="./images/icons/service-1.svg" alt="icon" class="icon" />
-            </div>
-            <div class="content">
-              <h3 class="title link">
-                <a href="#">New experience</a>
-              </h3>
-              <p class="desc">
-                We turn your travel dreams into reality with unforgettable and
-                safe experiences
-              </p>
-            </div>
-          </div>
-          <div class="box-icon-benefits">
-            <div class="wrap-icon">
-              <img src="./images/icons/trip.svg" alt="icon" class="icon" />
-            </div>
-            <div class="content">
-              <h3 class="title link">
-                <a href="#">Price and quality</a>
-              </h3>
-              <p class="desc">
-                Explore the world with us on unique journeys, competitive
-                prices, and 5-star service
-              </p>
-            </div>
+
+          <!-- Pagination -->
+          <div class="slider-control">
+            <div class="sw-pagination sw-pagination-topchose text-center"></div>
           </div>
         </div>
       </div>
+
       <div class="flat-img-with-text">
         <div class="box-image">
           <div class="image-left">
@@ -2609,7 +2627,7 @@
     </section>
     <!--End Img with Text -->
     <!-- Testinial -->
-    <section class="flat-section tf-vacation-hero">
+    <section class="flat-section tf-vacation-hero pt-0">
       <div class="container">
         <div class="flat-img-with-text">
           <div class="card-wrapper">
@@ -2777,7 +2795,7 @@
     </section>
     <!--End Testinial -->
     <!-- Blog -->
-    <section class="flat-section">
+    <section class="flat-section pt-0">
       <div class="container">
         <div class="box-title">
           <h1

@@ -360,6 +360,20 @@ document.addEventListener("DOMContentLoaded", () => {
       slideShadows: false,
     },
     speed: 1000,
+    breakpoints: {
+      0: {
+        // Mobile
+        cardsEffect: {
+          perSlideOffset: 0,
+        },
+      },
+      576: {
+        // Desktop
+        cardsEffect: {
+          perSlideOffset: 10,
+        },
+      },
+    },
   });
 
   // =============== Testimonial  =============================
