@@ -5896,6 +5896,7 @@ h5 {
   display: flex;
   gap: 40px;
   width: max-content;
+  overflow: hidden;
   animation: scroll 30s linear infinite;
 }
 .partner .partners-list:hover {
