@@ -42,6 +42,21 @@
         }
     }
 
+    &.style-white {
+        .swiper-pagination-bullet {
+            background-color: var(--white) !important;
+
+            &::before {
+                border: 1px solid var(--white) !important;
+            }
+        }
+
+
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--white) !important;
+        }
+    }
 
 }
 
@@ -144,4 +159,12 @@
         opacity: 1;
         border: 2px solid var(--primary-color);
     }
+}
+
+.swiper-wrapper {
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    height: auto !important;
 }
