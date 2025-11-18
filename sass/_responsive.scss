@@ -6,7 +6,7 @@
 @media (max-width: 1600px) {
    .tf-vacation-hero {
       &.style-01 {
-         padding: 100px 10px;
+         padding: 80px 10px;
 
          .flat-service {
             top: 65%;
@@ -156,19 +156,17 @@
       &.style-01 {
          .box-image {
 
+
             .image-left,
             .image-right {
                flex: 1 1 50% !important;
-               max-width: 100% !important;
-               overflow: hidden;
-               height: 100%;
+
 
                img {
                   aspect-ratio: 3 / 5;
                }
             }
 
-            height: 100%;
             width: 100%;
          }
 
@@ -717,6 +715,24 @@
       }
    }
 
+   .tf-vacation-hero {
+      &.style-01 {
+         .flat-service {
+            top: 55%;
+         }
+
+         .box-image {
+            flex-direction: column;
+
+            .image-left,
+            .image-right {
+               img {
+                  aspect-ratio: 1 / 1;
+               }
+            }
+         }
+      }
+   }
 
    .banner-section {
       padding: 150px 0 !important;
@@ -856,9 +872,6 @@
       }
    }
 
-   .tf-vacation-hero.style-01 .flat-service {
-      top: 70%;
-   }
 }
 
 @media (max-width: 575px) {

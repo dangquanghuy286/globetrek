@@ -6449,13 +6449,6 @@ h5 {
   height: 100%;
   border-radius: 16px;
 }
-.tf-vacation-hero.style-01 .box-image .image-left img,
-.tf-vacation-hero.style-01 .box-image .image-right img {
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 16px;
-  height: auto;
-}
 .tf-vacation-hero.style-01 .box-image .image-left {
   flex: 0 0 323px;
 }
@@ -7148,7 +7141,7 @@ h5 {
 /* ====== MAX-WIDTH (Mobile First) ====== */
 @media (max-width: 1600px) {
   .tf-vacation-hero.style-01 {
-    padding: 100px 10px;
+    padding: 80px 10px;
   }
   .tf-vacation-hero.style-01 .flat-service {
     top: 65%;
@@ -7245,16 +7238,12 @@ h5 {
   .tf-vacation-hero.style-01 .box-image .image-left,
   .tf-vacation-hero.style-01 .box-image .image-right {
     flex: 1 1 50% !important;
-    max-width: 100% !important;
-    overflow: hidden;
-    height: 100%;
   }
   .tf-vacation-hero.style-01 .box-image .image-left img,
   .tf-vacation-hero.style-01 .box-image .image-right img {
     aspect-ratio: 3/5;
   }
   .tf-vacation-hero.style-01 .box-image {
-    height: 100%;
     width: 100%;
   }
   .tf-vacation-hero.style-01 .flat-img-with-text {
@@ -7592,6 +7581,16 @@ h5 {
   .advanced-form .group-checkbox .group-amentities {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+  .tf-vacation-hero.style-01 .flat-service {
+    top: 55%;
+  }
+  .tf-vacation-hero.style-01 .box-image {
+    flex-direction: column;
+  }
+  .tf-vacation-hero.style-01 .box-image .image-left img,
+  .tf-vacation-hero.style-01 .box-image .image-right img {
+    aspect-ratio: 1/1;
+  }
   .banner-section {
     padding: 150px 0 !important;
   }
@@ -7675,9 +7674,6 @@ h5 {
     width: 100px !important;
     height: 100px !important;
     border-radius: 12px !important;
-  }
-  .tf-vacation-hero.style-01 .flat-service {
-    top: 70%;
   }
 }
 @media (max-width: 575px) {
