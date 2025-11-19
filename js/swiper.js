@@ -440,6 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: mobile,
       spaceBetween: spacing,
       watchSlidesProgress: true,
+      loop: true,
       pagination: {
         el: ".sw-pagination-device",
         clickable: true,
@@ -477,7 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el: ".sw-pagination-tour",
         clickable: true,
       },
-
+      loop: true,
       breakpoints: {
         575: {
           slidesPerView: parseInt(mobileSm),

@@ -1376,6 +1376,10 @@ h5 {
   margin-bottom: 64px;
 }
 
+.mb_120 {
+  margin-bottom: 120px !important;
+}
+
 /* Margin Left */
 .ml-0 {
   margin-left: 0px;
@@ -7236,7 +7240,6 @@ h5 {
 
 .tf-promo-section {
   border-radius: 16px;
-  margin-bottom: 120px;
 }
 .tf-promo-section .flat-img-with-text {
   gap: 0;
