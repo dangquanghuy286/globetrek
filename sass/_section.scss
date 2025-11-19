@@ -2029,6 +2029,8 @@
 
 // =============Promo-section======================
 .tf-promo-section {
+    position: relative;
+    z-index: 1;
     border-radius: 16px;
 
     .flat-img-with-text {
@@ -2070,6 +2072,8 @@
         height: 100%;
         margin: -145px 0 -152px -175px;
         padding: 0;
+        position: relative;
+        z-index: 10;
 
 
         img {

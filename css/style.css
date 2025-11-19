@@ -7239,6 +7239,8 @@ h5 {
 }
 
 .tf-promo-section {
+  position: relative;
+  z-index: 1;
   border-radius: 16px;
 }
 .tf-promo-section .flat-img-with-text {
@@ -7271,6 +7273,8 @@ h5 {
   height: 100%;
   margin: -145px 0 -152px -175px;
   padding: 0;
+  position: relative;
+  z-index: 10;
 }
 .tf-promo-section .banner-device img {
   max-width: 770px;
