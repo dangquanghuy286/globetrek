@@ -94,43 +94,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-// =============== Testinial=============================
+// =============== Testimonial =============================
 document.addEventListener("DOMContentLoaded", function () {
   const testimonialEl = document.querySelector(".tf-sw-testimonial");
 
   if (testimonialEl) {
+    const preview = testimonialEl.dataset.preview || 1;
+    const tablet = testimonialEl.dataset.tablet || 1;
+    const mobile = testimonialEl.dataset.mobile || 1;
+    const mobileSm = testimonialEl.dataset.mobileSm || 1;
+
+    const spacingLg = testimonialEl.dataset.spaceLg || 0;
+    const spacingMd = testimonialEl.dataset.spaceMd || 0;
+    const spacing = testimonialEl.dataset.space || 0;
+
     const swTestimonial = new Swiper(".tf-sw-testimonial", {
-      slidesPerView: 1,
-      spaceBetween: 0,
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
       speed: 1000,
+      loop: true,
+
       navigation: {
         clickable: true,
         nextEl: ".flex-next",
         prevEl: ".flex-prev",
       },
+
       pagination: {
         el: ".sw-pagination-tes",
         clickable: true,
       },
-      loop: true,
+
       breakpoints: {
         575: {
-          slidesPerView: 1,
-          spaceBetween: 0,
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacing),
         },
         768: {
-          slidesPerView: 1,
-          spaceBetween: 0,
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
         },
         1440: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          centeredSlides: false,
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
         },
       },
     });
   }
 });
+
 // =================Mobile===========================
 document.addEventListener("DOMContentLoaded", function () {
   const tfSwMobile = document.querySelector(".tf-sw-mobile");
@@ -440,6 +452,44 @@ document.addEventListener("DOMContentLoaded", () => {
         1200: {
           slidesPerView: preview,
           spaceBetween: spacingLg,
+        },
+      },
+    });
+  }
+});
+// =========== TOUR SWIPER ==================
+document.addEventListener("DOMContentLoaded", () => {
+  const tfSwTour = document.querySelector(".tf-swiper-tour");
+  if (tfSwTour) {
+    const preview = tfSwTour.dataset.preview;
+    const tablet = tfSwTour.dataset.tablet;
+    const mobile = tfSwTour.dataset.mobile;
+    const mobileSm = tfSwTour.dataset.mobileSm;
+    const spacingLg = tfSwTour.dataset.spaceLg;
+    const spacingMd = tfSwTour.dataset.spaceMd;
+    const spacing = tfSwTour.dataset.space;
+
+    const swiper = new Swiper(".tf-swiper-tour", {
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
+
+      pagination: {
+        el: ".sw-pagination-tour",
+        clickable: true,
+      },
+
+      breakpoints: {
+        575: {
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacing),
+        },
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
+        },
+        1200: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
         },
       },
     });

@@ -329,6 +329,15 @@
 
       .content-left {
          align-items: stretch !important;
+
+         .banner-device {
+            margin: auto !important;
+
+            img {
+               max-width: 600px;
+               max-height: 600px;
+            }
+         }
       }
 
       .inner-left {
@@ -366,7 +375,9 @@
    }
 
    .tf-partner {
-      margin-top: 200px !important;
+      &.home-2 {
+         margin-top: 200px !important;
+      }
    }
 
    .tf-destination {
@@ -417,7 +428,6 @@
 
    }
 }
-
 
 @media (max-width: 991px) {
    .header {
@@ -533,7 +543,9 @@
    }
 
    .tf-partner {
-      margin-top: 300px !important;
+      &.home-2 {
+         margin-top: 300px !important;
+      }
 
       .box-content {
          flex-direction: column !important;
@@ -807,7 +819,9 @@
    }
 
    .tf-partner {
-      margin-top: 450px !important;
+      .home-2 {
+         margin-top: 450px !important;
+      }
    }
 
 
@@ -872,6 +886,20 @@
       }
    }
 
+   .tf-promo-section {
+      .content-left {
+         align-items: stretch !important;
+
+         .banner-device {
+            margin: auto !important;
+
+            img {
+               max-width: 500px;
+               max-height: 500px;
+            }
+         }
+      }
+   }
 }
 
 @media (max-width: 575px) {
@@ -1146,6 +1174,14 @@
       }
    }
 
+   .tf-image-box {
+      .tf-image-wrap {
+         &.item-3 {
+            bottom: 15%;
+         }
+      }
+   }
+
    .tf-destination {
       display: flex !important;
       gap: 0 !important;
@@ -1182,6 +1218,21 @@
       }
    }
 
+   .tf-promo-section {
+      .content-left {
+         align-items: stretch !important;
+
+         .banner-device {
+            margin: auto !important;
+
+            img {
+               max-width: 400px;
+               max-height: 400px;
+            }
+         }
+      }
+   }
+
    .close-btn {
       right: 10px;
    }
@@ -1208,6 +1259,21 @@
                .login {
                   gap: 3px;
                }
+            }
+         }
+      }
+   }
+
+   .tf-promo-section {
+      .content-left {
+         align-items: stretch !important;
+
+         .banner-device {
+            margin: auto !important;
+
+            img {
+               max-width: 100% !important;
+               max-height: 100% !important;
             }
          }
       }

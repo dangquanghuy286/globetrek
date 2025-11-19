@@ -121,7 +121,7 @@
 
                 img {
                     font-size: 14px;
-                    transition: transform 0.3s ease;
+                    transition: all 0.3s ease;
                 }
 
                 &:hover {
@@ -130,6 +130,53 @@
                     img {
                         filter: brightness(0) saturate(100%) invert(83%) sepia(69%) saturate(2126%) hue-rotate(321deg) brightness(91%) contrast(89%);
                     }
+                }
+            }
+
+            &.style-content-01 {
+                background-color: var(--white);
+                bottom: 8px;
+                left: 8px;
+                right: 8px;
+                padding: 24px;
+                border-radius: 16px;
+                color: var(--heading-color);
+
+                .date-post {
+                    color: var(--heading-color);
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(10%) sepia(4%) saturate(2132%) hue-rotate(179deg) brightness(97%) contrast(86%);
+                    }
+
+                }
+
+                .title {
+                    color: var(--heading-color);
+                }
+
+                .read-more {
+                    color: var(--heading-color);
+                    transition: all 0.3s ease;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(10%) sepia(4%) saturate(2132%) hue-rotate(179deg) brightness(97%) contrast(86%);
+                    }
+
+                    &:hover {
+                        color: var(--primary-color);
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(70%) sepia(52%) saturate(535%) hue-rotate(353deg) brightness(91%) contrast(89%);
+                        }
+                    }
+
+                }
+
+                .detail {
+                    left: auto;
+                    right: 24px;
+                    top: -18px;
                 }
             }
         }

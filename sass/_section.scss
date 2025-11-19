@@ -463,7 +463,6 @@
 
 // =========Partner============================
 .tf-partner {
-    margin-top: 114px;
 
     .box-content {
         display: flex;
@@ -554,12 +553,16 @@
 }
 
 // ============Tour=============================
-.flat-tab-recommend {
+.flat-recommended {
     .item {
         display: block;
         border-radius: 16px;
         overflow: hidden;
         border: 1px solid var(--stoke-color);
+
+        &:hover {
+            box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
+        }
 
         .images-group {
             aspect-ratio: 3/ 2;
@@ -593,8 +596,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 flex-wrap: wrap;
-                padding-bottom: 16px;
-                border-bottom: 1px solid var(--stoke-color);
+
 
                 .info {
                     display: flex;
@@ -620,31 +622,34 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 16px;
-
-                .address {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    gap: 8px;
-
-                    .icon {
-                        width: 16px;
-                        height: 16px;
-                    }
-
-                    .location {
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 140%;
-                        color: var(--text-color);
-                    }
-                }
+                padding-top: 16px;
+                border-top: 1px solid var(--stoke-color);
 
                 .price {
                     color: var(--primary-color);
                 }
             }
+        }
+
+        .address {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+
+            .icon {
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+
+        .location {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+            color: var(--text-color);
         }
 
         .group-meta {
@@ -702,7 +707,6 @@
 
                         img {
                             filter: brightness(0) invert(1);
-
                         }
 
                     }
@@ -730,6 +734,73 @@
             .archive-top {
                 width: 44%;
             }
+        }
+
+        &.list-style-02 {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+
+            .group-meta {
+                top: 24px;
+                left: 24px;
+                right: 24px;
+            }
+
+            .images-group {
+                aspect-ratio: 4/ 5;
+            }
+
+            .archive-top {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .archive-bottom {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .rate {
+                .total-rate {
+                    color: var(--white);
+                }
+            }
+
+            .tour-title {
+                color: var(--white);
+            }
+
+            .content-info-middle {
+
+                .info {
+                    color: var(--white);
+
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+
+            .content-bottom {
+                .price {
+                    color: var(--white);
+                }
+            }
+
+            .address {
+                .location {
+                    color: var(--white);
+                }
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
         }
     }
 }
@@ -911,7 +982,6 @@
     flex-direction: column;
     border-radius: 16px;
     transition: all 0.3s ease;
-    flex: 1;
 
     &.style-row {
         flex-direction: row;
@@ -985,7 +1055,6 @@
     .box-testimonial-item {
         display: flex;
         align-items: center;
-        gap: 32px;
         flex-direction: column;
         max-width: 840px;
         width: 100%;
@@ -996,22 +1065,38 @@
             font-size: 24px;
             color: var(--text-color);
             text-align: center;
+            line-height: 140%;
+            margin-bottom: 32px;
         }
 
-        .box-avt {
+
+
+        .info {
             display: flex;
             align-items: center;
-            gap: 12px;
             flex-direction: column;
             text-align: center;
+            gap: 2px;
+            margin-top: 12px;
 
-            .info {
-                .position {
-                    color: var(--text-color);
-                    line-height: 140%;
-                    font-size: 16px;
-                    margin-top: 2px;
-                }
+            .position {
+                color: var(--text-color);
+                line-height: 140%;
+                font-size: 16px;
+
+            }
+        }
+
+        &.box-style-01 {
+            background-color: #FDF8F1;
+            border: 1px solid #DCA54626;
+            padding: 24px;
+            border-radius: 20px;
+            max-width: none;
+
+            .description {
+                font-family: "Lexend", sans-serif;
+                font-size: 16px;
             }
         }
     }
@@ -1029,9 +1114,7 @@
         }
     }
 
-    .sw-pagination {
-        display: none;
-    }
+
 }
 
 // ============Find my tour====================
