@@ -175,6 +175,11 @@
          }
       }
    }
+
+   .cus-ovl-1 {
+      overflow: hidden !important;
+      clip-path: none !important;
+   }
 }
 
 @media (max-width: 1199px) {

@@ -2014,7 +2014,7 @@ h5 {
 }
 
 .cus-ovl-1 {
-  clip-path: inset(0 -33% 0 -33%);
+  clip-path: inset(0 -66.67% 0 -66.67%);
   overflow: visible;
 }
 .cus-ovl-1 .swiper-slide-active {
@@ -4197,7 +4197,7 @@ h5 {
   color: var(--primary-color);
 }
 .flat-blog-item.style-1 .content-box .read-more:hover img {
-  filter: brightness(0) saturate(100%) invert(83%) sepia(69%) saturate(2126%) hue-rotate(321deg) brightness(91%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
 }
 .flat-blog-item.style-1 .content-box.style-content-01 {
   background-color: var(--white);
@@ -4226,9 +4226,7 @@ h5 {
 }
 .flat-blog-item.style-1 .content-box.style-content-01 .read-more:hover {
   color: var(--primary-color);
-}
-.flat-blog-item.style-1 .content-box.style-content-01 .read-more:hover img {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(52%) saturate(535%) hue-rotate(353deg) brightness(91%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
 }
 .flat-blog-item.style-1 .content-box.style-content-01 .detail {
   left: auto;
@@ -7466,6 +7464,10 @@ h5 {
   }
   .tf-vacation-hero.style-01 .flat-img-with-text {
     flex-direction: column-reverse !important;
+  }
+  .cus-ovl-1 {
+    overflow: hidden !important;
+    clip-path: none !important;
   }
 }
 @media (max-width: 1199px) {

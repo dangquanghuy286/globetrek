@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: parseInt(mobile),
       spaceBetween: parseInt(spacing),
       speed: 1000,
-      loop: true,
+      loop: false,
 
       navigation: {
         clickable: true,

@@ -128,7 +128,7 @@
                     color: var(--primary-color);
 
                     img {
-                        filter: brightness(0) saturate(100%) invert(83%) sepia(69%) saturate(2126%) hue-rotate(321deg) brightness(91%) contrast(89%);
+                        filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
                     }
                 }
             }
@@ -166,9 +166,7 @@
                     &:hover {
                         color: var(--primary-color);
 
-                        img {
-                            filter: brightness(0) saturate(100%) invert(70%) sepia(52%) saturate(535%) hue-rotate(353deg) brightness(91%) contrast(89%);
-                        }
+                        filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
                     }
 
                 }
