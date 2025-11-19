@@ -2191,7 +2191,7 @@ h5 {
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   border-radius: 50%;
-  border: 3px solid #DCA546;
+  border: 3px dashed #DCA546;
   mask-image: conic-gradient(#DCA546 var(--progress-angle, 0deg), transparent 0);
   -webkit-mask-image: conic-gradient(#DCA546 var(--progress-angle, 0deg), transparent 0);
   z-index: 1;
@@ -4226,6 +4226,8 @@ h5 {
 }
 .flat-blog-item.style-1 .content-box.style-content-01 .read-more:hover {
   color: var(--primary-color);
+}
+.flat-blog-item.style-1 .content-box.style-content-01 .read-more:hover img {
   filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
 }
 .flat-blog-item.style-1 .content-box.style-content-01 .detail {
