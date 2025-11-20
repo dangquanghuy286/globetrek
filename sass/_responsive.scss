@@ -433,6 +433,32 @@
       }
 
    }
+
+   .tf-hero-title {
+      .wg-hero-content {
+         flex-direction: column;
+         gap: 20px;
+
+         .content-left,
+         .content-right {
+            width: 100%;
+         }
+
+         .content-left {
+            .box-title {
+               margin-bottom: 20px;
+            }
+
+            .slider-control {
+               margin-left: auto;
+            }
+         }
+
+         .content-right {
+            padding-left: 0;
+         }
+      }
+   }
 }
 
 @media (max-width: 991px) {

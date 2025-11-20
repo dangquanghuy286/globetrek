@@ -7764,6 +7764,23 @@ h5 {
     margin: auto;
     width: 100%;
   }
+  .tf-hero-title .wg-hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tf-hero-title .wg-hero-content .content-left,
+  .tf-hero-title .wg-hero-content .content-right {
+    width: 100%;
+  }
+  .tf-hero-title .wg-hero-content .content-left .box-title {
+    margin-bottom: 20px;
+  }
+  .tf-hero-title .wg-hero-content .content-left .slider-control {
+    margin-left: auto;
+  }
+  .tf-hero-title .wg-hero-content .content-right {
+    padding-left: 0;
+  }
 }
 @media (max-width: 991px) {
   .header .list-nav {
