@@ -1414,6 +1414,58 @@
         flex-direction: row;
         gap: 78px;
 
+        &.style-04 {
+            gap: 16px;
+            position: relative;
+
+            .rotating-badge {
+                left: 42.4%;
+                bottom: 38%;
+            }
+
+            .content-left {
+                display: grid;
+                align-items: stretch;
+                width: 41%;
+                height: auto;
+                grid-template-columns: 440px 332px;
+                grid-template-rows: 1fr;
+                gap: 16px;
+
+                margin-right: 16px;
+
+                .inner-left {
+                    margin-top: 0;
+                    height: 100%;
+
+                    img {
+                        aspect-ratio: 4 /6;
+                    }
+                }
+
+                .inner-right {
+                    gap: 16px;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    height: auto;
+
+                    img {
+                        aspect-ratio: 1 / 1.1 !important;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+            }
+
+            .content-right {
+                width: 58.124%;
+                padding: 76px 304px 76px 156px;
+            }
+        }
+
         &.row-reverse {
             flex-direction: row-reverse;
         }
@@ -2214,13 +2266,14 @@
 
             .tf-sw-hero {
                 overflow: visible;
-                clip-path: inset(0 -40% 0 0);
+                clip-path: inset(0 -38.8% 0 0);
             }
 
             .hero-card {
                 width: 100%;
                 border-radius: 16px;
                 margin-bottom: 32px;
+                overflow: hidden;
 
                 .hero-image {
                     aspect-ratio: 16 / 9;
@@ -2228,7 +2281,10 @@
                     height: 100%;
                     object-fit: cover;
                     border-radius: 16px;
+
                 }
+
+
             }
 
             .hero-info {
@@ -2237,6 +2293,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 gap: 34px;
+                @include transition3;
 
                 .name {
                     white-space: nowrap;
@@ -2248,11 +2305,31 @@
 
                     background-color: var(--heading-color);
                 }
+
+                .number,
+                .name a,
+                .divider {
+                    @include transition3;
+                }
+
+                &:hover {
+                    .number {
+                        color: var(--primary-color);
+
+                    }
+
+                    .name a {
+                        color: var(--primary-color);
+                    }
+
+                    .divider {
+                        background-color: var(--primary-color);
+
+                    }
+                }
             }
 
-            .swiper-slide-next {
-                opacity: 1;
-            }
+
         }
     }
 }

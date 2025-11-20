@@ -6745,6 +6745,48 @@ h5 {
   flex-direction: row;
   gap: 78px;
 }
+.tf-vacation-hero .flat-img-with-text.style-04 {
+  gap: 16px;
+  position: relative;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .rotating-badge {
+  left: 42.4%;
+  bottom: 38%;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-left {
+  display: grid;
+  align-items: stretch;
+  width: 41%;
+  height: auto;
+  grid-template-columns: 440px 332px;
+  grid-template-rows: 1fr;
+  gap: 16px;
+  margin-right: 16px;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-left {
+  margin-top: 0;
+  height: 100%;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-left img {
+  aspect-ratio: 4/6;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-right {
+  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: auto;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-right img {
+  aspect-ratio: 1/1.1 !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tf-vacation-hero .flat-img-with-text.style-04 .content-right {
+  width: 58.124%;
+  padding: 76px 304px 76px 156px;
+}
 .tf-vacation-hero .flat-img-with-text.row-reverse {
   flex-direction: row-reverse;
 }
@@ -7401,12 +7443,13 @@ h5 {
 }
 .tf-hero-title .wg-hero-content .content-right .tf-sw-hero {
   overflow: visible;
-  clip-path: inset(0 -40% 0 0);
+  clip-path: inset(0 -38.8% 0 0);
 }
 .tf-hero-title .wg-hero-content .content-right .hero-card {
   width: 100%;
   border-radius: 16px;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 .tf-hero-title .wg-hero-content .content-right .hero-card .hero-image {
   aspect-ratio: 16/9;
@@ -7421,6 +7464,11 @@ h5 {
   align-items: center;
   justify-content: flex-start;
   gap: 34px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .tf-hero-title .wg-hero-content .content-right .hero-info .name {
   white-space: nowrap;
@@ -7430,8 +7478,23 @@ h5 {
   height: 2px;
   background-color: var(--heading-color);
 }
-.tf-hero-title .wg-hero-content .content-right .swiper-slide-next {
-  opacity: 1;
+.tf-hero-title .wg-hero-content .content-right .hero-info .number,
+.tf-hero-title .wg-hero-content .content-right .hero-info .name a,
+.tf-hero-title .wg-hero-content .content-right .hero-info .divider {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-hero-title .wg-hero-content .content-right .hero-info:hover .number {
+  color: var(--primary-color);
+}
+.tf-hero-title .wg-hero-content .content-right .hero-info:hover .name a {
+  color: var(--primary-color);
+}
+.tf-hero-title .wg-hero-content .content-right .hero-info:hover .divider {
+  background-color: var(--primary-color);
 }
 
 /* --------------------------------------------------------------
