@@ -496,3 +496,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// ============Hero Title=====================
+document.addEventListener("DOMContentLoaded", function () {
+  const heroSwiper = new Swiper(".tf-sw-hero", {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    loop: false,
+    speed: 1000,
+
+    navigation: {
+      nextEl: ".nav-next-hero-title",
+      prevEl: ".nav-prev-hero-title",
+    },
+
+    pagination: {
+      el: ".sw-pagination-hero-title",
+      clickable: true,
+    },
+  });
+});

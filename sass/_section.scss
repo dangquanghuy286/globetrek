@@ -1132,11 +1132,15 @@
 
     .item {
         background-color: var(--white);
+        border-radius: 16px;
 
         .archive-top {
             position: relative;
             padding-bottom: 24px;
 
+            .img-style {
+                border-radius: 16px 16px 0 0;
+            }
 
             .tag {
                 position: absolute;
@@ -2152,5 +2156,103 @@
         width: 53.92%;
         z-index: 3;
 
+    }
+}
+
+// ==============Tf-hero-title===============
+.tf-hero-title {
+
+    overflow: hidden;
+
+    .wg-hero-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+
+
+
+
+        .content-left {
+            width: 33.33%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+
+            .box-title {
+                margin-bottom: 90px;
+
+                .title {
+                    margin-bottom: 32px;
+                }
+            }
+
+            .slider-control {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: auto;
+                justify-content: flex-start;
+                gap: 24px;
+            }
+        }
+
+        .tf-sw-hero {
+            width: 100%;
+        }
+
+        .content-right {
+            width: 66.67%;
+            flex: 1;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 3.125%;
+
+            .tf-sw-hero {
+                overflow: visible;
+                clip-path: inset(0 -40% 0 0);
+            }
+
+            .hero-card {
+                width: 100%;
+                border-radius: 16px;
+                margin-bottom: 32px;
+
+                .hero-image {
+                    aspect-ratio: 16 / 9;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+
+            .hero-info {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 34px;
+
+                .name {
+                    white-space: nowrap;
+                }
+
+                .divider {
+                    width: 54px;
+                    height: 2px;
+
+                    background-color: var(--heading-color);
+                }
+            }
+
+            .swiper-slide-next {
+                opacity: 1;
+            }
+        }
     }
 }

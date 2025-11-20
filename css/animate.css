@@ -565,6 +565,7 @@
     transform: scaleX(1);
   }
 }
+
 .animate__tada {
   -webkit-animation-name: tada;
   animation-name: tada;
@@ -1595,6 +1596,10 @@
     transform: translate3d(0, -2000px, 0) scaleY(3);
   }
 }
+.wow {
+  visibility: hidden;
+}
+
 .animate__bounceOutUp {
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
