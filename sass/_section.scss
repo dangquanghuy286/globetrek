@@ -1556,7 +1556,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
+            flex: 1;
             overflow: hidden;
 
             .box-title {
@@ -1668,7 +1668,8 @@
 
     .card-wrapper {
         width: 46%;
-        height: 550px;
+        height: auto;
+        overflow: hidden;
 
         .tf-rating-card {
             width: 100%;
@@ -1684,6 +1685,7 @@
                 width: 510px;
                 border-radius: 16px;
                 transition: 0.3s ease;
+                height: 550px;
 
                 img {
                     border-radius: 16px;

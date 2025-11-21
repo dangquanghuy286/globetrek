@@ -34,12 +34,12 @@
   </head>
   <body>
     <!-- Loading -->
-    <div class="preload preload-container">
+    <!-- <div class="preload preload-container">
       <div class="preload-logo">
         <div class="spinner"></div>
         <img src="./images/logo/destination.png" alt="logo-loading" />
       </div>
-    </div>
+    </div> -->
     <!-- End-Loading -->
     <!-- Header -->
     <header id="header" class="header style-1 color-1">
@@ -561,435 +561,6 @@
                 pulvinar neque non pretium volutpat. Proin finibus dignissim
               </p>
             </div>
-            <div class="tab-content">
-              <div class="fade active show" role="tabpanel">
-                <div class="form-s1">
-                  <form action="/search" method="post">
-                    <div class="form-search bg-white style-1">
-                      <div class="inner-group">
-                        <div class="form-group">
-                          <label>Location</label>
-                          <div class="group-select">
-                            <div class="select-items">
-                              <span class="current">Where are you going</span>
-                              <ul class="list">
-                                <li data-value="newyork" class="option">
-                                  <a href="#">
-                                    <img
-                                      src="./images/icons/place.svg"
-                                      alt="icon"
-                                      class="icon"
-                                    />
-                                    <div class="content">
-                                      <div class="place">New York</div>
-                                      <div class="country">United Stated</div>
-                                    </div>
-                                  </a>
-                                </li>
-                                <li data-value="newyork" class="option">
-                                  <a href="#">
-                                    <img
-                                      src="./images/icons/place.svg"
-                                      alt="icon"
-                                      class="icon"
-                                    />
-                                    <div class="content">
-                                      <div class="place">New York</div>
-                                      <div class="country">United Stated</div>
-                                    </div>
-                                  </a>
-                                </li>
-                                <li data-value="newyork" class="option">
-                                  <a href="#">
-                                    <img
-                                      src="./images/icons/place.svg"
-                                      alt="icon"
-                                      class="icon"
-                                    />
-                                    <div class="content">
-                                      <div class="place">New York</div>
-                                      <div class="country">United Stated</div>
-                                    </div>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label>Date</label>
-                          <div class="group-select">
-                            <div class="select-items">
-                              <div class="current">
-                                <input
-                                  type="text"
-                                  class="date-input"
-                                  placeholder="dd/mm/yyyy"
-                                  readonly
-                                />
-                                <img
-                                  src="./images/icons/calendar.svg"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div class="list">
-                                <div class="datepicker-header">
-                                  <button type="button" class="prev-month">
-                                    <i class="icon icon-CaretLeft"></i>
-                                  </button>
-                                  <div class="datepicker-title">
-                                    November 24
-                                  </div>
-                                  <button type="button" class="next-month">
-                                    <i class="icon icon-CaretRight"></i>
-                                  </button>
-                                </div>
-
-                                <div class="datepicker-weekdays">
-                                  <div class="datepicker-weekday weekend">
-                                    Su
-                                  </div>
-                                  <div class="datepicker-weekday">Mo</div>
-                                  <div class="datepicker-weekday">Tu</div>
-                                  <div class="datepicker-weekday">We</div>
-                                  <div class="datepicker-weekday">Th</div>
-                                  <div class="datepicker-weekday">Fr</div>
-                                  <div class="datepicker-weekday weekend">
-                                    Sa
-                                  </div>
-                                </div>
-
-                                <div class="datepicker-days"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label>Tour Type</label>
-                          <div class="group-select">
-                            <div class="select-items">
-                              <span class="current"
-                                >Select Type
-                                <i class="icon icon-CaretDown"></i>
-                              </span>
-                              <ul class="list">
-                                <li data-value="adventure" class="option">
-                                  <a href="#">
-                                    <div class="content">
-                                      <div class="type">Adventure</div>
-                                    </div>
-                                  </a>
-                                </li>
-                                <li data-value="beach" class="option">
-                                  <a href="#">
-                                    <div class="content">
-                                      <div class="type">Beach</div>
-                                    </div>
-                                  </a>
-                                </li>
-                                <li data-value="camping" class="option">
-                                  <a href="#">
-                                    <div class="content">
-                                      <div class="type">Camping</div>
-                                    </div>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label>People</label>
-                          <div class="group-select">
-                            <div class="select-items">
-                              <span class="current guest-text">
-                                <img
-                                  src="./images/icons/users.svg"
-                                  alt="icon"
-                                />
-
-                                <i class="icon icon-CaretDown"></i>
-                              </span>
-                              <div class="list">
-                                <div class="guest-item">
-                                  <span>Adult</span>
-                                  <div class="counter">
-                                    <button type="button" class="minus">
-                                      −
-                                    </button>
-                                    <input type="number" value="0" />
-                                    <button type="button" class="plus">
-                                      +
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="guest-item">
-                                  <span>Children</span>
-                                  <div class="counter">
-                                    <button type="button" class="minus">
-                                      −
-                                    </button>
-                                    <input type="number" value="0" />
-                                    <button type="button" class="plus">
-                                      +
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="guest-item">
-                                  <span>Infants</span>
-                                  <div class="counter">
-                                    <button type="button" class="minus">
-                                      −
-                                    </button>
-                                    <input type="number" value="0" />
-                                    <button type="button" class="plus">
-                                      +
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="box-btn-filter">
-                        <div class="box-filter">
-                          <div href="#" class="tf-btn hover-1 p-4">
-                            <img
-                              src="./images/icons/advanced.svg"
-                              alt="icon"
-                              class="icon"
-                            />
-                          </div>
-                        </div>
-                        <button
-                          type="submit"
-                          class="tf-btn primary hover-2 p-4"
-                        >
-                          <span class="icon icon-search"></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="advanced-form">
-                      <div class="group-price">
-                        <div class="box-title-price">
-                          <span class="title-price">Price</span>
-                          <div class="caption-price">
-                            <span id="slider-range-value1"> $0 </span>
-                            <span>-</span>
-                            <span id="slider-range-value2"> $10,000 </span>
-                          </div>
-                        </div>
-                        <div id="slider-range" class="slider-range"></div>
-                        <div class="slider-labels">
-                          <div>
-                            <input type="hidden" name="min-value" value="" />
-                            <input type="hidden" name="max-value" value="" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="group-checkbox">
-                        <div class="title-checkbox">Amentities</div>
-                        <div class="group-amentities grid-4">
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-1"
-                              />
-                              <label for="item-1" class="text-amenities"
-                                >Convenience</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-2"
-                              />
-                              <label for="item-2" class="text-amenities"
-                                >Cost-effective</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-3"
-                              />
-                              <label for="item-3" class="text-amenities"
-                                >Social Interaction</label
-                              >
-                            </div>
-                          </div>
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-4"
-                              />
-                              <label for="item-4" class="text-amenities"
-                                >Safety and Security</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-5"
-                              />
-                              <label for="item-5" class="text-amenities"
-                                >Variety of Experiences</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-6"
-                              />
-                              <label for="item-6" class="text-amenities"
-                                >Less Stress</label
-                              >
-                            </div>
-                          </div>
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-7"
-                              />
-                              <label for="item-7" class="text-amenities"
-                                >Hassle-Free Travel</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-8"
-                              />
-                              <label for="item-8" class="text-amenities"
-                                >Cultural Immersion</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-9"
-                              />
-                              <label for="item-9" class="text-amenities"
-                                >Time Efficiency</label
-                              >
-                            </div>
-                          </div>
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-10"
-                              />
-                              <label for="item-10" class="text-amenities"
-                                >Unique Experiences</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-11"
-                              />
-                              <label for="item-11" class="text-amenities"
-                                >Peace of Mind</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-12"
-                              />
-                              <label for="item-12" class="text-amenities"
-                                >Educational Value</label
-                              >
-                            </div>
-                          </div>
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-13"
-                              />
-                              <label for="item-13" class="text-amenities"
-                                >Group Discounts</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-18"
-                              />
-                              <label for="item-18" class="text-amenities"
-                                >Romantic Atmosphere</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-14"
-                              />
-                              <label for="item-14" class="text-amenities"
-                                >Flexibility</label
-                              >
-                            </div>
-                          </div>
-                          <div class="box-amentities">
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-15"
-                              />
-                              <label for="item-15" class="text-amenities"
-                                >Stress Relief</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-17"
-                              />
-                              <label for="item-17" class="text-amenities"
-                                >Scenic Views</label
-                              >
-                            </div>
-                            <div class="amenities-item">
-                              <input
-                                type="checkbox"
-                                class="tf-checkbox"
-                                id="item-16"
-                              />
-                              <label for="item-16" class="text-amenities"
-                                >Expert Guidance</label
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="content-right">
             <div class="inner-left">
@@ -1022,6 +593,411 @@
               </div>
               <div class="icon">
                 <img src="./images/icons/arrow-up.svg" alt="icon" />
+              </div>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="fade active show" role="tabpanel">
+              <div class="form-s1">
+                <form action="/search" method="post">
+                  <div class="form-search bg-white style-1">
+                    <div class="inner-group">
+                      <div class="form-group">
+                        <label>Location</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current">Where are you going</span>
+                            <ul class="list">
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="newyork" class="option">
+                                <a href="#">
+                                  <img
+                                    src="./images/icons/place.svg"
+                                    alt="icon"
+                                    class="icon"
+                                  />
+                                  <div class="content">
+                                    <div class="place">New York</div>
+                                    <div class="country">United Stated</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Date</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <div class="current">
+                              <input
+                                type="text"
+                                class="date-input"
+                                placeholder="dd/mm/yyyy"
+                                readonly
+                              />
+                              <img
+                                src="./images/icons/calendar.svg"
+                                alt="icon"
+                              />
+                            </div>
+                            <div class="list">
+                              <div class="datepicker-header">
+                                <button type="button" class="prev-month">
+                                  <i class="icon icon-CaretLeft"></i>
+                                </button>
+                                <div class="datepicker-title">November 24</div>
+                                <button type="button" class="next-month">
+                                  <i class="icon icon-CaretRight"></i>
+                                </button>
+                              </div>
+
+                              <div class="datepicker-weekdays">
+                                <div class="datepicker-weekday weekend">Su</div>
+                                <div class="datepicker-weekday">Mo</div>
+                                <div class="datepicker-weekday">Tu</div>
+                                <div class="datepicker-weekday">We</div>
+                                <div class="datepicker-weekday">Th</div>
+                                <div class="datepicker-weekday">Fr</div>
+                                <div class="datepicker-weekday weekend">Sa</div>
+                              </div>
+
+                              <div class="datepicker-days"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Tour Type</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current"
+                              >Select Type
+                              <i class="icon icon-CaretDown"></i>
+                            </span>
+                            <ul class="list">
+                              <li data-value="adventure" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Adventure</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="beach" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Beach</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li data-value="camping" class="option">
+                                <a href="#">
+                                  <div class="content">
+                                    <div class="type">Camping</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>People</label>
+                        <div class="group-select">
+                          <div class="select-items">
+                            <span class="current guest-text">
+                              <img src="./images/icons/users.svg" alt="icon" />
+
+                              <i class="icon icon-CaretDown"></i>
+                            </span>
+                            <div class="list">
+                              <div class="guest-item">
+                                <span>Adult</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                              <div class="guest-item">
+                                <span>Children</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                              <div class="guest-item">
+                                <span>Infants</span>
+                                <div class="counter">
+                                  <button type="button" class="minus">−</button>
+                                  <input type="number" value="0" />
+                                  <button type="button" class="plus">+</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box-btn-filter">
+                      <div class="box-filter">
+                        <div href="#" class="tf-btn hover-1 p-4">
+                          <img
+                            src="./images/icons/advanced.svg"
+                            alt="icon"
+                            class="icon"
+                          />
+                        </div>
+                      </div>
+                      <button type="submit" class="tf-btn primary hover-2 p-4">
+                        <span class="icon icon-search"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="advanced-form">
+                    <div class="group-price">
+                      <div class="box-title-price">
+                        <span class="title-price">Price</span>
+                        <div class="caption-price">
+                          <span id="slider-range-value1"> $0 </span>
+                          <span>-</span>
+                          <span id="slider-range-value2"> $10,000 </span>
+                        </div>
+                      </div>
+                      <div id="slider-range" class="slider-range"></div>
+                      <div class="slider-labels">
+                        <div>
+                          <input type="hidden" name="min-value" value="" />
+                          <input type="hidden" name="max-value" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group-checkbox">
+                      <div class="title-checkbox">Amentities</div>
+                      <div class="group-amentities grid-4">
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-1"
+                            />
+                            <label for="item-1" class="text-amenities"
+                              >Convenience</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-2"
+                            />
+                            <label for="item-2" class="text-amenities"
+                              >Cost-effective</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-3"
+                            />
+                            <label for="item-3" class="text-amenities"
+                              >Social Interaction</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-4"
+                            />
+                            <label for="item-4" class="text-amenities"
+                              >Safety and Security</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-5"
+                            />
+                            <label for="item-5" class="text-amenities"
+                              >Variety of Experiences</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-6"
+                            />
+                            <label for="item-6" class="text-amenities"
+                              >Less Stress</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-7"
+                            />
+                            <label for="item-7" class="text-amenities"
+                              >Hassle-Free Travel</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-8"
+                            />
+                            <label for="item-8" class="text-amenities"
+                              >Cultural Immersion</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-9"
+                            />
+                            <label for="item-9" class="text-amenities"
+                              >Time Efficiency</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-10"
+                            />
+                            <label for="item-10" class="text-amenities"
+                              >Unique Experiences</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-11"
+                            />
+                            <label for="item-11" class="text-amenities"
+                              >Peace of Mind</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-12"
+                            />
+                            <label for="item-12" class="text-amenities"
+                              >Educational Value</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-13"
+                            />
+                            <label for="item-13" class="text-amenities"
+                              >Group Discounts</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-18"
+                            />
+                            <label for="item-18" class="text-amenities"
+                              >Romantic Atmosphere</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-14"
+                            />
+                            <label for="item-14" class="text-amenities"
+                              >Flexibility</label
+                            >
+                          </div>
+                        </div>
+                        <div class="box-amentities">
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-15"
+                            />
+                            <label for="item-15" class="text-amenities"
+                              >Stress Relief</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-17"
+                            />
+                            <label for="item-17" class="text-amenities"
+                              >Scenic Views</label
+                            >
+                          </div>
+                          <div class="amenities-item">
+                            <input
+                              type="checkbox"
+                              class="tf-checkbox"
+                              id="item-16"
+                            />
+                            <label for="item-16" class="text-amenities"
+                              >Expert Guidance</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -2552,7 +2528,7 @@
     </section>
     <!-- End-Explore -->
     <!-- Img with Text -->
-    <section class="flat-section tf-vacation-hero">
+    <section class="flat-section tf-vacation-hero mx-4">
       <div class="container bg-imgwtext">
         <div class="flat-img-with-text">
           <div class="content-right">

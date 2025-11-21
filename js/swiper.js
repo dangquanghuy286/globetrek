@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Content
     const swTestimonial = new Swiper(".tf-review-box", {
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 40,
       speed: 1000,
       pagination: {
         el: ".avatar-navigation",

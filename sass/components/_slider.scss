@@ -49,6 +49,7 @@
             flex-direction: row;
             gap: 10px;
             width: 100%;
+            position: relative;
 
             .content-left {
                 width: 47%;
@@ -78,18 +79,7 @@
                     }
                 }
 
-                .tab-content {
-                    z-index: 50;
-                    position: absolute;
-                    left: 215px;
-                    top: 490px;
 
-                    .advanced-form {
-                        &::before {
-                            left: 84.5%;
-                        }
-                    }
-                }
 
             }
 
@@ -139,6 +129,18 @@
                 }
 
 
+            }
+
+            .tab-content {
+                position: absolute;
+                bottom: 15%;
+                left: 12.5%;
+
+                .advanced-form {
+                    &::before {
+                        left: 86.6%;
+                    }
+                }
             }
 
             .rotating-badge {
