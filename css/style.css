@@ -5224,7 +5224,7 @@ h5 {
 }
 .slider-default .swiper-slide.home-5 .box-title {
   padding: 200px 0 50px;
-  margin-bottom: 90px;
+  margin-bottom: 0;
 }
 .slider-default .swiper-slide.home-5 .box-title h3 {
   font-size: 64px;
@@ -6796,6 +6796,7 @@ h5 {
   flex-direction: row;
   gap: 12px;
   position: relative;
+  z-index: 2;
 }
 .tf-vacation-hero .flat-img-with-text .content-left .rotating-badge {
   bottom: 30%;
@@ -7295,6 +7296,25 @@ h5 {
   background-size: cover;
   background-color: var(--secondary-color);
   border-radius: 16px;
+}
+
+.bg-three {
+  position: relative;
+  background: url("../images/herobanner/bg-three.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bg-three::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, #5F6C5A 0%, #343832 50%, #2F332D 66%);
+  opacity: 0.7;
+}
+.bg-three .container {
+  position: relative;
+  z-index: 2;
 }
 
 .tf-promo-section {

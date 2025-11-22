@@ -1475,6 +1475,7 @@
             flex-direction: row;
             gap: 12px;
             position: relative;
+            z-index: 2;
 
             .rotating-badge {
                 bottom: 30%;
@@ -2083,6 +2084,31 @@
     background-size: cover;
     background-color: var(--secondary-color);
     border-radius: 16px;
+}
+
+.bg-three {
+    position: relative;
+    background: url("../images/herobanner/bg-three.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(180deg,
+                #5F6C5A 0%,
+                #343832 50%,
+                #2F332D 66%);
+        opacity: 0.7;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 // =============Promo-section======================
