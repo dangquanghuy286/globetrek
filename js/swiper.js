@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
       initialSlide: 2,
       watchSlidesProgress: true,
       spaceBetween: 0,
+      speed: 1000,
       navigation: {
         clickable: true,
         nextEl: ".flex-next-findtour",
