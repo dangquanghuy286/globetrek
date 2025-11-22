@@ -6223,6 +6223,7 @@ h5 {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
+  border: none;
 }
 .flat-recommended .item.list-style-02 .group-meta {
   top: 24px;
