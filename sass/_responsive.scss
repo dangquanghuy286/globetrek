@@ -109,6 +109,11 @@
       clip-path: none !important;
    }
 
+   .flat-tour-find {
+      .flex-direction-nav {
+         display: none;
+      }
+   }
 
 
    .tf-destination {
@@ -178,6 +183,16 @@
 
    .section-overlap--lg {
       margin-top: -100px;
+   }
+
+   .slider-default {
+      .home-5 {
+         .box-title {
+            h1 {
+               font-size: 200px !important;
+            }
+         }
+      }
    }
 }
 
@@ -249,8 +264,6 @@
 
    .slider-default {
       .swiper-slide {
-
-
          &.home-4 {
             .box-title {
                padding: 290px 0 90px;
@@ -567,40 +580,48 @@
    }
 
    .slider-default {
-      .swiper-slide {
-         &.home-3 {
-            .box-title {
-               padding: 100px 0 250px;
 
-               h1 {
-                  margin-bottom: 10px;
-               }
-            }
+      .home-3 {
+         .box-title {
+            padding: 100px 0 250px;
 
-            .wrap-search-link {
-               margin-top: 100px;
+            h1 {
+               margin-bottom: 10px;
             }
          }
 
-         &.home-4 {
-            .box-title {
-               padding: 200px 0 90px;
-            }
+         .wrap-search-link {
+            margin-top: 100px;
          }
+      }
 
-         &.home-1 {
-            .box-title {
-               padding: 150px 0 250px;
+      .home-4 {
+         .box-title {
+            padding: 200px 0 90px;
+         }
+      }
+
+      .home-1 {
+         .box-title {
+            padding: 150px 0 250px;
+         }
+      }
+
+      .home-5 {
+         .box-title {
+            h1 {
+               font-size: 100px !important;
             }
          }
       }
+
 
 
       .box-title {
          margin-bottom: 300px;
 
          h1 {
-            font-size: 60px;
+            font-size: 60px !important;
          }
 
          p {
@@ -791,6 +812,19 @@
       padding: 150px 0 !important;
    }
 
+   .flat-tour-find .tf-find-tour {
+      .wrap-content {
+         .image-wrap img {
+            height: 450px;
+            width: 100%;
+         }
+
+         .content {
+            bottom: 24px;
+            padding: 0 20px;
+         }
+      }
+   }
 
 
    .tf-single {
@@ -996,6 +1030,8 @@
    .section-overlap--lg {
       margin-top: -60px;
    }
+
+
 }
 
 @media (max-width: 575px) {
@@ -1082,10 +1118,19 @@
 
 
    .slider-default {
-      .swiper-slide.home-1 .box-title {
+      .home-1 .box-title {
          h1 {
             font-size: 40px;
          }
+      }
+
+      .home-5 {
+         .box-title {
+            h1 {
+               font-size: 50px !important;
+            }
+         }
+
       }
    }
 
@@ -1400,6 +1445,7 @@
          justify-content: center;
       }
    }
+
 
 
    .tf-toolbar-bottom {
