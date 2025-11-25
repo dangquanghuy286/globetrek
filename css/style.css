@@ -7792,6 +7792,12 @@ h5 {
     flex-direction: column !important;
     gap: 40px !important;
   }
+  .flat-img-with-text.style-05 .content-left {
+    margin-left: 0 !important;
+  }
+  .flat-img-with-text.style-05 .content-right {
+    padding: 68px 0 !important;
+  }
   .flat-img-with-text .content-left,
   .flat-img-with-text .content-right {
     width: 100% !important;
@@ -8138,6 +8144,30 @@ h5 {
   }
   .tf-partner .home-2 {
     margin-top: 450px !important;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-left {
+    padding: 40px 0;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right {
+    padding: 40px 0 !important;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .sub {
+    font-size: 40px !important;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .destination-name {
+    font-size: 50px !important;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .subtitle {
+    font-size: 15px;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .calendar .item {
+    padding-right: 24px !important;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .calendar .item label {
+    font-size: 14px;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-05 .content-right .calendar .item h3 {
+    font-size: 18px;
   }
   .hero .flat-hero .tab-content {
     bottom: -30%;

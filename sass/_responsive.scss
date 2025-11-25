@@ -300,6 +300,16 @@
       flex-direction: column !important;
       gap: 40px !important;
 
+      &.style-05 {
+         .content-left {
+            margin-left: 0 !important;
+         }
+
+         .content-right {
+            padding: 68px 0 !important;
+         }
+      }
+
       .content-left,
       .content-right {
          width: 100% !important;
@@ -852,6 +862,47 @@
    .tf-partner {
       .home-2 {
          margin-top: 450px !important;
+      }
+   }
+
+
+   .tf-vacation-hero {
+      .flat-img-with-text {
+         &.style-05 {
+            .content-left {
+               padding: 40px 0;
+            }
+
+            .content-right {
+               padding: 40px 0 !important;
+
+               .sub {
+                  font-size: 40px !important;
+               }
+
+               .destination-name {
+                  font-size: 50px !important;
+               }
+
+               .subtitle {
+                  font-size: 15px;
+               }
+
+               .calendar {
+                  .item {
+                     padding-right: 24px !important;
+
+                     label {
+                        font-size: 14px;
+                     }
+
+                     h3 {
+                        font-size: 18px;
+                     }
+                  }
+               }
+            }
+         }
       }
    }
 
