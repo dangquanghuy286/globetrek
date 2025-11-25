@@ -4701,8 +4701,8 @@ h5 {
   left: 50%;
   border-radius: 50%;
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: 1px solid var(--primary-color);
   overflow: visible;
   opacity: 0;
@@ -7374,6 +7374,10 @@ h5 {
   pointer-events: auto;
 }
 
+.section-overlap--lg {
+  margin-top: -150px;
+}
+
 .bg-first {
   background: url("../images/backgronud/bg-transperent.png") no-repeat center center;
   background-size: cover;
@@ -7722,6 +7726,9 @@ h5 {
   .cus-ovl-1 {
     overflow: hidden !important;
     clip-path: none !important;
+  }
+  .section-overlap--lg {
+    margin-top: -100px;
   }
 }
 @media (max-width: 1199px) {
@@ -8186,6 +8193,9 @@ h5 {
   .tf-promo-section .content-left .banner-device img {
     max-width: 500px;
     max-height: 500px;
+  }
+  .section-overlap--lg {
+    margin-top: -60px;
   }
 }
 @media (max-width: 575px) {

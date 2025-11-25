@@ -175,6 +175,10 @@
       overflow: hidden !important;
       clip-path: none !important;
    }
+
+   .section-overlap--lg {
+      margin-top: -100px;
+   }
 }
 
 @media (max-width: 1199px) {
@@ -936,6 +940,10 @@
             }
          }
       }
+   }
+
+   .section-overlap--lg {
+      margin-top: -60px;
    }
 }
 
