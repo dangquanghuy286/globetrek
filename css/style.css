@@ -6763,40 +6763,40 @@ h5 {
   position: relative;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .rotating-badge {
-  left: 42.4%;
+  left: 42%;
   bottom: 38%;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-left {
   display: grid;
   align-items: stretch;
-  width: 42.3%;
+  flex: 1;
   height: auto;
-  grid-template-columns: 440px 336px;
+  grid-template-columns: 57% 43%;
   grid-template-rows: 1fr;
   gap: 16px;
+  margin-right: 16px;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-left {
   margin-top: 0;
   height: 100%;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-left img {
-  aspect-ratio: 440/654 !important;
+  aspect-ratio: 4/6 !important;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-right {
   gap: 16px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  height: auto;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-right img {
-  aspect-ratio: 336/334 !important;
+  aspect-ratio: 1/1 !important;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 .content-right {
-  width: 58.124%;
+  width: 57.356%;
   padding: 76px 304px 76px 156px;
 }
 .tf-vacation-hero .flat-img-with-text.style-05 {
@@ -7623,6 +7623,18 @@ h5 {
   .tf-vacation-hero.style-01 .flat-service {
     top: 65%;
   }
+  .tf-vacation-hero.style-04 .content-left {
+    grid-template-columns: 56% 44%;
+    gap: 14px;
+    margin-right: 14px;
+  }
+  .tf-vacation-hero.style-04 .content-left .inner-right {
+    gap: 14px;
+  }
+  .tf-vacation-hero.style-04 .content-right {
+    width: 57.356% !important;
+    padding: 70px 240px 70px 140px !important;
+  }
   .hero .flat-hero {
     flex-direction: column;
   }
@@ -7726,6 +7738,9 @@ h5 {
   .tf-vacation-hero.style-01 .flat-img-with-text {
     flex-direction: column-reverse !important;
   }
+  .tf-vacation-hero.style-04 .content-right {
+    padding: 76px 200px 76px 120px;
+  }
   .cus-ovl-1 {
     overflow: hidden !important;
     clip-path: none !important;
@@ -7803,6 +7818,9 @@ h5 {
   }
   .flat-img-with-text.style-05 .content-right {
     padding: 68px 0 !important;
+  }
+  .flat-img-with-text.style-04 .content-right {
+    padding: 60px 120px 60px 80px !important;
   }
   .flat-img-with-text .content-left,
   .flat-img-with-text .content-right {
@@ -8111,6 +8129,13 @@ h5 {
   .tf-vacation-hero.style-01 .box-image .image-right img {
     aspect-ratio: 1/1;
   }
+  .tf-vacation-hero.style-04 .content-left {
+    grid-template-columns: 55% 45%;
+    margin-right: 0;
+  }
+  .tf-vacation-hero.style-04 .content-right {
+    padding: 48px 60px;
+  }
   .banner-section {
     padding: 150px 0 !important;
   }
@@ -8185,6 +8210,21 @@ h5 {
   }
   .tf-vacation-hero .flat-img-with-text.style-05 .content-right .calendar .item h3 {
     font-size: 18px;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-04 .content-left {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-04 .content-left .inner-right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-04 .content-right {
+    padding: 32px 24px;
+  }
+  .tf-vacation-hero .flat-img-with-text.style-04 .rotating-badge {
+    display: none;
   }
   .hero .flat-hero .tab-content {
     bottom: -30%;
@@ -8398,6 +8438,9 @@ h5 {
   }
   .flat-img-with-text .contact .tf-btn {
     width: 100%;
+  }
+  .flat-img-with-text.style-04 .content-right {
+    padding: 24px 16px !important;
   }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 12px;

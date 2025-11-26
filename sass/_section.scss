@@ -1420,25 +1420,26 @@
             position: relative;
 
             .rotating-badge {
-                left: 42.4%;
+                left: 42%;
                 bottom: 38%;
             }
 
             .content-left {
                 display: grid;
                 align-items: stretch;
-                width: 42.3%;
+                flex: 1;
                 height: auto;
-                grid-template-columns: 440px 336px;
+                grid-template-columns: 57% 43%;
                 grid-template-rows: 1fr;
                 gap: 16px;
+                margin-right: 16px;
 
                 .inner-left {
                     margin-top: 0;
                     height: 100%;
 
                     img {
-                        aspect-ratio: 440 / 654 !important;
+                        aspect-ratio: 4 / 6 !important;
                     }
                 }
 
@@ -1447,10 +1448,9 @@
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr 1fr;
-                    height: auto;
 
                     img {
-                        aspect-ratio: 336 / 334 !important;
+                        aspect-ratio: 1 / 1 !important;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -1460,7 +1460,7 @@
             }
 
             .content-right {
-                width: 58.124%;
+                width: 57.356%;
                 padding: 76px 304px 76px 156px;
             }
         }
