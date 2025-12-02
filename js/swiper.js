@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // ===================Find Wish========================
 document.addEventListener("DOMContentLoaded", () => {
-  const tfSwLatest = document.querySelector(".tf-perfect-tour");
+  const tfSwLatest = document.querySelector(".tf-tour-showcase");
   if (tfSwLatest) {
     const preview = tfSwLatest.dataset.preview;
     const tablet = tfSwLatest.dataset.tablet;
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const spacingMd = tfSwLatest.dataset.spaceMd;
     const spacing = tfSwLatest.dataset.space;
 
-    const swiper = new Swiper(".tf-perfect-tour", {
+    const swiper = new Swiper(".tf-tour-showcase", {
       slidesPerView: parseInt(mobile),
       spaceBetween: parseInt(spacing),
       pagination: {

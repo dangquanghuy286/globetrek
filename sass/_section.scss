@@ -1121,15 +1121,11 @@
 }
 
 // ============Find my tour====================
+
+
 .tf-tour-showcase {
-    background-color: #DCA54614;
-    overflow: hidden;
-
-    .tf-perfect-tour {
-        overflow: visible;
-        clip-path: inset(0 -33% 0 0);
-    }
-
+    overflow: visible;
+    clip-path: inset(0 -33% 0 0);
 
     .item {
         background-color: var(--white);
@@ -1189,6 +1185,10 @@
         }
     }
 }
+
+
+
+
 
 // ==============Text -Heading===============
 
@@ -2178,6 +2178,12 @@
 
 .section-overlap--lg {
     margin-top: -150px;
+}
+
+.bg-color-first {
+    background-color: #DCA54614;
+    overflow: hidden;
+
 }
 
 .bg-first {

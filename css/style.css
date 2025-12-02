@@ -6522,10 +6522,6 @@ h5 {
 }
 
 .tf-tour-showcase {
-  background-color: rgba(220, 165, 70, 0.0784313725);
-  overflow: hidden;
-}
-.tf-tour-showcase .tf-perfect-tour {
   overflow: visible;
   clip-path: inset(0 -33% 0 0);
 }
@@ -7376,6 +7372,11 @@ h5 {
 
 .section-overlap--lg {
   margin-top: -150px;
+}
+
+.bg-color-first {
+  background-color: rgba(220, 165, 70, 0.0784313725);
+  overflow: hidden;
 }
 
 .bg-first {
