@@ -6620,7 +6620,6 @@ h5 {
 }
 
 .tf-vacation-hero.style-01 {
-  background-color: var(--secondary-color);
   padding: 110px 56px;
   position: relative;
 }
@@ -8344,7 +8343,7 @@ h5 {
     font-size: 16px;
   }
   .slider-default .home-1 .box-title h1 {
-    font-size: 40px;
+    font-size: 40px !important;
   }
   .slider-default .home-5 .box-title h1 {
     font-size: 50px !important;
