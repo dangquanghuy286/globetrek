@@ -6521,32 +6521,32 @@ h5 {
   top: 11%;
 }
 
-.flat-perfect-tour {
+.tf-tour-showcase {
   background-color: rgba(220, 165, 70, 0.0784313725);
   overflow: hidden;
 }
-.flat-perfect-tour .tf-perfect-tour {
+.tf-tour-showcase .tf-perfect-tour {
   overflow: visible;
   clip-path: inset(0 -33% 0 0);
 }
-.flat-perfect-tour .item {
+.tf-tour-showcase .item {
   background-color: var(--white);
   border-radius: 16px;
 }
-.flat-perfect-tour .item .archive-top {
+.tf-tour-showcase .item .archive-top {
   position: relative;
   padding-bottom: 24px;
 }
-.flat-perfect-tour .item .archive-top .img-style {
+.tf-tour-showcase .item .archive-top .img-style {
   border-radius: 16px 16px 0 0;
 }
-.flat-perfect-tour .item .archive-top .tag {
+.tf-tour-showcase .item .archive-top .tag {
   position: absolute;
   bottom: 0px;
   left: 32px;
   top: auto !important;
 }
-.flat-perfect-tour .item .archive-top .tag .flag-total {
+.tf-tour-showcase .item .archive-top .tag .flag-total {
   background-color: var(--primary-color);
   color: var(--white);
   padding: 8px 26px;
@@ -6559,20 +6559,20 @@ h5 {
   font-size: 16px;
   border: 1px solid var(--primary-color);
 }
-.flat-perfect-tour .item .archive-top .tag .flag-total:hover {
+.tf-tour-showcase .item .archive-top .tag .flag-total:hover {
   background: var(--white);
   color: var(--primary-color);
 }
-.flat-perfect-tour .item .archive-bottom {
+.tf-tour-showcase .item .archive-bottom {
   padding: 32px;
 }
-.flat-perfect-tour .item .archive-bottom .tour-title {
+.tf-tour-showcase .item .archive-bottom .tour-title {
   margin-bottom: 12px;
 }
-.flat-perfect-tour .item .archive-bottom .subtitle {
+.tf-tour-showcase .item .archive-bottom .subtitle {
   line-height: 140%;
 }
-.flat-perfect-tour .item:hover {
+.tf-tour-showcase .item:hover {
   box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
