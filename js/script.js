@@ -171,7 +171,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   list.forEach((item) => item.addEventListener("click", activeLink));
+
+  // ===================Active-Wishlist==============================
+  const wishlistBtns = document.querySelectorAll(".btn-wished");
+
+  wishlistBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  });
 });
+
 // =====================Like ,Unlike===========================
 document.addEventListener("DOMContentLoaded", () => {
   const actions = document.querySelectorAll(".action");

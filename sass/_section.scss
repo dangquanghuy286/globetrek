@@ -32,7 +32,6 @@
     .title {
         text-transform: capitalize;
         font-size: 40px;
-        line-height: 120%;
     }
 
     .desc {
@@ -719,11 +718,18 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+                cursor: pointer;
 
-                img {
+                .icon {
                     width: 18px;
                     height: 18px;
                     filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(967%) hue-rotate(179deg) brightness(90%) contrast(89%);
+                }
+
+                &.active {
+                    .icon {
+                        filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(2038%) hue-rotate(330deg) brightness(95%) contrast(101%);
+                    }
                 }
             }
         }
@@ -1153,7 +1159,7 @@
                     display: flex;
                     text-align: center;
                     align-items: center;
-                    font-weight: 500px;
+                    font-weight: 500;
                     line-height: 140%;
                     font-size: 16px;
                     border: 1px solid var(--primary-color);
@@ -1173,10 +1179,6 @@
                 margin-bottom: 12px;
             }
 
-            .subtitle {
-                line-height: 140%;
-
-            }
         }
 
         &:hover {
