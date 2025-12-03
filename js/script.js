@@ -178,8 +178,50 @@ document.addEventListener("DOMContentLoaded", () => {
   wishlistBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       this.classList.toggle("active");
+
+      // Filter wishlist sau khi toggle
+      setTimeout(() => {
+        filterWishlist();
+      }, 300);
     });
   });
+
+  // ===================Filter-Wishlist==============================
+  function filterWishlist() {
+    const wishlistContainer = document.querySelector(".tf-wishlist");
+    const emptyWishlist = document.querySelector("#empty-wishlist");
+
+    if (!wishlistContainer) return;
+
+    const items = wishlistContainer.querySelectorAll(".item");
+    let hasActive = false;
+
+    items.forEach((item) => {
+      const btnWish = item.querySelector(".btn-wished.active");
+
+      if (!btnWish) {
+        item.remove();
+      } else {
+        hasActive = true;
+      }
+    });
+
+    // Hiển  empty state
+    if (!hasActive) {
+      wishlistContainer.style.display = "none";
+      if (emptyWishlist) {
+        emptyWishlist.style.display = "block";
+      }
+    } else {
+      wishlistContainer.style.display = "";
+      if (emptyWishlist) {
+        emptyWishlist.style.display = "none";
+      }
+    }
+  }
+
+  // Chạy filter khi load trang
+  filterWishlist();
 });
 
 // =====================Like ,Unlike===========================
