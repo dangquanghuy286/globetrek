@@ -329,23 +329,6 @@
         }
     }
 
-    .close-modal {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        font-size: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .close-modal:hover {
-        background-color: var(--input-color);
-        color: var(--primary-color);
-        transform: rotate(90deg);
-    }
 
     .group-btn {
         display: flex;
@@ -374,6 +357,24 @@
         }
 
     }
+}
+
+.close-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: var(--input-color);
+    color: var(--primary-color);
+    transform: rotate(90deg);
 }
 
 

@@ -5891,22 +5891,6 @@ h5 {
 .flat-account .box-btn .text {
   margin-top: 18px;
 }
-.flat-account .close-modal {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.flat-account .close-modal:hover {
-  background-color: var(--input-color);
-  color: var(--primary-color);
-  transform: rotate(90deg);
-}
 .flat-account .group-btn {
   display: flex;
   gap: 10px;
@@ -5929,6 +5913,24 @@ h5 {
 }
 .flat-account .group-btn .btn-social:hover {
   border-color: var(--primary-color);
+}
+
+.close-modal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+  background-color: var(--input-color);
+  color: var(--primary-color);
+  transform: rotate(90deg);
 }
 
 .tf-single .meta {
