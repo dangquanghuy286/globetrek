@@ -219,8 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
-  // Chạy filter khi load trang
   filterWishlist();
 });
 
