@@ -5710,10 +5710,10 @@ h5 {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.nav-tab-filter .nav-link-item:hover {
+.nav-tab-filter .nav-link-item:hover, .nav-tab-filter .nav-link-item.active {
   border: 1px solid var(--primary-color);
 }
-.nav-tab-filter .nav-link-item:hover .icon {
+.nav-tab-filter .nav-link-item:hover .icon, .nav-tab-filter .nav-link-item.active .icon {
   color: var(--primary-color);
   filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
 }
