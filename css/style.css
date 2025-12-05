@@ -5671,6 +5671,107 @@ h5 {
   margin-top: 12px;
 }
 
+.box-listing-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--stoke-color);
+  margin-bottom: 48px;
+}
+.box-listing-top .box-title {
+  margin-bottom: 0;
+}
+.box-listing-top .box-filter-tab {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-tab-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-tab-filter .nav-link-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid var(--stoke-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.nav-tab-filter .nav-link-item:hover {
+  border: 1px solid var(--primary-color);
+}
+.nav-tab-filter .nav-link-item:hover .icon {
+  color: var(--primary-color);
+  filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
+}
+.nav-tab-filter .nav-link-item .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--stoke-color);
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(3767%) hue-rotate(213deg) brightness(93%) contrast(97%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.box-select {
+  background-color: var(--white);
+  border: 1px solid var(--stoke-color);
+  box-sizing: border-box;
+  cursor: pointer;
+  clear: both;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--heading-color);
+  height: 48px;
+  outline: none;
+  position: relative;
+  user-select: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: auto;
+  text-align: start;
+  padding: 13px 18px;
+  border-radius: 10px;
+}
+.box-select.sort-select {
+  min-width: 179px;
+}
+.box-select .current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  gap: 10px;
+}
+.box-select .current .icon {
+  width: 16px;
+  height: 16px;
+}
+
 .tf-destination {
   display: grid;
   gap: 12px;
