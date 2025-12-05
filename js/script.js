@@ -566,29 +566,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-});
-document.addEventListener("DOMContentLoaded", () => {
+  // =============== Box Select ===============
   const boxSelect = document.querySelector(".box-select");
-  const list = boxSelect.querySelector(".list");
-  const icon = boxSelect.querySelector(".icon-CaretDown");
-
-  boxSelect.addEventListener("click", (e) => {
-    e.stopPropagation();
-    boxSelect.classList.toggle("active");
-    list.classList.toggle("show");
-    icon.classList.toggle("rotate");
-  });
-
-  document.addEventListener("click", () => {
-    boxSelect.classList.remove("active");
-    list.classList.remove("show");
-    icon.classList.remove("rotate");
-  });
+  if (boxSelect) {
+    boxSelect.addEventListener("click", (e) => {
+      e.stopPropagation();
+      boxSelect.classList.toggle("active");
+    });
+    document.addEventListener("click", () => {
+      boxSelect.classList.remove("active");
+    });
+  }
 });
+
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
-
+  if (!form) return;
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
