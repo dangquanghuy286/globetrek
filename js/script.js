@@ -32,22 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // =============BreadCrumb==================
 document.addEventListener("DOMContentLoaded", () => {
-  const breadcrumbContainer = document.getElementById("breadcrumb");
-  if (!breadcrumbContainer) return;
+  const breadcrumbContainers = document.querySelectorAll(".breadcrumb-dynamic");
+  if (!breadcrumbContainers.length) return;
 
   // get path
   const path = window.location.pathname;
   const parts = path.split("/").filter(Boolean);
 
-  // To capital
   const capitalizeWords = (str) => {
     return str
       .split(" ")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(" ");
   };
 
-  // path home
   let breadcrumbHTML = `
     <a class="breadcrumb-item" href="index.html">Home</a>
   `;
@@ -69,8 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  breadcrumbContainer.innerHTML = breadcrumbHTML;
+  breadcrumbContainers.forEach((el) => {
+    el.innerHTML = breadcrumbHTML;
+  });
 });
+
 // =============Scroll======================
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
