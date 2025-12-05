@@ -565,6 +565,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const boxSelect = document.querySelector(".box-select");
+  const list = boxSelect.querySelector(".list");
+  const icon = boxSelect.querySelector(".icon-CaretDown");
+
+  // Toggle khi click box-select
+  boxSelect.addEventListener("click", (e) => {
+    e.stopPropagation();
+    boxSelect.classList.toggle("active");
+    list.classList.toggle("show");
+    icon.classList.toggle("rotate");
+  });
+
+  // Click ra ngoài -> đóng
+  document.addEventListener("click", () => {
+    boxSelect.classList.remove("active");
+    list.classList.remove("show");
+    icon.classList.remove("rotate");
+  });
+});
 
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
