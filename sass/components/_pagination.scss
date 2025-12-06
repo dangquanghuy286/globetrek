@@ -1,3 +1,5 @@
+@use "../abstracts/index.scss" as *;
+
 .wd-navigation {
     display: flex;
     align-items: center;
@@ -38,4 +40,9 @@
         font-size: 14px;
         color: var(--black);
     }
+}
+
+.listing-pagination {
+    @include flex(center, space-between);
+    gap: 12px;
 }
