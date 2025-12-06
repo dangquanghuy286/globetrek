@@ -285,6 +285,20 @@
     }
 
 
+    &.box-single {
+
+        .swiper-slide {
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                .group-meta {
+                    display: none;
+                }
+            }
+        }
+    }
 
     .destination-post {
         width: 100%;

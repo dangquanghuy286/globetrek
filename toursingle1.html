@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+    />
     <link href="css/boostrap.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/favicon.png" />
@@ -33,7 +41,7 @@
       </div>
     </div>
     <!-- Header -->
-    <header id="header" class="header style-1">
+    <header id="header" class="header style-1 color-1">
       <div class="container">
         <div class="header-wrap relative w-full">
           <div class="header-ct-left flex-left z-5">
@@ -117,7 +125,7 @@
                               >
                             </li>
                             <li>
-                              <a href="./lisyhalfmapleft.html"
+                              <a href="./listhalfmapleft.html"
                                 >List Tour – Half Map Left</a
                               >
                             </li>
@@ -252,7 +260,12 @@
                   ></a>
                 </li>
                 <li class="search">
-                  <a href="#"><span class="icon icon-search"></span></a>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalSearch"
+                    ><span class="icon icon-search"></span
+                  ></a>
                 </li>
 
                 <li class="login">
@@ -371,7 +384,7 @@
                         <a href="./listtopmap.html">List Tours - Top Map</a>
                       </li>
                       <li>
-                        <a href="./lisyhalfmapleft.html"
+                        <a href="./listhalfmapleft.html"
                           >List Tours - Haft Map Left</a
                         >
                       </li>
@@ -537,10 +550,10 @@
         </div>
       </div>
     </header>
-    <div class="flat-section pb-0 mb-14">
+    <div class="mt-4 mb-14">
       <div class="container">
         <div class="breadcrumb-content">
-          <div class="breadcrumb" id="breadcrumb"></div>
+          <div class="breadcrumb breadcrumb-dynamic"></div>
         </div>
       </div>
     </div>
@@ -548,7 +561,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="box-info">
+            <div class="box-info mb-16">
               <h1 class="font-semibold">
                 Discovering Da Bia, the hamlet that captured an ASEAN Community
                 Tourism Award
@@ -590,51 +603,115 @@
                 </div>
               </div>
             </div>
-            <div class="tf-destination my-16">
-              <div class="item hover-img">
-                <div class="destination-post">
-                  <a href="#" class="img-style">
-                    <img src="./images/tours/tour-10.png" alt="img-tour" />
-                  </a>
-                  <div class="group-meta">
-                    <a href="#" class="tf-btn">
-                      <span>Show all 5 photo</span>
-                      <img src="./images/icons/picture.svg" alt="Photo" />
-                    </a>
-                    <a href="#" class="tf-btn">
-                      <span>Watch Video</span>
-                      <img src="./images/icons/camera.svg" alt="Photo" />
-                    </a>
+            <div
+              class="tf-sw-mobile swiper wow animate__animated animate__fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.4s"
+              data-screen="575"
+              data-preview="1"
+              data-space="15"
+            >
+              <div class="swiper-wrapper tf-destination grid-1 box-single">
+                <div class="swiper-slide">
+                  <div class="item hover-img">
+                    <div class="destination-post">
+                      <a href="#" class="img-style">
+                        <img src="./images/tours/tour-10.png" alt="img-tour" />
+                      </a>
+                      <div class="group-meta">
+                        <a href="#" class="tf-btn">
+                          <span>Show all 5 photo</span>
+                          <img src="./images/icons/picture.svg" alt="Photo" />
+                        </a>
+                        <a href="#" class="tf-btn">
+                          <span>Watch Video</span>
+                          <img src="./images/icons/camera.svg" alt="Photo" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item hover-img">
+                    <div class="destination-post">
+                      <a href="#" class="img-style">
+                        <img src="./images/tours/tour-11.png" alt="img-tour" />
+                      </a>
+                      <div class="group-meta">
+                        <a href="#" class="tf-btn">
+                          <span>Show all 5 photo</span>
+                          <img src="./images/icons/picture.svg" alt="Photo" />
+                        </a>
+                        <a href="#" class="tf-btn">
+                          <span>Watch Video</span>
+                          <img src="./images/icons/camera.svg" alt="Photo" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item hover-img">
+                    <div class="destination-post">
+                      <a href="#" class="img-style">
+                        <img src="./images/tours/tour-12.png" alt="img-tour" />
+                      </a>
+                      <div class="group-meta">
+                        <a href="#" class="tf-btn">
+                          <span>Show all 5 photo</span>
+                          <img src="./images/icons/picture.svg" alt="Photo" />
+                        </a>
+                        <a href="#" class="tf-btn">
+                          <span>Watch Video</span>
+                          <img src="./images/icons/camera.svg" alt="Photo" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item hover-img">
+                    <div class="destination-post">
+                      <a href="#" class="img-style">
+                        <img src="./images/tours/tour-13.png" alt="img-tour" />
+                      </a>
+                      <div class="group-meta">
+                        <a href="#" class="tf-btn">
+                          <span>Show all 5 photo</span>
+                          <img src="./images/icons/picture.svg" alt="Photo" />
+                        </a>
+                        <a href="#" class="tf-btn">
+                          <span>Watch Video</span>
+                          <img src="./images/icons/camera.svg" alt="Photo" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item hover-img">
+                    <div class="destination-post">
+                      <a href="#" class="img-style">
+                        <img src="./images/tours/tour-14.png" alt="img-tour" />
+                      </a>
+                      <div class="group-meta">
+                        <a href="#" class="tf-btn">
+                          <span>Show all 5 photo</span>
+                          <img src="./images/icons/picture.svg" alt="Photo" />
+                        </a>
+                        <a href="#" class="tf-btn">
+                          <span>Watch Video</span>
+                          <img src="./images/icons/camera.svg" alt="Photo" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="item hover-img">
-                <div class="destination-post">
-                  <a href="#" class="img-style">
-                    <img src="./images/tours/tour-11.png" alt="img-tour" />
-                  </a>
-                </div>
-              </div>
-              <div class="item hover-img">
-                <div class="destination-post">
-                  <a href="#" class="img-style">
-                    <img src="./images/tours/tour-12.png" alt="img-tour" />
-                  </a>
-                </div>
-              </div>
-              <div class="item hover-img">
-                <div class="destination-post">
-                  <a href="#" class="img-style">
-                    <img src="./images/tours/tour-13.png" alt="img-tour" />
-                  </a>
-                </div>
-              </div>
-              <div class="item hover-img">
-                <div class="destination-post">
-                  <a href="#" class="img-style">
-                    <img src="./images/tours/tour-14.png" alt="img-tour" />
-                  </a>
-                </div>
+              <div class="slider-control">
+                <div
+                  class="sw-pagination sw-pagination-topchose text-center"
+                ></div>
               </div>
             </div>
           </div>

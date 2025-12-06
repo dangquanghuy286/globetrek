@@ -1399,6 +1399,19 @@
 
       .swiper-slide {
          height: 338px !important;
+
+         .group-meta {
+            left: 12px !important;
+         }
+
+         &:nth-child(2),
+         &:nth-child(3),
+         &:nth-child(4),
+         &:nth-child(5) {
+            .group-meta {
+               display: flex !important;
+            }
+         }
       }
    }
 
