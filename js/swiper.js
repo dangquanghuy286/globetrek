@@ -516,3 +516,34 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+// ============ Team Member=====================
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperTeam = document.querySelector(".tf-teamMember");
+  if (swiperTeam) {
+    const preview = swiperTeam.dataset.preview;
+    const tablet = swiperTeam.dataset.tablet;
+    const mobile = swiperTeam.dataset.mobile;
+    const spacing = swiperTeam.dataset.space;
+
+    new Swiper(".tf-teamMember", {
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
+
+      speed: 1000,
+      pagination: {
+        el: ".sw-pagination-teamMember",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacing),
+        },
+        1200: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacing),
+        },
+      },
+    });
+  }
+});
