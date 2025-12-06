@@ -225,13 +225,36 @@
         &:nth-child(5) {
             grid-area: item5;
         }
+
+        &:nth-child(6) {
+            grid-area: item6;
+        }
+
+        &:nth-child(7) {
+            grid-area: item7;
+        }
+
+        &:nth-child(8) {
+            grid-area: item8;
+        }
+
+        &:nth-child(9) {
+            grid-area: item9;
+        }
+
+        &:nth-child(10) {
+            grid-area: item10;
+        }
+
+        &:nth-child(11) {
+            grid-area: item11;
+        }
+
     }
 
     // Style 1
     &.grid-1 {
         grid-template-columns: repeat(4, 1fr);
-
-
         grid-template-areas:
             "item1 item1 item2 item3"
             "item1 item1 item4 item5";
@@ -243,6 +266,17 @@
         grid-template-areas:
             "item1 item1 item2 item2 item5 item5"
             "item1 item1 item3 item4 item5 item5";
+    }
+
+    &.grid-3 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 330px);
+        grid-template-areas:
+            "item1 item1 item2 item2"
+            "item1 item1 item3 item4"
+            "item5 item6 item7 item7"
+            "item8 item8 item11 item11"
+            "item9 item10 item11 item11";
     }
 
 
@@ -1029,6 +1063,13 @@
     position: relative;
     background-attachment: fixed;
 
+
+    &.banner-1 {
+        background: url("../images/tours/bg-tour-2.png") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -1038,6 +1079,7 @@
         height: 100%;
         background-color: #0000004D;
         z-index: 0;
+
     }
 
     .content {
