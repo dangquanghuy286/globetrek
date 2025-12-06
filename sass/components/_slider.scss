@@ -245,6 +245,8 @@
 
             .box-title {
                 text-align: center;
+                position: relative;
+                z-index: 20;
 
                 p {
                     margin-bottom: 48px;
@@ -457,7 +459,7 @@
                 }
 
                 .box-title {
-                    padding: 200px 0 50px;
+                    padding: 200px 0 140px;
                     margin-bottom: 0;
 
                     h3 {
