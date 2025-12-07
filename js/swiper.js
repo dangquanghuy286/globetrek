@@ -479,6 +479,10 @@ document.addEventListener("DOMContentLoaded", () => {
         el: ".sw-pagination-tour",
         clickable: true,
       },
+      navigation: {
+        nextEl: ".nav-next-tour",
+        prevEl: ".nav-prev-tour",
+      },
       loop: true,
       breakpoints: {
         575: {

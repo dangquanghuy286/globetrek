@@ -95,6 +95,12 @@
     margin-top: 48px;
     margin-bottom: 2px;
 
+    &.style-01 {
+
+        margin: 0;
+        gap: 12px;
+    }
+
     .sw-pagination {
         width: auto !important;
         position: static !important;
@@ -105,16 +111,32 @@
         height: 58px;
         border-radius: 50%;
         @include flex(center, center);
-
         visibility: visible;
         opacity: 1;
         transition: all 0.3s ease;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
+        &.nav-style-2 {
+            color: var(--primary-color);
+
+            img {
+                filter: brightness(0) saturate(100%) invert(75%) sepia(35%) saturate(822%) hue-rotate(347deg) brightness(91%) contrast(89%);
+            }
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: var(--white);
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+
         img {
             width: 24px;
             height: 24px;
-            object-fit: contain;
+            object-fit: cover;
         }
 
         &:hover {
