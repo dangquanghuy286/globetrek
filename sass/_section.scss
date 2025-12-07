@@ -1073,7 +1073,7 @@
 .banner-section {
     background: url("../images/tours/bg-tour-1.png") no-repeat center center;
     background-size: cover;
-    width: 100%;
+
     padding: 233px 0;
     display: flex;
     justify-content: center;
@@ -1085,6 +1085,14 @@
         background: url("../images/tours/bg-tour-2.png") no-repeat center center;
         background-size: cover;
         background-attachment: fixed;
+    }
+
+    &.rounded-style-01 {
+        border-radius: 16px;
+
+        &::before {
+            border-radius: 16px;
+        }
     }
 
     &::before {
