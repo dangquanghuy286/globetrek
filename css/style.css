@@ -5015,6 +5015,10 @@ h5 {
   z-index: 10;
   transform: translateX(-50%);
 }
+.rotating-badge.pos-01 {
+  left: 42.5%;
+  top: 10%;
+}
 .rotating-badge .circle {
   position: relative;
   width: 100%;
@@ -6501,16 +6505,17 @@ h5 {
   gap: 4px;
   justify-content: center;
   text-align: center;
+  width: 100%;
 }
 .rating .rate .total-rate {
   font-weight: 700;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 1;
   color: var(--heading-color);
 }
 .rating .rate .review {
   font-size: 14px;
-  line-height: 140%;
+  line-height: 1;
   font-weight: 400;
   color: var(--place-holder);
 }
@@ -6902,9 +6907,12 @@ h5 {
   background-size: cover;
   background-color: var(--secondary-color);
   padding: 80px 56px;
-  justify-content: center;
   border-radius: 16px;
   overflow: visible;
+}
+.tf-vacation-hero .bg-imgwtext.bg-style-imgwtext-01 {
+  background: none;
+  padding: 120px 56px;
 }
 .tf-vacation-hero .bg-imgwtext .content-right {
   width: 50% !important;
@@ -6957,6 +6965,7 @@ h5 {
   align-items: stretch;
   flex-direction: row;
   gap: 78px;
+  position: relative;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 {
   gap: 16px;
@@ -7088,6 +7097,9 @@ h5 {
   position: relative;
   z-index: 2;
 }
+.tf-vacation-hero .flat-img-with-text .content-left.w-style-01 {
+  width: 32%;
+}
 .tf-vacation-hero .flat-img-with-text .content-left .rotating-badge {
   bottom: 30%;
   left: 52%;
@@ -7131,8 +7143,22 @@ h5 {
   flex-direction: column;
   gap: 32px;
 }
+.tf-vacation-hero .flat-img-with-text .content-right.w-style-01 {
+  width: 57%;
+}
 .tf-vacation-hero .flat-img-with-text .content-right.v3 {
   width: 48.4%;
+}
+.tf-vacation-hero .flat-img-with-text .wd-banner {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.tf-vacation-hero .flat-img-with-text .wd-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/1.18;
 }
 .tf-vacation-hero .flat-img-with-text .box-title {
   margin-bottom: 0;

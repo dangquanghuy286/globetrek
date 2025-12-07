@@ -162,6 +162,11 @@
         z-index: 10;
         transform: translateX(-50%);
 
+        &.pos-01 {
+            left: 42.5%;
+            top: 10%;
+        }
+
         .circle {
             position: relative;
             width: 100%;
