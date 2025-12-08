@@ -236,7 +236,7 @@ a {
     &:hover,
     &:focus {
         @include transition3;
-
+        outline: 0;
     }
 }
 

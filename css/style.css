@@ -260,6 +260,7 @@ a:hover, a:focus {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  outline: 0;
 }
 
 html {
@@ -3254,7 +3255,9 @@ h5 {
   cursor: pointer;
 }
 .sub-menu .sub-item a {
+  display: block;
   padding: 16px 24px;
+  color: var(--heading-color);
 }
 .sub-menu .sub-item a:hover {
   background-color: var(--primary-color);
@@ -4228,7 +4231,7 @@ h5 {
 .flat-blog-item.style-1 .content-box.style-content-01 .date-post img {
   filter: brightness(0) saturate(100%) invert(10%) sepia(4%) saturate(2132%) hue-rotate(179deg) brightness(97%) contrast(86%);
 }
-.flat-blog-item.style-1 .content-box.style-content-01 .title {
+.flat-blog-item.style-1 .content-box.style-content-01 .name {
   color: var(--heading-color);
 }
 .flat-blog-item.style-1 .content-box.style-content-01 .read-more {
@@ -8131,7 +8134,7 @@ h5 {
     gap: 10px;
   }
   .header .header-ct-right .wrap-login-menu ul {
-    gap: 10px;
+    gap: 15px;
   }
   .header .header-ct-right .wrap-login-menu ul .heart::after {
     right: -5px;
