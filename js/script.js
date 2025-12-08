@@ -109,36 +109,22 @@ document.querySelectorAll(".mobile-dropdown").forEach((item) => {
     e.preventDefault();
     const parent = e.currentTarget.parentElement;
     const subMenu = parent.querySelector(".mb-sub-menu");
-    const icon = parent.querySelector(".mb-icon");
 
     if (subMenu) {
+      // Đóng tất cả nav-item
       document.querySelectorAll(".nav-item.active").forEach((otherItem) => {
         if (otherItem !== parent) {
           otherItem.classList.remove("active");
-
-          const otherIcon = otherItem.querySelector(".mb-icon");
-          if (otherIcon) {
-            otherIcon.classList.remove("icon-CaretUp");
-            otherIcon.classList.add("icon-CaretDown");
-          }
         }
       });
 
       // Toggle
-      const isActive = parent.classList.toggle("active");
-
-      if (icon) {
-        if (isActive) {
-          icon.classList.remove("icon-CaretDown");
-          icon.classList.add("icon-CaretUp");
-        } else {
-          icon.classList.remove("icon-CaretUp");
-          icon.classList.add("icon-CaretDown");
-        }
-      }
+      parent.classList.toggle("active");
     }
   });
 });
+
+// ===================-SUBMENU==============================
 document.querySelectorAll(".sub-link.has-sub").forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
