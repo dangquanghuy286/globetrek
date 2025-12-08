@@ -501,6 +501,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// =========== DESTINATION (Gallery) ==================
+document.addEventListener("DOMContentLoaded", () => {
+  const tfSwDes = document.querySelector(".tf-sw-destination");
+  if (tfSwDes) {
+    const preview = tfSwDes.dataset.preview;
+    const tablet = tfSwDes.dataset.tablet;
+    const mobile = tfSwDes.dataset.mobile;
+    const mobileSm = tfSwDes.dataset.mobileSm;
+
+    const spacingLg = tfSwDes.dataset.spaceLg;
+    const spacingMd = tfSwDes.dataset.spaceMd;
+    const spacing = tfSwDes.dataset.space;
+
+    const swiper = new Swiper(".tf-sw-destination", {
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
+      pagination: {
+        el: ".sw-pagination-destination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".nav-next-destination",
+        prevEl: ".nav-prev-destination",
+      },
+
+      loop: true,
+
+      breakpoints: {
+        575: {
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacing),
+        },
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
+        },
+        1200: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
+        },
+      },
+    });
+  }
+});
+
 // ============Hero Title=====================
 document.addEventListener("DOMContentLoaded", function () {
   const heroSwiper = new Swiper(".tf-sw-hero", {

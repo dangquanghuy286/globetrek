@@ -231,6 +231,13 @@ textarea {
 a {
     text-decoration: none !important;
     color: inherit;
+    @include transition3;
+
+    &:hover,
+    &:focus {
+        @include transition3;
+
+    }
 }
 
 
@@ -491,12 +498,13 @@ h5 {
 
 .link {
     color: inherit;
-    transition: all 0.3s ease;
+    @include transition3;
 }
 
 .link:hover {
     color: var(--primary-color) !important;
     cursor: pointer;
+    @include transition3;
 }
 
 

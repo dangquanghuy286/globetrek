@@ -89,10 +89,8 @@
             left: 20px;
             right: 20px;
 
-            .title {
+            .name {
                 color: var(--white);
-                font-size: 24px;
-                line-height: 100%;
             }
 
             .date-post {
@@ -109,11 +107,9 @@
                 font-weight: 600;
                 font-size: 16px;
                 color: var(--white);
-                transition: all 0.3s ease;
 
                 img {
                     font-size: 14px;
-                    transition: all 0.3s ease;
                 }
 
                 &:hover {
@@ -273,10 +269,10 @@
                 }
             }
 
-            .title {
+            .name {
 
-                font-weight: 600;
-                text-transform: capitalize;
+                font-weight: 500;
+
                 font-size: 16px;
                 line-height: 140%;
             }

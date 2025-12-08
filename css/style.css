@@ -248,6 +248,18 @@ textarea {
 a {
   text-decoration: none !important;
   color: inherit;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a:hover, a:focus {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 html {
@@ -541,12 +553,21 @@ h5 {
 
 .link {
   color: inherit;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .link:hover {
   color: var(--primary-color) !important;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .fs-7 {
@@ -3230,11 +3251,6 @@ h5 {
   left: 20px;
 }
 .sub-menu .sub-item {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 .sub-menu .sub-item a {
@@ -4171,10 +4187,8 @@ h5 {
   left: 20px;
   right: 20px;
 }
-.flat-blog-item.style-1 .content-box .title {
+.flat-blog-item.style-1 .content-box .name {
   color: var(--white);
-  font-size: 24px;
-  line-height: 100%;
 }
 .flat-blog-item.style-1 .content-box .date-post {
   color: var(--white);
@@ -4189,11 +4203,9 @@ h5 {
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
-  transition: all 0.3s ease;
 }
 .flat-blog-item.style-1 .content-box .read-more img {
   font-size: 14px;
-  transition: all 0.3s ease;
 }
 .flat-blog-item.style-1 .content-box .read-more:hover {
   color: var(--primary-color);
@@ -4311,9 +4323,8 @@ h5 {
   color: var(--text-color);
   margin-top: 10px;
 }
-.recent .recent-post-item .content .title {
-  font-weight: 600;
-  text-transform: capitalize;
+.recent .recent-post-item .content .name {
+  font-weight: 500;
   font-size: 16px;
   line-height: 140%;
 }
@@ -5918,14 +5929,15 @@ h5 {
 .tf-destination.box-single .swiper-slide:nth-child(2) .group-meta, .tf-destination.box-single .swiper-slide:nth-child(3) .group-meta, .tf-destination.box-single .swiper-slide:nth-child(4) .group-meta, .tf-destination.box-single .swiper-slide:nth-child(5) .group-meta {
   display: none;
 }
-.tf-destination .destination-post {
+
+.destination-post {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 16px;
 }
-.tf-destination .destination-post .content {
+.destination-post .content {
   position: absolute;
   bottom: 8px;
   left: 50%;
@@ -5940,7 +5952,7 @@ h5 {
   padding: 16px;
   transition: all 0.3s ease;
 }
-.tf-destination .destination-post .group-meta {
+.destination-post .group-meta {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -5949,7 +5961,7 @@ h5 {
   gap: 12px;
   z-index: 5;
 }
-.tf-destination .destination-post .group-meta .tf-btn {
+.destination-post .group-meta .tf-btn {
   padding: 14px 24px;
   background-color: var(--border-header);
   border: var(--border-header);
@@ -5957,14 +5969,14 @@ h5 {
   color: var(--white);
   transition: all 0.3s ease;
 }
-.tf-destination .destination-post .group-meta .tf-btn img {
+.destination-post .group-meta .tf-btn img {
   filter: brightness(0) invert(1);
 }
-.tf-destination .destination-post .group-meta .tf-btn:hover {
+.destination-post .group-meta .tf-btn:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
-.tf-destination .destination-post .group-meta .tf-btn:hover img {
+.destination-post .group-meta .tf-btn:hover img {
   filter: brightness(0) invert(1);
 }
 
@@ -6678,9 +6690,7 @@ h5 {
   text-align: center;
   flex: 1;
 }
-.box-icon-benefits .content .title {
-  font-size: 24px;
-  line-height: 100%;
+.box-icon-benefits .content .name {
   margin-bottom: 12px;
 }
 .box-icon-benefits .content .desc {
@@ -8806,6 +8816,11 @@ h5 {
   }
   .flat-blog-list .flat-blog-item .content-box .post-author span {
     font-size: 12px;
+  }
+  .flat-blog-list .flat-blog-item .content-box .post-author .icon {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
   }
   .flat-latest-hero h1 {
     font-size: 48px;
