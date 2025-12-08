@@ -2807,9 +2807,7 @@
     .content {
         @include flex(center, space-between);
 
-        .name-member {
-            @include transition3;
-        }
+
 
         .position {
             color: var(--text-color);

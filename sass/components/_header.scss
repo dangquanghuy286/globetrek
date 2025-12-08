@@ -209,7 +209,7 @@
 }
 
 
-// Submenu
+// ===================== MENU ITEM =====================
 .menu-item {
     color: var(--heading-color);
     padding: 33px 0;
@@ -220,7 +220,6 @@
         align-items: center;
         gap: 6px;
         color: var(--heading-color);
-
     }
 
     .icon {
@@ -233,20 +232,20 @@
             transform: rotate(180deg);
         }
 
-        >.sub-menu {
+        >.sub-menu,
+        >.mega-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
 
-        .mega-menu {
-            opacity: 1;
-            visibility: visible;
+        >.mega-menu {
             transform: translateX(-50%) translateY(0);
         }
     }
 }
 
+// ===================== DROPDOWN BASE (Sub + Mega chung) =====================
 .sub-menu,
 .mega-menu {
     position: absolute;
@@ -254,23 +253,22 @@
     background: var(--white);
     border-radius: 12px;
     opacity: 0;
-    transform: translateY(12px);
-    @include transition3;
-    z-index: 999;
     visibility: hidden;
+    transform: translateY(12px);
+    z-index: 999;
+    @include transition3;
 
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: calc(100% - 8px);
+        border-top: 15px solid var(--white);
+        border-right: 15px solid transparent;
+        transform: rotate(45deg);
+    }
 }
 
-.sub-menu::before,
-.mega-menu::before {
-    content: "";
-    position: absolute;
-    border-top: 15px solid var(--white);
-    border-right: 15px solid transparent;
-    transform: rotate(45deg);
-    bottom: calc(100% - 8px);
-}
-
+// ===================== SUB MENU =====================
 .sub-menu {
     left: 0;
     min-width: 280px;
@@ -282,14 +280,12 @@
     }
 
     .sub-item {
-
         cursor: pointer;
 
         a {
             display: block;
             padding: 16px 24px;
             color: var(--heading-color);
-
 
             &:hover {
                 background-color: var(--primary-color);
@@ -303,14 +299,15 @@
     }
 }
 
+// ===================== MEGA MENU =====================
 .mega-menu {
     left: 215px;
-    transform: translateX(-50%) translateY(12px);
     width: 1280px;
     max-width: 90vw;
+    padding: 32px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 32px 0px;
+    transform: translateX(-50%) translateY(12px);
 
     &::before {
         left: 35%;
@@ -324,10 +321,13 @@
     .mega-col {
         ul {
             li {
-                &:hover {
-                    background-color: var(--primary-color);
+                a {
+                    display: block;
+                    padding: 16px 24px;
+                    color: var(--heading-color);
 
-                    a {
+                    &:hover {
+                        background-color: var(--primary-color);
                         color: var(--white);
 
                         &.active {
@@ -335,17 +335,10 @@
                         }
                     }
                 }
-
-                a {
-                    display: block;
-                    padding: 16px 24px;
-                    color: var(--heading-color);
-                }
             }
         }
     }
 }
-
 
 
 .toggle-mobile {
