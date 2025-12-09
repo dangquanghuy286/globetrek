@@ -779,8 +779,52 @@
                   <input type="date" class="form-control mt-3" />
                 </div>
 
-                <div class="widget-item widget-People-tour">
+                <div class="widget-item widget-people-tour">
                   <h5 class="text-black text-capitalize">People</h5>
+
+                  <ul class="box-fill-people mt-3" id="wg-people">
+                    <li class="people-item">
+                      <a
+                        href="#people-collapse"
+                        class="people-top collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#people-collapse"
+                        aria-expanded="false"
+                        aria-controls="people-collapse"
+                      >
+                        <span class="current subtitle"></span>
+                        <i class="icon icon-CaretDown"></i>
+                      </a>
+
+                      <div
+                        class="collapse"
+                        id="people-collapse"
+                        data-bs-parent="#wg-people"
+                      >
+                        <div class="people-content">
+                          <!-- Adult Counter -->
+                          <div class="guest-item style-01">
+                            <span class="guest-label">Adult</span>
+                            <div class="counter">
+                              <button type="button" class="minus">−</button>
+                              <input type="number" value="0" min="0" />
+                              <button type="button" class="plus">+</button>
+                            </div>
+                          </div>
+
+                          <!-- Children Counter -->
+                          <div class="guest-item style-01">
+                            <span class="guest-label">Children</span>
+                            <div class="counter">
+                              <button type="button" class="minus">−</button>
+                              <input type="number" value="0" min="0" />
+                              <button type="button" class="plus">+</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="widget-item widget-advanced-price">

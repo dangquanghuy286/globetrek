@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// =============BreadCrumb==================
 
 // =============BreadCrumb==================
 document.addEventListener("DOMContentLoaded", () => {
@@ -346,15 +345,11 @@ document.addEventListener("DOMContentLoaded", function () {
           parseInt(guestItems[0]?.querySelector("input").value) || 0;
         const children =
           parseInt(guestItems[1]?.querySelector("input").value) || 0;
-        const infants =
-          parseInt(guestItems[2]?.querySelector("input").value) || 0;
 
         let parts = [];
         if (adults > 0) parts.push(`${adults} Adult${adults > 1 ? "s" : ""}`);
         if (children > 0)
           parts.push(`${children} Child${children > 1 ? "ren" : ""}`);
-        if (infants > 0)
-          parts.push(`${infants} Infant${infants > 1 ? "s" : ""}`);
 
         let text = parts.length > 0 ? parts.join(" - ") : "Select guests";
 
@@ -592,7 +587,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const guests = {
       adults: guestInputs[0]?.value || "0",
       children: guestInputs[1]?.value || "0",
-      infants: guestInputs[2]?.value || "0",
     };
 
     // Get price from advanced form
@@ -612,7 +606,6 @@ document.addEventListener("DOMContentLoaded", function () {
       type: tourType,
       adults: guests.adults,
       children: guests.children,
-      infants: guests.infants,
       minPrice: minPrice,
       maxPrice: maxPrice,
       amenities: amenities,
@@ -693,4 +686,68 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.remove("active");
     });
   });
+});
+
+// ============Fill=========================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const peopleWidget = document.querySelector(".widget-people-tour");
+  // ===========People count=====================
+  if (peopleWidget) {
+    const current = peopleWidget.querySelector(".current");
+    const guestItems = peopleWidget.querySelectorAll(".guest-item");
+
+    if (guestItems.length > 0) {
+      // Counter Logic
+      guestItems.forEach((item) => {
+        const minus = item.querySelector(".minus");
+        const plus = item.querySelector(".plus");
+        const input = item.querySelector("input");
+
+        minus?.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          let value = parseInt(input.value) || 0;
+          if (value > 0) {
+            input.value = value - 1;
+            updateCurrent();
+          }
+        });
+
+        plus?.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          let value = parseInt(input.value) || 0;
+          input.value = value + 1;
+          updateCurrent();
+        });
+
+        input?.addEventListener("change", () => {
+          if (input.value < 0) input.value = 0;
+          updateCurrent();
+        });
+      });
+
+      function updateCurrent() {
+        const adults =
+          parseInt(guestItems[0]?.querySelector("input").value) || 0;
+        const children =
+          parseInt(guestItems[1]?.querySelector("input").value) || 0;
+
+        let parts = [];
+        if (adults > 0) parts.push(`${adults} Adult${adults > 1 ? "s" : ""}`);
+        if (children > 0)
+          parts.push(`${children} Child${children > 1 ? "ren" : ""}`);
+
+        let text = parts.length > 0 ? parts.join(" - ") : "Select guests";
+
+        if (current) {
+          current.textContent = text;
+        }
+      }
+
+      // Khởi tạo giá trị ban đầu
+      updateCurrent();
+    }
+  }
 });

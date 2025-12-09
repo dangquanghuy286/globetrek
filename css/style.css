@@ -2709,61 +2709,6 @@ h5 {
   color: var(--text-color);
   transition: color 0.2s ease;
 }
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px 8px 24px;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item span {
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--text-color);
-  line-height: 140%;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 18px;
-  border: 1px solid var(--stoke-color);
-  gap: 10px;
-  border-radius: 16px;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter button {
-  width: 16px;
-  height: 16px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 16px;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter button:hover {
-  opacity: 0.7;
-  background: var(--three-color);
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input {
-  min-width: 24px;
-  width: 24px;
-  height: 24px;
-  text-align: center;
-  border: none;
-  font-size: 16px;
-  color: var(--text-color);
-  background: transparent;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input::-webkit-outer-spin-button, .form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.form-search .inner-group .form-group .group-select .select-items .list .guest-item .counter input[type=number] {
-  -moz-appearance: textfield;
-}
 .form-search .inner-group .form-group:first-child {
   padding-left: 0;
 }
@@ -2788,6 +2733,65 @@ h5 {
 }
 .form-search .box-btn-filter .tf-btn .icon {
   font-size: 24px;
+}
+
+.guest-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 8px 24px;
+}
+.guest-item.style-01 {
+  padding: 4px 0;
+}
+.guest-item span {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 140%;
+}
+.guest-item .counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid var(--stoke-color);
+  gap: 10px;
+  border-radius: 16px;
+}
+.guest-item .counter button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guest-item .counter button:hover {
+  opacity: 0.7;
+  background: var(--three-color);
+}
+.guest-item .counter input {
+  min-width: 24px !important;
+  width: 24px !important;
+  height: 24px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  color: var(--text-color);
+  background: transparent;
+}
+.guest-item .counter input::-webkit-outer-spin-button, .guest-item .counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.guest-item .counter input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .advanced-form {
@@ -3019,6 +3023,36 @@ h5 {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
+}
+.sidebar-filter .widget-people-tour input {
+  width: 60px !important;
+}
+.sidebar-filter .widget-people-tour .people-item {
+  padding: 16px 18px;
+  border: 1px solid var(--stoke-color);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  border-radius: 16px;
+  flex-direction: column;
+}
+.sidebar-filter .widget-people-tour .people-item .people-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.sidebar-filter .widget-people-tour .people-item .people-top .icon {
+  display: flex;
+  align-items: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.sidebar-filter .widget-people-tour .counter {
+  padding: 10px;
 }
 
 .breadcrumb {
