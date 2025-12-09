@@ -389,6 +389,10 @@
         background-size: cover;
     }
 
+    &.h-2 {
+        min-height: 390px;
+    }
+
     &::after {
         content: '';
         position: absolute;

@@ -4417,6 +4417,9 @@ h5 {
   background-position: center;
   background-size: cover;
 }
+.content-widget.h-2 {
+  min-height: 390px;
+}
 .content-widget::after {
   content: "";
   position: absolute;
