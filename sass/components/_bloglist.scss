@@ -382,6 +382,13 @@
     background-position: center;
     background-size: cover;
 
+    &.banner-1 {
+        background: url(../../images/backgronud/bg-ex-2.png) no-repeat center center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -401,6 +408,36 @@
     .content {
         position: relative;
         z-index: 1;
+
+        &.style-01 {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
+
+            .box-title {
+                width: 100%;
+                margin-bottom: 0;
+                font-family: "Lexend", sans-serif;
+
+
+                .title {
+                    margin-bottom: 12px;
+                    line-height: 100%;
+                    text-transform: none;
+                }
+            }
+
+            .subtitle,
+            .phone {
+                color: var(--white) !important;
+            }
+
+            .wg-contact {
+                gap: 64px;
+                justify-content: center;
+            }
+        }
     }
 
     h2 {

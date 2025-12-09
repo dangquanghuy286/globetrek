@@ -641,18 +641,17 @@ document.addEventListener("DOMContentLoaded", function () {
         max: [10000],
       },
       format: moneyFormat,
-      connect: true, // Đúng rồi, tạo thanh connect
+      connect: true,
     });
 
-    // Di chuyển listener handles VÀO ĐÂY, sau khi tạo
+    // Event click handle to expand size
     const noUiHandles = slider.querySelectorAll(".noUi-handle");
     noUiHandles.forEach(function (handle) {
       handle.addEventListener("click", function () {
-        this.style.width = "50px"; // Lưu ý: Override CSS 18px của bạn; bỏ nếu không cần
+        this.style.width = "50px";
       });
     });
 
-    // Event update giữ nguyên
     slider.noUiSlider.on("update", function (values, handle) {
       const value1 = slider.parentElement.querySelector("#slider-range-value1");
       const value2 = slider.parentElement.querySelector("#slider-range-value2");
@@ -662,6 +661,35 @@ document.addEventListener("DOMContentLoaded", function () {
       if (value2) value2.textContent = values[1];
       if (minInput) minInput.value = moneyFormat.from(values[0]);
       if (maxInput) maxInput.value = moneyFormat.from(values[1]);
+    });
+  });
+});
+// ============ FAQ Accordion =================
+document.addEventListener("DOMContentLoaded", () => {
+  const faqList = document.querySelectorAll(".faq-item");
+
+  faqList.forEach((item) => {
+    const trigger = item.querySelector(".faq-top");
+    const collapse = item.querySelector(".collapse");
+
+    collapse.addEventListener("shown.bs.collapse", () => {
+      faqList.forEach((other) => {
+        if (other !== item) {
+          const otherCollapse = other.querySelector(".collapse");
+          const bsCollapse = bootstrap.Collapse.getInstance(otherCollapse);
+
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+        }
+      });
+
+      item.classList.add("active");
+    });
+
+    // Đóng
+    collapse.addEventListener("hidden.bs.collapse", () => {
+      item.classList.remove("active");
     });
   });
 });

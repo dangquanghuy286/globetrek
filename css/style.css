@@ -4411,6 +4411,12 @@ h5 {
   background-position: center;
   background-size: cover;
 }
+.content-widget.banner-1 {
+  background: url(../../images/backgronud/bg-ex-2.png) no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .content-widget::after {
   content: "";
   position: absolute;
@@ -4428,6 +4434,30 @@ h5 {
 .content-widget .content {
   position: relative;
   z-index: 1;
+}
+.content-widget .content.style-01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+.content-widget .content.style-01 .box-title {
+  width: 100%;
+  margin-bottom: 0;
+  font-family: "Lexend", sans-serif;
+}
+.content-widget .content.style-01 .box-title .title {
+  margin-bottom: 12px;
+  line-height: 100%;
+  text-transform: none;
+}
+.content-widget .content.style-01 .subtitle,
+.content-widget .content.style-01 .phone {
+  color: var(--white) !important;
+}
+.content-widget .content.style-01 .wg-contact {
+  gap: 64px;
+  justify-content: center;
 }
 .content-widget h2 {
   color: var(--white);
@@ -7107,8 +7137,8 @@ h5 {
 .tf-vacation-hero .flat-img-with-text.style-05 .content-right .box-schedule .calendar .item h3 {
   color: var(--white);
 }
-.tf-vacation-hero .flat-img-with-text.style-05 .content-right .contact .subtitle,
-.tf-vacation-hero .flat-img-with-text.style-05 .content-right .contact .phone {
+.tf-vacation-hero .flat-img-with-text.style-05 .content-right .wg-contact .subtitle,
+.tf-vacation-hero .flat-img-with-text.style-05 .content-right .wg-contact .phone {
   color: var(--white);
 }
 .tf-vacation-hero .flat-img-with-text.row-reverse {
@@ -7253,40 +7283,6 @@ h5 {
 .tf-vacation-hero .box-benefit:hover .icon {
   transform: rotateY(360deg);
 }
-.tf-vacation-hero .contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 24px;
-}
-.tf-vacation-hero .contact .box-info {
-  display: flex;
-  gap: 16px;
-  flex-direction: row;
-  flex-shrink: 0;
-}
-.tf-vacation-hero .contact .box-info .icon {
-  width: 48px;
-  height: 48px;
-  color: var(--white);
-  background-color: var(--primary-color);
-  font-size: 24px;
-  align-items: center;
-  display: flex;
-  border-radius: 16px;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.tf-vacation-hero .contact .box-info .content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  white-space: nowrap;
-}
-.tf-vacation-hero .contact .box-info .content .phone {
-  color: var(--primary-color);
-}
 .tf-vacation-hero .card-wrapper {
   width: 46%;
   height: auto;
@@ -7336,6 +7332,45 @@ h5 {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.wg-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+}
+.wg-contact .box-info {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.wg-contact .box-info .icon {
+  width: 48px;
+  height: 48px;
+  color: var(--white);
+  background-color: var(--primary-color);
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  border-radius: 16px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wg-contact .box-info .icon.ic-style-01 {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+.wg-contact .box-info .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+.wg-contact .box-info .content .phone {
+  color: var(--primary-color);
 }
 
 .flat-types {
@@ -7988,6 +8023,69 @@ h5 {
 }
 .box-member:hover .content .name-member {
   color: var(--primary-color);
+}
+
+.wg-faq:not(:last-child) {
+  margin-bottom: 48px;
+}
+.wg-faq .topic {
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.wg-faq .faq-item {
+  border-bottom: 1px solid var(--stoke-color);
+  padding-bottom: 24px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wg-faq .faq-item .faq-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 16px;
+  color: var(--heading-color);
+}
+.wg-faq .faq-item .question-title {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wg-faq .faq-item .icon {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wg-faq .faq-item .faq-answer {
+  text-transform: none;
+}
+.wg-faq .faq-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.wg-faq .faq-item.active .faq-top .question-title,
+.wg-faq .faq-item.active .faq-top .icon {
+  color: var(--primary-color);
+}
+.wg-faq .faq-item.active .faq-top .icon {
+  transform: rotate(180deg);
 }
 
 /* --------------------------------------------------------------
@@ -8808,11 +8906,11 @@ h5 {
   .flat-img-with-text .flat-service {
     gap: 20px !important;
   }
-  .flat-img-with-text .contact {
+  .flat-img-with-text .wg-contact {
     flex-direction: column;
     align-items: flex-start !important;
   }
-  .flat-img-with-text .contact .tf-btn {
+  .flat-img-with-text .wg-contact .tf-btn {
     width: 100%;
   }
   .flat-img-with-text.style-04 .content-right {

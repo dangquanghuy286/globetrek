@@ -1801,7 +1801,7 @@
                     }
                 }
 
-                .contact {
+                .wg-contact {
 
                     .subtitle,
                     .phone {
@@ -1997,44 +1997,7 @@
 
     }
 
-    .contact {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        gap: 24px;
 
-        .box-info {
-            display: flex;
-            gap: 16px;
-            flex-direction: row;
-            flex-shrink: 0;
-
-            .icon {
-                width: 48px;
-                height: 48px;
-                color: var(--white);
-                background-color: var(--primary-color);
-                font-size: 24px;
-                align-items: center;
-                display: flex;
-                border-radius: 16px;
-                justify-content: center;
-                flex-shrink: 0;
-            }
-
-            .content {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-                white-space: nowrap;
-
-                .phone {
-                    color: var(--primary-color);
-                }
-            }
-        }
-    }
 
     .card-wrapper {
         width: 46%;
@@ -2095,6 +2058,49 @@
     }
 }
 
+.wg-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+
+    .box-info {
+        display: flex;
+        gap: 16px;
+        flex-direction: row;
+        flex-shrink: 0;
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            color: var(--white);
+            background-color: var(--primary-color);
+            font-size: 24px;
+            align-items: center;
+            display: flex;
+            border-radius: 16px;
+            justify-content: center;
+            flex-shrink: 0;
+
+            &.ic-style-01 {
+                background-color: var(--white);
+                color: var(--primary-color);
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            white-space: nowrap;
+
+            .phone {
+                color: var(--primary-color);
+            }
+        }
+    }
+}
 
 // ==============Category Type=================
 .flat-types {
@@ -2853,6 +2859,70 @@
             }
 
 
+        }
+    }
+}
+
+// ==============FAQ Section======================
+.wg-faq {
+    &:not(:last-child) {
+        margin-bottom: 48px;
+    }
+
+    .topic {
+        margin-bottom: 24px;
+        font-weight: 500;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid var(--stoke-color);
+        padding-bottom: 24px;
+        @include transition3;
+
+        .faq-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: capitalize;
+            position: relative;
+            padding-bottom: 16px;
+            color: var(--heading-color);
+
+        }
+
+        .question-title {
+            @include transition3;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            @include transition3;
+            font-size: 16px;
+            @include flex(center, center);
+        }
+
+        .faq-answer {
+            text-transform: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &.active {
+
+            .faq-top {
+
+                .question-title,
+                .icon {
+                    color: var(--primary-color);
+                }
+
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 }
