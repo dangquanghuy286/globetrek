@@ -4407,14 +4407,10 @@ h5 {
   width: 100%;
   position: relative;
   background: url(../../images/tours/bg-tour-1.png) no-repeat center center;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 .content-widget.banner-1 {
   background: url(../../images/backgronud/bg-ex-2.png) no-repeat center center;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 .content-widget.h-2 {
