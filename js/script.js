@@ -669,10 +669,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const faqList = document.querySelectorAll(".faq-item");
 
   faqList.forEach((item) => {
-    const trigger = item.querySelector(".faq-top");
     const collapse = item.querySelector(".collapse");
 
-    collapse.addEventListener("shown.bs.collapse", () => {
+    collapse.addEventListener("show.bs.collapse", () => {
+      // Close other items
       faqList.forEach((other) => {
         if (other !== item) {
           const otherCollapse = other.querySelector(".collapse");
@@ -684,11 +684,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      // Add active class
       item.classList.add("active");
     });
 
-    // Đóng
-    collapse.addEventListener("hidden.bs.collapse", () => {
+    // Remove active class khi đóng
+    collapse.addEventListener("hide.bs.collapse", () => {
       item.classList.remove("active");
     });
   });

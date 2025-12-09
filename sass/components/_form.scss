@@ -228,120 +228,7 @@
             }
 
 
-            .datepicker-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 24px;
-                padding: 10px 10px 0 10px;
 
-
-                .datepicker-title {
-                    font-size: 20px;
-                    font-weight: 500;
-                    color: var(--heading-color);
-                }
-
-
-
-                button {
-                    background: none;
-                    border: none;
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.3s;
-                    font-size: 20px;
-                    color: var(--icon-color);
-
-                    &:hover {
-                        background: #f5f5f5;
-                    }
-
-                    .icon {
-                        font-size: 16px;
-                    }
-                }
-
-            }
-
-            .datepicker-weekdays {
-                display: grid;
-                grid-template-columns: repeat(7, 1fr);
-                gap: 8px;
-                margin-bottom: 8px;
-                padding: 0 10px;
-
-                .datepicker-weekday {
-                    text-align: center;
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: var(--text-color);
-                    padding: 8px 0;
-
-                    &.weekend {
-                        color: var(--primary-color);
-                    }
-                }
-
-            }
-
-            .datepicker-days {
-                display: grid;
-                grid-template-columns: repeat(7, 1fr);
-                gap: 8px;
-                padding: 0 10px;
-
-                .datepicker-day {
-                    aspect-ratio: 1;
-                    border: none;
-                    background: none;
-                    border-radius: 50%;
-                    font-size: 13px;
-                    color: var(--text-color);
-                    cursor: pointer;
-                    transition: all 0.3s;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: 500;
-                    min-height: 40px;
-
-                    &.weekend {
-                        color: var(--primary-color);
-                    }
-
-                    &.today,
-                    &.selected {
-                        background: var(--primary-color);
-                        color: var(--white);
-                    }
-
-                    &.other-month {
-                        color: var(--input-color);
-                    }
-
-                    &.disabled {
-                        color: var(--note-color);
-                        cursor: not-allowed;
-                    }
-
-                }
-
-
-
-                .datepicker-day .datepicker-day.other-month:hover {
-                    background: #f9f9f9;
-                }
-
-                .datepicker-day:hover:not(.disabled):not(.selected) {
-                    background: #f5f5f5;
-                }
-            }
 
 
             .group-select {
@@ -640,24 +527,6 @@
 
     }
 
-    .group-price {
-        margin-bottom: 30px;
-
-        .box-title-price {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-            margin-bottom: 10px;
-
-            .title-price {
-                font-weight: 600;
-            }
-
-            .caption-price {
-                font-weight: 600;
-            }
-        }
-    }
 
     .group-checkbox {
         margin-top: 20px;
@@ -701,6 +570,143 @@
 
 }
 
+// =================Date==============
+.datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 10px 10px 0 10px;
+
+
+    .datepicker-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--heading-color);
+    }
+
+
+
+    button {
+        background: none;
+        border: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        font-size: 20px;
+        color: var(--icon-color);
+
+        &:hover {
+            background: #f5f5f5;
+        }
+
+        .icon {
+            font-size: 16px;
+        }
+    }
+
+}
+
+.datepicker-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 0 10px;
+
+    .datepicker-weekday {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-color);
+        padding: 8px 0;
+
+        &.weekend {
+            color: var(--primary-color);
+        }
+    }
+
+}
+
+.datepicker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 0 10px;
+
+    .datepicker-day {
+        aspect-ratio: 1;
+        border: none;
+        background: none;
+        border-radius: 50%;
+        font-size: 13px;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        min-height: 40px;
+
+        &.weekend {
+            color: var(--primary-color);
+        }
+
+        &.today,
+        &.selected {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        &.other-month {
+            color: var(--input-color);
+        }
+
+        &.disabled {
+            color: var(--note-color);
+            cursor: not-allowed;
+        }
+
+    }
+
+
+
+    .datepicker-day .datepicker-day.other-month:hover {
+        background: #f9f9f9;
+    }
+
+    .datepicker-day:hover:not(.disabled):not(.selected) {
+        background: #f5f5f5;
+    }
+}
+
+// ===================Price=============
+.group-price {
+    margin-bottom: 30px;
+
+    .box-title-price {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .title-price {
+            font-weight: 600;
+        }
+
+        .caption-price {
+            font-weight: 600;
+        }
+    }
+}
+
+
 .tf-checkbox {
     width: 20px !important;
     height: 20px !important;
@@ -725,5 +731,31 @@
             line-height: 12px;
             color: var(--white);
         }
+    }
+}
+
+.sidebar-filter {
+    .filter-result {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    h5 {
+        font-weight: 500;
+    }
+
+    .widget-item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .list-check-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
     }
 }

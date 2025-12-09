@@ -2594,96 +2594,6 @@ h5 {
 .form-search .inner-group .form-group input:hover {
   border-color: var(--primary-color);
 }
-.form-search .inner-group .form-group .datepicker-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  padding: 10px 10px 0 10px;
-}
-.form-search .inner-group .form-group .datepicker-header .datepicker-title {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--heading-color);
-}
-.form-search .inner-group .form-group .datepicker-header button {
-  background: none;
-  border: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  font-size: 20px;
-  color: var(--icon-color);
-}
-.form-search .inner-group .form-group .datepicker-header button:hover {
-  background: #f5f5f5;
-}
-.form-search .inner-group .form-group .datepicker-header button .icon {
-  font-size: 16px;
-}
-.form-search .inner-group .form-group .datepicker-weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  margin-bottom: 8px;
-  padding: 0 10px;
-}
-.form-search .inner-group .form-group .datepicker-weekdays .datepicker-weekday {
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-color);
-  padding: 8px 0;
-}
-.form-search .inner-group .form-group .datepicker-weekdays .datepicker-weekday.weekend {
-  color: var(--primary-color);
-}
-.form-search .inner-group .form-group .datepicker-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  padding: 0 10px;
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day {
-  aspect-ratio: 1;
-  border: none;
-  background: none;
-  border-radius: 50%;
-  font-size: 13px;
-  color: var(--text-color);
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  min-height: 40px;
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day.weekend {
-  color: var(--primary-color);
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day.today, .form-search .inner-group .form-group .datepicker-days .datepicker-day.selected {
-  background: var(--primary-color);
-  color: var(--white);
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day.other-month {
-  color: var(--input-color);
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day.disabled {
-  color: var(--note-color);
-  cursor: not-allowed;
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day .datepicker-day.other-month:hover {
-  background: #f9f9f9;
-}
-.form-search .inner-group .form-group .datepicker-days .datepicker-day:hover:not(.disabled):not(.selected) {
-  background: #f5f5f5;
-}
 .form-search .inner-group .form-group .group-select .select-items .current {
   font-weight: 400;
   line-height: 140%;
@@ -2916,21 +2826,6 @@ h5 {
   visibility: visible;
   margin-top: 5px;
 }
-.advanced-form .group-price {
-  margin-bottom: 30px;
-}
-.advanced-form .group-price .box-title-price {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.advanced-form .group-price .box-title-price .title-price {
-  font-weight: 600;
-}
-.advanced-form .group-price .box-title-price .caption-price {
-  font-weight: 600;
-}
 .advanced-form .group-checkbox {
   margin-top: 20px;
 }
@@ -2962,6 +2857,115 @@ h5 {
   cursor: pointer;
   font-weight: 400;
   line-height: 140%;
+}
+
+.datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 10px 10px 0 10px;
+}
+.datepicker-header .datepicker-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+.datepicker-header button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 20px;
+  color: var(--icon-color);
+}
+.datepicker-header button:hover {
+  background: #f5f5f5;
+}
+.datepicker-header button .icon {
+  font-size: 16px;
+}
+
+.datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0 10px;
+}
+.datepicker-weekdays .datepicker-weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 8px 0;
+}
+.datepicker-weekdays .datepicker-weekday.weekend {
+  color: var(--primary-color);
+}
+
+.datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 0 10px;
+}
+.datepicker-days .datepicker-day {
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  min-height: 40px;
+}
+.datepicker-days .datepicker-day.weekend {
+  color: var(--primary-color);
+}
+.datepicker-days .datepicker-day.today, .datepicker-days .datepicker-day.selected {
+  background: var(--primary-color);
+  color: var(--white);
+}
+.datepicker-days .datepicker-day.other-month {
+  color: var(--input-color);
+}
+.datepicker-days .datepicker-day.disabled {
+  color: var(--note-color);
+  cursor: not-allowed;
+}
+.datepicker-days .datepicker-day .datepicker-day.other-month:hover {
+  background: #f9f9f9;
+}
+.datepicker-days .datepicker-day:hover:not(.disabled):not(.selected) {
+  background: #f5f5f5;
+}
+
+.group-price {
+  margin-bottom: 30px;
+}
+.group-price .box-title-price {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.group-price .box-title-price .title-price {
+  font-weight: 600;
+}
+.group-price .box-title-price .caption-price {
+  font-weight: 600;
 }
 
 .tf-checkbox {
@@ -2996,6 +3000,25 @@ h5 {
   font-size: 16px;
   line-height: 12px;
   color: var(--white);
+}
+
+.sidebar-filter .filter-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.sidebar-filter h5 {
+  font-weight: 500;
+}
+.sidebar-filter .widget-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.sidebar-filter .list-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
 .breadcrumb {
@@ -4411,6 +4434,7 @@ h5 {
 }
 .content-widget.banner-1 {
   background: url(../../images/backgronud/bg-ex-2.png) no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
 }
 .content-widget.h-2 {
@@ -6552,6 +6576,12 @@ h5 {
 .rating .list-star .icon img {
   filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
 }
+.rating .list-star .ic-empty {
+  color: var(--input-color);
+}
+.rating .list-star .ic-empty img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(935%) hue-rotate(197deg) brightness(115%) contrast(79%);
+}
 .rating .rate {
   display: flex;
   align-items: center;
@@ -8051,6 +8081,13 @@ h5 {
   color: var(--heading-color);
 }
 .wg-faq .faq-item .question-title {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wg-faq .faq-item .collapse.show {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;

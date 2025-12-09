@@ -1050,6 +1050,14 @@
                 filter: brightness(0) saturate(100%) invert(82%) sepia(32%) saturate(5285%) hue-rotate(330deg) brightness(97%) contrast(95%);
             }
         }
+
+        .ic-empty {
+            color: var(--input-color);
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(935%) hue-rotate(197deg) brightness(115%) contrast(79%);
+            }
+        }
     }
 
     .rate {
@@ -2892,6 +2900,12 @@
 
         .question-title {
             @include transition3;
+        }
+
+        .collapse {
+            &.show {
+                @include transition3;
+            }
         }
 
         .icon {
