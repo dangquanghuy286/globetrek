@@ -415,16 +415,17 @@
             align-items: start;
             width: 100%;
 
-            .box-title {
+            .box-name {
                 width: 100%;
                 margin-bottom: 0;
                 font-family: "Lexend", sans-serif;
 
 
-                .title {
+                .name {
                     margin-bottom: 12px;
                     line-height: 100%;
                     text-transform: none;
+                    color: var(--white);
                 }
             }
 
