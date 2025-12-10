@@ -3280,6 +3280,11 @@ h5 {
   visibility: hidden;
   transform: translateY(12px);
   z-index: 999;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .sub-menu::before,
 .mega-menu::before {
@@ -5632,6 +5637,10 @@ h5 {
   background-color: var(--primary-color);
 }
 
+.flat-map .top-map {
+  height: 800px;
+}
+
 /* ============ Updated noUiSlider CSS ============ */
 .noUi-target {
   direction: ltr;
@@ -6173,7 +6182,6 @@ h5 {
   max-width: 440px;
   height: 100%;
   transform: none;
-  transition: transform 0.3s ease-out;
   left: 0;
   top: 0;
 }
@@ -8193,6 +8201,10 @@ h5 {
 }
 .wg-faq .faq-item.active .faq-top .icon {
   transform: rotate(180deg);
+}
+
+.map-listing-item {
+  position: relative;
 }
 
 /* --------------------------------------------------------------

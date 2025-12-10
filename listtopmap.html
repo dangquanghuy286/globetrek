@@ -42,7 +42,7 @@
       </div>
     </div>
     <!-- Header -->
-    <header id="header" class="header style-1 position-fixed color-1">
+    <header id="header" class="header style-1 color-1">
       <div class="container">
         <div class="header-wrap relative w-full">
           <div class="header-ct-left flex-left z-5">
@@ -552,7 +552,14 @@
       </div>
     </header>
     <!-- Hero -->
-
+    <section class="flat-map">
+      <div
+        id="map"
+        class="top-map"
+        data-map-zoom="18"
+        data-map-scroll="true"
+      ></div>
+    </section>
     <!-- Tour -->
     <section class="flat-section flat-recommended">
       <div class="container">
@@ -2627,8 +2634,11 @@
     <script>
       Fancybox.bind("[data-fancybox]", {});
     </script>
+    <!-- MapBox -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcjBJ9NhW1znVoxA-CYq86DLkVdWDYhAM"></script>
     <!-- Load  -->
     <script src="js/animate.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/swiper.js"></script>
     <script src="./js/script.js"></script>
   </body>

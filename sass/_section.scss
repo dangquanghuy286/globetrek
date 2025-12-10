@@ -483,7 +483,6 @@
         max-width: 440px;
         height: 100%;
         transform: none;
-        transition: transform 0.3s ease-out;
         left: 0;
         top: 0;
     }
@@ -2991,4 +2990,9 @@
             }
         }
     }
+}
+
+// ==============Map=============================
+.map-listing-item {
+    position: relative;
 }
