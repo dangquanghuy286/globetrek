@@ -67,9 +67,25 @@
     align-items: center;
     gap: 10px;
 
-    .nav-link-item {
-        width: 48px;
+
+    .tf-btn {
+        min-height: auto;
         height: 48px;
+        padding: 14px 16px;
+        background-color: var(--quote-color);
+        width: auto;
+        min-width: auto;
+
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+        }
+    }
+
+    .nav-link-item {
+        padding: 12px;
         border-radius: 10px;
         border: 1px solid var(--stoke-color);
         display: flex;
@@ -447,6 +463,42 @@
     border: 0;
     background: var(--white);
     overflow: hidden;
+}
+
+// ============= Modal Filter===============
+
+.modal-filter {
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+        padding: 32px;
+        overflow-y: auto;
+        background: #fff;
+    }
+
+    .modal-dialog-left {
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        max-width: 440px;
+        height: 100%;
+        transform: none;
+        transition: transform 0.3s ease-out;
+        left: 0;
+        top: 0;
+    }
+
+    &.fade {
+        .modal-dialog-left {
+            transform: translateX(-100%) !important;
+        }
+    }
+
+    &.show {
+        .modal-dialog-left {
+            transform: translateX(0) !important;
+        }
+    }
 }
 
 .flat-account {
