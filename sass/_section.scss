@@ -3057,16 +3057,6 @@
     animation-delay: 0.2s;
 }
 
-
-
-#singleListingMap .marker-container {
-    cursor: default;
-}
-
-#singleListingMap .marker-container {
-    cursor: default;
-}
-
 .marker-card {
     width: 100%;
     height: 100%;
@@ -3409,5 +3399,40 @@
         height: 800px;
     }
 
+
+}
+
+// ==============flat-tour-with-map==============
+.flat-tour-with-map {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+
+    &.ss-list-style {
+        display: block;
+    }
+
+    .wrap-left {
+        height: calc(100vh - 80px);
+
+    }
+
+    .flat-map {
+        width: 100%;
+        height: 100%;
+
+        .top-map {
+            height: 100%;
+        }
+    }
+
+    .wrap-right {
+        padding-bottom: 32px !important;
+        height: calc(100vh - 80px);
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 32px !important;
+    }
 
 }

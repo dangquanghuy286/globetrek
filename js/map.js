@@ -343,118 +343,14 @@ function mainMap() {
     gestureHandling: "cooperative",
     styles: [
       {
-        featureType: "all",
-        elementType: "geometry.fill",
+        elementType: "geometry",
         stylers: [
           {
-            weight: "2.00",
+            color: "#f5f5f5",
           },
         ],
       },
       {
-        featureType: "all",
-        elementType: "geometry.stroke",
-        stylers: [
-          {
-            color: "#9c9c9c",
-          },
-        ],
-      },
-      {
-        featureType: "all",
-        elementType: "labels.text",
-        stylers: [
-          {
-            visibility: "on",
-          },
-        ],
-      },
-      {
-        featureType: "landscape",
-        elementType: "all",
-        stylers: [
-          {
-            color: "#f2f2f2",
-          },
-        ],
-      },
-      {
-        featureType: "landscape",
-        elementType: "geometry.fill",
-        stylers: [
-          {
-            color: "#ffffff",
-          },
-        ],
-      },
-      {
-        featureType: "landscape.man_made",
-        elementType: "geometry.fill",
-        stylers: [
-          {
-            color: "#ffffff",
-          },
-        ],
-      },
-      {
-        featureType: "poi",
-        elementType: "all",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
-      },
-      {
-        featureType: "road",
-        elementType: "all",
-        stylers: [
-          {
-            saturation: -100,
-          },
-          {
-            lightness: 45,
-          },
-        ],
-      },
-      {
-        featureType: "road",
-        elementType: "geometry.fill",
-        stylers: [
-          {
-            color: "#eeeeee",
-          },
-        ],
-      },
-      {
-        featureType: "road",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#7b7b7b",
-          },
-        ],
-      },
-      {
-        featureType: "road",
-        elementType: "labels.text.stroke",
-        stylers: [
-          {
-            color: "#ffffff",
-          },
-        ],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "all",
-        stylers: [
-          {
-            visibility: "simplified",
-          },
-        ],
-      },
-      {
-        featureType: "road.arterial",
         elementType: "labels.icon",
         stylers: [
           {
@@ -463,32 +359,135 @@ function mainMap() {
         ],
       },
       {
-        featureType: "transit",
-        elementType: "all",
+        elementType: "labels.text.fill",
         stylers: [
           {
-            visibility: "off",
+            color: "#616161",
+          },
+        ],
+      },
+      {
+        elementType: "labels.text.stroke",
+        stylers: [
+          {
+            color: "#f5f5f5",
+          },
+        ],
+      },
+      {
+        featureType: "administrative.land_parcel",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#bdbdbd",
+          },
+        ],
+      },
+      {
+        featureType: "poi",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#eeeeee",
+          },
+        ],
+      },
+      {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#757575",
+          },
+        ],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#e5e5e5",
+          },
+        ],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#9e9e9e",
+          },
+        ],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#ffffff",
+          },
+        ],
+      },
+      {
+        featureType: "road.arterial",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#757575",
+          },
+        ],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#dadada",
+          },
+        ],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#616161",
+          },
+        ],
+      },
+      {
+        featureType: "road.local",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#9e9e9e",
+          },
+        ],
+      },
+      {
+        featureType: "transit.line",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#e5e5e5",
+          },
+        ],
+      },
+      {
+        featureType: "transit.station",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#eeeeee",
           },
         ],
       },
       {
         featureType: "water",
-        elementType: "all",
+        elementType: "geometry",
         stylers: [
           {
-            color: "#46bcec",
-          },
-          {
-            visibility: "on",
-          },
-        ],
-      },
-      {
-        featureType: "water",
-        elementType: "geometry.fill",
-        stylers: [
-          {
-            color: "#c8d7d4",
+            color: "#c9c9c9",
           },
         ],
       },
@@ -497,16 +496,7 @@ function mainMap() {
         elementType: "labels.text.fill",
         stylers: [
           {
-            color: "#070707",
-          },
-        ],
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.stroke",
-        stylers: [
-          {
-            color: "#ffffff",
+            color: "#9e9e9e",
           },
         ],
       },
@@ -565,7 +555,7 @@ function mainMap() {
     pane: "floatPane",
     enableEventPropagation: false,
   };
-  var markerCluster, overlay, i;
+  var overlay, i;
   var allMarkers = [];
   var clusterStyles = [{ textColor: "white", url: "", height: 50, width: 50 }];
   var markerIco = '<i class="icon icon-pin"></i>';
@@ -584,7 +574,7 @@ function mainMap() {
       );
     allMarkers.push(overlay);
 
-    // Thêm event click cho marker (mở info box)
+    // Thêm event click cho marker
     google.maps.event.addDomListener(
       overlay,
       "click",
@@ -614,14 +604,6 @@ function mainMap() {
       })(overlay, i)
     );
   }
-
-  // Tạo cluster cho markers
-  var options = {
-    imagePath: "images/",
-    styles: clusterStyles,
-    minClusterSize: 2,
-  };
-  markerCluster = new MarkerClusterer(map, allMarkers, options);
 
   // Event resize map khi thay đổi kích thước cửa sổ
   google.maps.event.addDomListener(window, "resize", function () {

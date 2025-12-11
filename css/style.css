@@ -975,6 +975,10 @@ h5 {
   padding-top: 32px;
 }
 
+.pt-10 {
+  padding-top: 40px;
+}
+
 .pt-12 {
   padding-top: 48px;
 }
@@ -4000,6 +4004,9 @@ h5 {
 }
 .tf-grid-layout.tf-col-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+.tf-grid-layout.tf-col-1 {
+  grid-template-columns: 1fr;
 }
 .tf-grid-layout.tf-col-3 {
   grid-template-columns: repeat(3, 1fr);
@@ -8266,14 +8273,6 @@ h5 {
   animation-delay: 0.2s;
 }
 
-#singleListingMap .marker-container {
-  cursor: default;
-}
-
-#singleListingMap .marker-container {
-  cursor: default;
-}
-
 .marker-card {
   width: 100%;
   height: 100%;
@@ -8567,6 +8566,33 @@ h5 {
 
 .flat-map .top-map {
   height: 800px;
+}
+
+.flat-tour-with-map {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+}
+.flat-tour-with-map.ss-list-style {
+  display: block;
+}
+.flat-tour-with-map .wrap-left {
+  height: calc(100vh - 80px);
+}
+.flat-tour-with-map .flat-map {
+  width: 100%;
+  height: 100%;
+}
+.flat-tour-with-map .flat-map .top-map {
+  height: 100%;
+}
+.flat-tour-with-map .wrap-right {
+  padding-bottom: 32px !important;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 32px !important;
 }
 
 /* --------------------------------------------------------------
