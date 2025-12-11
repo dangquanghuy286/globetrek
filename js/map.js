@@ -6,7 +6,7 @@
 // PHẦN 1: HÀM TẠO DỮ LIỆU VÀ MẢNG VỊ TRÍ CHO MAP CHÍNH
 // ============================================================================
 
-// Hàm tạo HTML gallery dựa trên danh sách ảnh
+// Hàm tạo HTML gallery
 function generateGalleryHtml(galleryUrls = []) {
   if (!galleryUrls.length) return "";
 
@@ -32,7 +32,7 @@ function generateGalleryHtml(galleryUrls = []) {
   return html;
 }
 
-// Hàm tạo HTML video fancybox
+// Hàm tạo HTML video
 function generateVideoHtml(videoUrls = []) {
   if (!videoUrls.length) return "";
 
@@ -57,7 +57,6 @@ function generateVideoHtml(videoUrls = []) {
 
   return html;
 }
-
 // ==========================
 // Hàm chính InfoBox
 // ==========================
@@ -187,13 +186,35 @@ var locations = [
     1,
     "<div></div>",
   ],
+  [
+    locationData(
+      "images/tours/tour-3.png",
+      "toursingle2.html",
+      "Art and tradition: Exploring Bali’s cultural scene",
+      "$7250,00",
+
+      [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+
+      // ========= videoUrls  =========
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"]
+    ),
+
+    40.709295,
+    -74.003099,
+    1,
+    "<div></div>",
+  ],
 ];
 
 // ============================================================================
 // PHẦN 2: HÀM XỬ LÝ ĐÁNH GIÁ (RATING)
 // ============================================================================
 
-// Hàm xử lý đánh giá số (thêm class dựa trên giá trị data-rating)
+// Hàm xử lý đánh giá
 function numericalRating(selector) {
   document.querySelectorAll(selector).forEach((el) => {
     const rating = parseFloat(el.dataset.rating);
@@ -205,7 +226,7 @@ function numericalRating(selector) {
 
 numericalRating(".numerical-rating");
 
-// Hàm xử lý đánh giá sao (tạo HTML sao dựa trên data-rating)
+// Hàm xử lý đánh giá sao
 function starRating(selector) {
   const starsMap = [
     [4.75, "star star star star star"],
@@ -237,7 +258,7 @@ function starRating(selector) {
 starRating(".star-rating");
 
 // ============================================================================
-// PHẦN 3: HÀM TẠO MAP CHÍNH (MAIN MAP)
+// PHẦN 3: HÀM TẠO MAP CHÍNH
 // ============================================================================
 
 function mainMap() {
@@ -255,7 +276,7 @@ function mainMap() {
       ? parseInt(mapScrollAttr)
       : false;
 
-  // Tạo map Google với tùy chỉnh style và options
+  // Tạo map Google với
   var map = new google.maps.Map(mapElement, {
     zoom: zoomLevel,
     scrollwheel: false,
@@ -331,7 +352,7 @@ function mainMap() {
         elementType: "all",
         stylers: [
           {
-            visibility: "off", // Ẩn điểm quan tâm
+            visibility: "off",
           },
         ],
       },
@@ -397,7 +418,7 @@ function mainMap() {
         elementType: "all",
         stylers: [
           {
-            visibility: "off", // Ẩn giao thông công cộng
+            visibility: "off",
           },
         ],
       },
@@ -498,7 +519,7 @@ function mainMap() {
   var markerCluster, overlay, i;
   var allMarkers = [];
   var clusterStyles = [{ textColor: "white", url: "", height: 50, width: 50 }];
-  var markerIco = '<i class="icon icon-pin"></i>'; // Placeholder icon, as original [4] is invalid HTML
+  var markerIco = '<i class="icon icon-pin"></i>';
 
   // Vòng lặp tạo markers từ locations
   for (i = 0; i < locations.length; i++) {
@@ -640,79 +661,7 @@ if (typeof map != "undefined" && map != null) {
 }
 
 // ============================================================================
-// PHẦN 4: HÀM TẠO MAP CHO SINGLE LISTING
-// ============================================================================
-
-function singleListingMap() {
-  var singleMapElement = document.getElementById("singleListingMap");
-  if (!singleMapElement) return; // Thoát nếu không có element
-
-  // Lấy lat/lng từ data attributes
-  var myLatlng = new google.maps.LatLng({
-    lng: parseFloat(singleMapElement.dataset.longitude),
-    lat: parseFloat(singleMapElement.dataset.latitude),
-  });
-
-  // Event click street view
-  var streetView = document.getElementById("streetView");
-  if (streetView) {
-    streetView.addEventListener("click", function (e) {
-      e.preventDefault();
-      single_map.getStreetView().setOptions({
-        visible: true,
-        position: myLatlng,
-      });
-    });
-  }
-
-  // Custom zoom control cho single map (tương tự mainMap)
-  var zoomControlDiv = document.createElement("div");
-  var zoomControl = new ZoomControl(zoomControlDiv, single_map);
-  function ZoomControl(controlDiv, single_map) {
-    zoomControlDiv.index = 1;
-    single_map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(
-      zoomControlDiv
-    );
-    controlDiv.style.padding = "5px";
-    var controlWrapper = document.createElement("div");
-    controlDiv.appendChild(controlWrapper);
-    var zoomInButton = document.createElement("div");
-    zoomInButton.className = "custom-zoom-in";
-    controlWrapper.appendChild(zoomInButton);
-    var zoomOutButton = document.createElement("div");
-    zoomOutButton.className = "custom-zoom-out";
-    controlWrapper.appendChild(zoomOutButton);
-    google.maps.event.addDomListener(zoomInButton, "click", function () {
-      single_map.setZoom(single_map.getZoom() + 1);
-    });
-    google.maps.event.addDomListener(zoomOutButton, "click", function () {
-      single_map.setZoom(single_map.getZoom() - 1);
-    });
-  }
-
-  // Tạo icon cho single marker và thêm marker
-  var singleMapIco =
-    "<i class='" +
-    (singleMapElement.dataset.mapIcon || "icon icon-pin") +
-    "'></i>";
-  new CustomMarker(
-    myLatlng,
-    single_map,
-    {
-      marker_id: "1",
-    },
-    singleMapIco
-  );
-}
-
-// Khởi tạo singleListingMap nếu element tồn tại
-var single_map = document.getElementById("singleListingMap");
-if (typeof single_map != "undefined" && single_map != null) {
-  google.maps.event.addDomListener(window, "load", singleListingMap);
-}
-
-// ============================================================================
-// PHẦN 5: CLASS CUSTOM MARKER (TỪ GOOGLE OVERLAYVIEW)
+// PHẦN 4: CLASS CUSTOM MARKER (TỪ GOOGLE OVERLAYVIEW)
 // ============================================================================
 
 // Class tùy chỉnh cho marker (3D flip effect)
