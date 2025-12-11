@@ -153,49 +153,59 @@ function generateContactBox(options) {
   } = options;
 
   return `
-    <div class="map-listing-item flat-contact-item">
-      <div class="item box-01">
-        <div class="archive-top">
-          <div class="image-box">
-            <img src="${mapImg}" alt="contact image">
-            <div class="infoBox-close ic-01">
-            <i class="icon icon-X "></i>
-          </div>
-          </div>
-        </div>
+  <div class="map-listing-item flat-contact-item">
+    <div class="item box-01">
 
-        <div class="archive-bottom">
-          <h4 class="contact-title font-medium">
-            ${mapTitle}
-          </h4>
-
-          <div class="contact-info-list">
-            <div class="contact-item">
-              <img src="./images/icons/place.svg" alt="icon" class="icon">
-              <div class="info-content">
-                <span class="value">${address}</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <img src="./images/icons/phone-call.svg" alt="icon" class="icon">
-              <div class="info-content">
-                <a href="tel:${phone.replace(
-                  /\s/g,
-                  ""
-                )}" class="value info-phone">${phone}</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <img src="./images/icons/mail.svg" alt="icon" class="icon">
-              <div class="info-content">
-                <a href="mailto:${email}" class="value">${email}</a>
-              </div>
-            </div>
-          </div>     
+      <div class="archive-top">
+        <div class="image-box">
+          <img src="${mapImg}" alt="contact image">
+          <div class="infoBox-close ic-01">
+            <i class="icon icon-X"></i>
+          </div>
         </div>
       </div>
+
+      <div class="archive-bottom">
+        <h4 class="contact-title font-medium">
+          ${mapTitle}
+        </h4>
+
+        <div class="contact-info-list">
+
+          <div class="contact-item">
+            <img src="./images/icons/place.svg" alt="icon" class="icon">
+            <div class="info-content">
+              <span class="value">${address}</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <img src="./images/icons/phone-call.svg" alt="icon" class="icon">
+            <div class="info-content">
+              <a href="tel:${phone.replace(
+                /\s/g,
+                ""
+              )}" class="value info-phone">
+                ${phone}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <img src="./images/icons/mail.svg" alt="icon" class="icon">
+            <div class="info-content">
+              <a href="mailto:${email}" class="value">
+                ${email}
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  `;
+  </div>
+`;
 }
 
 // ============================================================================
