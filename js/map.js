@@ -20,7 +20,7 @@ function generateGalleryHtml(galleryUrls = []) {
     </a>
   `;
 
-  // Các ảnh còn lại -> hidden
+  // Còn lại -> hidden
   for (let i = 1; i < galleryUrls.length; i++) {
     html += `
       <a data-fancybox="gallery1" 
@@ -66,7 +66,12 @@ function locationData(
   mapTitle,
   price,
   galleryUrls = [],
-  videoUrls = []
+  videoUrls = [],
+  rate = 5,
+  reviewCount = 0,
+  place = "Unknown",
+  totalPeople = 20,
+  totalDay = 4
 ) {
   const galleryHtml = generateGalleryHtml(galleryUrls);
   const videoHtml = generateVideoHtml(videoUrls);
@@ -101,11 +106,11 @@ function locationData(
           <div class="content-top">
             <div class="rating">
               <ul class="list-star">
-                ${"<li class='icon icon-star'></li>".repeat(5)}
+                ${"<li class='icon icon-star'></li>".repeat(Math.round(rate))}
               </ul>
               <div class="rate">
-                <div class="total-rate">5</div>
-                <div class="review">(1.100)</div>
+                <div class="total-rate">${rate}</div>
+                <div class="review">(${reviewCount.toLocaleString()})</div>
               </div>
             </div>
           </div>
@@ -119,18 +124,18 @@ function locationData(
           <div class="content-info-middle">
             <div class="info person">
               <img src="images/icons/users.svg" alt="icon" class="icon">
-              <span class="total-people">20 People</span>
+              <span class="total-people">${totalPeople} People</span>
             </div>
             <div class="info date">
               <img src="./images/icons/calendar.svg" alt="icon" class="icon">
-              <span class="total-day">4 days</span>
+              <span class="total-day">${totalDay} days</span>
             </div>
           </div>
 
           <div class="content-bottom">
             <div class="address">
               <img src="./images/icons/place.svg" alt="icon" class="icon">
-              <span class="location">Las Vegas</span>
+              <span class="location">${place}</span>
             </div>
             <h5 class="price">${price}</h5>
           </div>
@@ -148,114 +153,158 @@ var locations = [
       "toursingle1.html",
       "Art and tradition: Exploring Bali’s cultural scene",
       "$7250,00",
-
       [
         "images/gallery/img1.jpg",
         "images/gallery/img2.jpg",
         "images/gallery/img3.jpg",
       ],
-
-      // ========= videoUrls  =========
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"]
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.7,
+      892,
+      "Bali",
+      30,
+      7
     ),
-
     40.711536,
     -73.994601,
     1,
     "<div></div>",
   ],
+
   [
     locationData(
       "images/tours/tour-2.png",
       "toursingle2.html",
       "Art and tradition: Exploring Bali’s cultural scene",
       "$7250,00",
-
       [
         "images/gallery/img1.jpg",
         "images/gallery/img2.jpg",
         "images/gallery/img3.jpg",
       ],
-
-      // ========= videoUrls  =========
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"]
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.6,
+      540,
+      "New York",
+      100,
+      4
     ),
-
     40.711536,
     -74,
     1,
     "<div></div>",
   ],
+
   [
     locationData(
       "images/tours/tour-3.png",
-      "toursingle2.html",
-      "Art and tradition: Exploring Bali’s cultural scene",
-      "$7250,00",
-
+      "toursingle3.html",
+      "Explore Brooklyn local life",
+      "$6800,00",
       [
         "images/gallery/img1.jpg",
         "images/gallery/img2.jpg",
         "images/gallery/img3.jpg",
       ],
-
-      // ========= videoUrls  =========
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"]
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.8,
+      1230,
+      "Brooklyn"
     ),
-
     40.709295,
     -74.003099,
     1,
     "<div></div>",
   ],
+
+  [
+    locationData(
+      "images/tours/tour-4.png",
+      "toursingle4.html",
+      "Discover New York hidden gems",
+      "$5300,00",
+      [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.9,
+      2100,
+      "Manhattan"
+    ),
+    40.71367192098294,
+    -73.99764924560291,
+    1,
+    "<div></div>",
+  ],
+
+  [
+    locationData(
+      "images/tours/tour-5.png",
+      "toursingle5.html",
+      "Historical Manhattan walking tour",
+      "$4800,00",
+      [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.5,
+      870,
+      "Manhattan"
+    ),
+    40.7122,
+    -74.0025,
+    1,
+    "<div></div>",
+  ],
+
+  [
+    locationData(
+      "images/tours/tour-6.png",
+      "toursingle6.html",
+      "Skyline view: NYC cityscape adventure",
+      "$6200,00",
+      [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.7,
+      1430,
+      "New York City"
+    ),
+    40.7089,
+    -74.0058,
+    1,
+    "<div></div>",
+  ],
+
+  [
+    locationData(
+      "images/tours/tour-7.png",
+      "toursingle7.html",
+      "Brooklyn bridge photography tour",
+      "$4500,00",
+      [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      4.9,
+      3050,
+      "Brooklyn Bridge"
+    ),
+    40.7103,
+    -73.9977,
+    1,
+    "<div></div>",
+  ],
 ];
-
-// ============================================================================
-// PHẦN 2: HÀM XỬ LÝ ĐÁNH GIÁ (RATING)
-// ============================================================================
-
-// Hàm xử lý đánh giá
-function numericalRating(selector) {
-  document.querySelectorAll(selector).forEach((el) => {
-    const rating = parseFloat(el.dataset.rating);
-    if (rating >= 4) el.classList.add("high");
-    else if (rating >= 3) el.classList.add("mid");
-    else el.classList.add("low");
-  });
-}
-
-numericalRating(".numerical-rating");
-
-// Hàm xử lý đánh giá sao
-function starRating(selector) {
-  const starsMap = [
-    [4.75, "star star star star star"],
-    [4.25, "star star star star star half"],
-    [3.75, "star star star star star empty"],
-    [3.25, "star star star star half star empty"],
-    [2.75, "star star star star empty star empty"],
-    [2.25, "star star star half star empty star empty"],
-    [1.75, "star star star empty star empty star empty"],
-    [1.25, "star star half star empty star empty star empty"],
-    [0, "star star empty star empty star empty star empty"],
-  ];
-
-  document.querySelectorAll(selector).forEach((el) => {
-    const rating = parseFloat(el.dataset.rating);
-
-    for (let [min, layout] of starsMap) {
-      if (rating >= min) {
-        el.innerHTML = layout
-          .split(" ")
-          .map((cls) => `<span class="${cls}"></span>`)
-          .join("");
-        break;
-      }
-    }
-  });
-}
-
-starRating(".star-rating");
 
 // ============================================================================
 // PHẦN 3: HÀM TẠO MAP CHÍNH
@@ -661,10 +710,10 @@ if (typeof map != "undefined" && map != null) {
 }
 
 // ============================================================================
-// PHẦN 4: CLASS CUSTOM MARKER (TỪ GOOGLE OVERLAYVIEW)
+// PHẦN 4: CLASS CUSTOM MARKER
 // ============================================================================
 
-// Class tùy chỉnh cho marker (3D flip effect)
+// Class tùy chỉnh cho marker
 function CustomMarker(latlng, map, args, markerIco) {
   this.latlng = latlng;
   this.args = args;
@@ -707,7 +756,7 @@ CustomMarker.prototype.draw = function () {
     var panes = this.getPanes();
     panes.overlayImage.appendChild(div);
   }
-  // Cập nhật vị trí pixel
+  // Cập nhật vị trí
   var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
   if (point) {
     div.style.left = point.x + "px";
@@ -715,7 +764,7 @@ CustomMarker.prototype.draw = function () {
   }
 };
 
-// Phương thức remove: xóa marker
+// Remove market
 CustomMarker.prototype.remove = function () {
   if (this.div) {
     this.div.parentNode.removeChild(this.div);
@@ -725,7 +774,7 @@ CustomMarker.prototype.remove = function () {
   }
 };
 
-// Phương thức getPosition: trả về vị trí LatLng
+// Trả về vị trí
 CustomMarker.prototype.getPosition = function () {
   return this.latlng;
 };
