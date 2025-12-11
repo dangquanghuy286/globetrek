@@ -8285,6 +8285,11 @@ h5 {
   margin-left: 160px;
   margin-bottom: -140px;
 }
+#map .infoBox.style-01 {
+  margin: 0;
+  margin-left: -40px;
+  margin-bottom: -20px;
+}
 
 .map-listing-item {
   position: relative;
@@ -8328,6 +8333,48 @@ h5 {
   align-items: stretch;
   border: 1px solid var(--stoke-color);
   overflow: hidden;
+}
+.map-listing-item .item.box-01 {
+  display: block;
+}
+.map-listing-item .item.box-01 .archive-top {
+  width: 100%;
+}
+.map-listing-item .item.box-01 .archive-bottom {
+  padding: 20px;
+}
+.map-listing-item .item.box-01 .image-box {
+  border-radius: 16px 16px 0 0;
+}
+.map-listing-item .item.box-01 .image-box img {
+  width: 359px;
+  height: 202px;
+}
+.map-listing-item .item .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--text-color);
+  font-family: "Outfit", sans-serif;
+}
+.map-listing-item .item .contact-item .info-phone {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.map-listing-item .item .contact-item .icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  filter: brightness(0) saturate(100%) invert(44%) sepia(0%) saturate(2928%) hue-rotate(137deg) brightness(77%) contrast(85%);
+}
+.map-listing-item .item .contact-title {
+  margin-bottom: 12px;
+  font-family: "Outfit", sans-serif;
+}
+.map-listing-item .item .contact-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 .map-listing-item .item .group-meta {
   position: absolute;
@@ -8508,7 +8555,6 @@ h5 {
   height: 32px;
   line-height: 24px;
   font-size: 24px;
-  border-radius: 8px;
   z-index: 9;
   text-align: center;
   border-radius: 50%;
@@ -8569,12 +8615,7 @@ h5 {
 }
 
 .flat-tour-with-map {
-  display: flex;
-  height: 100%;
-  align-items: stretch;
-}
-.flat-tour-with-map.ss-list-style {
-  display: block;
+  overflow: hidden;
 }
 .flat-tour-with-map .wrap-left {
   height: calc(100vh - 80px);

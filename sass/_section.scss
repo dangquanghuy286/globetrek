@@ -3068,6 +3068,12 @@
 #map .infoBox {
     margin-left: 160px;
     margin-bottom: -140px;
+
+    &.style-01 {
+        margin: 0;
+        margin-left: -40px;
+        margin-bottom: -20px;
+    }
 }
 
 .map-listing-item {
@@ -3115,6 +3121,62 @@
     align-items: stretch;
     border: 1px solid var(--stoke-color);
     overflow: hidden;
+
+    &.box-01 {
+        display: block;
+
+        .archive-top {
+            width: 100%;
+
+        }
+
+        .archive-bottom {
+            padding: 20px;
+        }
+
+        .image-box {
+            border-radius: 16px 16px 0 0;
+
+            img {
+
+                width: 359px;
+                height: 202px;
+            }
+        }
+
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--text-color);
+        font-family: "Outfit", sans-serif;
+
+        .info-phone {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            filter: brightness(0) saturate(100%) invert(44%) sepia(0%) saturate(2928%) hue-rotate(137deg) brightness(77%) contrast(85%);
+        }
+    }
+
+    .contact-title {
+        margin-bottom: 12px;
+        font-family: "Outfit", sans-serif;
+    }
+
+    .contact-item:not(:last-child) {
+        margin-bottom: 8px;
+
+    }
 
     .group-meta {
         position: absolute;
@@ -3329,12 +3391,12 @@
         height: 32px;
         line-height: 24px;
         font-size: 24px;
-        border-radius: 8px;
         z-index: 9;
         text-align: center;
         border-radius: 50%;
         cursor: pointer;
         transition: all 300ms ease;
+
 
         :hover {
             background-color: var(--input-color);
@@ -3404,13 +3466,7 @@
 
 // ==============flat-tour-with-map==============
 .flat-tour-with-map {
-    display: flex;
-    height: 100%;
-    align-items: stretch;
-
-    &.ss-list-style {
-        display: block;
-    }
+    overflow: hidden;
 
     .wrap-left {
         height: calc(100vh - 80px);

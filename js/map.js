@@ -1,12 +1,9 @@
-/*var infoBox_ratingType='star-rating';*/
-
 "use strict";
 
 // ============================================================================
 // PHẦN 1: HÀM TẠO DỮ LIỆU VÀ MẢNG VỊ TRÍ CHO MAP CHÍNH
 // ============================================================================
-
-// Hàm tạo HTML gallery
+//  HTML gallery
 function generateGalleryHtml(galleryUrls = []) {
   if (!galleryUrls.length) return "";
 
@@ -20,7 +17,6 @@ function generateGalleryHtml(galleryUrls = []) {
     </a>
   `;
 
-  // Còn lại -> hidden
   for (let i = 1; i < galleryUrls.length; i++) {
     html += `
       <a data-fancybox="gallery1" 
@@ -32,7 +28,7 @@ function generateGalleryHtml(galleryUrls = []) {
   return html;
 }
 
-// Hàm tạo HTML video
+//  HTML video
 function generateVideoHtml(videoUrls = []) {
   if (!videoUrls.length) return "";
 
@@ -57,40 +53,43 @@ function generateVideoHtml(videoUrls = []) {
 
   return html;
 }
-// ==========================
-// Hàm chính InfoBox
-// ==========================
-function locationData(
-  mapImg,
-  mapURL,
-  mapTitle,
-  price,
-  galleryUrls = [],
-  videoUrls = [],
-  rate = 5,
-  reviewCount = 0,
-  place = "Unknown",
-  totalPeople = 20,
-  totalDay = 4
-) {
+
+// ============================================================================
+// PHẦN 2: HÀM TẠO BOX
+// ============================================================================
+
+// Hàm tạo Tour InfoBox
+// ============Tour=====================
+function generateTourBox(options) {
+  const {
+    mapImg,
+    mapURL,
+    mapTitle,
+    price,
+    galleryUrls = [],
+    videoUrls = [],
+    rate = 5,
+    reviewCount = 0,
+    place = "Unknown",
+    totalPeople = 20,
+    totalDay = 4,
+  } = options;
+
   const galleryHtml = generateGalleryHtml(galleryUrls);
   const videoHtml = generateVideoHtml(videoUrls);
 
   return `
     <div class="map-listing-item flat-tab-recommend">
       <div class="item">
-
         <div class="archive-top">
           <div class="image-box">
             <img src="${mapImg}" alt="image">
-
             <div class="group-meta">
               <div class="tag-meta">
                 <div class="flag-tag">Featured</div>
                 ${galleryHtml}
                 ${videoHtml}
               </div>
-
               <div class="btn-wished">
                 <img src="./images/icons/icon-wishlist.svg" alt="icon" class="icon" />
               </div>
@@ -116,9 +115,7 @@ function locationData(
           </div>
 
           <h5 class="tour-title">
-            <a class="link" href="${mapURL}">
-              ${mapTitle}
-            </a>
+            <a class="link" href="${mapURL}">${mapTitle}</a>
           </h5>
 
           <div class="content-info-middle">
@@ -140,182 +137,195 @@ function locationData(
             <h5 class="price">${price}</h5>
           </div>
         </div>
-
       </div>
     </div>
   `;
 }
 
-var locations = [
-  [
-    locationData(
-      "images/tours/tour-1.png",
-      "toursingle1.html",
-      "Art and tradition: Exploring Bali’s cultural scene",
-      "$7250,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.7,
-      892,
-      "Bali",
-      30,
-      7
-    ),
-    40.711536,
-    -73.994601,
-    1,
-    "<div></div>",
-  ],
+// Hàm tạo Contact InfoBox
+function generateContactBox(options) {
+  const {
+    mapImg,
+    mapTitle,
+    phone = "+1 234 567 890",
+    email = "info@example.com",
+    address = "Unknown",
+  } = options;
 
-  [
-    locationData(
-      "images/tours/tour-2.png",
-      "toursingle2.html",
-      "Art and tradition: Exploring Bali’s cultural scene",
-      "$7250,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.6,
-      540,
-      "New York",
-      100,
-      4
-    ),
-    40.711536,
-    -74,
-    1,
-    "<div></div>",
-  ],
+  return `
+    <div class="map-listing-item flat-contact-item">
+      <div class="item box-01">
+        <div class="archive-top">
+          <div class="image-box">
+            <img src="${mapImg}" alt="contact image">
+            <div class="infoBox-close ic-01">
+            <i class="icon icon-X "></i>
+          </div>
+          </div>
+        </div>
 
-  [
-    locationData(
-      "images/tours/tour-3.png",
-      "toursingle3.html",
-      "Explore Brooklyn local life",
-      "$6800,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.8,
-      1230,
-      "Brooklyn"
-    ),
-    40.709295,
-    -74.003099,
-    1,
-    "<div></div>",
-  ],
+        <div class="archive-bottom">
+          <h4 class="contact-title font-medium">
+            ${mapTitle}
+          </h4>
 
-  [
-    locationData(
-      "images/tours/tour-4.png",
-      "toursingle4.html",
-      "Discover New York hidden gems",
-      "$5300,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.9,
-      2100,
-      "Manhattan"
-    ),
-    40.71367192098294,
-    -73.99764924560291,
-    1,
-    "<div></div>",
-  ],
+          <div class="contact-info-list">
+            <div class="contact-item">
+              <img src="./images/icons/place.svg" alt="icon" class="icon">
+              <div class="info-content">
+                <span class="value">${address}</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="./images/icons/phone-call.svg" alt="icon" class="icon">
+              <div class="info-content">
+                <a href="tel:${phone.replace(
+                  /\s/g,
+                  ""
+                )}" class="value info-phone">${phone}</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="./images/icons/mail.svg" alt="icon" class="icon">
+              <div class="info-content">
+                <a href="mailto:${email}" class="value">${email}</a>
+              </div>
+            </div>
+          </div>     
+        </div>
+      </div>
+    </div>
+  `;
+}
 
-  [
-    locationData(
-      "images/tours/tour-5.png",
-      "toursingle5.html",
-      "Historical Manhattan walking tour",
-      "$4800,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.5,
-      870,
-      "Manhattan"
-    ),
-    40.7122,
-    -74.0025,
-    1,
-    "<div></div>",
-  ],
+// ============================================================================
+// BoxType
+// ============================================================================
 
-  [
-    locationData(
-      "images/tours/tour-6.png",
-      "toursingle6.html",
-      "Skyline view: NYC cityscape adventure",
-      "$6200,00",
-      [
-        "images/gallery/img1.jpg",
-        "images/gallery/img2.jpg",
-        "images/gallery/img3.jpg",
-      ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.7,
-      1430,
-      "New York City"
-    ),
-    40.7089,
-    -74.0058,
-    1,
-    "<div></div>",
-  ],
+function locationData(options) {
+  const { boxType = "tour" } = options;
 
-  [
-    locationData(
-      "images/tours/tour-7.png",
-      "toursingle7.html",
-      "Brooklyn bridge photography tour",
-      "$4500,00",
-      [
+  switch (boxType) {
+    case "contact":
+      return generateContactBox(options);
+    case "tour":
+    default:
+      return generateTourBox(options);
+  }
+}
+
+// ============================================================================
+// DỮ LIỆU LOCATIONS
+// ============================================================================
+
+var allLocations = [
+  // Tour Box
+  {
+    data: {
+      boxType: "tour",
+      mapImg: "images/tours/tour-1.png",
+      mapURL: "toursingle1.html",
+      mapTitle: "Art and tradition: Exploring Bali's cultural scene",
+      price: "$7250,00",
+      galleryUrls: [
         "images/gallery/img1.jpg",
         "images/gallery/img2.jpg",
         "images/gallery/img3.jpg",
       ],
-      ["https://www.youtube.com/embed/tgbNymZ7vqY"],
-      4.9,
-      3050,
-      "Brooklyn Bridge"
-    ),
-    40.7103,
-    -73.9977,
-    1,
-    "<div></div>",
-  ],
+      videoUrls: ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      rate: 4.7,
+      reviewCount: 892,
+      place: "Bali",
+      totalPeople: 30,
+      totalDay: 7,
+    },
+    lat: 40.711536,
+    lng: -73.994601,
+  },
+
+  // Tour Box
+  {
+    data: {
+      boxType: "tour",
+      mapImg: "images/tours/tour-4.png",
+      mapURL: "toursingle4.html",
+      mapTitle: "Discover New York hidden gems",
+      price: "$5300,00",
+      galleryUrls: [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      videoUrls: ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      rate: 4.9,
+      reviewCount: 2100,
+      place: "Manhattan",
+    },
+    lat: 40.71367192098294,
+    lng: -73.99764924560291,
+  },
+  // Tour Box
+  {
+    data: {
+      boxType: "tour",
+      mapImg: "images/tours/tour-7.png",
+      mapURL: "toursingle7.html",
+      mapTitle: "Brooklyn bridge photography tour",
+      price: "$4500,00",
+      galleryUrls: [
+        "images/gallery/img1.jpg",
+        "images/gallery/img2.jpg",
+        "images/gallery/img3.jpg",
+      ],
+      videoUrls: ["https://www.youtube.com/embed/tgbNymZ7vqY"],
+      rate: 4.9,
+      reviewCount: 3050,
+      place: "Brooklyn Bridge",
+      totalPeople: 15,
+      totalDay: 1,
+    },
+    lat: 40.7103,
+    lng: -73.9977,
+  },
+  // Contact Box
+  {
+    data: {
+      boxType: "contact",
+      mapImg: "images/tours/tour-9.png",
+      mapURL: "contact-single2.html",
+      mapTitle: "Office address",
+      phone: "(229) 555-0109",
+      email: "themesflat@gmail.com",
+      address: "102 Ingraham St, Brooklyn, NY 11237",
+    },
+    lat: 15.917105,
+    lng: 108.269265,
+  },
 ];
+
+// Hàm tạo locations dựa trên boxType
+function createLocationsByType(selectedType = "tour") {
+  return allLocations
+    .filter((loc) => loc.data.boxType === selectedType)
+    .map((loc) => [locationData(loc.data), loc.lat, loc.lng, 1, "<div></div>"]);
+}
 
 // ============================================================================
 // PHẦN 3: HÀM TẠO MAP CHÍNH
 // ============================================================================
 
 function mainMap() {
-  var ib = new InfoBox(); // Khởi tạo InfoBox cho popup
+  var ib = new InfoBox();
 
   var mapElement = document.getElementById("map");
   var mapZoomAttr = mapElement ? mapElement.dataset.mapZoom : null;
   var mapScrollAttr = mapElement ? mapElement.dataset.mapScroll : null;
+  var boxTypeAttr = mapElement ? mapElement.dataset.boxType : null;
+  var centerLatAttr = mapElement ? mapElement.dataset.centerLat : null;
+  var centerLngAttr = mapElement ? mapElement.dataset.centerLng : null;
+  var infoBoxStyleAttr = mapElement ? mapElement.dataset.infoBoxStyle : null;
+  var infoBoxStyle = infoBoxStyleAttr || "";
+
   var zoomLevel =
     mapZoomAttr !== undefined && mapZoomAttr !== null
       ? parseInt(mapZoomAttr)
@@ -324,12 +334,37 @@ function mainMap() {
     mapScrollAttr !== undefined && mapScrollAttr !== null
       ? parseInt(mapScrollAttr)
       : false;
+  var selectedBoxType = boxTypeAttr || "tour";
 
-  // Tạo map Google với
+  // Fallback về New York nếu không có data
+  var defaultLat = 40.709295;
+  var defaultLng = -74.003099;
+  var centerLat =
+    centerLatAttr !== undefined && centerLatAttr !== null
+      ? parseFloat(centerLatAttr)
+      : defaultLat;
+  var centerLng =
+    centerLngAttr !== undefined && centerLngAttr !== null
+      ? parseFloat(centerLngAttr)
+      : defaultLng;
+
+  // Tạo locations
+  var locations = createLocationsByType(selectedBoxType);
+
+  // Tự động center vào trung bình locations
+  if (locations.length > 0) {
+    var avgLat =
+      locations.reduce((sum, loc) => sum + loc[1], 0) / locations.length;
+    var avgLng =
+      locations.reduce((sum, loc) => sum + loc[2], 0) / locations.length;
+    centerLat = avgLat;
+    centerLng = avgLng;
+  }
+
   var map = new google.maps.Map(mapElement, {
     zoom: zoomLevel,
     scrollwheel: false,
-    center: new google.maps.LatLng(40.709295, -74.003099),
+    center: new google.maps.LatLng(centerLat, centerLng),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoomControl: true,
     zoomControlOptions: {
@@ -344,170 +379,97 @@ function mainMap() {
     styles: [
       {
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#f5f5f5",
-          },
-        ],
+        stylers: [{ color: "#f5f5f5" }],
       },
       {
         elementType: "labels.icon",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [{ visibility: "off" }],
       },
       {
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#616161",
-          },
-        ],
+        stylers: [{ color: "#616161" }],
       },
       {
         elementType: "labels.text.stroke",
-        stylers: [
-          {
-            color: "#f5f5f5",
-          },
-        ],
+        stylers: [{ color: "#f5f5f5" }],
       },
       {
         featureType: "administrative.land_parcel",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#bdbdbd",
-          },
-        ],
+        stylers: [{ color: "#bdbdbd" }],
       },
       {
         featureType: "poi",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#eeeeee",
-          },
-        ],
+        stylers: [{ color: "#eeeeee" }],
       },
       {
         featureType: "poi",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#757575",
-          },
-        ],
+        stylers: [{ color: "#757575" }],
       },
       {
         featureType: "poi.park",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#e5e5e5",
-          },
-        ],
+        stylers: [{ color: "#e5e5e5" }],
       },
       {
         featureType: "poi.park",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e",
-          },
-        ],
+        stylers: [{ color: "#9e9e9e" }],
       },
       {
         featureType: "road",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#ffffff",
-          },
-        ],
+        stylers: [{ color: "#ffffff" }],
       },
       {
         featureType: "road.arterial",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#757575",
-          },
-        ],
+        stylers: [{ color: "#757575" }],
       },
       {
         featureType: "road.highway",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#dadada",
-          },
-        ],
+        stylers: [{ color: "#dadada" }],
       },
       {
         featureType: "road.highway",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#616161",
-          },
-        ],
+        stylers: [{ color: "#616161" }],
       },
       {
         featureType: "road.local",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e",
-          },
-        ],
+        stylers: [{ color: "#9e9e9e" }],
       },
       {
         featureType: "transit.line",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#e5e5e5",
-          },
-        ],
+        stylers: [{ color: "#e5e5e5" }],
       },
       {
         featureType: "transit.station",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#eeeeee",
-          },
-        ],
+        stylers: [{ color: "#eeeeee" }],
       },
       {
         featureType: "water",
         elementType: "geometry",
-        stylers: [
-          {
-            color: "#c9c9c9",
-          },
-        ],
+        stylers: [{ color: "#c9c9c9" }],
       },
       {
         featureType: "water",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e",
-          },
-        ],
+        stylers: [{ color: "#9e9e9e" }],
       },
     ],
   });
 
   // ============================================================================
-  // PHẦN 3.1: EVENT LISTENER CHO HOVER LISTING ITEM VÀ MARKER
+  // EVENT LISTENER CHO HOVER LISTING ITEM VÀ MARKER
   // ============================================================================
 
-  // Convert mouseover/mouseout cho .listing-item-container (hiệu ứng hover với marker)
   var listingContainers = document.querySelectorAll(".listing-item-container");
   listingContainers.forEach(function (container) {
     container.addEventListener("mouseover", function () {
@@ -520,7 +482,6 @@ function mainMap() {
         if (marker_div) {
           marker_div.classList.add("clicked");
 
-          // Separate mouseout listener (xử lý rời chuột)
           var mouseoutHandler = function () {
             if (!marker_div.classList.contains("infoBox-opened")) {
               marker_div.classList.remove("clicked");
@@ -534,7 +495,7 @@ function mainMap() {
   });
 
   // ============================================================================
-  // PHẦN 3.2: TẠO INFOBOX VÀ MARKERS CHO MAP
+  // TẠO INFOBOX VÀ MARKERS
   // ============================================================================
 
   var boxText = document.createElement("div");
@@ -547,7 +508,7 @@ function mainMap() {
     maxWidth: 0,
     pixelOffset: new google.maps.Size(-134, -55),
     zIndex: null,
-    boxStyle: { width: "580px" },
+    boxStyle: { maxWidth: "580px" },
     closeBoxMargin: "0",
     closeBoxURL: "",
     infoBoxClearance: new google.maps.Size(25, 25),
@@ -557,10 +518,8 @@ function mainMap() {
   };
   var overlay, i;
   var allMarkers = [];
-  var clusterStyles = [{ textColor: "white", url: "", height: 50, width: 50 }];
   var markerIco = '<i class="icon icon-pin"></i>';
 
-  // Vòng lặp tạo markers từ locations
   for (i = 0; i < locations.length; i++) {
     var overlaypositions = new google.maps.LatLng(
         locations[i][1],
@@ -574,7 +533,6 @@ function mainMap() {
       );
     allMarkers.push(overlay);
 
-    // Thêm event click cho marker
     google.maps.event.addDomListener(
       overlay,
       "click",
@@ -586,6 +544,11 @@ function mainMap() {
           ib.open(map, overlay);
           currentInfobox = locations[i][3];
           google.maps.event.addListener(ib, "domready", function () {
+            var infoBoxDiv = document.querySelector(".infoBox");
+            if (infoBoxDiv && infoBoxStyle) {
+              infoBoxDiv.classList.add(infoBoxStyle);
+            }
+
             var closeButtons = document.querySelectorAll(".infoBox-close");
             closeButtons.forEach(function (btn) {
               btn.addEventListener("click", function (e) {
@@ -605,7 +568,6 @@ function mainMap() {
     );
   }
 
-  // Event resize map khi thay đổi kích thước cửa sổ
   google.maps.event.addDomListener(window, "resize", function () {
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
@@ -613,10 +575,9 @@ function mainMap() {
   });
 
   // ============================================================================
-  // PHẦN 3.3: CUSTOM ZOOM CONTROL VÀ EVENT KHÁC
+  // CUSTOM ZOOM CONTROL
   // ============================================================================
 
-  // Tạo custom zoom control
   var zoomControlDiv = document.createElement("div");
   var zoomControl = new ZoomControl(zoomControlDiv, map);
   function ZoomControl(controlDiv, map) {
@@ -640,7 +601,6 @@ function mainMap() {
     });
   }
 
-  // Toggle scroll wheel cho map
   var scrollEnabling = document.getElementById("scrollEnabling");
   if (scrollEnabling) {
     scrollEnabling.addEventListener("click", function (e) {
@@ -654,7 +614,6 @@ function mainMap() {
     });
   }
 
-  // Event geolocation (tìm vị trí hiện tại)
   var geoLocation = document.getElementById("geoLocation");
   var locationLinks = document.querySelectorAll(".input-with-icon.location a");
   if (geoLocation) {
@@ -670,7 +629,6 @@ function mainMap() {
     });
   });
 
-  // Hàm geolocate sử dụng navigator.geolocation
   function geolocate() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -685,17 +643,15 @@ function mainMap() {
   }
 }
 
-// Khởi tạo mainMap nếu element #map tồn tại
 var map = document.getElementById("map");
 if (typeof map != "undefined" && map != null) {
   google.maps.event.addDomListener(window, "load", mainMap);
 }
 
 // ============================================================================
-// PHẦN 4: CLASS CUSTOM MARKER
+// CLASS CUSTOM MARKER
 // ============================================================================
 
-// Class tùy chỉnh cho marker
 function CustomMarker(latlng, map, args, markerIco) {
   this.latlng = latlng;
   this.args = args;
@@ -704,7 +660,6 @@ function CustomMarker(latlng, map, args, markerIco) {
 }
 CustomMarker.prototype = new google.maps.OverlayView();
 
-// Phương thức draw: vẽ marker lên map
 CustomMarker.prototype.draw = function () {
   var self = this;
   var div = this.div;
@@ -723,7 +678,6 @@ CustomMarker.prototype.draw = function () {
       '<div class="marker-arrow"></div>' +
       "</div>" +
       "</div>";
-    // Event click cho marker (mở info box)
     div.addEventListener("click", function (event) {
       var mapMarkers = document.querySelectorAll(".map-marker-container");
       mapMarkers.forEach(function (marker) {
@@ -738,7 +692,6 @@ CustomMarker.prototype.draw = function () {
     var panes = this.getPanes();
     panes.overlayImage.appendChild(div);
   }
-  // Cập nhật vị trí
   var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
   if (point) {
     div.style.left = point.x + "px";
@@ -746,17 +699,13 @@ CustomMarker.prototype.draw = function () {
   }
 };
 
-// Remove market
 CustomMarker.prototype.remove = function () {
   if (this.div) {
     this.div.parentNode.removeChild(this.div);
     this.div = null;
-    // Note: Xóa class nếu cần (an toàn trong browser hiện đại)
-    if (this.div) this.div.classList.remove("clicked");
   }
 };
 
-// Trả về vị trí
 CustomMarker.prototype.getPosition = function () {
   return this.latlng;
 };
