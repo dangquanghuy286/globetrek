@@ -264,9 +264,6 @@
       }
    }
 
-   .title {
-      font-size: 60px !important;
-   }
 
    .hero {
       .flat-hero {
@@ -392,6 +389,15 @@
 
       .flat-service {
          padding-bottom: 24px !important;
+      }
+   }
+
+   .flat-img-with-contact {
+      flex-direction: column-reverse;
+
+      .wg-content {
+         width: 100% !important;
+         padding: 0 20px !important;
       }
    }
 
