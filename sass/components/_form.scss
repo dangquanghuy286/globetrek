@@ -797,3 +797,62 @@
         }
     }
 }
+
+// ==================Form contact=========
+.flat-contact {
+    position: relative;
+    z-index: 999;
+    margin-top: -222px;
+
+}
+
+.wg-form-contact {
+    padding: 42px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    background-color: var(--white);
+
+    .tf-contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        select,
+        textarea {
+            padding: 16px;
+            border: 1px solid var(--input-color);
+            border-radius: 16px;
+            font-size: 16px;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+            margin-bottom: 12px;
+            color: var(--heading-color);
+        }
+    }
+
+    .full {
+        grid-column: span 2;
+    }
+
+    .submit-btn {
+        background: #d89c2b;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+    }
+}

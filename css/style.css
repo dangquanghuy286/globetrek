@@ -326,6 +326,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 textarea,
+select,
 input[type=text],
 input[type=password],
 input[type=datetime],
@@ -362,6 +363,8 @@ input[type=color] {
   transition: all 0.3s ease;
 }
 textarea:hover, textarea:focus,
+select:hover,
+select:focus,
 input[type=text]:hover,
 input[type=text]:focus,
 input[type=password]:hover,
@@ -393,6 +396,7 @@ input[type=color]:focus {
   border-color: var(--primary-color) !important;
 }
 textarea.style-2,
+select.style-2,
 input[type=text].style-2,
 input[type=password].style-2,
 input[type=datetime].style-2,
@@ -3061,6 +3065,57 @@ h5 {
 }
 .sidebar-filter .widget-people-tour .counter {
   padding: 10px;
+}
+
+.flat-contact {
+  position: relative;
+  z-index: 999;
+  margin-top: -222px;
+}
+
+.wg-form-contact {
+  padding: 42px;
+  border: 1px solid #ECECEC;
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  background-color: var(--white);
+}
+.wg-form-contact .tf-contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+.wg-form-contact .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.wg-form-contact .form-group input,
+.wg-form-contact .form-group select,
+.wg-form-contact .form-group textarea {
+  padding: 16px;
+  border: 1px solid var(--input-color);
+  border-radius: 16px;
+  font-size: 16px;
+}
+.wg-form-contact .form-group label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 12px;
+  color: var(--heading-color);
+}
+.wg-form-contact .full {
+  grid-column: span 2;
+}
+.wg-form-contact .submit-btn {
+  background: #d89c2b;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
 }
 
 .breadcrumb {

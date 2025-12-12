@@ -252,7 +252,6 @@ var allLocations = [
     lat: 40.711536,
     lng: -73.994601,
   },
-
   // Tour Box
   {
     data: {
