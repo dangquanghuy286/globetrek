@@ -9437,6 +9437,15 @@ h5 {
   .modal-filter .modal-dialog-left {
     max-width: 320px;
   }
+  .flat-contact .wg-form-contact {
+    padding: 24px;
+  }
+  .flat-contact .tf-contact-form {
+    grid-template-columns: 1fr;
+  }
+  .flat-contact .tf-contact-form .full {
+    grid-column: span 1;
+  }
 }
 @media (max-width: 575px) {
   .header .header-ct-right {
