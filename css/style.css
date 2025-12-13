@@ -2028,7 +2028,6 @@ h5 {
 
 .subtitle {
   color: var(--text-color);
-  text-transform: capitalize;
   line-height: 140%;
   font-size: 16px;
   font-weight: 400;
@@ -7551,58 +7550,94 @@ h5 {
   width: 48%;
   padding: 60px 0;
 }
-.tf-vacation-hero-v2 .box-info {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info {
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: center;
 }
-.tf-vacation-hero-v2 .box-info .info-item {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item {
   display: flex;
   gap: 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
 }
-.tf-vacation-hero-v2 .box-info .info-item.phone a {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item.phone a {
   font-weight: 700;
   font-size: 30px;
   color: var(--primary-color);
 }
-.tf-vacation-hero-v2 .box-info .info-item.email a {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item.email a {
   color: var(--primary-color);
 }
-.tf-vacation-hero-v2 .box-info .info-item .content {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item .content {
   display: flex;
   gap: 2px;
   flex-direction: column;
 }
-.tf-vacation-hero-v2 .box-info .info-item .icon {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item .icon {
   display: flex;
   justify-content: center;
   align-items: start;
   padding-right: 20px;
   border-right: 1px solid var(--stoke-color);
 }
-.tf-vacation-hero-v2 .box-info .info-item .icon img {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-info .info-item .icon img {
   width: 50px;
   height: 50px;
   font-size: 50px;
   filter: brightness(0) saturate(100%) invert(75%) sepia(4%) saturate(219%) hue-rotate(60deg) brightness(95%) contrast(85%);
   color: #ACAFAB;
 }
-.tf-vacation-hero-v2 .box-images {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-images {
   flex: 1;
   border-radius: 16px;
   overflow: hidden;
 }
-.tf-vacation-hero-v2 .box-images img {
+.tf-vacation-hero-v2 .flat-img-with-contact .box-images img {
   overflow: hidden;
   position: relative;
   width: 100%;
   display: block;
   height: 100%;
   aspect-ratio: 1/1;
+  border-radius: 16px;
+}
+.tf-vacation-hero-v2 .flat-img-with-map {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .box-title {
+  margin-bottom: 24px;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .wg-content {
+  width: 50%;
+  padding: 40px 0;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .wg-content .icon {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  filter: brightness(0) saturate(100%) invert(92%) sepia(79%) saturate(3859%) hue-rotate(317deg) brightness(89%) contrast(91%);
+  color: var(--primary-color);
+}
+.tf-vacation-hero-v2 .flat-img-with-map .feature-list {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .feature-item {
+  display: flex;
+  gap: 8px;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .flat-map {
+  height: 100%;
+}
+.tf-vacation-hero-v2 .flat-img-with-map .flat-map .top-map {
+  height: 430px;
+  width: 620px;
   border-radius: 16px;
 }
 
@@ -8456,9 +8491,11 @@ h5 {
   align-items: stretch;
   border: 1px solid var(--stoke-color);
   overflow: hidden;
+  width: 560px;
 }
 .map-listing-item .item.box-01 {
   display: block;
+  width: 360px;
 }
 .map-listing-item .item.box-01 .archive-top {
   width: 100%;
@@ -8662,61 +8699,6 @@ h5 {
   color: var(--primary-color);
 }
 
-.contact-map-item .inner-box {
-  position: relative;
-  border-radius: 16px;
-  background: var(--white);
-  width: fit-content;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.contact-map-item .infoBox-close {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 32px;
-  height: 32px;
-  line-height: 24px;
-  font-size: 24px;
-  z-index: 9;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 300ms ease;
-}
-.contact-map-item .infoBox-close :hover {
-  background-color: var(--input-color);
-  color: var(--primary-color);
-  transform: rotate(90deg);
-}
-.contact-map-item .content {
-  padding: 20px;
-}
-.contact-map-item .content .title {
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21.86px;
-  color: #1c1c1e;
-  font-family: "Outfit" sans-serif;
-}
-.contact-map-item .content .list-info li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  line-height: 19.6px;
-  color: var(--text-color);
-  font-family: "Outfit" sans-serif;
-}
-.contact-map-item .content .list-info li .icon {
-  font-size: 16px;
-  color: var(--text-color);
-}
-.contact-map-item .content .list-info li:not(:last-child) {
-  margin-bottom: 6px;
-}
-
 .cluster-map-visible {
   text-align: center;
   font-size: 16px !important;
@@ -8757,6 +8739,31 @@ h5 {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 32px !important;
+}
+
+.tf-destination-detail .tf-sw-destination {
+  overflow: hidden;
+}
+.tf-destination-detail .tf-sw-destination .swiper-slide {
+  width: 368px;
+  transition: width 0.3s ease;
+}
+.tf-destination-detail .tf-sw-destination .swiper-slide .group-meta {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.tf-destination-detail .tf-sw-destination .swiper-slide.current-item {
+  width: 748px;
+}
+.tf-destination-detail .tf-sw-destination .swiper-slide.current-item .group-meta {
+  opacity: 1;
+  visibility: visible;
+}
+.tf-destination-detail .tf-sw-destination .destination-post img:not(.icon) {
+  width: 100%;
+  height: 613px;
+  object-fit: cover;
 }
 
 /* --------------------------------------------------------------

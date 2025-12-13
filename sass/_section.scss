@@ -2170,77 +2170,125 @@
             width: 48%;
             padding: 60px 0;
         }
+
+        .box-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+
+            .info-item {
+                display: flex;
+                gap: 20px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+
+                &.phone {
+                    a {
+                        font-weight: 700;
+                        font-size: 30px;
+
+                        color: var(--primary-color);
+                    }
+                }
+
+                &.email {
+                    a {
+                        color: var(--primary-color);
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    gap: 2px;
+                    flex-direction: column;
+                }
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    padding-right: 20px;
+                    border-right: 1px solid var(--stoke-color);
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 50px;
+                        filter: brightness(0) saturate(100%) invert(75%) sepia(4%) saturate(219%) hue-rotate(60deg) brightness(95%) contrast(85%);
+                        color: #ACAFAB;
+                    }
+
+                }
+            }
+
+        }
+
+        .box-images {
+            flex: 1;
+            border-radius: 16px;
+            overflow: hidden;
+
+            img {
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                display: block;
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 16px;
+            }
+
+        }
     }
 
-    .box-info {
+    .flat-img-with-map {
         display: flex;
-        flex-direction: column;
-        gap: 30px;
-        justify-content: center;
+        gap: 40px;
+        align-items: stretch;
 
-        .info-item {
-            display: flex;
-            gap: 20px;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 100%;
+        .box-title {
+            margin-bottom: 24px;
 
-            &.phone {
-                a {
-                    font-weight: 700;
-                    font-size: 30px;
+        }
 
-                    color: var(--primary-color);
-                }
-            }
-
-            &.email {
-                a {
-                    color: var(--primary-color);
-                }
-            }
-
-            .content {
-                display: flex;
-                gap: 2px;
-                flex-direction: column;
-            }
+        .wg-content {
+            width: 50%;
+            padding: 40px 0;
 
             .icon {
-                display: flex;
-                justify-content: center;
-                align-items: start;
-                padding-right: 20px;
-                border-right: 1px solid var(--stoke-color);
-
-                img {
-                    width: 50px;
-                    height: 50px;
-                    font-size: 50px;
-                    filter: brightness(0) saturate(100%) invert(75%) sepia(4%) saturate(219%) hue-rotate(60deg) brightness(95%) contrast(85%);
-                    color: #ACAFAB;
-                }
-
+                width: 20px;
+                height: 20px;
+                font-size: 20px;
+                filter: brightness(0) saturate(100%) invert(92%) sepia(79%) saturate(3859%) hue-rotate(317deg) brightness(89%) contrast(91%);
+                color: var(--primary-color);
             }
         }
 
-    }
+        .feature-list {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
 
-    .box-images {
-        flex: 1;
-        border-radius: 16px;
-        overflow: hidden;
+        .feature-item {
+            display: flex;
+            gap: 8px;
+        }
 
-        img {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            display: block;
+        .flat-map {
             height: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: 16px;
+
+            .top-map {
+                height: 430px;
+                width: 620px;
+                border-radius: 16px;
+            }
         }
     }
+
+
 }
 
 // ==============Category Type=================
@@ -3214,9 +3262,11 @@
     align-items: stretch;
     border: 1px solid var(--stoke-color);
     overflow: hidden;
+    width: 560px;
 
     &.box-01 {
         display: block;
+        width: 360px;
 
         .archive-top {
             width: 100%;
@@ -3466,72 +3516,6 @@
     }
 }
 
-.contact-map-item {
-    .inner-box {
-        position: relative;
-        border-radius: 16px;
-        background: var(--white);
-        width: fit-content;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .infoBox-close {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        width: 32px;
-        height: 32px;
-        line-height: 24px;
-        font-size: 24px;
-        z-index: 9;
-        text-align: center;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 300ms ease;
-
-
-        :hover {
-            background-color: var(--input-color);
-            color: var(--primary-color);
-            transform: rotate(90deg);
-        }
-    }
-
-    .content {
-        padding: 20px;
-
-        .title {
-            margin-bottom: 6px;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 21.86px;
-            color: #1c1c1e;
-            font-family: "Outfit" sans-serif;
-        }
-
-        .list-info {
-            li {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 14px;
-                line-height: 19.6px;
-                color: var(--text-color);
-                font-family: "Outfit" sans-serif;
-
-                .icon {
-                    font-size: 16px;
-                    color: var(--text-color);
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 6px;
-                }
-            }
-        }
-    }
-}
 
 .cluster-map-visible {
     text-align: center;
@@ -3584,4 +3568,36 @@
         padding-right: 32px !important;
     }
 
+}
+
+.tf-destination-detail {
+    .tf-sw-destination {
+        overflow: hidden;
+
+        .swiper-slide {
+            width: 368px;
+            transition: width 0.3s ease;
+
+            .group-meta {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+            }
+
+            &.current-item {
+                width: 748px;
+
+                .group-meta {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .destination-post img:not(.icon) {
+            width: 100%;
+            height: 613px;
+            object-fit: cover;
+        }
+    }
 }

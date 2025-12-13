@@ -218,7 +218,8 @@ function locationData(options) {
   switch (boxType) {
     case "contact":
       return generateContactBox(options);
-    case "tour":
+    case "tour-detail": // Thêm case mới, nhưng dùng generateTourBox (tương tự tour)
+    case "tour": // Giữ nguyên
     default:
       return generateTourBox(options);
   }
@@ -314,9 +315,33 @@ var allLocations = [
 
 // Hàm tạo locations dựa trên boxType
 function createLocationsByType(selectedType = "tour") {
-  return allLocations
-    .filter((loc) => loc.data.boxType === selectedType)
-    .map((loc) => [locationData(loc.data), loc.lat, loc.lng, 1, "<div></div>"]);
+  if (selectedType === "tour-detail") {
+    const detailIndex = parseInt(selectedTypeDetailIndex) || 0;
+    const singleLoc = allLocations[detailIndex];
+    if (singleLoc && singleLoc.data.boxType === "tour") {
+      singleLoc.data.boxType = "tour-detail";
+      return [
+        [
+          locationData(singleLoc.data),
+          singleLoc.lat,
+          singleLoc.lng,
+          1,
+          "<div></div>",
+        ],
+      ];
+    }
+    return []; // Fallback nếu index invalid
+  } else {
+    return allLocations
+      .filter((loc) => loc.data.boxType === selectedType)
+      .map((loc) => [
+        locationData(loc.data),
+        loc.lat,
+        loc.lng,
+        1,
+        "<div></div>",
+      ]);
+  }
 }
 
 // ============================================================================
@@ -330,6 +355,7 @@ function mainMap() {
   var mapZoomAttr = mapElement ? mapElement.dataset.mapZoom : null;
   var mapScrollAttr = mapElement ? mapElement.dataset.mapScroll : null;
   var boxTypeAttr = mapElement ? mapElement.dataset.boxType : null;
+  var detailIndexAttr = mapElement ? mapElement.dataset.detailIndex : null;
   var centerLatAttr = mapElement ? mapElement.dataset.centerLat : null;
   var centerLngAttr = mapElement ? mapElement.dataset.centerLng : null;
   var infoBoxStyleAttr = mapElement ? mapElement.dataset.infoBoxStyle : null;
@@ -344,6 +370,7 @@ function mainMap() {
       ? parseInt(mapScrollAttr)
       : false;
   var selectedBoxType = boxTypeAttr || "tour";
+  var selectedDetailIndex = detailIndexAttr || "0";
 
   // Fallback về New York nếu không có data
   var defaultLat = 40.709295;
@@ -357,10 +384,16 @@ function mainMap() {
       ? parseFloat(centerLngAttr)
       : defaultLng;
 
+  // Truyền index vào hàm create (nếu là tour-detail)
+  if (selectedBoxType === "tour-detail") {
+    // Gán global tạm để hàm create dùng (hoặc truyền param nếu refactor)
+    window.selectedTypeDetailIndex = selectedDetailIndex;
+  }
+
   // Tạo locations
   var locations = createLocationsByType(selectedBoxType);
 
-  // Tự động center vào trung bình locations
+  // Tự động center vào trung bình locations (với 1 item thì center luôn vào item đó)
   if (locations.length > 0) {
     var avgLat =
       locations.reduce((sum, loc) => sum + loc[1], 0) / locations.length;
