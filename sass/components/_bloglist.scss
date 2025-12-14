@@ -473,11 +473,29 @@
         padding: 10px 16px;
         border-radius: 99px;
         border: 1px solid var(--stoke-color);
-        display: inline-block;
+        display: flex;
+        gap: 10px;
+        @include transition3;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            object-fit: cover;
+        }
 
         &:hover {
             color: var(--white);
             background-color: var(--primary-color);
+
+            .icon {
+                color: var(--white);
+                filter: brightness(0) invert(1);
+            }
+
+            .subtitle {
+                color: var(--white) !important;
+            }
         }
     }
 }

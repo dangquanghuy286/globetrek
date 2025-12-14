@@ -2257,25 +2257,10 @@
             width: 50%;
             padding: 40px 0;
 
-            .icon {
-                width: 20px;
-                height: 20px;
-                font-size: 20px;
-                filter: brightness(0) saturate(100%) invert(92%) sepia(79%) saturate(3859%) hue-rotate(317deg) brightness(89%) contrast(91%);
-                color: var(--primary-color);
-            }
+
         }
 
-        .feature-list {
-            display: flex;
-            gap: 12px;
-            flex-direction: column;
-        }
 
-        .feature-item {
-            display: flex;
-            gap: 8px;
-        }
 
         .flat-map {
             height: 100%;
@@ -2290,6 +2275,27 @@
 
 
 }
+
+.feature-list {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+
+    .feature-item {
+        display: flex;
+        gap: 8px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        filter: brightness(0) saturate(100%) invert(92%) sepia(79%) saturate(3859%) hue-rotate(317deg) brightness(89%) contrast(91%);
+        color: var(--primary-color);
+    }
+}
+
+
 
 // ==============Category Type=================
 .flat-types {
@@ -3598,6 +3604,67 @@
             width: 100%;
             height: 613px;
             object-fit: cover;
+        }
+    }
+}
+
+// ================Property=======================
+.box-property-detail {
+    &:not(:last-child) {
+        margin-bottom: 48px;
+    }
+}
+
+.property-specification-item {
+    .info-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        width: 100%;
+        justify-content: flex-start;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 168px;
+
+            .box-icon {
+                border-radius: 16px;
+                background-color: var(--secondary-color);
+
+                .icon {
+                    filter: brightness(0) saturate(100%) invert(92%) sepia(79%) saturate(3859%) hue-rotate(317deg) brightness(89%) contrast(91%);
+                    color: var(--primary-color);
+                    width: 24px;
+                    height: 24px;
+                    font-size: 24px;
+                }
+
+                &:hover {
+                    background-color: var(--primary-color);
+
+                    .icon {
+                        color: var(--white);
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    }
+}
+
+.property-activitties {
+    .tag {
+        .tag-item {
+            padding: 16px;
+            border-radius: 16px;
         }
     }
 }
