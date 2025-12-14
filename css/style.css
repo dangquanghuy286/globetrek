@@ -9642,7 +9642,12 @@ h5 {
     height: 338px !important;
   }
   .tf-destination .swiper-slide .group-meta {
-    left: 12px !important;
+    bottom: 10px;
+    left: 0;
+    padding: 0 10px;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
   }
   .tf-destination .swiper-slide:nth-child(2) .group-meta, .tf-destination .swiper-slide:nth-child(3) .group-meta, .tf-destination .swiper-slide:nth-child(4) .group-meta, .tf-destination .swiper-slide:nth-child(5) .group-meta {
     display: flex !important;
