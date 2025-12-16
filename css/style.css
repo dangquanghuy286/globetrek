@@ -2741,6 +2741,11 @@ h5 {
 }
 .form-search .box-btn-filter .tf-btn.btn-1 {
   padding: 34px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .form-search .box-btn-filter .tf-btn .icon {
   font-size: 24px;
@@ -6478,6 +6483,29 @@ h5 {
 .partner {
   width: 100%;
   overflow: hidden;
+  position: relative;
+}
+.partner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.partner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 .partner .partners-list {
   display: flex;
@@ -6495,6 +6523,11 @@ h5 {
   object-fit: cover;
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .partner .partners-list .partners-item.partner-01:hover {
   filter: brightness(0) saturate(100%) invert(63%) sepia(33%) saturate(725%) hue-rotate(359deg) brightness(100%) contrast(94%);
@@ -6521,6 +6554,11 @@ h5 {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--stoke-color);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .flat-recommended .item:hover {
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
@@ -6881,7 +6919,7 @@ h5 {
   gap: 32px;
   flex-direction: column;
   border-radius: 16px;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .box-icon-benefits.style-row {
   flex-direction: row;
@@ -6889,10 +6927,12 @@ h5 {
 }
 .box-icon-benefits.style-row .wrap-icon {
   padding: 16px;
+  transition: background-color 0.3s ease;
 }
 .box-icon-benefits.style-row .wrap-icon .icon {
   width: 48px;
   height: 48px;
+  transition: transform 0.6s ease-in-out, filter 0.3s ease;
 }
 .box-icon-benefits:hover .wrap-icon {
   background-color: var(--primary-color);
@@ -6989,6 +7029,11 @@ h5 {
 .tf-tour-showcase .item {
   background-color: var(--white);
   border-radius: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .tf-tour-showcase .item .archive-top {
   position: relative;
@@ -7744,9 +7789,6 @@ h5 {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-.box-type.active, .box-type:hover {
-  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
 }
 .box-type.active .icon-box .icon, .box-type:hover .icon-box .icon {
   color: var(--white);
@@ -9130,6 +9172,9 @@ h5 {
   .tf-hero-title .wg-hero-content .content-right {
     padding-left: 0;
   }
+  .slider-control {
+    margin-top: 30px;
+  }
 }
 @media (max-width: 991px) {
   .header .list-nav {
@@ -9314,16 +9359,13 @@ h5 {
   .hero .flat-hero .tab-content .form-search .inner-group .form-group {
     padding: 0;
   }
-  .hero .flat-hero .tab-content .form-search .inner-group .form-group label {
-    text-align: center;
-  }
   .hero .flat-hero .tab-content .form-search .inner-group .form-group .list {
     top: calc(100% + 12px);
   }
   .hero .flat-hero .tab-content .form-search .inner-group .form-group .current {
     padding: 14px;
     border: 1px solid var(--stoke-color);
-    border-radius: 99px;
+    border-radius: 16px;
   }
   .home-4 .wrap-search-link .inner-group,
   .home-5 .wrap-search-link .inner-group {
@@ -9362,6 +9404,9 @@ h5 {
   }
   .tf-vacation-hero.style-04 .content-right {
     padding: 48px 60px;
+  }
+  .tf-vacation-hero .bg-imgwtext {
+    padding: 50px;
   }
   .banner-section {
     padding: 150px 0 !important;
@@ -9522,6 +9567,9 @@ h5 {
   }
   .flat-contact .tf-contact-form .full {
     grid-column: span 1;
+  }
+  .slider-control {
+    margin-top: 20px;
   }
 }
 @media (max-width: 575px) {

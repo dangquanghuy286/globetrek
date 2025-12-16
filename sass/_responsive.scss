@@ -480,6 +480,10 @@
          }
       }
    }
+
+   .slider-control {
+      margin-top: 30px;
+   }
 }
 
 @media (max-width: 991px) {
@@ -767,10 +771,6 @@
                   .form-group {
                      padding: 0;
 
-                     label {
-                        text-align: center;
-
-                     }
 
                      .list {
                         top: calc(100% + 12px);
@@ -779,7 +779,7 @@
                      .current {
                         padding: 14px;
                         border: 1px solid var(--stoke-color);
-                        border-radius: 99px;
+                        border-radius: 16px;
                      }
                   }
                }
@@ -848,6 +848,10 @@
          }
 
 
+      }
+
+      .bg-imgwtext {
+         padding: 50px;
       }
    }
 
@@ -1113,6 +1117,10 @@
       }
 
 
+   }
+
+   .slider-control {
+      margin-top: 20px;
    }
 }
 

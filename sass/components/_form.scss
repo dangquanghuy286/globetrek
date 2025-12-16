@@ -412,7 +412,7 @@
 
             &.btn-1 {
                 padding: 34px;
-
+                @include transition3;
 
             }
 
