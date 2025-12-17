@@ -1119,6 +1119,16 @@
 
    }
 
+   .rotating-badge {
+      width: 150px;
+      height: 150px;
+
+      .icon {
+         width: 34px;
+         height: 52px;
+      }
+   }
+
    .slider-control {
       margin-top: 20px;
    }

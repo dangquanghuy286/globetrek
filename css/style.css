@@ -6492,8 +6492,8 @@ h5 {
   left: 0;
   width: 20px;
   height: 100%;
-  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.95) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
   pointer-events: none;
 }
 .partner::after {
@@ -6503,9 +6503,15 @@ h5 {
   right: 0;
   width: 20px;
   height: 100%;
-  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.95) 20%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
   pointer-events: none;
+}
+.partner.color-1::before {
+  background: linear-gradient(to right, rgb(220, 165, 70) 0%, rgba(220, 165, 70, 0.95) 20%, rgba(220, 165, 70, 0.7) 50%, rgba(220, 165, 70, 0.3) 80%, rgba(220, 165, 70, 0) 100%);
+}
+.partner.color-1::after {
+  background: linear-gradient(to left, rgb(220, 165, 70) 0%, rgba(220, 165, 70, 0.95) 20%, rgba(220, 165, 70, 0.7) 50%, rgba(220, 165, 70, 0.3) 80%, rgba(220, 165, 70, 0) 100%);
 }
 .partner .partners-list {
   display: flex;
@@ -8008,7 +8014,6 @@ h5 {
   background: url("../images/backgronud/bg-transperent.png") no-repeat center center;
   background-size: cover;
   background-color: var(--primary-color);
-  border-radius: 16px;
 }
 
 .bg-second {
@@ -9567,6 +9572,14 @@ h5 {
   }
   .flat-contact .tf-contact-form .full {
     grid-column: span 1;
+  }
+  .rotating-badge {
+    width: 150px;
+    height: 150px;
+  }
+  .rotating-badge .icon {
+    width: 34px;
+    height: 52px;
   }
   .slider-control {
     margin-top: 20px;
