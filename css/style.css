@@ -7796,6 +7796,13 @@ h5 {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.box-type.active, .box-type:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .box-type.active .icon-box .icon, .box-type:hover .icon-box .icon {
   color: var(--white);
 }
@@ -7839,6 +7846,11 @@ h5 {
 }
 .box-type.style-01:hover {
   box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .box-type.style-01:hover .icon-box {
   background-color: var(--primary-color);
@@ -7885,6 +7897,13 @@ h5 {
 .box-type.style-02.bg-6 {
   background-image: url("../images/tours/tour-item/tour-10.png");
 }
+.box-type.style-02:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .box-type.style-02:hover .content {
   position: relative;
   z-index: 2;
@@ -7910,6 +7929,11 @@ h5 {
 }
 .box-type.style-03:hover {
   box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .box-type.style-03:hover .icon-box img {
   filter: brightness(60%);

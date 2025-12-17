@@ -2427,6 +2427,7 @@
 
     &.active,
     &:hover {
+        @include transition3;
 
         .icon-box {
             .icon {
@@ -2473,6 +2474,7 @@
         transform-origin: bottom center;
         z-index: -1;
         border-radius: 16px;
+
     }
 
     &.style-01 {
@@ -2484,6 +2486,7 @@
 
         &:hover {
             box-shadow: none;
+            @include transition3;
 
             .icon-box {
                 background-color: var(--primary-color);
@@ -2550,6 +2553,8 @@
         }
 
         &:hover {
+            @include transition3;
+
             .content {
                 position: relative;
                 z-index: 2;
@@ -2582,6 +2587,7 @@
 
         &:hover {
             box-shadow: none;
+            @include transition3;
 
             .icon-box {
                 img {
