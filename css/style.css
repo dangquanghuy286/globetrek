@@ -8404,6 +8404,14 @@ h5 {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.wg-faq .faq-item.style-01 {
+  padding: 24px 30px;
+  border-radius: 16px;
+  border: 1px solid var(--stoke-color);
+}
+.wg-faq .faq-item.style-01 .faq-top {
+  padding-bottom: 12px;
+}
 .wg-faq .faq-item .faq-top {
   display: flex;
   align-items: center;
