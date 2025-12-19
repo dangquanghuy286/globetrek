@@ -3134,16 +3134,15 @@
         @include transition3;
 
         &.style-01 {
-
             padding: 24px 30px;
             border-radius: 16px;
             border: 1px solid var(--stoke-color);
 
-            .faq-top {
-                padding-bottom: 12px;
+            &.active {
+                .faq-top {
+                    padding-bottom: 12px;
+                }
             }
-
-
         }
 
         .faq-top {
@@ -3152,7 +3151,7 @@
             justify-content: space-between;
             text-transform: capitalize;
             position: relative;
-            padding-bottom: 16px;
+
             color: var(--heading-color);
 
         }
@@ -3186,6 +3185,7 @@
         &.active {
 
             .faq-top {
+                padding-bottom: 16px;
 
                 .question-title,
                 .icon {
@@ -3739,4 +3739,95 @@
             border-radius: 16px;
         }
     }
+}
+
+.property-schedule {
+    .tour-plan-item {
+        padding-bottom: 32px;
+        position: relative;
+        @include transition3;
+
+        &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 32px;
+            bottom: -32px;
+            width: 2px;
+            border-left: 1px dashed var(--primary-color);
+            z-index: 0;
+        }
+
+        &.active {
+
+            .plan-topic {
+
+                .title-plan {
+                    color: var(--primary-color);
+                    @include transition3;
+                }
+
+                .icon-CaretDown {
+                    color: var(--primary-color);
+                    transform: rotate(180deg);
+
+                }
+
+
+            }
+
+
+        }
+    }
+
+    .tour-plan-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .plan-topic {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        @include transition3;
+
+        .title-plan {
+            font-weight: 500;
+        }
+
+
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include transition3;
+            font-size: 18px;
+
+            &.icon-CaretDown {
+                margin-left: auto;
+
+                width: 24px;
+                height: 24px;
+
+
+            }
+
+            &.icon-check {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                color: var(--white);
+
+            }
+        }
+    }
+
+    .plan-content {
+        padding-left: 48px;
+        padding-top: 16px;
+    }
+
+
 }

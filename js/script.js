@@ -657,35 +657,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// ============ FAQ Accordion =================
+// ============ Active Accordion =================
 document.addEventListener("DOMContentLoaded", () => {
-  const faqList = document.querySelectorAll(".faq-item");
+  function initAccordion(itemSelector) {
+    const items = document.querySelectorAll(itemSelector);
 
-  faqList.forEach((item) => {
-    const collapse = item.querySelector(".collapse");
+    items.forEach((item) => {
+      const collapse = item.querySelector(".collapse");
+      if (!collapse) return;
 
-    collapse.addEventListener("show.bs.collapse", () => {
-      // Close other items
-      faqList.forEach((other) => {
-        if (other !== item) {
-          const otherCollapse = other.querySelector(".collapse");
-          const bsCollapse = bootstrap.Collapse.getInstance(otherCollapse);
+      // Set active cho item mở sẵn
+      if (collapse.classList.contains("show")) {
+        item.classList.add("active");
+      }
 
-          if (bsCollapse) {
-            bsCollapse.hide();
+      // Khi mở
+      collapse.addEventListener("show.bs.collapse", () => {
+        // Đóng các item khác
+        items.forEach((other) => {
+          if (other !== item) {
+            const otherCollapse = other.querySelector(".collapse");
+            const instance = bootstrap.Collapse.getInstance(otherCollapse);
+
+            if (instance) {
+              instance.hide();
+            }
+            other.classList.remove("active");
           }
-        }
+        });
+
+        item.classList.add("active");
       });
 
-      // Add active class
-      item.classList.add("active");
+      // Khi đóng
+      collapse.addEventListener("hide.bs.collapse", () => {
+        item.classList.remove("active");
+      });
     });
+  }
 
-    // Remove active class khi đóng
-    collapse.addEventListener("hide.bs.collapse", () => {
-      item.classList.remove("active");
-    });
-  });
+  // INIT FAQ
+  initAccordion(".faq-item");
+
+  // INIT TOUR PLAN / SCHEDULE
+  initAccordion(".property-schedule .tour-plan-item");
 });
 
 // ============Fill=========================

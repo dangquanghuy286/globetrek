@@ -3343,11 +3343,11 @@ h5 {
   visibility: hidden;
   transform: translateY(12px);
   z-index: 999;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .sub-menu::before,
 .mega-menu::before {
@@ -8409,7 +8409,7 @@ h5 {
   border-radius: 16px;
   border: 1px solid var(--stoke-color);
 }
-.wg-faq .faq-item.style-01 .faq-top {
+.wg-faq .faq-item.style-01.active .faq-top {
   padding-bottom: 12px;
 }
 .wg-faq .faq-item .faq-top {
@@ -8418,7 +8418,6 @@ h5 {
   justify-content: space-between;
   text-transform: capitalize;
   position: relative;
-  padding-bottom: 16px;
   color: var(--heading-color);
 }
 .wg-faq .faq-item .question-title {
@@ -8457,6 +8456,9 @@ h5 {
 }
 .wg-faq .faq-item:not(:last-child) {
   margin-bottom: 24px;
+}
+.wg-faq .faq-item.active .faq-top {
+  padding-bottom: 16px;
 }
 .wg-faq .faq-item.active .faq-top .question-title,
 .wg-faq .faq-item.active .faq-top .icon {
@@ -8913,6 +8915,82 @@ h5 {
 .property-activitties .tag .tag-item {
   padding: 16px;
   border-radius: 16px;
+}
+
+.property-schedule .tour-plan-item {
+  padding-bottom: 32px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.property-schedule .tour-plan-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: -32px;
+  width: 2px;
+  border-left: 1px dashed var(--primary-color);
+  z-index: 0;
+}
+.property-schedule .tour-plan-item.active .plan-topic .title-plan {
+  color: var(--primary-color);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.property-schedule .tour-plan-item.active .plan-topic .icon-CaretDown {
+  color: var(--primary-color);
+  transform: rotate(180deg);
+}
+.property-schedule .tour-plan-item:last-child {
+  padding-bottom: 0;
+}
+.property-schedule .plan-topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.property-schedule .plan-topic .title-plan {
+  font-weight: 500;
+}
+.property-schedule .plan-topic .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+.property-schedule .plan-topic .icon.icon-CaretDown {
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+}
+.property-schedule .plan-topic .icon.icon-check {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.property-schedule .plan-content {
+  padding-left: 48px;
+  padding-top: 16px;
 }
 
 /* --------------------------------------------------------------
