@@ -8411,6 +8411,10 @@ h5 {
 .wg-faq .faq-item.style-01.active .faq-top {
   padding-bottom: 12px;
 }
+.wg-faq .faq-item.style-01.active .faq-top .question-title,
+.wg-faq .faq-item.style-01.active .faq-top .icon {
+  color: #5F6C5A;
+}
 .wg-faq .faq-item .faq-top {
   display: flex;
   align-items: center;

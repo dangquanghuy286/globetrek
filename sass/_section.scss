@@ -3143,7 +3143,13 @@
 
                 .faq-top {
                     padding-bottom: 12px;
+
+                    .question-title,
+                    .icon {
+                        color: #5F6C5A;
+                    }
                 }
+
             }
         }
 
