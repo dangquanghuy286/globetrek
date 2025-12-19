@@ -3139,6 +3139,8 @@
             border: 1px solid var(--stoke-color);
 
             &.active {
+                box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+
                 .faq-top {
                     padding-bottom: 12px;
                 }
@@ -3830,4 +3832,40 @@
     }
 
 
+}
+
+.property-map {
+    .flat-map {
+        .top-map {
+            height: 430px;
+            border-radius: 16px;
+        }
+    }
+
+    .location-top {
+        .location-title {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .location-meta {
+            display: flex;
+            gap: 4px;
+
+            .icon {
+                width: 16px;
+                height: 16px;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                filter: brightness(0) saturate(100%) invert(41%) sepia(0%) saturate(1127%) hue-rotate(321deg) brightness(89%) contrast(91%);
+
+            }
+
+            .location-address {
+                font-size: 14px;
+            }
+        }
+    }
 }

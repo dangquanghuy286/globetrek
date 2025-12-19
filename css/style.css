@@ -5726,10 +5726,6 @@ h5 {
   background-color: var(--primary-color);
 }
 
-.flat-map .top-map {
-  height: 800px;
-}
-
 /* ============ Updated noUiSlider CSS ============ */
 .noUi-target {
   direction: ltr;
@@ -8409,6 +8405,9 @@ h5 {
   border-radius: 16px;
   border: 1px solid var(--stoke-color);
 }
+.wg-faq .faq-item.style-01.active {
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+}
 .wg-faq .faq-item.style-01.active .faq-top {
   padding-bottom: 12px;
 }
@@ -8991,6 +8990,31 @@ h5 {
 .property-schedule .plan-content {
   padding-left: 48px;
   padding-top: 16px;
+}
+
+.property-map .flat-map .top-map {
+  height: 430px;
+  border-radius: 16px;
+}
+.property-map .location-top .location-title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.property-map .location-top .location-meta {
+  display: flex;
+  gap: 4px;
+}
+.property-map .location-top .location-meta .icon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0) saturate(100%) invert(41%) sepia(0%) saturate(1127%) hue-rotate(321deg) brightness(89%) contrast(91%);
+}
+.property-map .location-top .location-meta .location-address {
+  font-size: 14px;
 }
 
 /* --------------------------------------------------------------

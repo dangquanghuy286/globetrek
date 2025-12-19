@@ -666,12 +666,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const collapse = item.querySelector(".collapse");
       if (!collapse) return;
 
-      // Set active cho item mở sẵn
       if (collapse.classList.contains("show")) {
         item.classList.add("active");
       }
 
-      // Khi mở
+      // Mở
       collapse.addEventListener("show.bs.collapse", () => {
         // Đóng các item khác
         items.forEach((other) => {
@@ -689,7 +688,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("active");
       });
 
-      // Khi đóng
+      // Đóng
       collapse.addEventListener("hide.bs.collapse", () => {
         item.classList.remove("active");
       });
@@ -699,7 +698,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // INIT FAQ
   initAccordion(".faq-item");
 
-  // INIT TOUR PLAN / SCHEDULE
+  // INIT TOUR PLAN
   initAccordion(".property-schedule .tour-plan-item");
 });
 
