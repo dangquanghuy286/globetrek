@@ -1464,7 +1464,7 @@ h5 {
 }
 
 .gap-3 {
-  gap: 12px;
+  gap: 12px !important;
 }
 
 .gap-4 {
@@ -4730,7 +4730,7 @@ input[type=checkbox]:checked {
   font-size: 12px;
   line-height: 16.8px;
 }
-.list-review-item:not(:last-child) .content {
+.list-review-item .content {
   padding-bottom: 16px;
   margin-bottom: 34px;
   border-bottom: 1px solid var(--stoke-color);
@@ -6794,7 +6794,7 @@ input[type=checkbox]:checked {
 }
 .rating .list-star .icon-star.active,
 .rating .list-star .icon-star.selected {
-  color: #ffa800;
+  color: var(--star-color);
 }
 .rating .rate {
   display: flex;
@@ -9033,6 +9033,60 @@ input[type=checkbox]:checked {
   font-size: 14px;
 }
 
+.property-customer-reviews .wg-review-summary {
+  display: flex;
+  align-items: center;
+  gap: 58px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--stoke-color);
+}
+.property-customer-reviews .rating-breakdown-group {
+  flex: 1;
+  width: 100%;
+}
+.property-customer-reviews .box-breakdown-item .box-head {
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+.property-customer-reviews .box-breakdown-item .box-head .rating {
+  gap: 8px;
+}
+.property-customer-reviews .box-breakdown-item .box-head .rating .total-rate {
+  font-weight: 500;
+}
+.property-customer-reviews .box-breakdown-item .progress {
+  height: 6px;
+  background-color: rgba(95, 108, 90, 0.1490196078);
+}
+.property-customer-reviews .box-breakdown-item .progress .progress-bar {
+  background-color: var(--primary-color);
+  border-radius: 999px;
+}
+.property-customer-reviews .box-breakdown-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.property-customer-reviews .rating-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.property-customer-reviews .rating-summary .rating-score .score-value {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-right: 16px;
+}
+.property-customer-reviews .rating-summary .rating-score .score-max {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--place-holder);
+}
+
 /* --------------------------------------------------------------
    MEDIA QUERIES
    -------------------------------------------------------------- */
@@ -9713,6 +9767,10 @@ input[type=checkbox]:checked {
   }
   .modal-filter .modal-dialog-left {
     max-width: 320px;
+  }
+  .property-customer-reviews .wg-review-summary {
+    flex-direction: column;
+    gap: 24px;
   }
   .flat-contact .wg-form-contact {
     padding: 24px;

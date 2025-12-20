@@ -1103,6 +1103,13 @@
       max-width: 320px;
    }
 
+   .property-customer-reviews {
+      .wg-review-summary {
+         flex-direction: column;
+         gap: 24px;
+      }
+   }
+
    .flat-contact {
       .wg-form-contact {
          padding: 24px;

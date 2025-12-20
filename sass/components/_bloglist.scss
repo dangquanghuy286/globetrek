@@ -625,13 +625,13 @@
         }
     }
 
-    &:not(:last-child) {
-        .content {
-            padding-bottom: 16px;
-            margin-bottom: 34px;
-            border-bottom: 1px solid var(--stoke-color);
-        }
+
+    .content {
+        padding-bottom: 16px;
+        margin-bottom: 34px;
+        border-bottom: 1px solid var(--stoke-color);
     }
+
 
     .box-img-review {
         margin-top: 16px;

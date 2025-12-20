@@ -1164,7 +1164,7 @@
 
         .icon-star.active,
         .icon-star.selected {
-            color: #ffa800;
+            color: var(--star-color);
 
         }
     }
@@ -3880,4 +3880,82 @@
             }
         }
     }
+}
+
+.property-customer-reviews {
+    .wg-review-summary {
+        display: flex;
+        align-items: center;
+        gap: 58px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--stoke-color);
+    }
+
+    .rating-breakdown-group {
+        flex: 1;
+        width: 100%;
+    }
+
+    .box-breakdown-item {
+
+
+        .box-head {
+            display: flex;
+            margin-bottom: 8px;
+            justify-content: space-between;
+
+            .rating {
+                gap: 8px;
+
+                .total-rate {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .progress {
+            height: 6px;
+            background-color: #5F6C5A26;
+
+            .progress-bar {
+                background-color: var(--primary-color);
+                border-radius: 999px;
+            }
+        }
+    }
+
+    .box-breakdown-item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .rating-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .rating-score {
+
+
+
+            .score-value {
+                font-weight: 700;
+                font-size: 70px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: var(--primary-color);
+                margin-right: 16px;
+
+            }
+
+            .score-max {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: var(--place-holder);
+            }
+        }
+    }
+
+
 }

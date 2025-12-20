@@ -765,6 +765,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+// ============Pick Star + Post Form========
 document.addEventListener("DOMContentLoaded", () => {
   // ===== HANDLE STAR RATING =====
   document.querySelectorAll(".list-star").forEach((list) => {
@@ -832,3 +833,99 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((star) => star.classList.remove("active", "selected"));
   });
 });
+// ============Percent Review===============
+const reviewData = [
+  {
+    location: 5,
+    rooms: 4,
+    amenities: 5,
+    price: 4,
+    services: 5,
+    food: 4,
+  },
+  {
+    location: 4,
+    rooms: 4,
+    amenities: 4,
+    price: 3,
+    services: 4,
+    food: 3,
+  },
+  {
+    location: 5,
+    rooms: 5,
+    amenities: 5,
+    price: 4,
+    services: 5,
+    food: 5,
+  },
+];
+document.addEventListener("DOMContentLoaded", () => {
+  const wrap = document.querySelector(".wg-review-summary");
+  if (!wrap) return;
+
+  const maxScore = Number(wrap.dataset.max || 5);
+  const count = reviewData.length;
+
+  // Tính Trung Bình
+  const fields = Object.keys(reviewData[0]);
+
+  const avgByField = {};
+  fields.forEach((field) => {
+    const total = reviewData.reduce((sum, r) => sum + r[field], 0);
+    avgByField[field] = total / count;
+  });
+
+  const totalAvg =
+    Object.values(avgByField).reduce((s, v) => s + v, 0) / fields.length;
+
+  // Tính trung bình và Fix làm tròn sô
+  wrap.querySelector(".score-value").textContent = totalAvg.toFixed(1);
+
+  wrap.querySelector(".rating-count").textContent = count;
+
+  renderStars(
+    wrap.querySelector(".rating-summary .list-star"),
+    Math.floor(totalAvg),
+    maxScore
+  );
+
+  // Trung bình từng hạn mục
+  document.querySelectorAll(".box-breakdown-item").forEach((item) => {
+    const label = item.querySelector("label").textContent.toLowerCase();
+
+    const key = mapLabelToKey(label);
+    if (!key || !avgByField[key]) return;
+
+    const rate = avgByField[key];
+
+    item.querySelector(".total-rate").textContent = rate.toFixed(1);
+
+    renderStars(item.querySelector(".list-star"), Math.floor(rate), maxScore);
+
+    item.querySelector(".progress-bar").style.width =
+      (rate / maxScore) * 100 + "%";
+  });
+});
+
+// Render star
+function renderStars(ul, active, max) {
+  ul.innerHTML = "";
+  for (let i = 1; i <= max; i++) {
+    const li = document.createElement("li");
+    li.className = i <= active ? "icon icon-star" : "icon icon-star ic-empty";
+    ul.appendChild(li);
+  }
+}
+
+function mapLabelToKey(label) {
+  const map = {
+    location: "location",
+    rooms: "rooms",
+    amenities: "amenities",
+    price: "price",
+    services: "services",
+    food: "food",
+  };
+  return map[label] || null;
+}
