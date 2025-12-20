@@ -4737,7 +4737,7 @@ h5 {
   line-height: 16.8px;
 }
 .list-review-item:not(:last-child) .content {
-  padding-bottom: 34px;
+  padding-bottom: 16px;
   margin-bottom: 34px;
   border-bottom: 1px solid var(--stoke-color);
 }
