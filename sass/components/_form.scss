@@ -727,15 +727,18 @@
         background-color: var(--primary-color);
         border-color: var(--primary-color);
         position: relative;
+    }
 
-
-        &::before {
-            content: "\e91b";
-            font-family: "icomoon";
-            font-size: 16px;
-            line-height: 12px;
-            color: var(--white);
-        }
+    &:checked::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 1px;
+        width: 6px;
+        height: 12px;
+        border: solid var(--white);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
     }
 }
 
@@ -801,7 +804,7 @@
 // ==================Form contact=========
 .flat-contact {
     position: relative;
-    z-index: 999;
+    z-index: 10;
     margin-top: -222px;
 
 }

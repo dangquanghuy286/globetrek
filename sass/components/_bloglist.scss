@@ -693,6 +693,28 @@
     .form-wg {
         margin-top: 20px;
     }
+
+    .check-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rating-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 15px;
+
+        .rating {
+            .sub-ip {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+
 }
 
 .comment-form {
@@ -715,7 +737,7 @@
         display: block;
         font-weight: 600;
         margin-bottom: 8px;
-        color: var(--text-color);
+        color: var(--heading-color);
     }
 
 }

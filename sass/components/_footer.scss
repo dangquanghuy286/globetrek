@@ -160,32 +160,7 @@
                     text-decoration: underline;
                 }
 
-                input[type="checkbox"] {
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    border: 1px solid var(--border-icon);
-                    background-color: transparent;
-                    transition: all 0.2s ease;
-                    position: relative;
 
-                    &:checked {
-                        background-color: var(--primary-color);
-                        border-color: var(--primary-color);
-                    }
-
-                    &:checked::after {
-                        content: '';
-                        position: absolute;
-                        left: 5px;
-                        top: 1px;
-                        width: 4px;
-                        height: 8px;
-                        border: solid var(--white);
-                        border-width: 0 2px 2px 0;
-                        transform: rotate(45deg);
-                    }
-                }
 
             }
 
@@ -258,4 +233,21 @@
 .list-social {
     flex-wrap: wrap;
     gap: 12px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid var(--border-icon);
+    background-color: transparent;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:checked {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+
 }

@@ -3014,12 +3014,16 @@ h5 {
   border-color: var(--primary-color);
   position: relative;
 }
-.tf-checkbox:checked::before {
-  content: "\e91b";
-  font-family: "icomoon";
-  font-size: 16px;
-  line-height: 12px;
-  color: var(--white);
+.tf-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .sidebar-filter .filter-result {
@@ -3073,7 +3077,7 @@ h5 {
 
 .flat-contact {
   position: relative;
-  z-index: 999;
+  z-index: 10;
   margin-top: -222px;
 }
 
@@ -3878,30 +3882,6 @@ h5 {
   color: var(--primary-color);
   text-decoration: underline;
 }
-.footer .inner-footer .widget-newseletter .agree-terms input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid var(--border-icon);
-  background-color: transparent;
-  transition: all 0.2s ease;
-  position: relative;
-}
-.footer .inner-footer .widget-newseletter .agree-terms input[type=checkbox]:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-.footer .inner-footer .widget-newseletter .agree-terms input[type=checkbox]:checked::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 4px;
-  height: 8px;
-  border: solid var(--white);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
 .footer .inner-footer .widget-newseletter .action-download a {
   background-color: var(--border-header);
   border: 1px solid var(--border-header);
@@ -3951,6 +3931,20 @@ h5 {
 .list-social {
   flex-wrap: wrap;
   gap: 12px;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid var(--border-icon);
+  background-color: transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+input[type=checkbox]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .box-icon {
@@ -4788,6 +4782,20 @@ h5 {
 .wrap-form-comment .form-wg {
   margin-top: 20px;
 }
+.wrap-form-comment .check-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrap-form-comment .rating-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.wrap-form-comment .rating-group .rating .sub-ip {
+  margin-bottom: 0;
+}
 
 .comment-form {
   max-width: 100%;
@@ -4807,7 +4815,7 @@ h5 {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--text-color);
+  color: var(--heading-color);
 }
 
 .action-btn {
@@ -6783,6 +6791,10 @@ h5 {
 }
 .rating .list-star .ic-empty img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(935%) hue-rotate(197deg) brightness(115%) contrast(79%);
+}
+.rating .list-star .icon-star.active,
+.rating .list-star .icon-star.selected {
+  color: #ffa800;
 }
 .rating .rate {
   display: flex;
@@ -9899,6 +9911,10 @@ h5 {
   }
   .flat-account .form-account {
     padding: 30px !important;
+  }
+  .wrap-form-comment .rating-group {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
   }
   .tf-image-box .tf-image-wrap.item-3 {
     bottom: 15%;

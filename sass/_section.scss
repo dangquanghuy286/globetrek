@@ -1161,6 +1161,12 @@
                 filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(935%) hue-rotate(197deg) brightness(115%) contrast(79%);
             }
         }
+
+        .icon-star.active,
+        .icon-star.selected {
+            color: #ffa800;
+
+        }
     }
 
     .rate {

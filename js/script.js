@@ -765,3 +765,70 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== HANDLE STAR RATING =====
+  document.querySelectorAll(".list-star").forEach((list) => {
+    const stars = list.querySelectorAll(".icon-star");
+    const input = list.parentElement.querySelector('input[type="hidden"]');
+
+    stars.forEach((star) => {
+      const value = star.dataset.value;
+
+      // Hover effect
+      star.addEventListener("mouseenter", () => {
+        stars.forEach((s) => {
+          s.classList.toggle("active", s.dataset.value <= value);
+        });
+      });
+
+      // Remove hover
+      list.addEventListener("mouseleave", () => {
+        stars.forEach((s) => {
+          s.classList.remove("active");
+          s.classList.toggle("selected", s.dataset.value <= input.value);
+        });
+      });
+
+      // Click select
+      star.addEventListener("click", () => {
+        input.value = value;
+
+        stars.forEach((s) => {
+          s.classList.toggle("selected", s.dataset.value <= value);
+        });
+      });
+    });
+  });
+
+  // ===== HANDLE FORM SUBMIT =====
+  const form = document.getElementById("commentForm");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    // Check rating
+    const ratings = [
+      "rating_location",
+      "rating_rooms",
+      "rating_amenities",
+      "rating_price",
+      "rating_services",
+      "rating_food",
+    ];
+
+    for (let rate of ratings) {
+      if (data.get(rate) === "0") {
+        alert("Please rate all categories");
+        return;
+      }
+    }
+
+    // Reset form
+    form.reset();
+    document
+      .querySelectorAll(".icon-star")
+      .forEach((star) => star.classList.remove("active", "selected"));
+  });
+});

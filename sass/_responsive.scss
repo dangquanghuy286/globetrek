@@ -1432,6 +1432,13 @@
       }
    }
 
+   .wrap-form-comment {
+      .rating-group {
+         grid-template-columns: 1fr;
+         margin-bottom: 30px;
+      }
+   }
+
    .tf-image-box {
       .tf-image-wrap {
          &.item-3 {
