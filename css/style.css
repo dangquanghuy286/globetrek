@@ -3152,6 +3152,12 @@ h5 {
   align-items: center;
   justify-content: space-between;
 }
+.tf-form-book .tf-booking-totals h5 {
+  font-weight: 500;
+}
+.tf-form-book .tf-booking-totals .tf-total-value {
+  color: var(--primary-color);
+}
 .tf-form-book .form-group {
   margin-top: 24px;
 }
