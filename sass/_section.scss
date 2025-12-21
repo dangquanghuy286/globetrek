@@ -4022,31 +4022,41 @@
 
             background: var(--white);
             cursor: pointer;
-            transition: all 0.2s;
+            @include transition4;
 
             &:hover:not(.empty):not(.today) {
                 background-color: #F7F7F6;
             }
 
-            /* ===== Empty ===== */
             &.empty {
                 background-color: #F7F7F6;
                 pointer-events: none;
                 cursor: default;
             }
 
-            /* ===== Selected ===== */
-            &.selected {
-                background-color: #F7F7F6;
-            }
 
-            &.today {
+
+            &.today,
+            &.active {
                 background-color: var(--primary-color);
                 color: var(--white);
+                @include transition4;
 
                 .day-name,
                 .day-price {
                     color: var(--white);
+                    @include transition4;
+                }
+            }
+
+            &.active {
+                &:hover {
+                    color: var(--text-color);
+
+                    .day-name,
+                    .day-price {
+                        color: var(--text-color);
+                    }
                 }
             }
         }

@@ -929,10 +929,11 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
+
 // ========Calendar==========
 document.addEventListener("DOMContentLoaded", function () {
   let currentDate = new Date();
-  let selectedDates = [];
+  let activeDate = null;
 
   const calendarData = {
     "2025-12-03": { price: 80 },
@@ -1017,7 +1018,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Highlight today
       if (dateStr === todayStr) dayCell.classList.add("today");
-      if (selectedDates.includes(dateStr)) dayCell.classList.add("selected");
+      // Highlight active
+      if (activeDate === dateStr) dayCell.classList.add("active");
 
       if (dayData) {
         dayCell.innerHTML = `
@@ -1031,8 +1033,17 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-      // Selected
-      dayCell.onclick = () => toggleDate(dateStr, dayCell);
+      dayCell.onclick = () => {
+        document
+          .querySelectorAll(".day-cell.active")
+          .forEach((c) => c.classList.remove("active"));
+        document
+          .querySelectorAll(".day-cell.today")
+          .forEach((c) => c.classList.remove("today"));
+        activeDate = dateStr;
+        dayCell.classList.add("active");
+      };
+
       daysGrid.appendChild(dayCell);
     }
 
@@ -1048,17 +1059,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="day-name">${dayNames[date.getDay()]}</div>
       `;
       daysGrid.appendChild(dayCell);
-    }
-  }
-
-  function toggleDate(dateStr, cell) {
-    const index = selectedDates.indexOf(dateStr);
-    if (index > -1) {
-      selectedDates.splice(index, 1);
-      cell.classList.remove("selected");
-    } else {
-      selectedDates.push(dateStr);
-      cell.classList.add("selected");
     }
   }
 

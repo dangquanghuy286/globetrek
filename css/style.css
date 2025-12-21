@@ -9144,32 +9144,45 @@ input[type=checkbox]:checked {
   align-items: center;
   background: var(--white);
   cursor: pointer;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .wg-calendar .days-grid .day-cell:hover:not(.empty):not(.today) {
   background-color: #F7F7F6;
-}
-.wg-calendar .days-grid .day-cell {
-  /* ===== Empty ===== */
 }
 .wg-calendar .days-grid .day-cell.empty {
   background-color: #F7F7F6;
   pointer-events: none;
   cursor: default;
 }
-.wg-calendar .days-grid .day-cell {
-  /* ===== Selected ===== */
-}
-.wg-calendar .days-grid .day-cell.selected {
-  background-color: #F7F7F6;
-}
-.wg-calendar .days-grid .day-cell.today {
+.wg-calendar .days-grid .day-cell.today, .wg-calendar .days-grid .day-cell.active {
   background-color: var(--primary-color);
   color: var(--white);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .wg-calendar .days-grid .day-cell.today .day-name,
-.wg-calendar .days-grid .day-cell.today .day-price {
+.wg-calendar .days-grid .day-cell.today .day-price, .wg-calendar .days-grid .day-cell.active .day-name,
+.wg-calendar .days-grid .day-cell.active .day-price {
   color: var(--white);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.wg-calendar .days-grid .day-cell.active:hover {
+  color: var(--text-color);
+}
+.wg-calendar .days-grid .day-cell.active:hover .day-name,
+.wg-calendar .days-grid .day-cell.active:hover .day-price {
+  color: var(--text-color);
 }
 .wg-calendar .days-grid .day-number {
   font-weight: 700;
