@@ -1122,4 +1122,158 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderCalendar();
 });
-// ==========Time=============
+
+// =============== BOOKING FORM CALCULATOR ===============
+document.addEventListener("DOMContentLoaded", function () {
+  const bookingForm = document.querySelector(".tf-form-book.booking-form form");
+
+  if (!bookingForm) return;
+
+  // Giá cơ bản
+  const PRICES = {
+    adult: 100,
+    children: 50,
+    servicePerBooking: 20,
+    servicePerPerson: 20,
+  };
+
+  // Lấy các elements
+  const adultInput = bookingForm.querySelector(
+    '.guest-item:nth-child(1) input[type="number"]'
+  );
+  const childrenInput = bookingForm.querySelector(
+    '.guest-item:nth-child(2) input[type="number"]'
+  );
+  const serviceBookingCheckbox = bookingForm.querySelector("#add_sv_booking");
+  const servicePersonCheckbox = bookingForm.querySelector("#add_sv_person");
+  const totalValueElement = bookingForm.querySelector(".tf-total-value");
+  const totalHiddenInput = bookingForm.querySelector(
+    'input[name="total_amount"]'
+  );
+
+  // Hiển thị giá trong subtitle
+  const valueAdultSpan = bookingForm.querySelector(".value-adult");
+  const valueChildrenSpan = bookingForm.querySelector(".value-chidlder");
+
+  // Cập nhật giá hiển thị
+  if (valueAdultSpan) valueAdultSpan.textContent = `$${PRICES.adult}`;
+  if (valueChildrenSpan) valueChildrenSpan.textContent = `$${PRICES.children}`;
+
+  // Hàm tính tổng
+  function calculateTotal() {
+    const adultCount = parseInt(adultInput?.value) || 0;
+    const childrenCount = parseInt(childrenInput?.value) || 0;
+    const totalPeople = adultCount + childrenCount;
+
+    let total = 0;
+
+    // Tính tiền người lớn và trẻ em
+    total += adultCount * PRICES.adult;
+    total += childrenCount * PRICES.children;
+
+    // Thêm dịch vụ per booking
+    if (serviceBookingCheckbox?.checked) {
+      total += PRICES.servicePerBooking;
+    }
+
+    // Thêm dịch vụ per person
+    if (servicePersonCheckbox?.checked) {
+      total += totalPeople * PRICES.servicePerPerson;
+    }
+
+    return total;
+  }
+
+  // Hàm cập nhật hiển thị tổng tiền
+  function updateTotal() {
+    const total = calculateTotal();
+
+    if (totalValueElement) {
+      totalValueElement.textContent = `$${total.toFixed(2)}`;
+    }
+
+    if (totalHiddenInput) {
+      totalHiddenInput.value = total.toFixed(2);
+    }
+  }
+
+  // Gắn sự kiện
+  adultInput?.addEventListener("change", updateTotal);
+  childrenInput?.addEventListener("change", updateTotal);
+  serviceBookingCheckbox?.addEventListener("change", updateTotal);
+  servicePersonCheckbox?.addEventListener("change", updateTotal);
+
+  // Lắng nghe sự kiện click từ nút +/- (đã có trong code cũ)
+  const guestItems = bookingForm.querySelectorAll(".guest-item");
+  guestItems.forEach((item) => {
+    const minus = item.querySelector(".minus");
+    const plus = item.querySelector(".plus");
+
+    minus?.addEventListener("click", () => {
+      setTimeout(updateTotal, 10);
+    });
+
+    plus?.addEventListener("click", () => {
+      setTimeout(updateTotal, 10);
+    });
+  });
+
+  // Xử lý submit form
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validate form
+    const tourDate = bookingForm.querySelector(
+      'input[name="tour_date"]'
+    )?.value;
+    const tourTime = bookingForm.querySelector(
+      'input[name="tour_time"]'
+    )?.value;
+    const adultCount = parseInt(adultInput?.value) || 0;
+    const childrenCount = parseInt(childrenInput?.value) || 0;
+
+    // Kiểm tra các trường bắt buộc
+    if (!tourDate) {
+      alert("Vui lòng chọn ngày!");
+      return;
+    }
+
+    if (!tourTime) {
+      alert("Vui lòng chọn giờ!");
+      return;
+    }
+
+    if (adultCount === 0 && childrenCount === 0) {
+      alert("Vui lòng chọn ít nhất 1 người!");
+      return;
+    }
+
+    // Tạo object dữ liệu booking
+    const bookingData = {
+      tour_date: tourDate,
+      tour_time: tourTime,
+      adult_count: adultCount,
+      children_count: childrenCount,
+      adult_price: PRICES.adult,
+      children_price: PRICES.children,
+      service_per_booking: serviceBookingCheckbox?.checked || false,
+      service_per_person: servicePersonCheckbox?.checked || false,
+      service_booking_price: PRICES.servicePerBooking,
+      service_person_price: PRICES.servicePerPerson,
+      total_amount: calculateTotal().toFixed(2),
+      timestamp: new Date().toISOString(),
+    };
+
+    // Lưu vào sessionStorage để sử dụng ở trang payment
+    sessionStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+    // Log để kiểm tra (có thể bỏ sau khi test xong)
+    console.log("Booking Data:", bookingData);
+
+    // Submit form
+    this.submit();
+  });
+
+  // Khởi tạo tổng tiền ban đầu
+  updateTotal();
+});
