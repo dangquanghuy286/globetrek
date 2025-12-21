@@ -916,7 +916,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const maxScore = Number(wrap.dataset.max || 5);
   const count = reviewData.length;
 
-  // Tính Trung Bình
+  // RANGE
   const fields = Object.keys(reviewData[0]);
 
   const avgByField = {};
@@ -928,7 +928,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalAvg =
     Object.values(avgByField).reduce((s, v) => s + v, 0) / fields.length;
 
-  // Tính trung bình và Fix làm tròn sô
+  // FIX
   wrap.querySelector(".score-value").textContent = totalAvg.toFixed(1);
 
   wrap.querySelector(".rating-count").textContent = count;
@@ -990,6 +990,24 @@ document.addEventListener("DOMContentLoaded", function () {
     "2025-12-07": { price: 69 },
     "2025-12-10": { price: 80 },
     "2025-12-12": { price: 99 },
+    "2025-12-20": { price: 120 },
+    "2025-12-25": { price: 150 },
+
+    "2026-01-02": { price: 90 },
+    "2026-01-05": { price: 95 },
+    "2026-01-10": { price: 110 },
+    "2026-01-15": { price: 130 },
+
+    "2026-02-01": { price: 85 },
+    "2026-02-14": { price: 160 },
+    "2026-02-20": { price: 100 },
+
+    "2026-03-05": { price: 105 },
+    "2026-03-10": { price: 115 },
+    "2026-03-25": { price: 140 },
+
+    "2026-04-01": { price: 120 },
+    "2026-04-30": { price: 180 },
   };
 
   function getDayData(dateStr) {
@@ -1003,11 +1021,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const todayStr = formatDate(
     today.getFullYear(),
     today.getMonth(),
     today.getDate()
   );
+
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   function renderCalendar() {
@@ -1038,15 +1058,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const daysGrid = document.getElementById("daysGrid");
     daysGrid.innerHTML = "";
 
-    // Previous month days
+    // Previous month
     for (let i = firstDayOfMonth - 1; i >= 0; i--) {
       const day = daysInPrevMonth - i;
       const date = new Date(year, month - 1, day);
-      const dateStr = formatDate(
-        date.getFullYear(),
-        date.getMonth(),
-        date.getDate()
-      );
       const dayCell = document.createElement("div");
       dayCell.className = "day-cell empty disabled";
       dayCell.innerHTML = `
@@ -1056,21 +1071,23 @@ document.addEventListener("DOMContentLoaded", function () {
       daysGrid.appendChild(dayCell);
     }
 
-    // Current month days
+    // Current month
     for (let day = 1; day <= daysInMonth; day++) {
       const date = new Date(year, month, day);
+      date.setHours(0, 0, 0, 0);
+
       const dateStr = formatDate(year, month, day);
       const dayData = getDayData(dateStr);
+      const isPast = date < today;
 
       const dayCell = document.createElement("div");
       dayCell.className = "day-cell";
 
-      // Highlight today
-      if (dateStr === todayStr) dayCell.classList.add("today");
-      // Highlight active
-      if (activeDate === dateStr) dayCell.classList.add("active");
+      if (isPast) dayCell.classList.add("disabled");
+      if (!isPast && dateStr === todayStr) dayCell.classList.add("today");
+      if (!isPast && activeDate === dateStr) dayCell.classList.add("active");
 
-      if (dayData) {
+      if (!isPast && dayData) {
         dayCell.innerHTML = `
           <div class="day-number">${day}</div>
           <div class="day-price">$${dayData.price.toFixed(2)}</div>
@@ -1082,21 +1099,28 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-      dayCell.onclick = () => {
-        document
-          .querySelectorAll(".day-cell.active")
-          .forEach((c) => c.classList.remove("active"));
-        document
-          .querySelectorAll(".day-cell.today")
-          .forEach((c) => c.classList.remove("today"));
-        activeDate = dateStr;
-        dayCell.classList.add("active");
-      };
+      if (!isPast) {
+        dayCell.onclick = () => {
+          document
+            .querySelectorAll(".day-cell.active")
+            .forEach((c) => c.classList.remove("active"));
+          document
+            .querySelectorAll(".day-cell.today")
+            .forEach((c) => c.classList.remove("today"));
+
+          activeDate = dateStr;
+          dayCell.classList.add("active");
+
+          if (dayData?.price) {
+            window.updatePriceFromCalendar(dateStr, dayData.price);
+          }
+        };
+      }
 
       daysGrid.appendChild(dayCell);
     }
 
-    // Next month days
+    // Next month
     const totalCells = firstDayOfMonth + daysInMonth;
     const remainingCells = (7 - (totalCells % 7)) % 7;
     for (let i = 1; i <= remainingCells; i++) {
@@ -1126,18 +1150,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // =============== BOOKING FORM CALCULATOR ===============
 document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.querySelector(".tf-form-book.booking-form form");
-
   if (!bookingForm) return;
 
-  // Giá cơ bản
-  const PRICES = {
+  window.PRICES = {
     adult: 100,
     children: 50,
     servicePerBooking: 20,
     servicePerPerson: 20,
   };
 
-  // Lấy các elements
   const adultInput = bookingForm.querySelector(
     '.guest-item:nth-child(1) input[type="number"]'
   );
@@ -1151,129 +1172,77 @@ document.addEventListener("DOMContentLoaded", function () {
     'input[name="total_amount"]'
   );
 
-  // Hiển thị giá trong subtitle
   const valueAdultSpan = bookingForm.querySelector(".value-adult");
-  const valueChildrenSpan = bookingForm.querySelector(".value-chidlder");
+  const valueChildrenSpan = bookingForm.querySelector(".value-child");
 
-  // Cập nhật giá hiển thị
-  if (valueAdultSpan) valueAdultSpan.textContent = `$${PRICES.adult}`;
-  if (valueChildrenSpan) valueChildrenSpan.textContent = `$${PRICES.children}`;
-
-  // Hàm tính tổng
   function calculateTotal() {
     const adultCount = parseInt(adultInput?.value) || 0;
     const childrenCount = parseInt(childrenInput?.value) || 0;
     const totalPeople = adultCount + childrenCount;
 
     let total = 0;
-
-    // Tính tiền người lớn và trẻ em
     total += adultCount * PRICES.adult;
     total += childrenCount * PRICES.children;
 
-    // Thêm dịch vụ per booking
     if (serviceBookingCheckbox?.checked) {
       total += PRICES.servicePerBooking;
     }
-
-    // Thêm dịch vụ per person
     if (servicePersonCheckbox?.checked) {
       total += totalPeople * PRICES.servicePerPerson;
     }
-
     return total;
   }
 
-  // Hàm cập nhật hiển thị tổng tiền
   function updateTotal() {
     const total = calculateTotal();
-
-    if (totalValueElement) {
-      totalValueElement.textContent = `$${total.toFixed(2)}`;
-    }
-
-    if (totalHiddenInput) {
-      totalHiddenInput.value = total.toFixed(2);
-    }
+    totalValueElement.textContent = `$${total.toFixed(2)}`;
+    totalHiddenInput.value = total.toFixed(2);
   }
 
-  // Gắn sự kiện
+  // Change Input
+  adultInput?.addEventListener("input", updateTotal);
+  childrenInput?.addEventListener("input", updateTotal);
+
+  // Change Input +/-
   adultInput?.addEventListener("change", updateTotal);
   childrenInput?.addEventListener("change", updateTotal);
+
+  const adultPlusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(1) .plus"
+  );
+  const adultMinusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(1) .minus"
+  );
+  const childPlusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(2) .plus"
+  );
+  const childMinusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(2) .minus"
+  );
+
+  adultPlusBtn?.addEventListener("click", updateTotal);
+  adultMinusBtn?.addEventListener("click", updateTotal);
+  childPlusBtn?.addEventListener("click", updateTotal);
+  childMinusBtn?.addEventListener("click", updateTotal);
+
+  // Checkbox services
   serviceBookingCheckbox?.addEventListener("change", updateTotal);
   servicePersonCheckbox?.addEventListener("change", updateTotal);
 
-  // Lắng nghe sự kiện click từ nút +/- (đã có trong code cũ)
-  const guestItems = bookingForm.querySelectorAll(".guest-item");
-  guestItems.forEach((item) => {
-    const minus = item.querySelector(".minus");
-    const plus = item.querySelector(".plus");
-
-    minus?.addEventListener("click", () => {
-      setTimeout(updateTotal, 10);
-    });
-
-    plus?.addEventListener("click", () => {
-      setTimeout(updateTotal, 10);
-    });
-  });
-
-  // Xử lý submit form
-  bookingForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Validate form
-    const tourDate = bookingForm.querySelector(
-      'input[name="tour_date"]'
-    )?.value;
-    const tourTime = bookingForm.querySelector(
-      'input[name="tour_time"]'
-    )?.value;
-    const adultCount = parseInt(adultInput?.value) || 0;
-    const childrenCount = parseInt(childrenInput?.value) || 0;
-
-    // Kiểm tra các trường bắt buộc
-    if (!tourDate) {
-      alert("Vui lòng chọn ngày!");
-      return;
-    }
-
-    if (!tourTime) {
-      alert("Vui lòng chọn giờ!");
-      return;
-    }
-
-    if (adultCount === 0 && childrenCount === 0) {
-      alert("Vui lòng chọn ít nhất 1 người!");
-      return;
-    }
-
-    // Tạo object dữ liệu booking
-    const bookingData = {
-      tour_date: tourDate,
-      tour_time: tourTime,
-      adult_count: adultCount,
-      children_count: childrenCount,
-      adult_price: PRICES.adult,
-      children_price: PRICES.children,
-      service_per_booking: serviceBookingCheckbox?.checked || false,
-      service_per_person: servicePersonCheckbox?.checked || false,
-      service_booking_price: PRICES.servicePerBooking,
-      service_person_price: PRICES.servicePerPerson,
-      total_amount: calculateTotal().toFixed(2),
-      timestamp: new Date().toISOString(),
-    };
-
-    // Lưu vào sessionStorage để sử dụng ở trang payment
-    sessionStorage.setItem("bookingData", JSON.stringify(bookingData));
-
-    // Log để kiểm tra (có thể bỏ sau khi test xong)
-    console.log("Booking Data:", bookingData);
-
-    // Submit form
-    this.submit();
-  });
-
-  // Khởi tạo tổng tiền ban đầu
+  // Khởi tạo total ban đầu
   updateTotal();
+
+  // UPDATE TOTAL FROM CALENDAR
+  window.updatePriceFromCalendar = function (dateStr, price) {
+    const dateInput = bookingForm.querySelector('input[name="tour_date"]');
+    if (dateInput) dateInput.value = dateStr;
+
+    PRICES.adult = price;
+    PRICES.children = price / 2;
+
+    valueAdultSpan.textContent = `$${PRICES.adult.toFixed(2)}`;
+    valueChildrenSpan.textContent = `$${PRICES.children.toFixed(2)}`;
+
+    updateTotal();
+  };
 });
