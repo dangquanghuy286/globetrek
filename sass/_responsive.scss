@@ -1139,6 +1139,27 @@
    .slider-control {
       margin-top: 20px;
    }
+
+   .property-calendar {
+      width: 100%;
+      overflow: hidden;
+
+      .wg-calendar {
+         overflow-x: auto;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+      }
+
+      .wg-calendar {
+
+         .weekdays,
+         .days-grid {
+            min-width: 500px;
+         }
+      }
+   }
+
+
 }
 
 @media (max-width: 575px) {

@@ -2943,7 +2943,6 @@ h5 {
   border-radius: 50%;
   font-size: 13px;
   color: var(--text-color);
-  cursor: pointer;
   transition: all 0.3s;
   display: flex;
   align-items: center;
@@ -3142,6 +3141,9 @@ h5 {
 }
 .tf-form-book .check-box .value {
   margin-left: auto;
+}
+.tf-form-book .datepicker-days .datepicker-day {
+  min-height: 30px;
 }
 .tf-form-book .booking-form {
   padding-bottom: 24px;
@@ -10032,6 +10034,19 @@ input[type=checkbox]:checked {
   }
   .slider-control {
     margin-top: 20px;
+  }
+  .property-calendar {
+    width: 100%;
+    overflow: hidden;
+  }
+  .property-calendar .wg-calendar {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .property-calendar .wg-calendar .weekdays,
+  .property-calendar .wg-calendar .days-grid {
+    min-width: 500px;
   }
 }
 @media (max-width: 575px) {

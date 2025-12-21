@@ -651,7 +651,6 @@
         border-radius: 50%;
         font-size: 13px;
         color: var(--text-color);
-        cursor: pointer;
         transition: all 0.3s;
         display: flex;
         align-items: center;
@@ -878,6 +877,12 @@
 
         .value {
             margin-left: auto;
+        }
+    }
+
+    .datepicker-days {
+        .datepicker-day {
+            min-height: 30px;
         }
     }
 
