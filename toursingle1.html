@@ -587,7 +587,7 @@
               </div>
             </div>
             <div
-              class="tf-sw-mobile swiper wow animate__animated animate__fadeIn"
+              class="tf-sw-mobile swiper wow animate__animated animate__fadeInUp"
               data-wow-duration="1s"
               data-wow-delay="0.4s"
               data-screen="575"
@@ -703,7 +703,7 @@
     </section>
     <!-- End-Hero -->
     <!-- Property -->
-    <div class="flat-property">
+    <section class="flat-property">
       <div class="container">
         <div class="row">
           <div class="col-xl-8">
@@ -1074,7 +1074,7 @@
                     </a>
 
                     <div
-                      class="plan-content collapse show"
+                      class="plan-content collapse"
                       id="day-2"
                       data-bs-parent="#tour-plan"
                     >
@@ -1137,8 +1137,29 @@
                 </ul>
               </div>
             </div>
-            <div class="box-property-detail property-Calendar">
+            <div class="box-property-detail property-calendar">
               <h3 class="property-topic mb-6">Calendar & Price</h3>
+              <div class="wg-calendar">
+                <div class="box-head-calendar">
+                  <button class="nav-prev-month nav-btn" onclick="prevMonth()">
+                    <i class="icon icon-CaretLeft"></i>
+                  </button>
+                  <h4 id="monthYear"></h4>
+                  <button class="nav-next-month nav-btn" onclick="nextMonth()">
+                    <i class="icon icon-CaretRight"></i>
+                  </button>
+                </div>
+                <div class="weekdays">
+                  <div class="weekday">Sun</div>
+                  <div class="weekday">Mon</div>
+                  <div class="weekday">Tue</div>
+                  <div class="weekday">Wed</div>
+                  <div class="weekday">Thu</div>
+                  <div class="weekday">Fri</div>
+                  <div class="weekday">Sat</div>
+                </div>
+                <div class="days-grid" id="daysGrid"></div>
+              </div>
             </div>
 
             <div class="box-property-detail property-map">
@@ -1910,9 +1931,8 @@
           <div class="col-xl-4"></div>
         </div>
       </div>
-    </div>
+    </section>
     <!--End Property -->
-    <!-- Tour -->
     <!-- Tour -->
     <section class="flat-recommended flat-section">
       <div class="container">
@@ -1923,14 +1943,6 @@
             data-wow-delay="0.2s"
           >
             <h1 class="title">Listing tour</h1>
-          </div>
-          <div class="slider-control style-01">
-            <a href="#" class="flex-prev nav-prev-tour nav-style-2">
-              <img src="./images/icons/arrow-left-1.svg" alt="prev" />
-            </a>
-            <a href="#" class="flex-next nav-next-tour nav-style-2">
-              <img src="./images/icons/arrow-right-2.svg" alt="next" />
-            </a>
           </div>
         </div>
         <div class="flat-tab-recommend">

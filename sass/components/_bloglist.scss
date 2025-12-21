@@ -707,8 +707,19 @@
         margin-bottom: 15px;
 
         .rating {
+
             .sub-ip {
                 margin-bottom: 0;
+
+            }
+
+            .list-star {
+                cursor: pointer;
+            }
+
+            .subtitle {
+                width: 80px;
+                flex-shrink: 0;
             }
         }
     }

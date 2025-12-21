@@ -929,3 +929,147 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
+// ========Calendar==========
+document.addEventListener("DOMContentLoaded", function () {
+  let currentDate = new Date();
+  let selectedDates = [];
+
+  const calendarData = {
+    "2025-12-03": { price: 80 },
+    "2025-12-04": { price: 99 },
+    "2025-12-07": { price: 69 },
+    "2025-12-10": { price: 80 },
+    "2025-12-12": { price: 99 },
+  };
+
+  function getDayData(dateStr) {
+    return calendarData[dateStr] || null;
+  }
+
+  function formatDate(year, month, day) {
+    const m = String(month + 1).padStart(2, "0");
+    const d = String(day).padStart(2, "0");
+    return `${year}-${m}-${d}`;
+  }
+
+  const today = new Date();
+  const todayStr = formatDate(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate()
+  );
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function renderCalendar() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    document.getElementById("monthYear").textContent = `${
+      monthNames[month]
+    } ${year.toString().slice(-2)}`;
+
+    const daysGrid = document.getElementById("daysGrid");
+    daysGrid.innerHTML = "";
+
+    // Previous month days
+    for (let i = firstDayOfMonth - 1; i >= 0; i--) {
+      const day = daysInPrevMonth - i;
+      const date = new Date(year, month - 1, day);
+      const dateStr = formatDate(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate()
+      );
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell empty disabled";
+      dayCell.innerHTML = `
+        <div class="day-number">${day}</div>
+        <div class="day-name">${dayNames[date.getDay()]}</div>
+      `;
+      daysGrid.appendChild(dayCell);
+    }
+
+    // Current month days
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month, day);
+      const dateStr = formatDate(year, month, day);
+      const dayData = getDayData(dateStr);
+
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell";
+
+      // Highlight today
+      if (dateStr === todayStr) dayCell.classList.add("today");
+      if (selectedDates.includes(dateStr)) dayCell.classList.add("selected");
+
+      if (dayData) {
+        dayCell.innerHTML = `
+          <div class="day-number">${day}</div>
+          <div class="day-price">$${dayData.price.toFixed(2)}</div>
+        `;
+      } else {
+        dayCell.innerHTML = `
+          <div class="day-number">${day}</div>
+          <div class="day-name">${dayNames[date.getDay()]}</div>
+        `;
+      }
+
+      // Selected
+      dayCell.onclick = () => toggleDate(dateStr, dayCell);
+      daysGrid.appendChild(dayCell);
+    }
+
+    // Next month days
+    const totalCells = firstDayOfMonth + daysInMonth;
+    const remainingCells = (7 - (totalCells % 7)) % 7;
+    for (let i = 1; i <= remainingCells; i++) {
+      const date = new Date(year, month + 1, i);
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell empty disabled";
+      dayCell.innerHTML = `
+        <div class="day-number">${i}</div>
+        <div class="day-name">${dayNames[date.getDay()]}</div>
+      `;
+      daysGrid.appendChild(dayCell);
+    }
+  }
+
+  function toggleDate(dateStr, cell) {
+    const index = selectedDates.indexOf(dateStr);
+    if (index > -1) {
+      selectedDates.splice(index, 1);
+      cell.classList.remove("selected");
+    } else {
+      selectedDates.push(dateStr);
+      cell.classList.add("selected");
+    }
+  }
+
+  window.prevMonth = function () {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+  };
+  window.nextMonth = function () {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+  };
+
+  renderCalendar();
+});
