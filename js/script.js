@@ -308,6 +308,54 @@ document.addEventListener("DOMContentLoaded", function () {
         current?.classList.remove("active");
       });
     });
+
+    // ============ TIME PICKER LOGIC ============
+    const selectDate = dropdown.querySelector(".select-date");
+    if (
+      selectDate &&
+      list &&
+      !dropdown.querySelector(".guest-item") &&
+      !dropdown.querySelector(".datepicker-days")
+    ) {
+      if (list.children.length <= 1) {
+        list.innerHTML = "";
+
+        for (let hour = 0; hour < 24; hour++) {
+          for (let minute = 0; minute < 60; minute += 30) {
+            const timeValue = `${String(hour).padStart(2, "0")}:${String(
+              minute
+            ).padStart(2, "0")}`;
+            const li = document.createElement("li");
+            li.className = "time-option";
+            li.textContent = timeValue;
+            li.setAttribute("data-time", timeValue);
+            list.appendChild(li);
+          }
+        }
+      }
+
+      // Add click event to time options
+      const timeOptions = list.querySelectorAll("li");
+      timeOptions.forEach((option) => {
+        option.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const timeValue =
+            option.getAttribute("data-time") || option.textContent.trim();
+          selectDate.value = timeValue;
+
+          // Remove active class from all options
+          timeOptions.forEach((opt) => opt.classList.remove("selected"));
+          // Add active class to selected option
+          option.classList.add("selected");
+
+          list?.classList.remove("active");
+          current?.classList.remove("active");
+        });
+      });
+    }
+
     // Counter Logic
     const guestItems = dropdown.querySelectorAll(".guest-item");
 
@@ -547,6 +595,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
   // =============== Box Select ===============
   const boxSelect = document.querySelector(".box-select");
   if (boxSelect) {
@@ -1073,3 +1122,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderCalendar();
 });
+// ==========Time=============
