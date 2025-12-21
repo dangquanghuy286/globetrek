@@ -1099,7 +1099,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-      if (!isPast) {
+      if (!isPast && dayData) {
         dayCell.onclick = () => {
           document
             .querySelectorAll(".day-cell.active")
