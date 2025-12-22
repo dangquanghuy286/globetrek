@@ -987,6 +987,10 @@ h5 {
   padding-top: 48px;
 }
 
+.pt-14 {
+  padding-top: 56px;
+}
+
 .pt-16 {
   padding-top: 64px;
 }
@@ -1067,6 +1071,10 @@ h5 {
 
 .pb-12 {
   padding-bottom: 48px;
+}
+
+.pb-14 {
+  padding-bottom: 56px;
 }
 
 .pb-16 {
@@ -2059,6 +2067,10 @@ h5 {
   width: 1226.67px !important;
   height: 690px !important;
   object-fit: cover;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--stoke-color);
 }
 
 .avatar.round {
