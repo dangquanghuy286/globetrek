@@ -1504,6 +1504,23 @@
       }
    }
 
+   .tf-image-slider {
+      .photo-box {
+         aspect-ratio: 1 / 1;
+      }
+
+      .group-meta {
+         bottom: 10px;
+         left: 0;
+         padding: 0 10px;
+         align-items: stretch;
+         flex-direction: column;
+         width: 100%;
+
+
+      }
+   }
+
    .tf-sw-mobile {
       .sw-pagination {
          display: block !important;

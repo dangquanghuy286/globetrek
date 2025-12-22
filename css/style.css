@@ -5848,6 +5848,13 @@ input[type=checkbox]:checked {
   right: 95px;
   width: auto;
 }
+.flex-direction-nav.style-hero-3 {
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 40px;
+  left: 0;
+}
 .flex-direction-nav a {
   width: 64px;
   height: 64px;
@@ -6320,7 +6327,8 @@ input[type=checkbox]:checked {
   padding: 16px;
   transition: all 0.3s ease;
 }
-.destination-post .group-meta {
+
+.group-meta {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -6329,7 +6337,7 @@ input[type=checkbox]:checked {
   gap: 12px;
   z-index: 5;
 }
-.destination-post .group-meta .tf-btn {
+.group-meta .tf-btn {
   padding: 14px 24px;
   background-color: var(--border-header);
   border: var(--border-header);
@@ -6337,14 +6345,14 @@ input[type=checkbox]:checked {
   color: var(--white);
   transition: all 0.3s ease;
 }
-.destination-post .group-meta .tf-btn img {
+.group-meta .tf-btn img {
   filter: brightness(0) invert(1);
 }
-.destination-post .group-meta .tf-btn:hover {
+.group-meta .tf-btn:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
-.destination-post .group-meta .tf-btn:hover img {
+.group-meta .tf-btn:hover img {
   filter: brightness(0) invert(1);
 }
 
@@ -9346,6 +9354,15 @@ input[type=checkbox]:checked {
   color: var(--text-color);
 }
 
+.tf-image-slider .item {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.tf-image-slider .photo-box {
+  aspect-ratio: 3/2;
+  border-radius: 16px;
+}
+
 /* --------------------------------------------------------------
    MEDIA QUERIES
    -------------------------------------------------------------- */
@@ -10266,6 +10283,17 @@ input[type=checkbox]:checked {
   }
   .tf-destination .swiper-slide:nth-child(2) .group-meta, .tf-destination .swiper-slide:nth-child(3) .group-meta, .tf-destination .swiper-slide:nth-child(4) .group-meta, .tf-destination .swiper-slide:nth-child(5) .group-meta {
     display: flex !important;
+  }
+  .tf-image-slider .photo-box {
+    aspect-ratio: 1/1;
+  }
+  .tf-image-slider .group-meta {
+    bottom: 10px;
+    left: 0;
+    padding: 0 10px;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
   }
   .tf-sw-mobile .sw-pagination {
     display: block !important;

@@ -344,41 +344,41 @@
 
     }
 
-    .group-meta {
-        position: absolute;
-        bottom: 24px;
-        left: 24px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        z-index: 5;
 
-        .tf-btn {
-            padding: 14px 24px;
-            background-color: var(--border-header);
-            border: var(--border-header);
-            backdrop-filter: blur(4px);
+
+}
+
+.group-meta {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 5;
+
+    .tf-btn {
+        padding: 14px 24px;
+        background-color: var(--border-header);
+        border: var(--border-header);
+        backdrop-filter: blur(4px);
+        color: var(--white);
+        transition: all 0.3s ease;
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+
+        &:hover {
+            background-color: var(--primary-color);
             color: var(--white);
-            transition: all 0.3s ease;
 
             img {
                 filter: brightness(0) invert(1);
             }
-
-            &:hover {
-                background-color: var(--primary-color);
-                color: var(--white);
-
-                img {
-                    filter: brightness(0) invert(1);
-                }
-            }
         }
     }
-
 }
-
-
 
 
 // =========Location=================
@@ -4076,6 +4076,20 @@
             color: var(--text-color);
         }
 
+
+    }
+}
+
+// ========Img Slider==========
+.tf-image-slider {
+    .item {
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    .photo-box {
+        aspect-ratio: 3 / 2;
+        border-radius: 16px;
 
     }
 }
