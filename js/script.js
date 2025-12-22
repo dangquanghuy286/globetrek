@@ -1254,6 +1254,7 @@ const reviewData = [
     food: 5,
   },
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.querySelector(".wg-review-summary");
   if (!wrap) return;
@@ -1284,7 +1285,7 @@ document.addEventListener("DOMContentLoaded", () => {
     maxScore
   );
 
-  // Trung bình từng hạn mục
+  // Avg Categories
   document.querySelectorAll(".box-breakdown-item").forEach((item) => {
     const label = item.querySelector("label").textContent.toLowerCase();
 
@@ -1300,6 +1301,18 @@ document.addEventListener("DOMContentLoaded", () => {
     item.querySelector(".progress-bar").style.width =
       (rate / maxScore) * 100 + "%";
   });
+
+  // === RENDER RATE ===
+  const rateWrap = document.querySelector(".rate");
+  if (rateWrap) {
+    const ratingText = rateWrap.querySelector(".rating-text");
+    const ratingCount = rateWrap.querySelector(".rating-count");
+    const listStar = rateWrap.querySelector(".list-star");
+
+    if (ratingText) ratingText.textContent = totalAvg.toFixed(1);
+    if (ratingCount) ratingCount.textContent = count;
+    if (listStar) renderStars(listStar, Math.floor(totalAvg), maxScore);
+  }
 });
 
 // Render star

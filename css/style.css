@@ -6327,8 +6327,7 @@ input[type=checkbox]:checked {
   padding: 16px;
   transition: all 0.3s ease;
 }
-
-.group-meta {
+.destination-post .group-meta {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -6337,7 +6336,7 @@ input[type=checkbox]:checked {
   gap: 12px;
   z-index: 5;
 }
-.group-meta .tf-btn {
+.destination-post .group-meta .tf-btn {
   padding: 14px 24px;
   background-color: var(--border-header);
   border: var(--border-header);
@@ -6345,14 +6344,14 @@ input[type=checkbox]:checked {
   color: var(--white);
   transition: all 0.3s ease;
 }
-.group-meta .tf-btn img {
+.destination-post .group-meta .tf-btn img {
   filter: brightness(0) invert(1);
 }
-.group-meta .tf-btn:hover {
+.destination-post .group-meta .tf-btn:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
-.group-meta .tf-btn:hover img {
+.destination-post .group-meta .tf-btn:hover img {
   filter: brightness(0) invert(1);
 }
 
