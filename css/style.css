@@ -2957,6 +2957,10 @@ h5 {
   background: var(--primary-color);
   color: var(--white);
 }
+.datepicker-days .datepicker-day.today:hover, .datepicker-days .datepicker-day.selected:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
 .datepicker-days .datepicker-day.other-month {
   color: var(--input-color);
 }

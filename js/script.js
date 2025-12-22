@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", function () {
       this.classList.toggle("active");
 
-      // Filter wishlist sau khi toggle
+      // Filter wishlist
       setTimeout(() => {
         filterWishlist();
       }, 300);
@@ -261,9 +261,286 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// =============Data============
+const calendarData = {
+  "2025-12-03": { price: 80 },
+  "2025-12-04": { price: 99 },
+  "2025-12-07": { price: 69 },
+  "2025-12-10": { price: 80 },
+  "2025-12-12": { price: 99 },
+  "2025-12-20": { price: 120 },
+  "2025-12-25": { price: 150 },
+  "2026-01-02": { price: 90 },
+  "2026-01-05": { price: 95 },
+  "2026-01-10": { price: 110 },
+  "2026-01-15": { price: 130 },
+  "2026-02-01": { price: 85 },
+  "2026-02-14": { price: 160 },
+  "2026-02-20": { price: 100 },
+  "2026-03-05": { price: 105 },
+  "2026-03-10": { price: 115 },
+  "2026-03-25": { price: 140 },
+  "2026-04-01": { price: 120 },
+  "2026-04-30": { price: 180 },
+  "2026-05-03": { price: 55 },
+  "2026-05-07": { price: 197 },
+  "2026-05-08": { price: 81 },
+  "2026-05-15": { price: 65 },
+  "2026-05-21": { price: 110 },
+  "2026-05-26": { price: 78 },
+  "2026-05-27": { price: 131 },
+  "2026-06-08": { price: 81 },
+  "2026-06-19": { price: 200 },
+  "2026-06-24": { price: 200 },
+  "2026-06-25": { price: 131 },
+  "2026-06-27": { price: 77 },
+  "2026-06-28": { price: 160 },
+  "2026-07-09": { price: 146 },
+  "2026-07-11": { price: 183 },
+  "2026-07-14": { price: 89 },
+  "2026-08-05": { price: 142 },
+  "2026-08-10": { price: 150 },
+  "2026-08-24": { price: 108 },
+  "2026-08-26": { price: 194 },
+  "2026-09-09": { price: 65 },
+  "2026-09-17": { price: 144 },
+  "2026-10-01": { price: 190 },
+  "2026-10-09": { price: 200 },
+  "2026-10-15": { price: 129 },
+  "2026-10-28": { price: 147 },
+  "2026-11-10": { price: 170 },
+  "2026-11-13": { price: 79 },
+  "2026-11-14": { price: 99 },
+  "2026-12-01": { price: 154 },
+  "2026-12-09": { price: 156 },
+  "2026-12-13": { price: 186 },
+  "2026-12-14": { price: 199 },
+  "2026-12-16": { price: 100 },
+  "2026-12-22": { price: 124 },
+  "2027-01-24": { price: 179 },
+  "2027-02-07": { price: 103 },
+  "2027-02-09": { price: 180 },
+  "2027-02-14": { price: 170 },
+  "2027-02-17": { price: 163 },
+  "2027-02-25": { price: 67 },
+  "2027-03-14": { price: 130 },
+  "2027-03-19": { price: 170 },
+  "2027-03-23": { price: 74 },
+  "2027-03-28": { price: 119 },
+  "2027-03-30": { price: 52 },
+  "2027-04-03": { price: 82 },
+  "2027-04-07": { price: 139 },
+  "2027-04-10": { price: 91 },
+  "2027-04-14": { price: 53 },
+  "2027-04-15": { price: 191 },
+  "2027-04-16": { price: 59 },
+  "2027-04-17": { price: 199 },
+  "2027-04-21": { price: 158 },
+  "2027-04-27": { price: 199 },
+  "2027-05-01": { price: 72 },
+  "2027-05-13": { price: 118 },
+  "2027-05-17": { price: 162 },
+  "2027-05-22": { price: 117 },
+  "2027-05-26": { price: 147 },
+  "2027-06-03": { price: 164 },
+  "2027-06-07": { price: 70 },
+  "2027-06-14": { price: 193 },
+  "2027-06-19": { price: 137 },
+  "2027-06-23": { price: 179 },
+  "2027-06-27": { price: 172 },
+  "2027-07-04": { price: 81 },
+  "2027-07-09": { price: 165 },
+  "2027-07-18": { price: 170 },
+  "2027-07-19": { price: 85 },
+  "2027-07-25": { price: 189 },
+  "2027-07-27": { price: 128 },
+  "2027-08-03": { price: 105 },
+  "2027-08-04": { price: 161 },
+  "2027-08-05": { price: 190 },
+  "2027-08-06": { price: 196 },
+  "2027-08-10": { price: 136 },
+  "2027-08-14": { price: 166 },
+  "2027-08-21": { price: 190 },
+  "2027-08-22": { price: 182 },
+  "2027-08-27": { price: 136 },
+  "2027-08-30": { price: 123 },
+  "2027-09-07": { price: 156 },
+  "2027-09-24": { price: 73 },
+  "2027-09-27": { price: 93 },
+  "2027-09-29": { price: 66 },
+  "2027-10-01": { price: 162 },
+  "2027-10-08": { price: 87 },
+  "2027-10-15": { price: 98 },
+  "2027-10-16": { price: 69 },
+  "2027-10-17": { price: 52 },
+  "2027-11-18": { price: 71 },
+  "2027-11-21": { price: 170 },
+  "2027-12-01": { price: 184 },
+  "2027-12-16": { price: 190 },
+  "2027-12-18": { price: 144 },
+  "2027-12-19": { price: 58 },
+  "2027-12-26": { price: 50 },
+  "2027-12-27": { price: 143 },
+  "2027-12-28": { price: 132 },
+};
+// ========Calendar==========
+document.addEventListener("DOMContentLoaded", function () {
+  let currentDate = new Date();
+  let activeDate = null;
 
+  function getDayData(dateStr) {
+    return calendarData[dateStr] || null;
+  }
+
+  function formatDate(year, month, day) {
+    const m = String(month + 1).padStart(2, "0");
+    const d = String(day).padStart(2, "0");
+    return `${year}-${m}-${d}`;
+  }
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = formatDate(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate()
+  );
+
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function renderCalendar() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    document.getElementById("monthYear").textContent = `${
+      monthNames[month]
+    } ${year.toString().slice(-2)}`;
+
+    const daysGrid = document.getElementById("daysGrid");
+    daysGrid.innerHTML = "";
+
+    // Previous month
+    for (let i = firstDayOfMonth - 1; i >= 0; i--) {
+      const day = daysInPrevMonth - i;
+      const date = new Date(year, month - 1, day);
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell empty disabled";
+      dayCell.innerHTML = `
+        <div class="day-number">${day}</div>
+        <div class="day-name">${dayNames[date.getDay()]}</div>
+      `;
+      daysGrid.appendChild(dayCell);
+    }
+
+    // Current month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month, day);
+      date.setHours(0, 0, 0, 0);
+
+      const dateStr = formatDate(year, month, day);
+      const dayData = getDayData(dateStr);
+      const isPast = date < today;
+
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell";
+
+      if (isPast) dayCell.classList.add("disabled");
+      if (!isPast && dateStr === todayStr) dayCell.classList.add("today");
+      if (!isPast && activeDate === dateStr) dayCell.classList.add("active");
+
+      if (!isPast && dayData) {
+        dayCell.innerHTML = `
+          <div class="day-number">${day}</div>
+          <div class="day-price">$${dayData.price.toFixed(2)}</div>
+        `;
+      } else {
+        dayCell.innerHTML = `
+          <div class="day-number">${day}</div>
+          <div class="day-name">${dayNames[date.getDay()]}</div>
+        `;
+      }
+
+      if (!isPast && dayData) {
+        dayCell.onclick = () => {
+          document
+            .querySelectorAll(".day-cell.active")
+            .forEach((c) => c.classList.remove("active"));
+          document
+            .querySelectorAll(".day-cell.today")
+            .forEach((c) => c.classList.remove("today"));
+
+          activeDate = dateStr;
+          dayCell.classList.add("active");
+
+          if (dayData?.price) {
+            window.updatePriceFromCalendar(dateStr, dayData.price);
+          }
+        };
+      }
+
+      daysGrid.appendChild(dayCell);
+    }
+
+    // Next month
+    const totalCells = firstDayOfMonth + daysInMonth;
+    const remainingCells = (7 - (totalCells % 7)) % 7;
+    for (let i = 1; i <= remainingCells; i++) {
+      const date = new Date(year, month + 1, i);
+      const dayCell = document.createElement("div");
+      dayCell.className = "day-cell empty disabled";
+      dayCell.innerHTML = `
+        <div class="day-number">${i}</div>
+        <div class="day-name">${dayNames[date.getDay()]}</div>
+      `;
+      daysGrid.appendChild(dayCell);
+    }
+  }
+
+  window.prevMonth = function () {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+  };
+  window.nextMonth = function () {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+  };
+
+  renderCalendar();
+});
 // ===================Active Sub Menu=========================
 document.addEventListener("DOMContentLoaded", function () {
+  function hasTourOnDate(year, month, day) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
+      day
+    ).padStart(2, "0")}`;
+    return calendarData[dateStr] !== undefined;
+  }
+
+  // THÊM: Function lấy giá tour
+  function getTourPrice(year, month, day) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
+      day
+    ).padStart(2, "0")}`;
+    return calendarData[dateStr]?.price || null;
+  }
+
   const dropdowns = document.querySelectorAll(".group-select .select-items");
 
   dropdowns.forEach((dropdown) => {
@@ -334,7 +611,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // Add click event to time options
       const timeOptions = list.querySelectorAll("li");
       timeOptions.forEach((option) => {
         option.addEventListener("click", (e) => {
@@ -345,9 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
             option.getAttribute("data-time") || option.textContent.trim();
           selectDate.value = timeValue;
 
-          // Remove active class from all options
           timeOptions.forEach((opt) => opt.classList.remove("selected"));
-          // Add active class to selected option
           option.classList.add("selected");
 
           list?.classList.remove("active");
@@ -387,7 +661,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-      // Update current logic
       function updateCurrent() {
         const adults =
           parseInt(guestItems[0]?.querySelector("input").value) || 0;
@@ -401,14 +674,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let text = parts.length > 0 ? parts.join(" - ") : "Select guests";
 
-        // save i
         const icon = current.querySelector("i");
         const img = current.querySelector("img");
 
-        // remove
         current.innerHTML = "";
 
-        // Add img -> text -> icon
         if (img) {
           current.appendChild(img.cloneNode(true));
         }
@@ -418,16 +688,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // Khởi tạo
       updateCurrent();
     }
 
-    // ============ DATEPICKER LOGIC ============
+    // ============ DATEPICKER LOGIC  ============
     const dateInput = dropdown.querySelector(".date-input");
     const datepickerDays = dropdown.querySelector(".datepicker-days");
     const datepickerTitle = dropdown.querySelector(".datepicker-title");
     const prevBtn = dropdown.querySelector(".prev-month");
     const nextBtn = dropdown.querySelector(".next-month");
+
+    const isDatepickerForTour = dropdown.classList.contains("datepicker");
 
     if (dateInput && datepickerDays) {
       let currentDate = new Date();
@@ -443,7 +714,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const lastDate = lastDay.getDate();
         const prevLastDate = prevLastDay.getDate();
 
-        // Update title
         const monthNames = [
           "January",
           "February",
@@ -460,29 +730,85 @@ document.addEventListener("DOMContentLoaded", function () {
         ];
         datepickerTitle.textContent = `${monthNames[month]} ${year}`;
 
-        // Clear days
         datepickerDays.innerHTML = "";
 
         // Previous month days
         for (let i = firstDayIndex; i > 0; i--) {
           const day = document.createElement("button");
           day.type = "button";
+          const dayNum = prevLastDate - i + 1;
+
           day.className = "datepicker-day other-month";
-          day.textContent = prevLastDate - i + 1;
-          day.addEventListener("click", (e) => {
-            e.stopPropagation();
-            selectDate(new Date(year, month - 1, prevLastDate - i + 1));
-          });
+          day.textContent = dayNum;
+
+          if (isDatepickerForTour) {
+            const hasTour = hasTourOnDate(year, month - 1, dayNum);
+
+            if (!hasTour) {
+              day.classList.add("disabled");
+              day.style.cursor = "not-allowed";
+              day.style.opacity = "0.4";
+            } else {
+              day.addEventListener("click", (e) => {
+                e.stopPropagation();
+                selectDate(new Date(year, month - 1, dayNum));
+              });
+            }
+          } else {
+            day.addEventListener("click", (e) => {
+              e.stopPropagation();
+              selectDate(new Date(year, month - 1, dayNum));
+            });
+          }
+
           datepickerDays.appendChild(day);
         }
 
         // Current month days
         const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
         for (let i = 1; i <= lastDate; i++) {
           const day = document.createElement("button");
           day.type = "button";
           day.className = "datepicker-day";
+
+          const dayDate = new Date(year, month, i);
+          dayDate.setHours(0, 0, 0, 0);
+          const isPast = dayDate < today;
+          const isToday = dayDate.getTime() === today.getTime();
+
           day.textContent = i;
+
+          if (isDatepickerForTour) {
+            const hasTour = hasTourOnDate(year, month, i);
+
+            // Disable nếu không có tour VÀ không phải today,
+            if ((!hasTour && !isToday) || (isPast && !isToday)) {
+              day.classList.add("disabled");
+              day.disabled = true;
+              day.style.cursor = "not-allowed";
+              day.style.opacity = "0.4";
+            } else {
+              day.addEventListener("click", (e) => {
+                e.stopPropagation();
+                selectDate(new Date(year, month, i));
+              });
+            }
+          } else {
+            // Disable ngày quá khứ
+            if (isPast) {
+              day.classList.add("disabled");
+              day.disabled = true;
+              day.style.cursor = "not-allowed";
+              day.style.opacity = "0.4";
+            } else {
+              day.addEventListener("click", (e) => {
+                e.stopPropagation();
+                selectDate(new Date(year, month, i));
+              });
+            }
+          }
 
           // Check if today
           if (
@@ -509,11 +835,6 @@ document.addEventListener("DOMContentLoaded", function () {
             day.classList.add("weekend");
           }
 
-          day.addEventListener("click", (e) => {
-            e.stopPropagation();
-            selectDate(new Date(year, month, i));
-          });
-
           datepickerDays.appendChild(day);
         }
 
@@ -522,12 +843,30 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 1; i <= remainingDays; i++) {
           const day = document.createElement("button");
           day.type = "button";
+
           day.className = "datepicker-day other-month";
           day.textContent = i;
-          day.addEventListener("click", (e) => {
-            e.stopPropagation();
-            selectDate(new Date(year, month + 1, i));
-          });
+          // Disable ngày tương lai
+          if (isDatepickerForTour) {
+            const hasTour = hasTourOnDate(year, month + 1, i);
+
+            if (!hasTour) {
+              day.classList.add("disabled");
+              day.style.cursor = "not-allowed";
+              day.style.opacity = "0.4";
+            } else {
+              day.addEventListener("click", (e) => {
+                e.stopPropagation();
+                selectDate(new Date(year, month + 1, i));
+              });
+            }
+          } else {
+            day.addEventListener("click", (e) => {
+              e.stopPropagation();
+              selectDate(new Date(year, month + 1, i));
+            });
+          }
+
           datepickerDays.appendChild(day);
         }
       }
@@ -540,10 +879,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const year = date.getFullYear();
         dateInput.value = `${day}/${month}/${year}`;
 
-        // Re-render to show selected
+        // If this is the tour datepicker, update the price
+        if (isDatepickerForTour) {
+          const dateStr = `${year}-${month}-${day}`;
+          const price = getTourPrice(year, date.getMonth(), date.getDate());
+
+          if (price && window.updatePriceFromCalendar) {
+            window.updatePriceFromCalendar(dateStr, price);
+          }
+        }
+
         renderCalendar(date.getFullYear(), date.getMonth());
 
-        // Close dropdown
         list?.classList.remove("active");
         current?.classList.remove("active");
       }
@@ -561,7 +908,6 @@ document.addEventListener("DOMContentLoaded", function () {
         renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
       });
 
-      // Initialize calendar
       renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
     }
   });
@@ -608,7 +954,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
@@ -979,182 +1324,14 @@ function mapLabelToKey(label) {
   return map[label] || null;
 }
 
-// ========Calendar==========
-document.addEventListener("DOMContentLoaded", function () {
-  let currentDate = new Date();
-  let activeDate = null;
-
-  const calendarData = {
-    "2025-12-03": { price: 80 },
-    "2025-12-04": { price: 99 },
-    "2025-12-07": { price: 69 },
-    "2025-12-10": { price: 80 },
-    "2025-12-12": { price: 99 },
-    "2025-12-20": { price: 120 },
-    "2025-12-25": { price: 150 },
-
-    "2026-01-02": { price: 90 },
-    "2026-01-05": { price: 95 },
-    "2026-01-10": { price: 110 },
-    "2026-01-15": { price: 130 },
-
-    "2026-02-01": { price: 85 },
-    "2026-02-14": { price: 160 },
-    "2026-02-20": { price: 100 },
-
-    "2026-03-05": { price: 105 },
-    "2026-03-10": { price: 115 },
-    "2026-03-25": { price: 140 },
-
-    "2026-04-01": { price: 120 },
-    "2026-04-30": { price: 180 },
-  };
-
-  function getDayData(dateStr) {
-    return calendarData[dateStr] || null;
-  }
-
-  function formatDate(year, month, day) {
-    const m = String(month + 1).padStart(2, "0");
-    const d = String(day).padStart(2, "0");
-    return `${year}-${m}-${d}`;
-  }
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const todayStr = formatDate(
-    today.getFullYear(),
-    today.getMonth(),
-    today.getDate()
-  );
-
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  function renderCalendar() {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
-    const firstDayOfMonth = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const daysInPrevMonth = new Date(year, month, 0).getDate();
-
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    document.getElementById("monthYear").textContent = `${
-      monthNames[month]
-    } ${year.toString().slice(-2)}`;
-
-    const daysGrid = document.getElementById("daysGrid");
-    daysGrid.innerHTML = "";
-
-    // Previous month
-    for (let i = firstDayOfMonth - 1; i >= 0; i--) {
-      const day = daysInPrevMonth - i;
-      const date = new Date(year, month - 1, day);
-      const dayCell = document.createElement("div");
-      dayCell.className = "day-cell empty disabled";
-      dayCell.innerHTML = `
-        <div class="day-number">${day}</div>
-        <div class="day-name">${dayNames[date.getDay()]}</div>
-      `;
-      daysGrid.appendChild(dayCell);
-    }
-
-    // Current month
-    for (let day = 1; day <= daysInMonth; day++) {
-      const date = new Date(year, month, day);
-      date.setHours(0, 0, 0, 0);
-
-      const dateStr = formatDate(year, month, day);
-      const dayData = getDayData(dateStr);
-      const isPast = date < today;
-
-      const dayCell = document.createElement("div");
-      dayCell.className = "day-cell";
-
-      if (isPast) dayCell.classList.add("disabled");
-      if (!isPast && dateStr === todayStr) dayCell.classList.add("today");
-      if (!isPast && activeDate === dateStr) dayCell.classList.add("active");
-
-      if (!isPast && dayData) {
-        dayCell.innerHTML = `
-          <div class="day-number">${day}</div>
-          <div class="day-price">$${dayData.price.toFixed(2)}</div>
-        `;
-      } else {
-        dayCell.innerHTML = `
-          <div class="day-number">${day}</div>
-          <div class="day-name">${dayNames[date.getDay()]}</div>
-        `;
-      }
-
-      if (!isPast && dayData) {
-        dayCell.onclick = () => {
-          document
-            .querySelectorAll(".day-cell.active")
-            .forEach((c) => c.classList.remove("active"));
-          document
-            .querySelectorAll(".day-cell.today")
-            .forEach((c) => c.classList.remove("today"));
-
-          activeDate = dateStr;
-          dayCell.classList.add("active");
-
-          if (dayData?.price) {
-            window.updatePriceFromCalendar(dateStr, dayData.price);
-          }
-        };
-      }
-
-      daysGrid.appendChild(dayCell);
-    }
-
-    // Next month
-    const totalCells = firstDayOfMonth + daysInMonth;
-    const remainingCells = (7 - (totalCells % 7)) % 7;
-    for (let i = 1; i <= remainingCells; i++) {
-      const date = new Date(year, month + 1, i);
-      const dayCell = document.createElement("div");
-      dayCell.className = "day-cell empty disabled";
-      dayCell.innerHTML = `
-        <div class="day-number">${i}</div>
-        <div class="day-name">${dayNames[date.getDay()]}</div>
-      `;
-      daysGrid.appendChild(dayCell);
-    }
-  }
-
-  window.prevMonth = function () {
-    currentDate.setMonth(currentDate.getMonth() - 1);
-    renderCalendar();
-  };
-  window.nextMonth = function () {
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    renderCalendar();
-  };
-
-  renderCalendar();
-});
-
 // =============== BOOKING FORM CALCULATOR ===============
 document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.querySelector(".tf-form-book.booking-form form");
   if (!bookingForm) return;
 
   window.PRICES = {
-    adult: 100,
-    children: 50,
+    adult: 0,
+    children: 0,
     servicePerBooking: 20,
     servicePerPerson: 20,
   };
