@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 // =============BreadCrumb==================
 document.addEventListener("DOMContentLoaded", () => {
   const breadcrumbContainers = document.querySelectorAll(".breadcrumb-dynamic");
@@ -72,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = breadcrumbHTML;
   });
 });
-
 // =============Scroll======================
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
@@ -83,25 +81,31 @@ window.addEventListener("scroll", function () {
   }
 });
 // ==================== Toggle MENU ===================
-const toggleBtn = document.querySelector(".toggle-mobile");
-const menu = document.querySelector(".mobile-menu");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.querySelector(".close-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-mobile");
+  const menu = document.querySelector(".mobile-menu");
+  const overlay = document.querySelector(".overlay");
+  const closeBtn = document.querySelector(".close-btn");
 
-toggleBtn.addEventListener("click", () => {
-  menu.classList.add("active");
-  overlay.classList.add("active");
-  closeBtn.classList.add("active");
-});
+  if (!toggleBtn || !menu || !overlay || !closeBtn) return;
 
-// ischecked overplay
-[overlay, closeBtn].forEach((el) => {
-  el.addEventListener("click", () => {
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-    closeBtn.classList.remove("active");
+  // Open menu
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+    closeBtn.classList.add("active");
+  });
+
+  // Close menu
+  [overlay, closeBtn].forEach((el) => {
+    el.addEventListener("click", () => {
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+      closeBtn.classList.remove("active");
+    });
   });
 });
+
 // =====================SUBMENU=================================
 document.querySelectorAll(".mobile-dropdown").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -262,134 +266,522 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // =============Data============
-const calendarData = {
-  "2025-12-03": { price: 80 },
-  "2025-12-04": { price: 99 },
-  "2025-12-07": { price: 69 },
-  "2025-12-10": { price: 80 },
-  "2025-12-12": { price: 99 },
-  "2025-12-20": { price: 120 },
-  "2025-12-25": { price: 150 },
-  "2026-01-02": { price: 90 },
-  "2026-01-05": { price: 95 },
-  "2026-01-10": { price: 110 },
-  "2026-01-15": { price: 130 },
-  "2026-02-01": { price: 85 },
-  "2026-02-14": { price: 160 },
-  "2026-02-20": { price: 100 },
-  "2026-03-05": { price: 105 },
-  "2026-03-10": { price: 115 },
-  "2026-03-25": { price: 140 },
-  "2026-04-01": { price: 120 },
-  "2026-04-30": { price: 180 },
-  "2026-05-03": { price: 55 },
-  "2026-05-07": { price: 197 },
-  "2026-05-08": { price: 81 },
-  "2026-05-15": { price: 65 },
-  "2026-05-21": { price: 110 },
-  "2026-05-26": { price: 78 },
-  "2026-05-27": { price: 131 },
-  "2026-06-08": { price: 81 },
-  "2026-06-19": { price: 200 },
-  "2026-06-24": { price: 200 },
-  "2026-06-25": { price: 131 },
-  "2026-06-27": { price: 77 },
-  "2026-06-28": { price: 160 },
-  "2026-07-09": { price: 146 },
-  "2026-07-11": { price: 183 },
-  "2026-07-14": { price: 89 },
-  "2026-08-05": { price: 142 },
-  "2026-08-10": { price: 150 },
-  "2026-08-24": { price: 108 },
-  "2026-08-26": { price: 194 },
-  "2026-09-09": { price: 65 },
-  "2026-09-17": { price: 144 },
-  "2026-10-01": { price: 190 },
-  "2026-10-09": { price: 200 },
-  "2026-10-15": { price: 129 },
-  "2026-10-28": { price: 147 },
-  "2026-11-10": { price: 170 },
-  "2026-11-13": { price: 79 },
-  "2026-11-14": { price: 99 },
-  "2026-12-01": { price: 154 },
-  "2026-12-09": { price: 156 },
-  "2026-12-13": { price: 186 },
-  "2026-12-14": { price: 199 },
-  "2026-12-16": { price: 100 },
-  "2026-12-22": { price: 124 },
-  "2027-01-24": { price: 179 },
-  "2027-02-07": { price: 103 },
-  "2027-02-09": { price: 180 },
-  "2027-02-14": { price: 170 },
-  "2027-02-17": { price: 163 },
-  "2027-02-25": { price: 67 },
-  "2027-03-14": { price: 130 },
-  "2027-03-19": { price: 170 },
-  "2027-03-23": { price: 74 },
-  "2027-03-28": { price: 119 },
-  "2027-03-30": { price: 52 },
-  "2027-04-03": { price: 82 },
-  "2027-04-07": { price: 139 },
-  "2027-04-10": { price: 91 },
-  "2027-04-14": { price: 53 },
-  "2027-04-15": { price: 191 },
-  "2027-04-16": { price: 59 },
-  "2027-04-17": { price: 199 },
-  "2027-04-21": { price: 158 },
-  "2027-04-27": { price: 199 },
-  "2027-05-01": { price: 72 },
-  "2027-05-13": { price: 118 },
-  "2027-05-17": { price: 162 },
-  "2027-05-22": { price: 117 },
-  "2027-05-26": { price: 147 },
-  "2027-06-03": { price: 164 },
-  "2027-06-07": { price: 70 },
-  "2027-06-14": { price: 193 },
-  "2027-06-19": { price: 137 },
-  "2027-06-23": { price: 179 },
-  "2027-06-27": { price: 172 },
-  "2027-07-04": { price: 81 },
-  "2027-07-09": { price: 165 },
-  "2027-07-18": { price: 170 },
-  "2027-07-19": { price: 85 },
-  "2027-07-25": { price: 189 },
-  "2027-07-27": { price: 128 },
-  "2027-08-03": { price: 105 },
-  "2027-08-04": { price: 161 },
-  "2027-08-05": { price: 190 },
-  "2027-08-06": { price: 196 },
-  "2027-08-10": { price: 136 },
-  "2027-08-14": { price: 166 },
-  "2027-08-21": { price: 190 },
-  "2027-08-22": { price: 182 },
-  "2027-08-27": { price: 136 },
-  "2027-08-30": { price: 123 },
-  "2027-09-07": { price: 156 },
-  "2027-09-24": { price: 73 },
-  "2027-09-27": { price: 93 },
-  "2027-09-29": { price: 66 },
-  "2027-10-01": { price: 162 },
-  "2027-10-08": { price: 87 },
-  "2027-10-15": { price: 98 },
-  "2027-10-16": { price: 69 },
-  "2027-10-17": { price: 52 },
-  "2027-11-18": { price: 71 },
-  "2027-11-21": { price: 170 },
-  "2027-12-01": { price: 184 },
-  "2027-12-16": { price: 190 },
-  "2027-12-18": { price: 144 },
-  "2027-12-19": { price: 58 },
-  "2027-12-26": { price: 50 },
-  "2027-12-27": { price: 143 },
-  "2027-12-28": { price: 132 },
+const tour_data_detail = {
+  title:
+    "Discovering Da Bia, the hamlet that captured an ASEAN Community Tourism Award",
+  place: "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+  calendarData: {
+    "2025-12-03": {
+      price: 80,
+      times: ["7:00"],
+    },
+    "2025-12-04": {
+      price: 99,
+      times: ["10:00", "15:00", "8:00"],
+    },
+    "2025-12-07": {
+      price: 69,
+      times: ["15:00"],
+    },
+    "2025-12-10": {
+      price: 80,
+      times: ["13:00"],
+    },
+    "2025-12-12": {
+      price: 99,
+      times: ["7:00"],
+    },
+    "2025-12-20": {
+      price: 120,
+      times: ["10:00"],
+    },
+    "2025-12-25": {
+      price: 150,
+      times: ["15:00", "7:00"],
+    },
+    "2026-01-02": {
+      price: 90,
+      times: ["13:00", "15:00"],
+    },
+    "2026-01-05": {
+      price: 95,
+      times: ["11:00", "14:00"],
+    },
+    "2026-01-10": {
+      price: 110,
+      times: ["9:00"],
+    },
+    "2026-01-15": {
+      price: 130,
+      times: ["11:00", "12:00", "13:00", "8:00"],
+    },
+    "2026-02-01": {
+      price: 85,
+      times: ["10:00", "15:00", "8:00"],
+    },
+    "2026-02-14": {
+      price: 160,
+      times: ["12:00"],
+    },
+    "2026-02-20": {
+      price: 100,
+      times: ["11:00", "12:00", "7:00"],
+    },
+    "2026-03-05": {
+      price: 105,
+      times: ["10:00", "15:00", "7:00", "8:00"],
+    },
+    "2026-03-10": {
+      price: 115,
+      times: ["10:00", "12:00", "15:00"],
+    },
+    "2026-03-25": {
+      price: 140,
+      times: ["7:00"],
+    },
+    "2026-04-01": {
+      price: 120,
+      times: ["11:00", "8:00"],
+    },
+    "2026-04-30": {
+      price: 180,
+      times: ["13:00", "8:00"],
+    },
+    "2026-05-03": {
+      price: 55,
+      times: ["12:00", "14:00", "8:00"],
+    },
+    "2026-05-07": {
+      price: 197,
+      times: ["10:00", "12:00", "15:00"],
+    },
+    "2026-05-08": {
+      price: 81,
+      times: ["11:00", "8:00", "9:00"],
+    },
+    "2026-05-15": {
+      price: 65,
+      times: ["14:00", "9:00"],
+    },
+    "2026-05-21": {
+      price: 110,
+      times: ["10:00", "11:00", "12:00", "9:00"],
+    },
+    "2026-05-26": {
+      price: 78,
+      times: ["10:00"],
+    },
+    "2026-05-27": {
+      price: 131,
+      times: ["12:00"],
+    },
+    "2026-06-08": {
+      price: 81,
+      times: ["11:00", "14:00", "15:00", "8:00"],
+    },
+    "2026-06-19": {
+      price: 200,
+      times: ["10:00", "14:00", "15:00"],
+    },
+    "2026-06-24": {
+      price: 200,
+      times: ["11:00", "13:00", "8:00", "9:00"],
+    },
+    "2026-06-25": {
+      price: 131,
+      times: ["13:00", "15:00", "9:00"],
+    },
+    "2026-06-27": {
+      price: 77,
+      times: ["14:00", "9:00"],
+    },
+    "2026-06-28": {
+      price: 160,
+      times: ["7:00"],
+    },
+    "2026-07-09": {
+      price: 146,
+      times: ["9:00"],
+    },
+    "2026-07-11": {
+      price: 183,
+      times: ["13:00", "8:00"],
+    },
+    "2026-07-14": {
+      price: 89,
+      times: ["11:00", "13:00", "14:00", "9:00"],
+    },
+    "2026-08-05": {
+      price: 142,
+      times: ["8:00"],
+    },
+    "2026-08-10": {
+      price: 150,
+      times: ["12:00", "8:00", "9:00"],
+    },
+    "2026-08-24": {
+      price: 108,
+      times: ["12:00", "14:00", "7:00", "9:00"],
+    },
+    "2026-08-26": {
+      price: 194,
+      times: ["11:00", "15:00", "9:00"],
+    },
+    "2026-09-09": {
+      price: 65,
+      times: ["11:00"],
+    },
+    "2026-09-17": {
+      price: 144,
+      times: ["12:00", "9:00"],
+    },
+    "2026-10-01": {
+      price: 190,
+      times: ["15:00", "7:00"],
+    },
+    "2026-10-09": {
+      price: 200,
+      times: ["14:00", "15:00", "7:00"],
+    },
+    "2026-10-15": {
+      price: 129,
+      times: ["10:00", "11:00", "7:00"],
+    },
+    "2026-10-28": {
+      price: 147,
+      times: ["15:00", "8:00"],
+    },
+    "2026-11-10": {
+      price: 170,
+      times: ["12:00", "15:00", "8:00", "9:00"],
+    },
+    "2026-11-13": {
+      price: 79,
+      times: ["11:00", "14:00", "15:00", "9:00"],
+    },
+    "2026-11-14": {
+      price: 99,
+      times: ["10:00", "12:00", "15:00", "9:00"],
+    },
+    "2026-12-01": {
+      price: 154,
+      times: ["10:00", "11:00", "12:00", "14:00"],
+    },
+    "2026-12-09": {
+      price: 156,
+      times: ["10:00"],
+    },
+    "2026-12-13": {
+      price: 186,
+      times: ["12:00", "8:00"],
+    },
+    "2026-12-14": {
+      price: 199,
+      times: ["15:00"],
+    },
+    "2026-12-16": {
+      price: 100,
+      times: ["10:00", "7:00"],
+    },
+    "2026-12-22": {
+      price: 124,
+      times: ["7:00"],
+    },
+    "2027-01-24": {
+      price: 179,
+      times: ["7:00", "8:00"],
+    },
+    "2027-02-07": {
+      price: 103,
+      times: ["10:00", "8:00", "9:00"],
+    },
+    "2027-02-09": {
+      price: 180,
+      times: ["10:00", "11:00", "12:00", "9:00"],
+    },
+    "2027-02-14": {
+      price: 170,
+      times: ["10:00", "13:00", "14:00", "15:00"],
+    },
+    "2027-02-17": {
+      price: 163,
+      times: ["15:00", "8:00"],
+    },
+    "2027-02-25": {
+      price: 67,
+      times: ["10:00", "12:00", "13:00", "14:00"],
+    },
+    "2027-03-14": {
+      price: 130,
+      times: ["8:00"],
+    },
+    "2027-03-19": {
+      price: 170,
+      times: ["13:00"],
+    },
+    "2027-03-23": {
+      price: 74,
+      times: ["10:00", "15:00", "8:00"],
+    },
+    "2027-03-28": {
+      price: 119,
+      times: ["14:00", "15:00"],
+    },
+    "2027-03-30": {
+      price: 52,
+      times: ["13:00", "9:00"],
+    },
+    "2027-04-03": {
+      price: 82,
+      times: ["10:00", "13:00", "14:00"],
+    },
+    "2027-04-07": {
+      price: 139,
+      times: ["14:00"],
+    },
+    "2027-04-10": {
+      price: 91,
+      times: ["7:00"],
+    },
+    "2027-04-14": {
+      price: 53,
+      times: ["8:00"],
+    },
+    "2027-04-15": {
+      price: 191,
+      times: ["13:00", "9:00"],
+    },
+    "2027-04-16": {
+      price: 59,
+      times: ["10:00", "13:00", "14:00", "15:00"],
+    },
+    "2027-04-17": {
+      price: 199,
+      times: ["9:00"],
+    },
+    "2027-04-21": {
+      price: 158,
+      times: ["10:00", "13:00", "7:00", "9:00"],
+    },
+    "2027-04-27": {
+      price: 199,
+      times: ["13:00", "14:00", "8:00"],
+    },
+    "2027-05-01": {
+      price: 72,
+      times: ["10:00", "11:00"],
+    },
+    "2027-05-13": {
+      price: 118,
+      times: ["15:00"],
+    },
+    "2027-05-17": {
+      price: 162,
+      times: ["12:00"],
+    },
+    "2027-05-22": {
+      price: 117,
+      times: ["7:00"],
+    },
+    "2027-05-26": {
+      price: 147,
+      times: ["11:00", "15:00", "7:00", "9:00"],
+    },
+    "2027-06-03": {
+      price: 164,
+      times: ["9:00"],
+    },
+    "2027-06-07": {
+      price: 70,
+      times: ["8:00"],
+    },
+    "2027-06-14": {
+      price: 193,
+      times: ["13:00", "8:00"],
+    },
+    "2027-06-19": {
+      price: 137,
+      times: ["7:00", "8:00"],
+    },
+    "2027-06-23": {
+      price: 179,
+      times: ["12:00", "15:00", "8:00", "9:00"],
+    },
+    "2027-06-27": {
+      price: 172,
+      times: ["10:00", "11:00", "15:00"],
+    },
+    "2027-07-04": {
+      price: 81,
+      times: ["11:00", "14:00"],
+    },
+    "2027-07-09": {
+      price: 165,
+      times: ["10:00", "7:00", "8:00"],
+    },
+    "2027-07-18": {
+      price: 170,
+      times: ["8:00"],
+    },
+    "2027-07-19": {
+      price: 85,
+      times: ["11:00", "15:00"],
+    },
+    "2027-07-25": {
+      price: 189,
+      times: ["12:00", "8:00"],
+    },
+    "2027-07-27": {
+      price: 128,
+      times: ["11:00", "12:00"],
+    },
+    "2027-08-03": {
+      price: 105,
+      times: ["11:00", "14:00"],
+    },
+    "2027-08-04": {
+      price: 161,
+      times: ["15:00"],
+    },
+    "2027-08-05": {
+      price: 190,
+      times: ["14:00", "8:00", "9:00"],
+    },
+    "2027-08-06": {
+      price: 196,
+      times: ["8:00"],
+    },
+    "2027-08-10": {
+      price: 136,
+      times: ["11:00", "15:00"],
+    },
+    "2027-08-14": {
+      price: 166,
+      times: ["10:00", "12:00"],
+    },
+    "2027-08-21": {
+      price: 190,
+      times: ["14:00", "15:00", "9:00"],
+    },
+    "2027-08-22": {
+      price: 182,
+      times: ["8:00"],
+    },
+    "2027-08-27": {
+      price: 136,
+      times: ["11:00", "14:00", "7:00", "9:00"],
+    },
+    "2027-08-30": {
+      price: 123,
+      times: ["11:00", "9:00"],
+    },
+    "2027-09-07": {
+      price: 156,
+      times: ["11:00", "13:00", "15:00", "7:00"],
+    },
+    "2027-09-24": {
+      price: 73,
+      times: ["8:00"],
+    },
+    "2027-09-27": {
+      price: 93,
+      times: ["15:00", "7:00"],
+    },
+    "2027-09-29": {
+      price: 66,
+      times: ["10:00", "15:00", "9:00"],
+    },
+    "2027-10-01": {
+      price: 162,
+      times: ["11:00", "7:00"],
+    },
+    "2027-10-08": {
+      price: 87,
+      times: ["12:00", "7:00", "8:00"],
+    },
+    "2027-10-15": {
+      price: 98,
+      times: ["12:00", "8:00"],
+    },
+    "2027-10-16": {
+      price: 69,
+      times: ["10:00", "13:00", "8:00", "9:00"],
+    },
+    "2027-10-17": {
+      price: 52,
+      times: ["13:00", "7:00"],
+    },
+    "2027-11-18": {
+      price: 71,
+      times: ["12:00", "13:00"],
+    },
+    "2027-11-21": {
+      price: 170,
+      times: ["11:00", "9:00"],
+    },
+    "2027-12-01": {
+      price: 184,
+      times: ["13:00"],
+    },
+    "2027-12-16": {
+      price: 190,
+      times: ["14:00"],
+    },
+    "2027-12-18": {
+      price: 144,
+      times: ["10:00", "14:00"],
+    },
+    "2027-12-19": {
+      price: 58,
+      times: ["10:00", "11:00", "8:00"],
+    },
+    "2027-12-26": {
+      price: 50,
+      times: ["10:00"],
+    },
+    "2027-12-27": {
+      price: 143,
+      times: ["11:00", "12:00", "13:00", "7:00"],
+    },
+    "2027-12-28": {
+      price: 132,
+      times: ["12:00", "13:00", "15:00"],
+    },
+  },
+  reviewData: [
+    {
+      location: 5,
+      rooms: 4,
+      amenities: 5,
+      price: 4,
+      services: 5,
+      food: 4,
+    },
+    {
+      location: 4,
+      rooms: 4,
+      amenities: 4,
+      price: 3,
+      services: 4,
+      food: 3,
+    },
+    {
+      location: 5,
+      rooms: 5,
+      amenities: 5,
+      price: 4,
+      services: 5,
+      food: 5,
+    },
+  ],
 };
 // ========Calendar==========
 document.addEventListener("DOMContentLoaded", function () {
-  let currentDate = new Date();
+  let currentDate = new Date(2025, 11, 23); // Set to December 23, 2025
   let activeDate = null;
 
   function getDayData(dateStr) {
-    return calendarData[dateStr] || null;
+    return tour_data_detail.calendarData[dateStr] || null;
   }
 
   function formatDate(year, month, day) {
@@ -398,7 +790,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${year}-${m}-${d}`;
   }
 
-  const today = new Date();
+  const today = new Date(2025, 11, 23); // Set today to December 23, 2025
   today.setHours(0, 0, 0, 0);
   const todayStr = formatDate(
     today.getFullYear(),
@@ -530,18 +922,79 @@ document.addEventListener("DOMContentLoaded", function () {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
       day
     ).padStart(2, "0")}`;
-    return calendarData[dateStr] !== undefined;
+    return tour_data_detail.calendarData[dateStr] !== undefined;
   }
 
-  // THÊM: Function lấy giá tour
+  // Lấy giá tour
   function getTourPrice(year, month, day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
       day
     ).padStart(2, "0")}`;
-    return calendarData[dateStr]?.price || null;
+    return tour_data_detail.calendarData[dateStr]?.price || null;
   }
 
   const dropdowns = document.querySelectorAll(".group-select .select-items");
+
+  //============== Hàm Up  TIME PICKER=====================
+  function updateTimePicker(dropdown) {
+    const selectDate = dropdown.querySelector(".select-date");
+    const list = dropdown.querySelector(".list");
+    const current = dropdown.querySelector(".current");
+
+    if (!selectDate || !list) return;
+
+    // Chose date
+    const dateValue = document.querySelector('input[name="tour_date"]')?.value;
+
+    // Xóa nội dung cũ
+    list.innerHTML = "";
+
+    if (!dateValue) {
+      const li = document.createElement("li");
+      li.textContent = "Please choose date first";
+      li.className = "disabled";
+      list.appendChild(li);
+    } else {
+      // Get time to calendarData
+      const times = tour_data_detail.calendarData?.[dateValue]?.times || [];
+
+      if (!times.length) {
+        const li = document.createElement("li");
+        li.textContent = "No time available";
+        li.className = "disabled";
+        list.appendChild(li);
+      } else {
+        times.forEach((time) => {
+          const li = document.createElement("li");
+          li.className = "time-option";
+          li.textContent = time;
+          li.setAttribute("data-time", time);
+          list.appendChild(li);
+        });
+      }
+    }
+
+    // Event click
+    const timeOptions = list.querySelectorAll("li");
+    timeOptions.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (option.classList.contains("disabled")) return;
+
+        const timeValue =
+          option.getAttribute("data-time") || option.textContent.trim();
+
+        // Up value
+        selectDate.value = timeValue;
+        timeOptions.forEach((opt) => opt.classList.remove("selected"));
+        option.classList.add("selected");
+        list?.classList.remove("active");
+        current?.classList.remove("active");
+      });
+    });
+  }
 
   dropdowns.forEach((dropdown) => {
     const current = dropdown.querySelector(".current");
@@ -562,6 +1015,17 @@ document.addEventListener("DOMContentLoaded", function () {
       list?.classList.toggle("active");
       dropdownMenu?.classList.toggle("active");
       current?.classList.toggle("active");
+
+      // UP TIME PICKER
+      const selectDate = dropdown.querySelector(".select-date");
+      if (
+        selectDate &&
+        list &&
+        !dropdown.querySelector(".guest-item") &&
+        !dropdown.querySelector(".datepicker-days")
+      ) {
+        updateTimePicker(dropdown);
+      }
     });
 
     // =========== Value Selection =============
@@ -586,51 +1050,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // ============ TIME PICKER LOGIC ============
-    const selectDate = dropdown.querySelector(".select-date");
-    if (
-      selectDate &&
-      list &&
-      !dropdown.querySelector(".guest-item") &&
-      !dropdown.querySelector(".datepicker-days")
-    ) {
-      if (list.children.length <= 1) {
-        list.innerHTML = "";
-
-        for (let hour = 0; hour < 24; hour++) {
-          for (let minute = 0; minute < 60; minute += 30) {
-            const timeValue = `${String(hour).padStart(2, "0")}:${String(
-              minute
-            ).padStart(2, "0")}`;
-            const li = document.createElement("li");
-            li.className = "time-option";
-            li.textContent = timeValue;
-            li.setAttribute("data-time", timeValue);
-            list.appendChild(li);
-          }
-        }
-      }
-
-      const timeOptions = list.querySelectorAll("li");
-      timeOptions.forEach((option) => {
-        option.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-
-          const timeValue =
-            option.getAttribute("data-time") || option.textContent.trim();
-          selectDate.value = timeValue;
-
-          timeOptions.forEach((opt) => opt.classList.remove("selected"));
-          option.classList.add("selected");
-
-          list?.classList.remove("active");
-          current?.classList.remove("active");
-        });
-      });
-    }
-
-    // Counter Logic
+    // ==================Counter Logic========================
     const guestItems = dropdown.querySelectorAll(".guest-item");
 
     if (guestItems.length > 0) {
@@ -701,7 +1121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isDatepickerForTour = dropdown.classList.contains("datepicker");
 
     if (dateInput && datepickerDays) {
-      let currentDate = new Date();
+      let currentDate = new Date(2025, 11, 23);
       let selectedDate = null;
 
       // Render calendar
@@ -765,7 +1185,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Current month days
-        const today = new Date();
+        const today = new Date(2025, 11, 23);
         today.setHours(0, 0, 0, 0);
 
         for (let i = 1; i <= lastDate; i++) {
@@ -783,7 +1203,6 @@ document.addEventListener("DOMContentLoaded", function () {
           if (isDatepickerForTour) {
             const hasTour = hasTourOnDate(year, month, i);
 
-            // Disable nếu không có tour VÀ không phải today,
             if ((!hasTour && !isToday) || (isPast && !isToday)) {
               day.classList.add("disabled");
               day.disabled = true;
@@ -796,7 +1215,6 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             }
           } else {
-            // Disable ngày quá khứ
             if (isPast) {
               day.classList.add("disabled");
               day.disabled = true;
@@ -810,7 +1228,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           }
 
-          // Check if today
           if (
             i === today.getDate() &&
             month === today.getMonth() &&
@@ -819,7 +1236,6 @@ document.addEventListener("DOMContentLoaded", function () {
             day.classList.add("today");
           }
 
-          // Check if selected
           if (
             selectedDate &&
             i === selectedDate.getDate() &&
@@ -829,7 +1245,6 @@ document.addEventListener("DOMContentLoaded", function () {
             day.classList.add("selected");
           }
 
-          // Check if weekend
           const dayOfWeek = new Date(year, month, i).getDay();
           if (dayOfWeek === 0 || dayOfWeek === 6) {
             day.classList.add("weekend");
@@ -846,7 +1261,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           day.className = "datepicker-day other-month";
           day.textContent = i;
-          // Disable ngày tương lai
+
           if (isDatepickerForTour) {
             const hasTour = hasTourOnDate(year, month + 1, i);
 
@@ -879,13 +1294,20 @@ document.addEventListener("DOMContentLoaded", function () {
         const year = date.getFullYear();
         dateInput.value = `${day}/${month}/${year}`;
 
-        // If this is the tour datepicker, update the price
         if (isDatepickerForTour) {
           const dateStr = `${year}-${month}-${day}`;
           const price = getTourPrice(year, date.getMonth(), date.getDate());
 
           if (price && window.updatePriceFromCalendar) {
             window.updatePriceFromCalendar(dateStr, price);
+          }
+
+          // Up TIME PICKER SAU KHI CHỌN NGÀY
+          const timePickerDropdown = document.querySelector(
+            '.select-items:has(.select-date[name="tour_time"])'
+          );
+          if (timePickerDropdown) {
+            updateTimePicker(timePickerDropdown);
           }
         }
 
@@ -954,6 +1376,106 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// =============== BOOKING FORM CALCULATOR ===============
+document.addEventListener("DOMContentLoaded", function () {
+  const bookingForm = document.querySelector(".tf-form-book.booking-form form");
+  if (!bookingForm) return;
+
+  window.PRICES = {
+    adult: 0,
+    children: 0,
+    servicePerBooking: 20,
+    servicePerPerson: 20,
+  };
+
+  const adultInput = bookingForm.querySelector(
+    '.guest-item:nth-child(1) input[type="number"]'
+  );
+  const childrenInput = bookingForm.querySelector(
+    '.guest-item:nth-child(2) input[type="number"]'
+  );
+  const serviceBookingCheckbox = bookingForm.querySelector("#add_sv_booking");
+  const servicePersonCheckbox = bookingForm.querySelector("#add_sv_person");
+  const totalValueElement = bookingForm.querySelector(".tf-total-value");
+  const totalHiddenInput = bookingForm.querySelector(
+    'input[name="total_amount"]'
+  );
+
+  const valueAdultSpan = bookingForm.querySelector(".value-adult");
+  const valueChildrenSpan = bookingForm.querySelector(".value-child");
+
+  function calculateTotal() {
+    const adultCount = parseInt(adultInput?.value) || 0;
+    const childrenCount = parseInt(childrenInput?.value) || 0;
+    const totalPeople = adultCount + childrenCount;
+
+    let total = 0;
+    total += adultCount * PRICES.adult;
+    total += childrenCount * PRICES.children;
+
+    if (serviceBookingCheckbox?.checked) {
+      total += PRICES.servicePerBooking;
+    }
+    if (servicePersonCheckbox?.checked) {
+      total += totalPeople * PRICES.servicePerPerson;
+    }
+    return total;
+  }
+
+  function updateTotal() {
+    const total = calculateTotal();
+    totalValueElement.textContent = `$${total.toFixed(2)}`;
+    totalHiddenInput.value = total.toFixed(2);
+  }
+
+  // Change Input
+  adultInput?.addEventListener("input", updateTotal);
+  childrenInput?.addEventListener("input", updateTotal);
+
+  // Change Input +/-
+  adultInput?.addEventListener("change", updateTotal);
+  childrenInput?.addEventListener("change", updateTotal);
+
+  const adultPlusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(1) .plus"
+  );
+  const adultMinusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(1) .minus"
+  );
+  const childPlusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(2) .plus"
+  );
+  const childMinusBtn = bookingForm.querySelector(
+    ".guest-item:nth-child(2) .minus"
+  );
+
+  adultPlusBtn?.addEventListener("click", updateTotal);
+  adultMinusBtn?.addEventListener("click", updateTotal);
+  childPlusBtn?.addEventListener("click", updateTotal);
+  childMinusBtn?.addEventListener("click", updateTotal);
+
+  // Checkbox services
+  serviceBookingCheckbox?.addEventListener("change", updateTotal);
+  servicePersonCheckbox?.addEventListener("change", updateTotal);
+
+  // Khởi tạo total ban đầu
+  updateTotal();
+
+  // UPDATE TOTAL FROM CALENDAR
+  window.updatePriceFromCalendar = function (dateStr, price) {
+    const dateInput = bookingForm.querySelector('input[name="tour_date"]');
+    if (dateInput) dateInput.value = dateStr;
+
+    PRICES.adult = price;
+    PRICES.children = price / 2;
+
+    valueAdultSpan.textContent = `$${PRICES.adult.toFixed(2)}`;
+    valueChildrenSpan.textContent = `$${PRICES.children.toFixed(2)}`;
+
+    updateTotal();
+  };
+});
+
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
@@ -1097,7 +1619,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ============Fill=========================
-
 document.addEventListener("DOMContentLoaded", function () {
   const peopleWidget = document.querySelector(".widget-people-tour");
   // ===========People count=====================
@@ -1228,46 +1749,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // ============Percent Review===============
-const reviewData = [
-  {
-    location: 5,
-    rooms: 4,
-    amenities: 5,
-    price: 4,
-    services: 5,
-    food: 4,
-  },
-  {
-    location: 4,
-    rooms: 4,
-    amenities: 4,
-    price: 3,
-    services: 4,
-    food: 3,
-  },
-  {
-    location: 5,
-    rooms: 5,
-    amenities: 5,
-    price: 4,
-    services: 5,
-    food: 5,
-  },
-];
-
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.querySelector(".wg-review-summary");
   if (!wrap) return;
 
   const maxScore = Number(wrap.dataset.max || 5);
-  const count = reviewData.length;
+  const count = tour_data_detail.reviewData.length;
 
   // RANGE
-  const fields = Object.keys(reviewData[0]);
+  const fields = Object.keys(tour_data_detail.reviewData[0]);
 
   const avgByField = {};
   fields.forEach((field) => {
-    const total = reviewData.reduce((sum, r) => sum + r[field], 0);
+    const total = tour_data_detail.reviewData.reduce(
+      (sum, r) => sum + r[field],
+      0
+    );
     avgByField[field] = total / count;
   });
 
@@ -1336,103 +1833,3 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
-
-// =============== BOOKING FORM CALCULATOR ===============
-document.addEventListener("DOMContentLoaded", function () {
-  const bookingForm = document.querySelector(".tf-form-book.booking-form form");
-  if (!bookingForm) return;
-
-  window.PRICES = {
-    adult: 0,
-    children: 0,
-    servicePerBooking: 20,
-    servicePerPerson: 20,
-  };
-
-  const adultInput = bookingForm.querySelector(
-    '.guest-item:nth-child(1) input[type="number"]'
-  );
-  const childrenInput = bookingForm.querySelector(
-    '.guest-item:nth-child(2) input[type="number"]'
-  );
-  const serviceBookingCheckbox = bookingForm.querySelector("#add_sv_booking");
-  const servicePersonCheckbox = bookingForm.querySelector("#add_sv_person");
-  const totalValueElement = bookingForm.querySelector(".tf-total-value");
-  const totalHiddenInput = bookingForm.querySelector(
-    'input[name="total_amount"]'
-  );
-
-  const valueAdultSpan = bookingForm.querySelector(".value-adult");
-  const valueChildrenSpan = bookingForm.querySelector(".value-child");
-
-  function calculateTotal() {
-    const adultCount = parseInt(adultInput?.value) || 0;
-    const childrenCount = parseInt(childrenInput?.value) || 0;
-    const totalPeople = adultCount + childrenCount;
-
-    let total = 0;
-    total += adultCount * PRICES.adult;
-    total += childrenCount * PRICES.children;
-
-    if (serviceBookingCheckbox?.checked) {
-      total += PRICES.servicePerBooking;
-    }
-    if (servicePersonCheckbox?.checked) {
-      total += totalPeople * PRICES.servicePerPerson;
-    }
-    return total;
-  }
-
-  function updateTotal() {
-    const total = calculateTotal();
-    totalValueElement.textContent = `$${total.toFixed(2)}`;
-    totalHiddenInput.value = total.toFixed(2);
-  }
-
-  // Change Input
-  adultInput?.addEventListener("input", updateTotal);
-  childrenInput?.addEventListener("input", updateTotal);
-
-  // Change Input +/-
-  adultInput?.addEventListener("change", updateTotal);
-  childrenInput?.addEventListener("change", updateTotal);
-
-  const adultPlusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(1) .plus"
-  );
-  const adultMinusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(1) .minus"
-  );
-  const childPlusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(2) .plus"
-  );
-  const childMinusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(2) .minus"
-  );
-
-  adultPlusBtn?.addEventListener("click", updateTotal);
-  adultMinusBtn?.addEventListener("click", updateTotal);
-  childPlusBtn?.addEventListener("click", updateTotal);
-  childMinusBtn?.addEventListener("click", updateTotal);
-
-  // Checkbox services
-  serviceBookingCheckbox?.addEventListener("change", updateTotal);
-  servicePersonCheckbox?.addEventListener("change", updateTotal);
-
-  // Khởi tạo total ban đầu
-  updateTotal();
-
-  // UPDATE TOTAL FROM CALENDAR
-  window.updatePriceFromCalendar = function (dateStr, price) {
-    const dateInput = bookingForm.querySelector('input[name="tour_date"]');
-    if (dateInput) dateInput.value = dateStr;
-
-    PRICES.adult = price;
-    PRICES.children = price / 2;
-
-    valueAdultSpan.textContent = `$${PRICES.adult.toFixed(2)}`;
-    valueChildrenSpan.textContent = `$${PRICES.children.toFixed(2)}`;
-
-    updateTotal();
-  };
-});

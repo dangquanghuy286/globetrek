@@ -3240,7 +3240,7 @@ h5 {
 .tf-form-book .form-group .list.style-01 {
   color: var(--text-color);
   overflow: hidden;
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
   padding: 16px 0 !important;
 }
