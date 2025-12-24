@@ -564,6 +564,13 @@
       .sw-pagination {
          display: block !important;
       }
+
+      .box-testimonial-item {
+         .description {
+            font-size: 20px;
+            line-height: 100%;
+         }
+      }
    }
 
    .wd-navigation {
@@ -615,7 +622,7 @@
 
       .home-3 {
          .box-title {
-            padding: 100px 0 250px;
+            padding: 100px 0 250px !important;
 
             h1 {
                margin-bottom: 10px;
@@ -630,6 +637,7 @@
       .home-4 {
          .box-title {
             padding: 200px 0 90px;
+
          }
       }
 
@@ -652,8 +660,12 @@
       .box-title {
          margin-bottom: 300px;
 
+         &.grid-banner {
+            margin-bottom: 0px !important;
+         }
+
          h1 {
-            font-size: 60px !important;
+            font-size: 40px !important;
          }
 
          p {
@@ -1245,10 +1257,6 @@
    .slider-default {
       .home-1 .box-title {
          padding: 200px 0 300px !important;
-
-         h1 {
-            font-size: 40px !important;
-         }
       }
 
       .home-5 {
@@ -1259,6 +1267,10 @@
          }
 
       }
+   }
+
+   .listing-pagination {
+      flex-direction: column;
    }
 
    .box-title {
@@ -1389,8 +1401,11 @@
 
       .card-review {
          width: 100% !important;
-         aspect-ratio: 1 / 1;
          height: 100% !important;
+
+         img {
+            aspect-ratio: 1 / 1;
+         }
       }
 
 

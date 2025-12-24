@@ -9710,6 +9710,10 @@ input[type=checkbox]:checked {
   .flat-testimonial .sw-pagination {
     display: block !important;
   }
+  .flat-testimonial .box-testimonial-item .description {
+    font-size: 20px;
+    line-height: 100%;
+  }
   .wd-navigation {
     gap: 8px;
   }
@@ -9741,7 +9745,7 @@ input[type=checkbox]:checked {
     width: 100%;
   }
   .slider-default .home-3 .box-title {
-    padding: 100px 0 250px;
+    padding: 100px 0 250px !important;
   }
   .slider-default .home-3 .box-title h1 {
     margin-bottom: 10px;
@@ -9761,8 +9765,11 @@ input[type=checkbox]:checked {
   .slider-default .box-title {
     margin-bottom: 300px;
   }
+  .slider-default .box-title.grid-banner {
+    margin-bottom: 0px !important;
+  }
   .slider-default .box-title h1 {
-    font-size: 60px !important;
+    font-size: 40px !important;
   }
   .slider-default .box-title p {
     font-size: 14px !important;
@@ -10136,11 +10143,11 @@ input[type=checkbox]:checked {
   .slider-default .home-1 .box-title {
     padding: 200px 0 300px !important;
   }
-  .slider-default .home-1 .box-title h1 {
-    font-size: 40px !important;
-  }
   .slider-default .home-5 .box-title h1 {
     font-size: 50px !important;
+  }
+  .listing-pagination {
+    flex-direction: column;
   }
   .box-title .tf-meta .contact-info ul li a {
     width: 36px;
@@ -10217,8 +10224,10 @@ input[type=checkbox]:checked {
   }
   .flat-img-with-text .card-review {
     width: 100% !important;
-    aspect-ratio: 1/1;
     height: 100% !important;
+  }
+  .flat-img-with-text .card-review img {
+    aspect-ratio: 1/1;
   }
   .flat-img-with-text .flat-service {
     gap: 20px !important;
