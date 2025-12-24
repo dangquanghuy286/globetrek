@@ -510,12 +510,6 @@
    }
 
    .flat-section {
-      .box-title {
-         .title {
-            margin-bottom: 24px !important;
-         }
-      }
-
       .subtitle {
          font-size: 15px;
       }
@@ -1181,17 +1175,11 @@
       }
    }
 
-   .title {
-      font-size: 32px !important;
-   }
-
    .flat-section {
       .box-title {
          margin-bottom: 30px;
 
-         .title {
-            margin-bottom: 16px !important;
-         }
+
       }
 
       .subtitle {
@@ -1202,6 +1190,12 @@
       .desc {
          font-size: 14px !important;
       }
+   }
+
+   .title {
+      margin-bottom: 16px !important;
+      font-size: 24px !important;
+      line-height: 100%;
    }
 
    .tf-grid-layout {
@@ -1250,6 +1244,8 @@
 
    .slider-default {
       .home-1 .box-title {
+         padding: 200px 0 300px !important;
+
          h1 {
             font-size: 40px !important;
          }
@@ -1619,8 +1615,6 @@
          justify-content: center;
       }
    }
-
-
 
    .tf-toolbar-bottom {
       padding: 0;

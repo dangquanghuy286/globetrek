@@ -775,6 +775,7 @@ const tour_data_detail = {
     },
   ],
 };
+// ********************Action Form**************************
 // ========Calendar==========
 document.addEventListener("DOMContentLoaded", function () {
   let currentDate = new Date();
@@ -1573,6 +1574,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ********************End Action Form**************************
 // ============ Active Accordion =================
 document.addEventListener("DOMContentLoaded", () => {
   function initAccordion(itemSelector) {

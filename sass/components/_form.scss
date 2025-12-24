@@ -656,7 +656,7 @@
         align-items: center;
         justify-content: center;
         font-weight: 500;
-        min-height: 40px;
+        min-height: 36px;
 
         &.weekend {
             color: var(--primary-color);
@@ -886,11 +886,7 @@
         }
     }
 
-    .datepicker-days {
-        .datepicker-day {
-            min-height: 30px;
-        }
-    }
+
 
     .booking-form {
         padding-bottom: 24px;
