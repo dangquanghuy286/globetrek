@@ -1858,3 +1858,12 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
+// ======== GET FULL PLACE FROM DATA =========
+document.addEventListener("DOMContentLoaded", () => {
+  const address = tour_data_detail?.place;
+  if (!address) return;
+
+  document.querySelectorAll(".location-address").forEach((el) => {
+    el.textContent = address;
+  });
+});
