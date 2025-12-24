@@ -872,6 +872,28 @@
       }
    }
 
+   .tf-vacation-hero-v2 {
+      .flat-img-with-contact {
+         .box-info {
+            gap: 24px;
+
+            .info-item {
+               gap: 16px;
+               font-size: 16px;
+
+               &.phone a {
+                  font-size: 24px;
+               }
+
+               .icon img {
+                  width: 40px;
+                  height: 40px;
+               }
+            }
+         }
+      }
+   }
+
    .banner-section {
       padding: 150px 0 !important;
    }
@@ -1025,6 +1047,7 @@
          }
       }
    }
+
 
 
    .hero {
@@ -1364,6 +1387,40 @@
 
    .footer {
       margin-bottom: 70px;
+   }
+
+   .tf-vacation-hero-v2 {
+      .flat-img-with-contact {
+         .box-info {
+            gap: 20px;
+
+            .info-item {
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               gap: 12px;
+
+               &.phone a {
+                  font-size: 22px;
+               }
+
+               .icon {
+                  padding-right: 0;
+                  border-right: none;
+                  align-items: center;
+
+                  img {
+                     width: 36px;
+                     height: 36px;
+                  }
+               }
+
+               .content {
+                  align-items: center;
+               }
+            }
+         }
+      }
    }
 
    .advanced-form {
