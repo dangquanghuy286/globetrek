@@ -777,7 +777,7 @@ const tour_data_detail = {
 };
 // ========Calendar==========
 document.addEventListener("DOMContentLoaded", function () {
-  let currentDate = new Date(2025, 11, 23); // Set to December 23, 2025
+  let currentDate = new Date();
   let activeDate = null;
 
   function getDayData(dateStr) {
@@ -790,7 +790,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${year}-${m}-${d}`;
   }
 
-  const today = new Date(2025, 11, 23); // Set today to December 23, 2025
+  const today = new Date(); // Set today to December 23, 2025
   today.setHours(0, 0, 0, 0);
   const todayStr = formatDate(
     today.getFullYear(),
@@ -1121,7 +1121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isDatepickerForTour = dropdown.classList.contains("datepicker");
 
     if (dateInput && datepickerDays) {
-      let currentDate = new Date(2025, 11, 23);
+      let currentDate = new Date();
       let selectedDate = null;
 
       // Render calendar
@@ -1185,7 +1185,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Current month days
-        const today = new Date(2025, 11, 23);
+        const today = new Date();
         today.setHours(0, 0, 0, 0);
 
         for (let i = 1; i <= lastDate; i++) {
