@@ -9002,6 +9002,7 @@ input[type=checkbox]:checked {
 
 .flat-tour-with-map {
   overflow: hidden;
+  padding-right: 16px;
 }
 .flat-tour-with-map .wrap-left {
   height: calc(100vh - 80px);
@@ -9704,6 +9705,13 @@ input[type=checkbox]:checked {
     top: -120% !important;
     border-radius: 12px !important;
   }
+  .flat-tour-with-map {
+    padding-right: 0;
+  }
+  .flat-tour-with-map .wrap-right {
+    padding-right: 0 !important;
+    padding-top: 32px !important;
+  }
   .flat-testimonial .flex-direction-nav {
     display: none;
   }
@@ -10049,7 +10057,7 @@ input[type=checkbox]:checked {
     gap: 24px;
   }
   .flat-contact .wg-form-contact {
-    padding: 24px;
+    padding: 16px;
   }
   .flat-contact .tf-contact-form {
     grid-template-columns: 1fr;

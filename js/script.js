@@ -791,7 +791,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${year}-${m}-${d}`;
   }
 
-  const today = new Date(); // Set today to December 23, 2025
+  const today = new Date();
   today.setHours(0, 0, 0, 0);
   const todayStr = formatDate(
     today.getFullYear(),
@@ -822,11 +822,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "November",
       "December",
     ];
-    document.getElementById("monthYear").textContent = `${
-      monthNames[month]
-    } ${year.toString().slice(-2)}`;
+    const monthYearEl = document.getElementById("monthYear");
+    if (monthYearEl) {
+      monthYearEl.textContent = `${monthNames[month]} ${year
+        .toString()
+        .slice(-2)}`;
+    }
 
     const daysGrid = document.getElementById("daysGrid");
+    if (!daysGrid) return;
     daysGrid.innerHTML = "";
 
     // Previous month
@@ -1690,13 +1694,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const stars = list.querySelectorAll(".icon-star");
     const input = list.parentElement.querySelector('input[type="hidden"]');
 
+    if (!input || stars.length === 0) return;
+
     stars.forEach((star) => {
       const value = star.dataset.value;
+      if (!value) return;
 
       // Hover effect
       star.addEventListener("mouseenter", () => {
         stars.forEach((s) => {
-          s.classList.toggle("active", s.dataset.value <= value);
+          s.classList.toggle(
+            "active",
+            Number(s.dataset.value) <= Number(value)
+          );
         });
       });
 
@@ -1704,7 +1714,10 @@ document.addEventListener("DOMContentLoaded", () => {
       list.addEventListener("mouseleave", () => {
         stars.forEach((s) => {
           s.classList.remove("active");
-          s.classList.toggle("selected", s.dataset.value <= input.value);
+          s.classList.toggle(
+            "selected",
+            Number(s.dataset.value) <= Number(input.value)
+          );
         });
       });
 
@@ -1713,7 +1726,10 @@ document.addEventListener("DOMContentLoaded", () => {
         input.value = value;
 
         stars.forEach((s) => {
-          s.classList.toggle("selected", s.dataset.value <= value);
+          s.classList.toggle(
+            "selected",
+            Number(s.dataset.value) <= Number(value)
+          );
         });
       });
     });
@@ -1721,6 +1737,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== HANDLE FORM SUBMIT =====
   const form = document.getElementById("commentForm");
+
+  if (!form) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -1738,7 +1756,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     for (let rate of ratings) {
-      if (data.get(rate) === "0") {
+      const value = data.get(rate);
+
+      if (!value || value === "0") {
         alert("Please rate all categories");
         return;
       }
@@ -1746,11 +1766,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reset form
     form.reset();
-    document
-      .querySelectorAll(".icon-star")
-      .forEach((star) => star.classList.remove("active", "selected"));
+
+    document.querySelectorAll(".icon-star").forEach((star) => {
+      star.classList.remove("active", "selected");
+    });
   });
 });
+
 // ============Percent Review===============
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.querySelector(".wg-review-summary");

@@ -556,6 +556,17 @@
       }
    }
 
+   .flat-tour-with-map {
+
+      padding-right: 0;
+
+      .wrap-right {
+         padding-right: 0 !important;
+         padding-top: 32px !important;
+      }
+   }
+
+
    .flat-testimonial {
       .flex-direction-nav {
          display: none;
@@ -953,6 +964,7 @@
    }
 
 
+
    .tf-vacation-hero {
       .flat-img-with-text {
          &.style-05 {
@@ -1118,7 +1130,7 @@
 
    .flat-contact {
       .wg-form-contact {
-         padding: 24px;
+         padding: 16px;
       }
 
       .tf-contact-form {
