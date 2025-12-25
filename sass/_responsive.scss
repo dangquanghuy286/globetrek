@@ -965,6 +965,61 @@
       }
    }
 
+   .wg-faq {
+      &:not(:last-child) {
+         margin-bottom: 36px;
+      }
+
+      .faq-item {
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+
+      .faq-item {
+         padding-bottom: 20px;
+
+         .question-title {
+            font-size: 18px;
+         }
+
+         &.active {
+            .faq-top {
+               padding-bottom: 12px;
+            }
+         }
+      }
+   }
+
+   .content-widget {
+      &.banner-1 {
+         padding: 20px;
+      }
+
+      .content {
+         &.style-01 {
+            flex-direction: column;
+
+            .wg-contact {
+               flex-direction: column;
+               gap: 24px;
+
+               .box-info {
+                  width: 100%;
+               }
+            }
+
+            .tf-btn {
+               width: 100%;
+            }
+         }
+
+         .name {
+            font-size: 32px;
+         }
+      }
+   }
+
 }
 
 @media (max-width: 767px) {

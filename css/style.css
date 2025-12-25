@@ -8588,6 +8588,7 @@ input[type=checkbox]:checked {
   justify-content: space-between;
   text-transform: capitalize;
   position: relative;
+  gap: 15px;
   color: var(--heading-color);
 }
 .wg-faq .faq-item .question-title {
@@ -9950,6 +9951,40 @@ input[type=checkbox]:checked {
   }
   .footer .widget-box {
     margin-bottom: 30px;
+  }
+  .wg-faq:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  .wg-faq .faq-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .wg-faq .faq-item {
+    padding-bottom: 20px;
+  }
+  .wg-faq .faq-item .question-title {
+    font-size: 18px;
+  }
+  .wg-faq .faq-item.active .faq-top {
+    padding-bottom: 12px;
+  }
+  .content-widget.banner-1 {
+    padding: 20px;
+  }
+  .content-widget .content.style-01 {
+    flex-direction: column;
+  }
+  .content-widget .content.style-01 .wg-contact {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .content-widget .content.style-01 .wg-contact .box-info {
+    width: 100%;
+  }
+  .content-widget .content.style-01 .tf-btn {
+    width: 100%;
+  }
+  .content-widget .content .name {
+    font-size: 32px;
   }
 }
 @media (max-width: 767px) {
