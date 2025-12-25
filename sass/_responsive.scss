@@ -256,6 +256,10 @@
       }
    }
 
+   .tf-booking-sidebar {
+      margin-top: 40px;
+   }
+
    .box-title {
       .tf-meta {
          flex-direction: column;
@@ -979,6 +983,10 @@
       .faq-item {
          padding-bottom: 20px;
 
+         &.style-01 {
+            padding: 20px;
+         }
+
          .question-title {
             font-size: 18px;
          }
@@ -1016,6 +1024,18 @@
 
          .name {
             font-size: 32px;
+         }
+      }
+   }
+
+   .property-schedule {
+      .plan-content {
+         padding-left: 40px;
+      }
+
+      .tour-plan-item {
+         &:not(:last-child)::before {
+            left: 13px;
          }
       }
    }
@@ -1300,6 +1320,12 @@
       line-height: 100%;
    }
 
+   .wrap-form-comment {
+      .group-ip {
+         grid-template-columns: 1fr;
+      }
+   }
+
    .tf-grid-layout {
       &.grid-mb {
          display: flex !important;
@@ -1324,6 +1350,11 @@
       overflow-y: auto;
    }
 
+   .tf-booking-sidebar {
+      .tf-form-book {
+         padding: 24px;
+      }
+   }
 
    .flex-direction-nav {
       display: none;
@@ -1680,6 +1711,48 @@
          }
       }
    }
+
+   .property-schedule {
+      .plan-topic {
+         gap: 12px;
+
+         .title-plan {
+            font-size: 14px;
+         }
+
+         .icon {
+            font-size: 16px;
+
+            &.icon-check {
+               width: 28px;
+               height: 28px;
+            }
+
+            &.icon-CaretDown {
+               width: 20px;
+               height: 20px;
+            }
+         }
+      }
+
+      .plan-content {
+         padding-left: 32px;
+         padding-top: 12px;
+         font-size: 14px;
+      }
+
+      .tour-plan-item {
+         padding-bottom: 24px;
+
+         &:not(:last-child)::before {
+            left: 11px;
+            top: 28px;
+            bottom: -24px;
+         }
+      }
+   }
+
+
 
    .tf-promo-section {
       .content-left {

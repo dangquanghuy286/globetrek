@@ -8588,7 +8588,7 @@ input[type=checkbox]:checked {
   justify-content: space-between;
   text-transform: capitalize;
   position: relative;
-  gap: 15px;
+  gap: 10px;
   color: var(--heading-color);
 }
 .wg-faq .faq-item .question-title {
@@ -8621,6 +8621,7 @@ input[type=checkbox]:checked {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .wg-faq .faq-item .faq-answer {
   text-transform: none;
@@ -9511,6 +9512,9 @@ input[type=checkbox]:checked {
   .header.style-2 .list-nav {
     padding: 0 16px;
   }
+  .tf-booking-sidebar {
+    margin-top: 40px;
+  }
   .box-title .tf-meta {
     flex-direction: column;
     gap: 10px;
@@ -9961,6 +9965,9 @@ input[type=checkbox]:checked {
   .wg-faq .faq-item {
     padding-bottom: 20px;
   }
+  .wg-faq .faq-item.style-01 {
+    padding: 20px;
+  }
   .wg-faq .faq-item .question-title {
     font-size: 18px;
   }
@@ -9985,6 +9992,12 @@ input[type=checkbox]:checked {
   }
   .content-widget .content .name {
     font-size: 32px;
+  }
+  .property-schedule .plan-content {
+    padding-left: 40px;
+  }
+  .property-schedule .tour-plan-item:not(:last-child)::before {
+    left: 13px;
   }
 }
 @media (max-width: 767px) {
@@ -10159,6 +10172,9 @@ input[type=checkbox]:checked {
     font-size: 24px !important;
     line-height: 100%;
   }
+  .wrap-form-comment .group-ip {
+    grid-template-columns: 1fr;
+  }
   .tf-grid-layout.grid-mb {
     display: flex !important;
     gap: 0;
@@ -10176,6 +10192,9 @@ input[type=checkbox]:checked {
   .advanced-form {
     max-height: 80vh;
     overflow-y: auto;
+  }
+  .tf-booking-sidebar .tf-form-book {
+    padding: 24px;
   }
   .flex-direction-nav {
     display: none;
@@ -10382,6 +10401,36 @@ input[type=checkbox]:checked {
   }
   .hero .content-right .rotating-badge {
     display: none;
+  }
+  .property-schedule .plan-topic {
+    gap: 12px;
+  }
+  .property-schedule .plan-topic .title-plan {
+    font-size: 14px;
+  }
+  .property-schedule .plan-topic .icon {
+    font-size: 16px;
+  }
+  .property-schedule .plan-topic .icon.icon-check {
+    width: 28px;
+    height: 28px;
+  }
+  .property-schedule .plan-topic .icon.icon-CaretDown {
+    width: 20px;
+    height: 20px;
+  }
+  .property-schedule .plan-content {
+    padding-left: 32px;
+    padding-top: 12px;
+    font-size: 14px;
+  }
+  .property-schedule .tour-plan-item {
+    padding-bottom: 24px;
+  }
+  .property-schedule .tour-plan-item:not(:last-child)::before {
+    left: 11px;
+    top: 28px;
+    bottom: -24px;
   }
   .tf-promo-section .content-left {
     align-items: stretch !important;
