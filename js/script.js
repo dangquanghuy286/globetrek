@@ -1441,18 +1441,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function calculateTotal() {
     const adultCount = parseInt(adultInput?.value) || 0;
     const childrenCount = parseInt(childrenInput?.value) || 0;
-    const totalPeople = adultCount + childrenCount;
 
     let total = 0;
     total += adultCount * PRICES.adult;
     total += childrenCount * PRICES.children;
 
+    // Service Per Booking
     if (serviceBookingCheckbox?.checked) {
-      total += PRICES.servicePerBooking;
+      total += adultCount * PRICES.servicePerBooking;
     }
+
+    // Service Per Person
     if (servicePersonCheckbox?.checked) {
-      total += totalPeople * PRICES.servicePerPerson;
+      total += childrenCount * PRICES.servicePerPerson;
     }
+
     return total;
   }
 
@@ -1803,7 +1806,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =================== Review Summary & Rating Breakdown ===================
-
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.querySelector(".wg-review-summary");
   if (!wrap) return;
