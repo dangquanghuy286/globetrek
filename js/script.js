@@ -971,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!dateValue) {
       const li = document.createElement("li");
       li.textContent = "Please choose date first";
-      li.className = "disabled";
+      li.className = "disabled text_primary text-center";
       list.appendChild(li);
     } else {
       // Get time to calendarData
