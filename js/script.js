@@ -80,105 +80,107 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-// ==================== Toggle MENU ===================
-document.addEventListener("DOMContentLoaded", () => {
+// =================== Mobile Menu=====================
+document.addEventListener("DOMContentLoaded", function () {
+  // ==================== Toggle MENU ===================
   const toggleBtn = document.querySelector(".toggle-mobile");
   const menu = document.querySelector(".mobile-menu");
   const overlay = document.querySelector(".overlay");
   const closeBtn = document.querySelector(".close-btn");
 
-  if (!toggleBtn || !menu || !overlay || !closeBtn) return;
-
-  // Open menu
-  toggleBtn.addEventListener("click", () => {
-    menu.classList.add("active");
-    overlay.classList.add("active");
-    closeBtn.classList.add("active");
-  });
-
-  // Close menu
-  [overlay, closeBtn].forEach((el) => {
-    el.addEventListener("click", () => {
-      menu.classList.remove("active");
-      overlay.classList.remove("active");
-      closeBtn.classList.remove("active");
+  if (toggleBtn && menu && overlay && closeBtn) {
+    // Open menu
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+      overlay.classList.add("active");
+      closeBtn.classList.add("active");
     });
-  });
-});
 
-// =====================SUBMENU=================================
-document.querySelectorAll(".mobile-dropdown").forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    const parent = e.currentTarget.parentElement;
-    const subMenu = parent.querySelector(".mb-sub-menu");
-
-    if (subMenu) {
-      // Đóng tất cả nav-item
-      document.querySelectorAll(".nav-item.active").forEach((otherItem) => {
-        if (otherItem !== parent) {
-          otherItem.classList.remove("active");
-        }
+    // Close menu
+    [overlay, closeBtn].forEach((el) => {
+      el.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        closeBtn.classList.remove("active");
       });
+    });
+  }
 
-      // Toggle
-      parent.classList.toggle("active");
-    }
-  });
-});
+  // ===================== SUBMENU (LEVEL 1) ====================
+  document.querySelectorAll(".mobile-dropdown").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parent = e.currentTarget.parentElement;
+      const subMenu = parent.querySelector(".mb-sub-menu");
 
-// ===================-SUBMENU==============================
-document.querySelectorAll(".sub-link.has-sub").forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    const parent = e.currentTarget.closest(".sub-item");
-    const subSubMenu = parent.querySelector(".mb-sub-sub-menu");
-
-    if (subSubMenu) {
-      parent
-        .closest(".mb-sub-menu")
-        .querySelectorAll(".sub-item.open")
-        .forEach((otherItem) => {
+      if (subMenu) {
+        // Đóng tất cả nav-item khác
+        document.querySelectorAll(".nav-item.active").forEach((otherItem) => {
           if (otherItem !== parent) {
-            otherItem.classList.remove("open");
-            const nested = otherItem.querySelector(".mb-sub-sub-menu");
-            if (nested) nested.style.display = "none";
+            otherItem.classList.remove("active");
           }
         });
 
-      // Toggle submenu con
-      const isOpen = parent.classList.toggle("open");
-      subSubMenu.style.display = isOpen ? "flex" : "none";
-    }
+        // Toggle menu lv1
+        parent.classList.toggle("active");
+      }
+    });
+  });
+
+  // ===================== SUBMENU (LEVEL 2) ====================
+  document.querySelectorAll(".sub-link.has-sub").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parent = e.currentTarget.closest(".sub-item");
+      const subSubMenu = parent?.querySelector(".mb-sub-sub-menu");
+
+      if (subSubMenu) {
+        // Đóng các submenu cùng cấp
+        parent
+          .closest(".mb-sub-menu")
+          .querySelectorAll(".sub-item.open")
+          .forEach((otherItem) => {
+            if (otherItem !== parent) {
+              otherItem.classList.remove("open");
+              const nested = otherItem.querySelector(".mb-sub-sub-menu");
+              if (nested) nested.style.display = "none";
+            }
+          });
+
+        // Toggle submenu lv2
+        const isOpen = parent.classList.toggle("open");
+        subSubMenu.style.display = isOpen ? "flex" : "none";
+      }
+    });
   });
 });
-
-// ===================Active-menu==============================
+// =================== Toolbar Active • Wishlist Filter • Like/Unlike ===================
 document.addEventListener("DOMContentLoaded", () => {
+  // =================== Active Menu ==================
   const list = document.querySelectorAll(".toolbar-item");
 
-  function activeLink(e) {
+  function activeLink() {
     list.forEach((item) => item.classList.remove("active"));
     this.classList.add("active");
   }
 
   list.forEach((item) => item.addEventListener("click", activeLink));
 
-  // ===================Active-Wishlist==============================
+  // =================== Wishlist =====================
   const wishlistBtns = document.querySelectorAll(".btn-wished");
 
   wishlistBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       this.classList.toggle("active");
 
-      // Filter wishlist
+      // Delay để animation xong rồi filter
       setTimeout(() => {
         filterWishlist();
       }, 300);
     });
   });
 
-  // ===================Filter-Wishlist==============================
+  // =================== Filter Wishlist ==============
   function filterWishlist() {
     const wishlistContainer = document.querySelector(".tf-wishlist");
     const emptyWishlist = document.querySelector("#empty-wishlist");
@@ -198,48 +200,44 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Hiển  empty state
+    // Empty state
     if (!hasActive) {
       wishlistContainer.style.display = "none";
-      if (emptyWishlist) {
-        emptyWishlist.style.display = "block";
-      }
+      if (emptyWishlist) emptyWishlist.style.display = "block";
     } else {
       wishlistContainer.style.display = "";
-      if (emptyWishlist) {
-        emptyWishlist.style.display = "none";
-      }
+      if (emptyWishlist) emptyWishlist.style.display = "none";
     }
   }
-  filterWishlist();
-});
 
-// =====================Like ,Unlike===========================
-document.addEventListener("DOMContentLoaded", () => {
+  // Chạy lần đầu
+  filterWishlist();
+
+  // ===================== Like / Unlike =====================
   const actions = document.querySelectorAll(".action");
 
   actions.forEach((action) => {
     const likeBtn = action.querySelector(".like-btn");
     const unlikeBtn = action.querySelector(".unlike-btn");
 
-    // is checked variable value
-    if (likeBtn && unlikeBtn) {
-      likeBtn.addEventListener("click", () => {
-        likeBtn.classList.toggle("active");
-        if (likeBtn.classList.contains("active")) {
-          unlikeBtn.classList.remove("active");
-        }
-      });
+    if (!likeBtn || !unlikeBtn) return;
 
-      unlikeBtn.addEventListener("click", () => {
-        unlikeBtn.classList.toggle("active");
-        if (unlikeBtn.classList.contains("active")) {
-          likeBtn.classList.remove("active");
-        }
-      });
-    }
+    likeBtn.addEventListener("click", () => {
+      likeBtn.classList.toggle("active");
+      if (likeBtn.classList.contains("active")) {
+        unlikeBtn.classList.remove("active");
+      }
+    });
+
+    unlikeBtn.addEventListener("click", () => {
+      unlikeBtn.classList.toggle("active");
+      if (unlikeBtn.classList.contains("active")) {
+        likeBtn.classList.remove("active");
+      }
+    });
   });
 });
+
 // ====================Active Nav menu=========================
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(
@@ -252,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".menu-item")
     .forEach((item) => item.classList.remove("active"));
 
-  // Get current pạt
+  // Get current path
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
   // Active for ref
@@ -940,6 +938,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const dropdowns = document.querySelectorAll(".group-select .select-items");
 
+  // ============== Hàm đóng tất cả dropdowns ==============
+  function closeAllDropdowns() {
+    dropdowns.forEach((dropdown) => {
+      dropdown.querySelector(".list")?.classList.remove("active");
+      dropdown.querySelector(".dropdown-menu")?.classList.remove("active");
+      dropdown.querySelector(".current")?.classList.remove("active");
+    });
+  }
+
+  // ============== Hàm đóng tất cả advanced-form ==============
+  function closeAllAdvancedForms() {
+    document.querySelectorAll(".advanced-form.show").forEach((form) => {
+      form.classList.remove("show");
+    });
+  }
+
   //============== Hàm Up  TIME PICKER=====================
   function updateTimePicker(dropdown) {
     const selectDate = dropdown.querySelector(".select-date");
@@ -1008,6 +1022,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     current?.addEventListener("click", (e) => {
       e.stopPropagation();
+
+      // Đóng tất cả advanced-form khi mở dropdown
+      closeAllAdvancedForms();
 
       dropdowns.forEach((other) => {
         if (other !== dropdown) {
@@ -1340,11 +1357,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("click", () => {
-    dropdowns.forEach((dropdown) => {
-      dropdown.querySelector(".list")?.classList.remove("active");
-      dropdown.querySelector(".dropdown-menu")?.classList.remove("active");
-      dropdown.querySelector(".current")?.classList.remove("active");
-    });
+    closeAllDropdowns();
   });
 
   // ========== Advanced Form Toggle ==========
@@ -1360,6 +1373,10 @@ document.addEventListener("DOMContentLoaded", function () {
       advancedBtn.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
+
+        // Đóng tất cả dropdowns trước khi mở advanced-form
+        closeAllDropdowns();
+
         advancedForm.classList.toggle("show");
 
         document.querySelectorAll(".advanced-form").forEach((form) => {
@@ -1367,6 +1384,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     }
+  });
+
+  // ======== CLOSE ADVANCED SEARCH WHEN CLICK OUTSIDE =========
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".advanced-form.show").forEach((form) => {
+      const formS1 = form.closest(".form-s1");
+      const filterBtn = formS1?.querySelector(".box-btn-filter");
+
+      if (!form.contains(e.target) && !filterBtn?.contains(e.target)) {
+        form.classList.remove("show");
+      }
+    });
   });
 
   // =============== Box Select ===============
@@ -1625,7 +1654,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion(".property-schedule .tour-plan-item");
 });
 
-// ============Fill=========================
+// =================== Guest Selection ===================
 document.addEventListener("DOMContentLoaded", function () {
   const peopleWidget = document.querySelector(".widget-people-tour");
   // ===========People count=====================
@@ -1687,7 +1716,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-// ============Pick Star + Post Form========
+// =================== Star Rating & Review Form ===================
 document.addEventListener("DOMContentLoaded", () => {
   // ===== HANDLE STAR RATING =====
   document.querySelectorAll(".list-star").forEach((list) => {
@@ -1773,7 +1802,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ============Percent Review===============
+// =================== Review Summary & Rating Breakdown ===================
+
 document.addEventListener("DOMContentLoaded", () => {
   const wrap = document.querySelector(".wg-review-summary");
   if (!wrap) return;
@@ -1858,7 +1888,7 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
-// ======== GET FULL PLACE FROM DATA =========
+// =================== Place Info Binding ===================
 document.addEventListener("DOMContentLoaded", () => {
   const address = tour_data_detail?.place;
   if (!address) return;
