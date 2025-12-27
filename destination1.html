@@ -1644,7 +1644,15 @@
               </div>
 
               <div class="box box-btn">
-                <a href="#" class="tf-btn primary w-100">Send Reset Link</a>
+                <a
+                  href="#modalOTP"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                  class="tf-btn primary w-100"
+                >
+                  Send Reset Link
+                </a>
+
                 <div class="text text-center">
                   Back to
                   <a
@@ -1655,6 +1663,67 @@
                     Sign In
                   </a>
                 </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- OTP Verify -->
+    <div
+      class="modal modal-account fade"
+      id="modalOTP"
+      aria-modal="true"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <!-- Banner -->
+            <div class="banner-account">
+              <img src="images/tours/tour-10.png" alt="banner" />
+              <img
+                src="images/logo/logo-3.png"
+                alt="logo"
+                class="logo-overlay"
+              />
+            </div>
+
+            <!-- Form -->
+            <form class="form-account otp-form">
+              <div class="title-box">
+                <h1>Nhập mã xác nhận</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+
+              <p class="text-center caption-2 mb-4">
+                Vui lòng kiểm tra tin nhắn trong <br />
+                <strong class="text_primary">huydang.280603@gmail.com</strong>
+              </p>
+
+              <!-- OTP input -->
+              <div class="box otp-box text-center">
+                <div class="otp-inputs d-flex justify-content-center gap-2">
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                </div>
+              </div>
+
+              <!-- Button -->
+              <div class="box box-btn">
+                <a href="#" class="tf-btn primary w-100">Tiếp tục</a>
+              </div>
+
+              <!-- Back -->
+              <div class="text text-center">
+                Không nhận được mã?
+                <a href="#" class="text-primary">Gửi lại</a>
               </div>
             </form>
           </div>

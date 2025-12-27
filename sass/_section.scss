@@ -525,6 +525,20 @@
         }
     }
 
+    .otp-inputs .otp-input {
+        width: 44px;
+        height: 48px;
+        text-align: center;
+        font-size: 20px;
+        border: none;
+        border-bottom: 2px solid var(--stoke-color);
+        padding: 2px;
+    }
+
+    .otp-inputs .otp-input:focus {
+        border-bottom-color: var(--primary-color);
+    }
+
     .form-account {
         flex-grow: 1;
         padding: 40px;
