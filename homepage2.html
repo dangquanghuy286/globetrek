@@ -3667,6 +3667,98 @@
         </div>
       </div>
     </div>
+    <!-- Reset Password -->
+    <div
+      class="modal modal-account fade"
+      id="modalResetPassword"
+      aria-modal="true"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <!-- Banner -->
+            <div class="banner-account">
+              <img src="images/backgronud/bg-register.png" alt="banner" />
+              <img
+                src="images/logo/logo-3.png"
+                alt="logo"
+                class="logo-overlay"
+              />
+            </div>
+
+            <!-- Form -->
+            <form class="form-account">
+              <div class="title-box">
+                <h1>Reset Password</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+
+              <div class="box">
+                <!-- New password -->
+                <fieldset class="box-fieldset">
+                  <label>New Password</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/icon-lock.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Enter new password"
+                    />
+                  </div>
+                </fieldset>
+
+                <!-- Confirm password -->
+                <fieldset class="box-fieldset">
+                  <label>Confirm Password</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/icon-lock.svg"
+                      alt="icon"
+                      class="icon"
+                    />
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Re-enter password"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- Button -->
+              <div class="box box-btn">
+                <a
+                  href="#modalLogin"
+                  data-bs-toggle="modal"
+                  class="tf-btn primary w-100"
+                >
+                  Confirm
+                </a>
+              </div>
+
+              <div class="text text-center">
+                After resetting your password, you will be redirected to
+                <a
+                  href="#modalLogin"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                  class="text_primary"
+                >
+                  Sign In
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Menubottom -->
     <div class="tf-toolbar-bottom">
