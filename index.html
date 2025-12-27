@@ -3494,12 +3494,12 @@
             <!-- Form -->
             <form class="form-account otp-form">
               <div class="title-box">
-                <h1>Nhập mã xác nhận</h1>
+                <h1>Enter Verification Code</h1>
                 <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
               </div>
 
               <p class="text-center caption-2 mb-4">
-                Vui lòng kiểm tra tin nhắn trong <br />
+                Please check the message sent to <br />
                 <strong class="text_primary">huydang.280603@gmail.com</strong>
               </p>
 
@@ -3517,13 +3517,21 @@
 
               <!-- Button -->
               <div class="box box-btn">
-                <a href="#" class="tf-btn primary w-100">Tiếp tục</a>
+                <a
+                  href="#modalResetPassword"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                  class="tf-btn primary w-100"
+                  id="btnOtpContinue"
+                >
+                  Continue
+                </a>
               </div>
 
               <!-- Back -->
               <div class="text text-center">
-                Không nhận được mã?
-                <a href="#" class="text-primary">Gửi lại</a>
+                Didn’t receive the code?
+                <a href="#" class="text-primary">Resend</a>
               </div>
             </form>
           </div>
