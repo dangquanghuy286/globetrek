@@ -1265,7 +1265,7 @@
             </div>
 
             <!-- Form -->
-            <form class="form-account otp-form">
+            <form class="form-account otp-form" id="otpForm">
               <div class="title-box">
                 <h1>Enter Verification Code</h1>
                 <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
@@ -1273,18 +1273,50 @@
 
               <p class="text-center caption-2 mb-4">
                 Please check the message sent to <br />
-                <strong class="text_primary">huydang.280603@gmail.com</strong>
+                <strong class="text_primary" id="otpEmail">
+                  huydang.280603@gmail.com
+                </strong>
               </p>
 
               <!-- OTP input -->
               <div class="box otp-box text-center">
                 <div class="otp-inputs d-flex justify-content-center gap-2">
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp1"
+                  />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp2"
+                  />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp3"
+                  />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp4"
+                  />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp5"
+                  />
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp6"
+                  />
                 </div>
               </div>
 
@@ -1304,7 +1336,7 @@
               <!-- Back -->
               <div class="text text-center">
                 Didn’t receive the code?
-                <a href="#" class="text-primary">Resend</a>
+                <a href="#" class="text-primary" id="btnOtpResend">Resend</a>
               </div>
             </form>
           </div>
