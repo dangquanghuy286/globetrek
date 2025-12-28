@@ -867,7 +867,7 @@
         .payment-item {
             border: 1px solid var(--stoke-color);
             border-radius: 12px;
-            padding: 4px 8px;
+            padding: 8px;
             transition: all 0.2s ease;
 
             &:has(input:checked) {
@@ -888,7 +888,7 @@
 
 
         .payment-logo {
-            width: 100px;
+            width: 80px;
             aspect-ratio: 2 / 1;
             object-fit: contain;
         }

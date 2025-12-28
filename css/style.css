@@ -3142,7 +3142,7 @@ h5 {
 .wg-form-contact .payment-method-list .payment-item {
   border: 1px solid var(--stoke-color);
   border-radius: 12px;
-  padding: 4px 8px;
+  padding: 8px;
   transition: all 0.2s ease;
 }
 .wg-form-contact .payment-method-list .payment-item:has(input:checked) {
@@ -3156,7 +3156,7 @@ h5 {
   margin-bottom: 0;
 }
 .wg-form-contact .payment-method-list .payment-logo {
-  width: 100px;
+  width: 80px;
   aspect-ratio: 2/1;
   object-fit: contain;
 }
