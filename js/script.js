@@ -1780,11 +1780,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.querySelector(".tf-form-book.booking-form form");
   if (!bookingForm) return;
 
+  const data = tour_data_detail;
+
   window.PRICES = {
     adult: 0,
     children: 0,
     servicePerBooking: 20,
     servicePerPerson: 20,
+  };
+
+  // Thông tin tour từ data
+  window.TOUR_INFO = {
+    title: data?.title || "",
+    place: data?.place || "",
+    maxGuest: data?.maxGuest || 0,
+    minAge: data?.minAge || 0,
+    contact: data?.contact || "",
+    languages: data?.languages || [],
   };
 
   const adultInput = bookingForm.querySelector(
@@ -1830,13 +1842,37 @@ document.addEventListener("DOMContentLoaded", function () {
     totalHiddenInput.value = total.toFixed(2);
   }
 
+  // Validate max guest limit
+  function validateGuestCount() {
+    const adultCount = parseInt(adultInput?.value) || 0;
+    const childrenCount = parseInt(childrenInput?.value) || 0;
+    const totalGuests = adultCount + childrenCount;
+
+    if (totalGuests > TOUR_INFO.maxGuest) {
+      return false;
+    }
+    return true;
+  }
+
   // Change Input
-  adultInput?.addEventListener("input", updateTotal);
-  childrenInput?.addEventListener("input", updateTotal);
+  adultInput?.addEventListener("input", () => {
+    validateGuestCount();
+    updateTotal();
+  });
+  childrenInput?.addEventListener("input", () => {
+    validateGuestCount();
+    updateTotal();
+  });
 
   // Change Input +/-
-  adultInput?.addEventListener("change", updateTotal);
-  childrenInput?.addEventListener("change", updateTotal);
+  adultInput?.addEventListener("change", () => {
+    validateGuestCount();
+    updateTotal();
+  });
+  childrenInput?.addEventListener("change", () => {
+    validateGuestCount();
+    updateTotal();
+  });
 
   const adultPlusBtn = bookingForm.querySelector(
     ".guest-item:nth-child(1) .plus"
@@ -1851,16 +1887,26 @@ document.addEventListener("DOMContentLoaded", function () {
     ".guest-item:nth-child(2) .minus"
   );
 
-  adultPlusBtn?.addEventListener("click", updateTotal);
+  adultPlusBtn?.addEventListener("click", () => {
+    setTimeout(() => {
+      validateGuestCount();
+      updateTotal();
+    }, 50);
+  });
   adultMinusBtn?.addEventListener("click", updateTotal);
-  childPlusBtn?.addEventListener("click", updateTotal);
+  childPlusBtn?.addEventListener("click", () => {
+    setTimeout(() => {
+      validateGuestCount();
+      updateTotal();
+    }, 50);
+  });
   childMinusBtn?.addEventListener("click", updateTotal);
 
   // Checkbox services
   serviceBookingCheckbox?.addEventListener("change", updateTotal);
   servicePersonCheckbox?.addEventListener("change", updateTotal);
 
-  // Khởi tạo total ban đầu
+  // Initialize total
   updateTotal();
 
   // UPDATE TOTAL FROM CALENDAR
@@ -1886,6 +1932,90 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateTotal();
   };
+
+  // Lấy tất cả thông tin booking khi submit
+  window.getBookingInfo = function () {
+    const formData = new FormData(bookingForm);
+
+    return {
+      // Tour Information
+      tourTitle: TOUR_INFO.title,
+      tourPlace: TOUR_INFO.place,
+      tourContact: TOUR_INFO.contact,
+      tourLanguages: TOUR_INFO.languages.join(", "),
+
+      // Booking Details
+      tourDate: formData.get("tour_date") || "",
+      tourTime: formData.get("tour_time") || "",
+
+      // Guest Information
+      adults: parseInt(adultInput?.value) || 0,
+      children: parseInt(childrenInput?.value) || 0,
+      totalGuests:
+        (parseInt(adultInput?.value) || 0) +
+        (parseInt(childrenInput?.value) || 0),
+
+      // Pricing Details
+      adultPrice: PRICES.adult,
+      childrenPrice: PRICES.children,
+      adultTotal: (parseInt(adultInput?.value) || 0) * PRICES.adult,
+      childrenTotal: (parseInt(childrenInput?.value) || 0) * PRICES.children,
+
+      // Services
+      servicePerBooking: serviceBookingCheckbox?.checked || false,
+      servicePerBookingPrice: serviceBookingCheckbox?.checked
+        ? PRICES.servicePerBooking
+        : 0,
+      servicePerPerson: servicePersonCheckbox?.checked || false,
+      servicePerPersonPrice: servicePersonCheckbox?.checked
+        ? PRICES.servicePerPerson
+        : 0,
+
+      // Total
+      totalAmount: parseFloat(totalHiddenInput?.value) || 0,
+
+      // Timestamp
+      bookingDate: new Date().toISOString(),
+    };
+  };
+
+  // Form Submit Handler
+  bookingForm.addEventListener("submit", function (e) {
+    // Validate guest count
+    if (!validateGuestCount()) {
+      return;
+    }
+
+    // Get all booking info
+    const bookingInfo = window.getBookingInfo();
+  });
+});
+
+// =================== Place Info Binding ===================
+document.addEventListener("DOMContentLoaded", () => {
+  const data = tour_data_detail;
+  if (!data) return;
+
+  // Update Max Guest
+  const maxGuestEl = document.querySelector(".max-guest-value");
+  if (maxGuestEl) maxGuestEl.textContent = data.maxGuest;
+
+  // Update Min Age
+  const minAgeEl = document.querySelector(".min-age-value");
+  if (minAgeEl) minAgeEl.textContent = data.minAge;
+
+  // Update Location
+  document.querySelectorAll(".location-value").forEach((el) => {
+    el.textContent = data.place;
+  });
+
+  // Update Contact
+  const contactEl = document.querySelector(".contact-value");
+  if (contactEl) contactEl.textContent = data.contact;
+
+  // Update Languages
+  const languagesEl = document.querySelector(".languages-value");
+  if (languagesEl) languagesEl.textContent = data.languages.join(", ");
 });
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
