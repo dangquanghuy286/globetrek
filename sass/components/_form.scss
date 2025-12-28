@@ -857,6 +857,43 @@
     .tf-btn {
         padding: 10px;
     }
+
+    .payment-method-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+
+        .payment-item {
+            border: 1px solid var(--stoke-color);
+            border-radius: 12px;
+            padding: 4px 8px;
+            transition: all 0.2s ease;
+
+            &:has(input:checked) {
+                border-color: var(--primary-color);
+            }
+        }
+
+        .tf-radio {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            margin-bottom: 0;
+
+
+
+        }
+
+
+        .payment-logo {
+            width: 100px;
+            aspect-ratio: 2 / 1;
+            object-fit: contain;
+        }
+    }
+
 }
 
 // =================Form Booking===========

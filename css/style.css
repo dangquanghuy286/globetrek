@@ -3134,6 +3134,32 @@ h5 {
 .wg-form-contact .tf-btn {
   padding: 10px;
 }
+.wg-form-contact .payment-method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wg-form-contact .payment-method-list .payment-item {
+  border: 1px solid var(--stoke-color);
+  border-radius: 12px;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+}
+.wg-form-contact .payment-method-list .payment-item:has(input:checked) {
+  border-color: var(--primary-color);
+}
+.wg-form-contact .payment-method-list .tf-radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.wg-form-contact .payment-method-list .payment-logo {
+  width: 100px;
+  aspect-ratio: 2/1;
+  object-fit: contain;
+}
 
 .tf-form-book {
   padding: 32px;

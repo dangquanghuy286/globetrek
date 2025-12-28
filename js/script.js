@@ -1996,27 +1996,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const data = tour_data_detail;
   if (!data) return;
 
-  // Update Max Guest
+  //  Max Guest
+  const tourTitle = document.querySelector(".tour-title-value");
+  if (tourTitle) tourTitle.textContent = data.title;
+  //  Max Guest
   const maxGuestEl = document.querySelector(".max-guest-value");
   if (maxGuestEl) maxGuestEl.textContent = data.maxGuest;
 
-  // Update Min Age
+  //  Min Age
   const minAgeEl = document.querySelector(".min-age-value");
   if (minAgeEl) minAgeEl.textContent = data.minAge;
 
-  // Update Location
+  //  Location
   document.querySelectorAll(".location-value").forEach((el) => {
     el.textContent = data.place;
   });
 
-  // Update Contact
+  //  Contact
   const contactEl = document.querySelector(".contact-value");
   if (contactEl) contactEl.textContent = data.contact;
 
-  // Update Languages
+  //  Languages
   const languagesEl = document.querySelector(".languages-value");
   if (languagesEl) languagesEl.textContent = data.languages.join(", ");
 });
+
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
@@ -2394,30 +2398,3 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
-
-// =================== Place Info Binding ===================
-document.addEventListener("DOMContentLoaded", () => {
-  const data = tour_data_detail;
-  if (!data) return;
-
-  // Update Max Guest
-  const maxGuestEl = document.querySelector(".max-guest-value");
-  if (maxGuestEl) maxGuestEl.textContent = data.maxGuest;
-
-  // Update Min Age
-  const minAgeEl = document.querySelector(".min-age-value");
-  if (minAgeEl) minAgeEl.textContent = data.minAge;
-
-  // Update Location
-  document.querySelectorAll(".location-value").forEach((el) => {
-    el.textContent = data.place;
-  });
-
-  // Update Contact
-  const contactEl = document.querySelector(".contact-value");
-  if (contactEl) contactEl.textContent = data.contact;
-
-  // Update Languages
-  const languagesEl = document.querySelector(".languages-value");
-  if (languagesEl) languagesEl.textContent = data.languages.join(", ");
-});
