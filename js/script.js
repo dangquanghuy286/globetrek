@@ -1789,7 +1789,7 @@ document.addEventListener("DOMContentLoaded", function () {
     servicePerPerson: 20,
   };
 
-  // Thông tin tour từ data
+  // Data
   window.TOUR_INFO = {
     title: data?.title || "",
     place: data?.place || "",
@@ -1933,7 +1933,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTotal();
   };
 
-  // Lấy tất cả thông tin booking khi submit
+  // Get data booking
   window.getBookingInfo = function () {
     const formData = new FormData(bookingForm);
 
@@ -1970,7 +1970,15 @@ document.addEventListener("DOMContentLoaded", function () {
       servicePerPersonPrice: servicePersonCheckbox?.checked
         ? PRICES.servicePerPerson
         : 0,
+      servicePerBookingTotal: serviceBookingCheckbox?.checked
+        ? PRICES.servicePerBooking
+        : 0,
 
+      servicePerPersonTotal: servicePersonCheckbox?.checked
+        ? ((parseInt(adultInput?.value) || 0) +
+            (parseInt(childrenInput?.value) || 0)) *
+          PRICES.servicePerPerson
+        : 0,
       // Total
       totalAmount: parseFloat(totalHiddenInput?.value) || 0,
 
@@ -1988,8 +1996,83 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get all booking info
     const bookingInfo = window.getBookingInfo();
+    localStorage.setItem("bookingData", JSON.stringify(bookingInfo));
   });
 });
+// ================Render form=============================
+document.addEventListener("DOMContentLoaded", function () {
+  // Get localStorage
+  const bookingDataStr = localStorage.getItem("bookingData");
+
+  if (!bookingDataStr) {
+    alert("No booking data found!");
+    return;
+  }
+
+  const data = JSON.parse(bookingDataStr);
+
+  // Render ra form
+  renderBookingInfo(data);
+});
+
+function renderBookingInfo(data) {
+  const infoForm = document.querySelector(".tf-form-book.checkout.info-form");
+  if (!infoForm) return;
+
+  // Tour Date
+  const tourDateEl = infoForm.querySelector(".tour-date-value");
+  if (tourDateEl) tourDateEl.textContent = data.tourDate || "N/A";
+
+  // Tour Time
+  const tourTimeEl = infoForm.querySelector(".tour-time-value");
+  if (tourTimeEl) tourTimeEl.textContent = data.tourTime || "N/A";
+
+  // Adults
+  const adultsEl = infoForm.querySelector(".adults-value");
+  if (adultsEl) adultsEl.textContent = data.adults || 0;
+
+  // Children
+  const childrenEl = infoForm.querySelector(".children-value");
+  if (childrenEl) childrenEl.textContent = data.children || 0;
+
+  // Total Guests
+  const totalGuestsEl = infoForm.querySelector(".total-guests-value");
+  if (totalGuestsEl) totalGuestsEl.textContent = data.totalGuests || 0;
+
+  // Adult Price
+  const adultPriceEl = infoForm.querySelector(".adult-price-value");
+  if (adultPriceEl) {
+    adultPriceEl.textContent = `$${data.adultTotal.toFixed(2)}`;
+  }
+
+  // Children Price
+  const childrenPriceEl = infoForm.querySelector(".children-price-value");
+  if (childrenPriceEl) {
+    childrenPriceEl.textContent = `$${data.childrenTotal.toFixed(2)}`;
+  }
+
+  // Service Per Booking
+  const serviceBookingEl = infoForm.querySelector(".service-booking-value");
+  if (serviceBookingEl) {
+    serviceBookingEl.textContent = `$${(
+      data.servicePerBookingTotal || 0
+    ).toFixed(2)}`;
+  }
+
+  // Service Per Person
+  const servicePersonEl = infoForm.querySelector(".service-person-value");
+  if (servicePersonEl) {
+    servicePersonEl.textContent = `$${(data.servicePerPersonTotal || 0).toFixed(
+      2
+    )}`;
+  }
+
+  // Total Amount
+  const totalAmountEl = infoForm.querySelector(".total-amount-value");
+  if (totalAmountEl) {
+    totalAmountEl.textContent = `$${data.totalAmount.toFixed(2)}`;
+  }
+}
 
 // =================== Place Info Binding ===================
 document.addEventListener("DOMContentLoaded", () => {
