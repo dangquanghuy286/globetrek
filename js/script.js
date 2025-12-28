@@ -268,482 +268,843 @@ const tour_data_detail = {
   title:
     "Discovering Da Bia, the hamlet that captured an ASEAN Community Tourism Award",
   place: "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+  maxGuest: 40,
+  minAge: 10,
+  contact: "+123 456 7890",
+  languages: ["English", "Vietnamese"],
   calendarData: {
     "2025-12-03": {
-      price: 80,
       times: ["7:00"],
+      prices: {
+        adult: 80,
+        children: 40,
+      },
     },
     "2025-12-04": {
-      price: 99,
       times: ["10:00", "15:00", "8:00"],
+      prices: {
+        adult: 99,
+        children: 49,
+      },
     },
     "2025-12-07": {
-      price: 69,
       times: ["15:00"],
+      prices: {
+        adult: 69,
+        children: 34,
+      },
     },
     "2025-12-10": {
-      price: 80,
       times: ["13:00"],
+      prices: {
+        adult: 80,
+        children: 40,
+      },
     },
     "2025-12-12": {
-      price: 99,
       times: ["7:00"],
+      prices: {
+        adult: 99,
+        children: 49,
+      },
     },
     "2025-12-20": {
-      price: 120,
       times: ["10:00"],
+      prices: {
+        adult: 120,
+        children: 60,
+      },
     },
     "2025-12-25": {
-      price: 150,
       times: ["15:00", "7:00"],
+      prices: {
+        adult: 150,
+        children: 75,
+      },
     },
     "2026-01-02": {
-      price: 90,
       times: ["13:00", "15:00"],
+      prices: {
+        adult: 90,
+        children: 45,
+      },
     },
     "2026-01-05": {
-      price: 95,
       times: ["11:00", "14:00"],
+      prices: {
+        adult: 95,
+        children: 47,
+      },
     },
     "2026-01-10": {
-      price: 110,
       times: ["9:00"],
+      prices: {
+        adult: 110,
+        children: 55,
+      },
     },
     "2026-01-15": {
-      price: 130,
       times: ["11:00", "12:00", "13:00", "8:00"],
+      prices: {
+        adult: 130,
+        children: 65,
+      },
     },
     "2026-02-01": {
-      price: 85,
       times: ["10:00", "15:00", "8:00"],
+      prices: {
+        adult: 85,
+        children: 42,
+      },
     },
     "2026-02-14": {
-      price: 160,
       times: ["12:00"],
+      prices: {
+        adult: 160,
+        children: 80,
+      },
     },
     "2026-02-20": {
-      price: 100,
       times: ["11:00", "12:00", "7:00"],
+      prices: {
+        adult: 100,
+        children: 50,
+      },
     },
     "2026-03-05": {
-      price: 105,
       times: ["10:00", "15:00", "7:00", "8:00"],
+      prices: {
+        adult: 105,
+        children: 52,
+      },
     },
     "2026-03-10": {
-      price: 115,
       times: ["10:00", "12:00", "15:00"],
+      prices: {
+        adult: 115,
+        children: 57,
+      },
     },
     "2026-03-25": {
-      price: 140,
       times: ["7:00"],
+      prices: {
+        adult: 140,
+        children: 70,
+      },
     },
     "2026-04-01": {
-      price: 120,
       times: ["11:00", "8:00"],
+      prices: {
+        adult: 120,
+        children: 60,
+      },
     },
     "2026-04-30": {
-      price: 180,
       times: ["13:00", "8:00"],
+      prices: {
+        adult: 180,
+        children: 90,
+      },
     },
     "2026-05-03": {
-      price: 55,
       times: ["12:00", "14:00", "8:00"],
+      prices: {
+        adult: 55,
+        children: 27,
+      },
     },
     "2026-05-07": {
-      price: 197,
       times: ["10:00", "12:00", "15:00"],
+      prices: {
+        adult: 197,
+        children: 98,
+      },
     },
     "2026-05-08": {
-      price: 81,
       times: ["11:00", "8:00", "9:00"],
+      prices: {
+        adult: 81,
+        children: 40,
+      },
     },
     "2026-05-15": {
-      price: 65,
       times: ["14:00", "9:00"],
+      prices: {
+        adult: 65,
+        children: 32,
+      },
     },
     "2026-05-21": {
-      price: 110,
       times: ["10:00", "11:00", "12:00", "9:00"],
+      prices: {
+        adult: 110,
+        children: 55,
+      },
     },
     "2026-05-26": {
-      price: 78,
       times: ["10:00"],
+      prices: {
+        adult: 78,
+        children: 39,
+      },
     },
     "2026-05-27": {
-      price: 131,
       times: ["12:00"],
+      prices: {
+        adult: 131,
+        children: 65,
+      },
     },
     "2026-06-08": {
-      price: 81,
       times: ["11:00", "14:00", "15:00", "8:00"],
+      prices: {
+        adult: 81,
+        children: 40,
+      },
     },
     "2026-06-19": {
-      price: 200,
       times: ["10:00", "14:00", "15:00"],
+      prices: {
+        adult: 200,
+        children: 100,
+      },
     },
     "2026-06-24": {
-      price: 200,
       times: ["11:00", "13:00", "8:00", "9:00"],
+      prices: {
+        adult: 200,
+        children: 100,
+      },
     },
     "2026-06-25": {
-      price: 131,
       times: ["13:00", "15:00", "9:00"],
+      prices: {
+        adult: 131,
+        children: 65,
+      },
     },
     "2026-06-27": {
-      price: 77,
       times: ["14:00", "9:00"],
+      prices: {
+        adult: 77,
+        children: 38,
+      },
     },
     "2026-06-28": {
-      price: 160,
       times: ["7:00"],
+      prices: {
+        adult: 160,
+        children: 80,
+      },
     },
     "2026-07-09": {
-      price: 146,
       times: ["9:00"],
+      prices: {
+        adult: 146,
+        children: 73,
+      },
     },
     "2026-07-11": {
-      price: 183,
       times: ["13:00", "8:00"],
+      prices: {
+        adult: 183,
+        children: 91,
+      },
     },
     "2026-07-14": {
-      price: 89,
       times: ["11:00", "13:00", "14:00", "9:00"],
+      prices: {
+        adult: 89,
+        children: 44,
+      },
     },
     "2026-08-05": {
-      price: 142,
       times: ["8:00"],
+      prices: {
+        adult: 142,
+        children: 71,
+      },
     },
     "2026-08-10": {
-      price: 150,
       times: ["12:00", "8:00", "9:00"],
+      prices: {
+        adult: 150,
+        children: 75,
+      },
     },
     "2026-08-24": {
-      price: 108,
       times: ["12:00", "14:00", "7:00", "9:00"],
+      prices: {
+        adult: 108,
+        children: 54,
+      },
     },
     "2026-08-26": {
-      price: 194,
       times: ["11:00", "15:00", "9:00"],
+      prices: {
+        adult: 194,
+        children: 97,
+      },
     },
     "2026-09-09": {
-      price: 65,
       times: ["11:00"],
+      prices: {
+        adult: 65,
+        children: 32,
+      },
     },
     "2026-09-17": {
-      price: 144,
       times: ["12:00", "9:00"],
+      prices: {
+        adult: 144,
+        children: 72,
+      },
     },
     "2026-10-01": {
-      price: 190,
       times: ["15:00", "7:00"],
+      prices: {
+        adult: 190,
+        children: 95,
+      },
     },
     "2026-10-09": {
-      price: 200,
       times: ["14:00", "15:00", "7:00"],
+      prices: {
+        adult: 200,
+        children: 100,
+      },
     },
     "2026-10-15": {
-      price: 129,
       times: ["10:00", "11:00", "7:00"],
+      prices: {
+        adult: 129,
+        children: 64,
+      },
     },
     "2026-10-28": {
-      price: 147,
       times: ["15:00", "8:00"],
+      prices: {
+        adult: 147,
+        children: 73,
+      },
     },
     "2026-11-10": {
-      price: 170,
       times: ["12:00", "15:00", "8:00", "9:00"],
+      prices: {
+        adult: 170,
+        children: 85,
+      },
     },
     "2026-11-13": {
-      price: 79,
       times: ["11:00", "14:00", "15:00", "9:00"],
+      prices: {
+        adult: 79,
+        children: 39,
+      },
     },
     "2026-11-14": {
-      price: 99,
       times: ["10:00", "12:00", "15:00", "9:00"],
+      prices: {
+        adult: 99,
+        children: 49,
+      },
     },
     "2026-12-01": {
-      price: 154,
       times: ["10:00", "11:00", "12:00", "14:00"],
+      prices: {
+        adult: 154,
+        children: 77,
+      },
     },
     "2026-12-09": {
-      price: 156,
       times: ["10:00"],
+      prices: {
+        adult: 156,
+        children: 78,
+      },
     },
     "2026-12-13": {
-      price: 186,
       times: ["12:00", "8:00"],
+      prices: {
+        adult: 186,
+        children: 93,
+      },
     },
     "2026-12-14": {
-      price: 199,
       times: ["15:00"],
+      prices: {
+        adult: 199,
+        children: 99,
+      },
     },
     "2026-12-16": {
-      price: 100,
       times: ["10:00", "7:00"],
+      prices: {
+        adult: 100,
+        children: 50,
+      },
     },
     "2026-12-22": {
-      price: 124,
       times: ["7:00"],
+      prices: {
+        adult: 124,
+        children: 62,
+      },
     },
     "2027-01-24": {
-      price: 179,
       times: ["7:00", "8:00"],
+      prices: {
+        adult: 179,
+        children: 89,
+      },
     },
     "2027-02-07": {
-      price: 103,
       times: ["10:00", "8:00", "9:00"],
+      prices: {
+        adult: 103,
+        children: 51,
+      },
     },
     "2027-02-09": {
-      price: 180,
       times: ["10:00", "11:00", "12:00", "9:00"],
+      prices: {
+        adult: 180,
+        children: 90,
+      },
     },
     "2027-02-14": {
-      price: 170,
       times: ["10:00", "13:00", "14:00", "15:00"],
+      prices: {
+        adult: 170,
+        children: 85,
+      },
     },
     "2027-02-17": {
-      price: 163,
       times: ["15:00", "8:00"],
+      prices: {
+        adult: 163,
+        children: 81,
+      },
     },
     "2027-02-25": {
-      price: 67,
       times: ["10:00", "12:00", "13:00", "14:00"],
+      prices: {
+        adult: 67,
+        children: 33,
+      },
     },
     "2027-03-14": {
-      price: 130,
       times: ["8:00"],
+      prices: {
+        adult: 130,
+        children: 65,
+      },
     },
     "2027-03-19": {
-      price: 170,
       times: ["13:00"],
+      prices: {
+        adult: 170,
+        children: 85,
+      },
     },
     "2027-03-23": {
-      price: 74,
       times: ["10:00", "15:00", "8:00"],
+      prices: {
+        adult: 74,
+        children: 37,
+      },
     },
     "2027-03-28": {
-      price: 119,
       times: ["14:00", "15:00"],
+      prices: {
+        adult: 119,
+        children: 59,
+      },
     },
     "2027-03-30": {
-      price: 52,
       times: ["13:00", "9:00"],
+      prices: {
+        adult: 52,
+        children: 26,
+      },
     },
     "2027-04-03": {
-      price: 82,
       times: ["10:00", "13:00", "14:00"],
+      prices: {
+        adult: 82,
+        children: 41,
+      },
     },
     "2027-04-07": {
-      price: 139,
       times: ["14:00"],
+      prices: {
+        adult: 139,
+        children: 69,
+      },
     },
     "2027-04-10": {
-      price: 91,
       times: ["7:00"],
+      prices: {
+        adult: 91,
+        children: 45,
+      },
     },
     "2027-04-14": {
-      price: 53,
       times: ["8:00"],
+      prices: {
+        adult: 53,
+        children: 26,
+      },
     },
     "2027-04-15": {
-      price: 191,
       times: ["13:00", "9:00"],
+      prices: {
+        adult: 191,
+        children: 95,
+      },
     },
     "2027-04-16": {
-      price: 59,
       times: ["10:00", "13:00", "14:00", "15:00"],
+      prices: {
+        adult: 59,
+        children: 29,
+      },
     },
     "2027-04-17": {
-      price: 199,
       times: ["9:00"],
+      prices: {
+        adult: 199,
+        children: 99,
+      },
     },
     "2027-04-21": {
-      price: 158,
       times: ["10:00", "13:00", "7:00", "9:00"],
+      prices: {
+        adult: 158,
+        children: 79,
+      },
     },
     "2027-04-27": {
-      price: 199,
       times: ["13:00", "14:00", "8:00"],
+      prices: {
+        adult: 199,
+        children: 99,
+      },
     },
     "2027-05-01": {
-      price: 72,
       times: ["10:00", "11:00"],
+      prices: {
+        adult: 72,
+        children: 36,
+      },
     },
     "2027-05-13": {
-      price: 118,
       times: ["15:00"],
+      prices: {
+        adult: 118,
+        children: 59,
+      },
     },
     "2027-05-17": {
-      price: 162,
       times: ["12:00"],
+      prices: {
+        adult: 162,
+        children: 81,
+      },
     },
     "2027-05-22": {
-      price: 117,
       times: ["7:00"],
+      prices: {
+        adult: 117,
+        children: 58,
+      },
     },
     "2027-05-26": {
-      price: 147,
       times: ["11:00", "15:00", "7:00", "9:00"],
+      prices: {
+        adult: 147,
+        children: 73,
+      },
     },
     "2027-06-03": {
-      price: 164,
       times: ["9:00"],
+      prices: {
+        adult: 164,
+        children: 82,
+      },
     },
     "2027-06-07": {
-      price: 70,
       times: ["8:00"],
+      prices: {
+        adult: 70,
+        children: 35,
+      },
     },
     "2027-06-14": {
-      price: 193,
       times: ["13:00", "8:00"],
+      prices: {
+        adult: 193,
+        children: 96,
+      },
     },
     "2027-06-19": {
-      price: 137,
       times: ["7:00", "8:00"],
+      prices: {
+        adult: 137,
+        children: 68,
+      },
     },
     "2027-06-23": {
-      price: 179,
       times: ["12:00", "15:00", "8:00", "9:00"],
+      prices: {
+        adult: 179,
+        children: 89,
+      },
     },
     "2027-06-27": {
-      price: 172,
       times: ["10:00", "11:00", "15:00"],
+      prices: {
+        adult: 172,
+        children: 86,
+      },
     },
     "2027-07-04": {
-      price: 81,
       times: ["11:00", "14:00"],
+      prices: {
+        adult: 81,
+        children: 40,
+      },
     },
     "2027-07-09": {
-      price: 165,
       times: ["10:00", "7:00", "8:00"],
+      prices: {
+        adult: 165,
+        children: 82,
+      },
     },
     "2027-07-18": {
-      price: 170,
       times: ["8:00"],
+      prices: {
+        adult: 170,
+        children: 85,
+      },
     },
     "2027-07-19": {
-      price: 85,
       times: ["11:00", "15:00"],
+      prices: {
+        adult: 85,
+        children: 42,
+      },
     },
     "2027-07-25": {
-      price: 189,
       times: ["12:00", "8:00"],
+      prices: {
+        adult: 189,
+        children: 94,
+      },
     },
     "2027-07-27": {
-      price: 128,
       times: ["11:00", "12:00"],
+      prices: {
+        adult: 128,
+        children: 64,
+      },
     },
     "2027-08-03": {
-      price: 105,
       times: ["11:00", "14:00"],
+      prices: {
+        adult: 105,
+        children: 52,
+      },
     },
     "2027-08-04": {
-      price: 161,
       times: ["15:00"],
+      prices: {
+        adult: 161,
+        children: 80,
+      },
     },
     "2027-08-05": {
-      price: 190,
       times: ["14:00", "8:00", "9:00"],
+      prices: {
+        adult: 190,
+        children: 95,
+      },
     },
     "2027-08-06": {
-      price: 196,
       times: ["8:00"],
+      prices: {
+        adult: 196,
+        children: 98,
+      },
     },
     "2027-08-10": {
-      price: 136,
       times: ["11:00", "15:00"],
+      prices: {
+        adult: 136,
+        children: 68,
+      },
     },
     "2027-08-14": {
-      price: 166,
       times: ["10:00", "12:00"],
+      prices: {
+        adult: 166,
+        children: 83,
+      },
     },
     "2027-08-21": {
-      price: 190,
       times: ["14:00", "15:00", "9:00"],
+      prices: {
+        adult: 190,
+        children: 95,
+      },
     },
     "2027-08-22": {
-      price: 182,
       times: ["8:00"],
+      prices: {
+        adult: 182,
+        children: 91,
+      },
     },
     "2027-08-27": {
-      price: 136,
       times: ["11:00", "14:00", "7:00", "9:00"],
+      prices: {
+        adult: 136,
+        children: 68,
+      },
     },
     "2027-08-30": {
-      price: 123,
       times: ["11:00", "9:00"],
+      prices: {
+        adult: 123,
+        children: 61,
+      },
     },
     "2027-09-07": {
-      price: 156,
       times: ["11:00", "13:00", "15:00", "7:00"],
+      prices: {
+        adult: 156,
+        children: 78,
+      },
     },
     "2027-09-24": {
-      price: 73,
       times: ["8:00"],
+      prices: {
+        adult: 73,
+        children: 36,
+      },
     },
     "2027-09-27": {
-      price: 93,
       times: ["15:00", "7:00"],
+      prices: {
+        adult: 93,
+        children: 46,
+      },
     },
     "2027-09-29": {
-      price: 66,
       times: ["10:00", "15:00", "9:00"],
+      prices: {
+        adult: 66,
+        children: 33,
+      },
     },
     "2027-10-01": {
-      price: 162,
       times: ["11:00", "7:00"],
+      prices: {
+        adult: 162,
+        children: 81,
+      },
     },
     "2027-10-08": {
-      price: 87,
       times: ["12:00", "7:00", "8:00"],
+      prices: {
+        adult: 87,
+        children: 43,
+      },
     },
     "2027-10-15": {
-      price: 98,
       times: ["12:00", "8:00"],
+      prices: {
+        adult: 98,
+        children: 49,
+      },
     },
     "2027-10-16": {
-      price: 69,
       times: ["10:00", "13:00", "8:00", "9:00"],
+      prices: {
+        adult: 69,
+        children: 34,
+      },
     },
     "2027-10-17": {
-      price: 52,
       times: ["13:00", "7:00"],
+      prices: {
+        adult: 52,
+        children: 26,
+      },
     },
     "2027-11-18": {
-      price: 71,
       times: ["12:00", "13:00"],
+      prices: {
+        adult: 71,
+        children: 35,
+      },
     },
     "2027-11-21": {
-      price: 170,
       times: ["11:00", "9:00"],
+      prices: {
+        adult: 170,
+        children: 85,
+      },
     },
     "2027-12-01": {
-      price: 184,
       times: ["13:00"],
+      prices: {
+        adult: 184,
+        children: 92,
+      },
     },
     "2027-12-16": {
-      price: 190,
       times: ["14:00"],
+      prices: {
+        adult: 190,
+        children: 95,
+      },
     },
     "2027-12-18": {
-      price: 144,
       times: ["10:00", "14:00"],
+      prices: {
+        adult: 144,
+        children: 72,
+      },
     },
     "2027-12-19": {
-      price: 58,
       times: ["10:00", "11:00", "8:00"],
+      prices: {
+        adult: 58,
+        children: 29,
+      },
     },
     "2027-12-26": {
-      price: 50,
       times: ["10:00"],
+      prices: {
+        adult: 50,
+        children: 25,
+      },
     },
     "2027-12-27": {
-      price: 143,
       times: ["11:00", "12:00", "13:00", "7:00"],
+      prices: {
+        adult: 143,
+        children: 71,
+      },
     },
     "2027-12-28": {
-      price: 132,
       times: ["12:00", "13:00", "15:00"],
+      prices: {
+        adult: 132,
+        children: 66,
+      },
     },
   },
   reviewData: [
@@ -861,9 +1222,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!isPast && activeDate === dateStr) dayCell.classList.add("active");
 
       if (!isPast && dayData) {
+        // Hiển thị giá người lớn
+        const adultPrice = dayData.prices?.adult || 0;
         dayCell.innerHTML = `
           <div class="day-number">${day}</div>
-          <div class="day-price">$${dayData.price.toFixed(2)}</div>
+          <div class="day-price">$${adultPrice.toFixed(2)}</div>
         `;
       } else {
         dayCell.innerHTML = `
@@ -884,8 +1247,8 @@ document.addEventListener("DOMContentLoaded", function () {
           activeDate = dateStr;
           dayCell.classList.add("active");
 
-          if (dayData?.price) {
-            window.updatePriceFromCalendar(dateStr, dayData.price);
+          if (dayData?.prices) {
+            window.updatePriceFromCalendar(dateStr, dayData.prices);
           }
         };
       }
@@ -919,6 +1282,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderCalendar();
 });
+
 // ===================Active Sub Menu=========================
 document.addEventListener("DOMContentLoaded", function () {
   function hasTourOnDate(year, month, day) {
@@ -929,11 +1293,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Lấy giá tour
-  function getTourPrice(year, month, day) {
+  function getTourPrices(year, month, day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
       day
     ).padStart(2, "0")}`;
-    return tour_data_detail.calendarData[dateStr]?.price || null;
+    return tour_data_detail.calendarData[dateStr]?.prices || null;
   }
 
   const dropdowns = document.querySelectorAll(".group-select .select-items");
@@ -954,7 +1318,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //============== Hàm Up  TIME PICKER=====================
+  //============== Hàm Update TIME PICKER=====================
   function updateTimePicker(dropdown) {
     const selectDate = dropdown.querySelector(".select-date");
     const list = dropdown.querySelector(".list");
@@ -974,7 +1338,7 @@ document.addEventListener("DOMContentLoaded", function () {
       li.className = "disabled text_primary text-center";
       list.appendChild(li);
     } else {
-      // Get time to calendarData
+      // Get time from calendarData
       const times = tour_data_detail.calendarData?.[dateValue]?.times || [];
 
       if (!times.length) {
@@ -1005,7 +1369,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const timeValue =
           option.getAttribute("data-time") || option.textContent.trim();
 
-        // Up value
+        // Update value
         selectDate.value = timeValue;
         timeOptions.forEach((opt) => opt.classList.remove("selected"));
         option.classList.add("selected");
@@ -1038,7 +1402,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownMenu?.classList.toggle("active");
       current?.classList.toggle("active");
 
-      // UP TIME PICKER
+      // Update TIME PICKER
       const selectDate = dropdown.querySelector(".select-date");
       if (
         selectDate &&
@@ -1318,13 +1682,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isDatepickerForTour) {
           const dateStr = `${year}-${month}-${day}`;
-          const price = getTourPrice(year, date.getMonth(), date.getDate());
+          const prices = getTourPrices(year, date.getMonth(), date.getDate());
 
-          if (price && window.updatePriceFromCalendar) {
-            window.updatePriceFromCalendar(dateStr, price);
+          if (prices && window.updatePriceFromCalendar) {
+            window.updatePriceFromCalendar(dateStr, prices);
           }
 
-          // Up TIME PICKER SAU KHI CHỌN NGÀY
+          // Update TIME PICKER sau khi chọn ngày
           const timePickerDropdown = document.querySelector(
             '.select-items:has(.select-date[name="tour_time"])'
           );
@@ -1410,6 +1774,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
 // =============== BOOKING FORM CALCULATOR ===============
 document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.querySelector(".tf-form-book.booking-form form");
@@ -1499,20 +1864,29 @@ document.addEventListener("DOMContentLoaded", function () {
   updateTotal();
 
   // UPDATE TOTAL FROM CALENDAR
-  window.updatePriceFromCalendar = function (dateStr, price) {
+  window.updatePriceFromCalendar = function (dateStr, prices) {
     const dateInput = bookingForm.querySelector('input[name="tour_date"]');
     if (dateInput) dateInput.value = dateStr;
 
-    PRICES.adult = price;
-    PRICES.children = price / 2;
+    // Check types
+    if (prices && typeof prices === "object") {
+      PRICES.adult = prices.adult || 0;
+      PRICES.children = prices.children || 0;
+    } else {
+      PRICES.adult = prices || 0;
+      PRICES.children = (prices || 0) / 2;
+    }
 
-    valueAdultSpan.textContent = `$${PRICES.adult.toFixed(2)}`;
-    valueChildrenSpan.textContent = `$${PRICES.children.toFixed(2)}`;
+    if (valueAdultSpan) {
+      valueAdultSpan.textContent = `$${PRICES.adult.toFixed(2)}`;
+    }
+    if (valueChildrenSpan) {
+      valueChildrenSpan.textContent = `$${PRICES.children.toFixed(2)}`;
+    }
 
     updateTotal();
   };
 });
-
 //==========Search=========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form-s1 form");
@@ -1890,12 +2264,30 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
+
 // =================== Place Info Binding ===================
 document.addEventListener("DOMContentLoaded", () => {
-  const address = tour_data_detail?.place;
-  if (!address) return;
+  const data = tour_data_detail;
+  if (!data) return;
 
-  document.querySelectorAll(".location-address").forEach((el) => {
-    el.textContent = address;
+  // Update Max Guest
+  const maxGuestEl = document.querySelector(".max-guest-value");
+  if (maxGuestEl) maxGuestEl.textContent = data.maxGuest;
+
+  // Update Min Age
+  const minAgeEl = document.querySelector(".min-age-value");
+  if (minAgeEl) minAgeEl.textContent = data.minAge;
+
+  // Update Location
+  document.querySelectorAll(".location-value").forEach((el) => {
+    el.textContent = data.place;
   });
+
+  // Update Contact
+  const contactEl = document.querySelector(".contact-value");
+  if (contactEl) contactEl.textContent = data.contact;
+
+  // Update Languages
+  const languagesEl = document.querySelector(".languages-value");
+  if (languagesEl) languagesEl.textContent = data.languages.join(", ");
 });
