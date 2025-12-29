@@ -2004,11 +2004,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get localStorage
   const bookingDataStr = localStorage.getItem("bookingData");
 
-  if (!bookingDataStr) {
-    alert("No booking data found!");
-    return;
-  }
-
   const data = JSON.parse(bookingDataStr);
 
   // Render ra form

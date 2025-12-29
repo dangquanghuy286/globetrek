@@ -3041,6 +3041,36 @@ h5 {
   transform: rotate(45deg);
 }
 
+.tf-radio {
+  position: relative;
+  border: 1px solid var(--input-color) !important;
+  border-radius: 50% !important;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+  height: 16px !important;
+  width: 16px !important;
+  -webkit-appearance: none;
+  padding: 0 !important;
+}
+.tf-radio:checked {
+  border-color: var(--primary-color) !important;
+}
+.tf-radio:checked::before {
+  opacity: 1;
+}
+.tf-radio::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  opacity: 0;
+}
+
 .sidebar-filter .filter-result {
   display: flex;
   align-items: center;
@@ -3148,7 +3178,7 @@ h5 {
 .wg-form-contact .payment-method-list .payment-item:has(input:checked) {
   border-color: var(--primary-color);
 }
-.wg-form-contact .payment-method-list .tf-radio {
+.wg-form-contact .payment-method-list .tf-check-payment {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -9239,7 +9269,7 @@ input[type=checkbox]:checked {
   justify-content: center;
   filter: brightness(0) saturate(100%) invert(41%) sepia(0%) saturate(1127%) hue-rotate(321deg) brightness(89%) contrast(91%);
 }
-.property-map .location-top .location-meta .location-address {
+.property-map .location-top .location-meta .location-value {
   font-size: 14px;
 }
 

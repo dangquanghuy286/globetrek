@@ -746,6 +746,39 @@
     }
 }
 
+.tf-radio {
+    position: relative;
+    border: 1px solid var(--input-color) !important;
+    border-radius: 50% !important;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    height: 16px !important;
+    width: 16px !important;
+    -webkit-appearance: none;
+    padding: 0 !important;
+
+    &:checked {
+        border-color: var(--primary-color) !important;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-color);
+        opacity: 0;
+    }
+}
+
 .sidebar-filter {
     .filter-result {
         display: flex;
@@ -875,7 +908,7 @@
             }
         }
 
-        .tf-radio {
+        .tf-check-payment {
             display: flex;
             align-items: center;
             gap: 12px;
