@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Check Out - Explore the World with Us</title>
+    <title>ThankYou - Explore the World with Us</title>
 
     <meta name="author" content="themesflat.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,6 +34,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png" />
   </head>
   <body>
+    <!-- Loading -->
     <div class="preload preload-container">
       <div class="preload-logo">
         <div class="spinner"></div>
@@ -41,7 +42,7 @@
       </div>
     </div>
     <!-- Header -->
-    <header id="header" class="header style-1 color-1">
+    <header id="header" class="header style-1 position-fixed color-1">
       <div class="container">
         <div class="header-wrap relative w-full">
           <div class="header-ct-left flex-left z-5">
@@ -57,13 +58,13 @@
                 <nav class="list-nav" id="menu-nav">
                   <ul class="menu-nav" id="menu-nav">
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./index.html" class="nav-link"
                         >Home <span class="icon icon-CaretDown"></span
                       ></a>
 
                       <ul class="sub-menu shadow-dropdown">
                         <li class="sub-item">
-                          <a href="/">HomePage 1</a>
+                          <a href="./index.html">HomePage 1</a>
                         </li>
                         <li class="sub-item">
                           <a href="./homepage2.html">HomePage 2</a>
@@ -80,7 +81,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link">
+                      <a href="./tourlist.html" class="nav-link">
                         Tour List <span class="icon icon-CaretDown"></span>
                       </a>
 
@@ -182,7 +183,7 @@
                     </li>
 
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./destination1.html" class="nav-link"
                         >Destination <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -201,7 +202,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./aboutus.html" class="nav-link"
                         >Pages <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -219,7 +220,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./bloggrid.html" class="nav-link"
                         >Blog <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -532,273 +533,38 @@
         </div>
       </div>
     </header>
-    <!-- Hero -->
-    <section class="page-title">
+    <section class="tf-thank flat-section">
       <div class="container">
-        <h1
-          class="text-center title wow animate__animated animate__fadeInUp"
-          data-wow-delay="0.2s"
-          data-wow-duration="1s"
-        >
-          Check Out
-        </h1>
-        <div
-          class="breadcrumb-content wow animate__animated animate__fadeInUp"
-          data-wow-delay="0.2s"
-          data-wow-duration="1s"
-        >
+        <div class="row" id="empty-thank">
           <div
-            class="breadcrumb breadcrumb-dynamic justify-content-center"
-          ></div>
-        </div>
-      </div>
-    </section>
-    <!-- End-Hero -->
-    <!-- Form info -->
-    <section class="flat-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-8">
-            <div class="wg-form-contact">
-              <div
-                class="box-title wow animate__animated animate__fadeInUp"
-                data-wow-duration="1s"
-                data-wow-delay="0.2s"
+            class="col-12 d-flex justify-content-center align-items-center"
+            style="height: 50vh"
+          >
+            <div class="text-center flex-center flex-column">
+              <img
+                src="./images/logo/done.png"
+                alt="Logo"
+                class="mb-4 aspect-1-1"
+                style="width: 500px"
+              />
+
+              <h4 class="text-muted mb-3">
+                Thank you for booking your tour with us. We sincerely appreciate
+                your trust and look forward to serving you.
+              </h4>
+
+              <!-- Nút Back to Home -->
+              <a
+                href="index.html"
+                class="tf-btn hover-1 primary px-4 py-2 mt-5"
               >
-                <h1 class="title tour-title-value"></h1>
-              </div>
-              <form
-                action="thankyou.html"
-                class="tf-payment-form tf-contact-form"
-                id="paymentform"
-              >
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Your email"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="phone">Phone number</label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="text"
-                    placeholder="Your phone number"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="address">Address</label>
-                  <input
-                    id="address"
-                    name="address"
-                    type="text"
-                    placeholder="Your address "
-                  />
-                </div>
-
-                <div class="form-group full">
-                  <label for="special_request">Special Requests</label>
-                  <textarea
-                    id="special_request"
-                    name="special_request"
-                    placeholder="Enter special requests (if any)"
-                  ></textarea>
-                </div>
-                <div class="form-group full">
-                  <label class="form-title">Payment Method</label>
-
-                  <ul class="payment-method-list">
-                    <!-- PayPal -->
-                    <li class="payment-item">
-                      <label class="tf-radio">
-                        <input
-                          type="radio"
-                          name="payment_method"
-                          value="paypal"
-                          class="tf-ratio"
-                        />
-
-                        <span class="payment-content">
-                          <img
-                            src="./images/logo/paypal-preview.png"
-                            alt="PayPal"
-                            class="payment-logo"
-                          />
-                        </span>
-                      </label>
-                    </li>
-                    <!-- <li class="payment-item">
-                      <label class="tf-radio">
-                        <input
-                          type="radio"
-                          name="payment_method"
-                          value="mastercard"
-                          class="tf-ratio"
-                        />
-
-                        <span class="payment-content">
-                          <img
-                            src="./images/logo/Mastercard-logo.svg"
-                            alt="mastercard"
-                            class="payment-logo"
-                          />
-                        </span>
-                      </label>
-                    </li>
-                    <li class="payment-item">
-                      <label class="tf-radio">
-                        <input
-                          type="radio"
-                          name="payment_method"
-                          value="american_express"
-                          class="tf-ratio"
-                        />
-
-                        <span class="payment-content">
-                          <img
-                            src="./images/logo/the-american-express-la-gi.jpg"
-                            alt="american_express"
-                            class="payment-logo"
-                          />
-                        </span>
-                      </label>
-                    </li> -->
-                  </ul>
-                </div>
-
-                <div class="full">
-                  <button type="submit" class="tf-btn primary hover-1">
-                    Booking now
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-xl-4">
-            <div
-              class="sticky-sidebar sidebar-tour wow animate__animated animate__fadeInDown"
-              data-wow-duration="1s"
-              data-wow-delay="0.2s"
-            >
-              <div class="tf-booking-sidebar">
-                <div class="tf-form-book checkout info-form shadow-md bg-white">
-                  <!-- Phần Tour Information -->
-                  <h3 class="form-topic">Tour Information</h3>
-                  <ul class="info-list">
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Max Guest:</label>
-                      <h5 class="value max-guest-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Min Age:</label>
-                      <h5 class="value min-age-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Location:</label>
-                      <h5 class="value location-address location-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Contact:</label>
-                      <h5 class="value contact-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Language:</label>
-                      <h5 class="value languages-value"></h5>
-                    </li>
-                  </ul>
-
-                  <h3 class="form-topic mt-4">Booking Details</h3>
-                  <ul class="info-list">
-                    <li class="info-item">
-                      <label class="subtitle label">Tour Date:</label>
-                      <h5 class="value tour-date-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Tour Time:</label>
-                      <h5 class="value tour-time-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Adults:</label>
-                      <h5 class="value adults-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Children:</label>
-                      <h5 class="value children-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Total Guests:</label>
-                      <h5 class="value total-guests-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Adult Price:</label>
-                      <h5 class="value adult-price-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Children Price:</label>
-                      <h5 class="value children-price-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Service Per Booking:</label>
-                      <h5 class="value service-booking-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Service Per Person:</label>
-                      <h5 class="value service-person-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <div class="form-group">
-                        <label for="discount_code" class="subtitle label"
-                          >Discount Code:</label
-                        >
-                        <div class="discount-input-wrapper">
-                          <input
-                            id="discount_code"
-                            name="discount_code"
-                            type="text"
-                            placeholder="Enter code"
-                            class="discount-input"
-                          />
-                          <button
-                            type="button"
-                            class="btn-apply-discount tf-btn primary hover-1 p-2"
-                          >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="info-item total-item">
-                      <label class="subtitle label fw-bold"
-                        >Total Amount:</label
-                      >
-                      <h5
-                        class="value total-amount-value text_primary fw-bold"
-                      ></h5>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                Back to Home
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--End Form info -->
     <!-- Tour -->
     <section class="flat-recommended flat-section pt-0">
       <div class="container">
@@ -1474,8 +1240,6 @@
         </div>
       </div>
     </section>
-    <!-- End-Tour -->
-    <!-- Footer -->
     <footer class="footer">
       <div class="top-footer">
         <div class="container">
@@ -1708,28 +1472,6 @@
         </div>
       </div>
     </footer>
-    <!-- Modal Search -->
-    <div class="modal fade" id="modalSearch" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-4">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h4 class="m-0">Search Tours</h4>
-            <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
-          </div>
-
-          <div class="search-box">
-            <input
-              type="text"
-              id="searchInput"
-              class="form-control"
-              placeholder="Search by location, title, price..."
-            />
-          </div>
-
-          <div id="searchResults" class="mt-3"></div>
-        </div>
-      </div>
-    </div>
     <!-- Login -->
     <div
       class="modal modal-account fade"
@@ -1793,7 +1535,7 @@
                 </fieldset>
               </div>
               <div class="box box-btn">
-                <a href="#" class="tf-btn primary w-100">Login</a>
+                <a href="#" class="tf-btn primary w-100">Sign In</a>
                 <div class="text text-center">
                   Don’t you have an account?
                   <a
@@ -1916,6 +1658,76 @@
                 <a href="#" class="btn-social">
                   <img src="images/icons/fb.png" alt="img" />Facebook
                 </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Forgot -->
+    <div
+      class="modal modal-account fade"
+      id="modalForgot"
+      aria-modal="true"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="flat-account">
+            <div class="banner-account">
+              <img src="images/backgronud/bg-forgot.png" alt="banner" />
+              <img
+                src="images/logo/logo-3.png"
+                alt="logo"
+                class="logo-overlay"
+              />
+            </div>
+            <form class="form-account">
+              <div class="title-box">
+                <h1>Forgot Password</h1>
+                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+              </div>
+
+              <div class="box">
+                <fieldset class="box-fieldset">
+                  <label>Email</label>
+                  <div class="ip-field">
+                    <img
+                      src="./images/icons/mail.svg"
+                      alt="icons"
+                      class="icon"
+                    />
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your registered email"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="box box-btn">
+                <a
+                  href="#modalOTP"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                  class="tf-btn primary w-100"
+                >
+                  Send Reset Link
+                </a>
+
+                <div class="text text-center">
+                  Back to
+                  <a
+                    href="#modalLogin"
+                    data-bs-toggle="modal"
+                    class="text-primary"
+                  >
+                    Sign In
+                  </a>
+                </div>
               </div>
             </form>
           </div>
@@ -2116,77 +1928,29 @@
       </div>
     </div>
 
-    <!-- Forgot -->
-    <div
-      class="modal modal-account fade"
-      id="modalForgot"
-      aria-modal="true"
-      role="dialog"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <!--  Search -->
+    <div class="modal fade" id="modalSearch" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="flat-account">
-            <div class="banner-account">
-              <img src="images/backgronud/bg-forgot.png" alt="banner" />
-              <img
-                src="images/logo/logo-3.png"
-                alt="logo"
-                class="logo-overlay"
-              />
-            </div>
-            <form class="form-account">
-              <div class="title-box">
-                <h1>Forgot Password</h1>
-                <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
-              </div>
-
-              <div class="box">
-                <fieldset class="box-fieldset">
-                  <label>Email</label>
-                  <div class="ip-field">
-                    <img
-                      src="./images/icons/mail.svg"
-                      alt="icons"
-                      class="icon"
-                    />
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Enter your registered email"
-                    />
-                  </div>
-                </fieldset>
-              </div>
-
-              <div class="box box-btn">
-                <a
-                  href="#modalOTP"
-                  data-bs-toggle="modal"
-                  data-bs-dismiss="modal"
-                  class="tf-btn primary w-100"
-                >
-                  Send Reset Link
-                </a>
-
-                <div class="text text-center">
-                  Back to
-                  <a
-                    href="#modalLogin"
-                    data-bs-toggle="modal"
-                    class="text-primary"
-                  >
-                    Sign In
-                  </a>
-                </div>
-              </div>
-            </form>
+        <div class="modal-content p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="m-0">Search Tours</h4>
+            <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
           </div>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search by location, title, price..."
+            />
+          </div>
+
+          <div id="searchResults" class="mt-3"></div>
         </div>
       </div>
     </div>
-    <!-- Menu-bottom -->
+    <!-- Menubottom -->
     <div class="tf-toolbar-bottom">
       <ul class="toolbar-list flex-center">
         <li class="toolbar-item active">
