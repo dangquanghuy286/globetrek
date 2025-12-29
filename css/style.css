@@ -3043,7 +3043,7 @@ h5 {
 
 .tf-radio {
   position: relative;
-  border: 1px solid var(--input-color) !important;
+  border: 1px solid var(--input-color);
   border-radius: 50% !important;
   background: none;
   cursor: pointer;
@@ -9602,6 +9602,17 @@ input[type=checkbox]:checked {
     gap: 10px;
     margin-top: 100px;
   }
+  .tf-vacation-hero-v2 .flat-img-with-map {
+    flex-direction: column;
+  }
+  .tf-vacation-hero-v2 .flat-img-with-map .wg-content {
+    width: 100%;
+  }
+  .tf-vacation-hero-v2 .flat-img-with-map .flat-map .top-map {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 100%;
+  }
   .hero .flat-hero .content-right {
     padding: 0;
   }
@@ -10007,6 +10018,13 @@ input[type=checkbox]:checked {
     bottom: 24px;
     padding: 0 20px;
   }
+  .tf-destination-detail .tf-sw-destination .swiper-slide {
+    width: 100% !important;
+  }
+  .tf-destination-detail .tf-sw-destination .swiper-slide .group-meta {
+    opacity: 1;
+    visibility: visible;
+  }
   .tf-single h1 {
     font-size: 30px;
   }
@@ -10291,6 +10309,16 @@ input[type=checkbox]:checked {
   }
   .categories-list a .icon {
     font-size: 16px;
+  }
+  .destination-post .group-meta {
+    left: 0;
+    margin: auto;
+    padding: 0 10px;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .destination-post .group-meta .tf-btn {
+    width: 100%;
   }
   .slider-default .home-1 .box-title {
     padding: 200px 0 300px !important;
