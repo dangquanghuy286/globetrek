@@ -896,6 +896,19 @@
 
 }
 
+.discount-input-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+
+
+
+    .tf-btn {
+        min-width: 100px;
+        width: 100px;
+    }
+}
+
 // =================Form Booking===========
 .tf-form-book {
     padding: 32px;
@@ -1042,6 +1055,10 @@
             align-items: center;
             justify-content: space-between;
             gap: 40px;
+
+            .form-group {
+                margin-top: 0;
+            }
 
             &:not(:last-child) {
                 padding-bottom: 16px;

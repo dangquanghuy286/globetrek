@@ -3161,6 +3161,16 @@ h5 {
   object-fit: contain;
 }
 
+.discount-input-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+.discount-input-wrapper .tf-btn {
+  min-width: 100px;
+  width: 100px;
+}
+
 .tf-form-book {
   padding: 32px;
   border-radius: 16px;
@@ -3281,6 +3291,9 @@ h5 {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+}
+.tf-form-book .info-list .info-item .form-group {
+  margin-top: 0;
 }
 .tf-form-book .info-list .info-item:not(:last-child) {
   padding-bottom: 16px;
