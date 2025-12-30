@@ -173,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", function () {
       this.classList.toggle("active");
 
-      // Delay để animation xong rồi filter
       setTimeout(() => {
         filterWishlist();
       }, 300);
@@ -210,7 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Chạy lần đầu
   filterWishlist();
 
   // ===================== Like / Unlike =====================

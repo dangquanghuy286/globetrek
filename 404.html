@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Wish List - Explore the World with Us</title>
+    <title>NoPage - Explore the World with Us</title>
 
     <meta name="author" content="themesflat.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,18 +21,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
+
     <link href="css/boostrap.css" rel="stylesheet" />
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/favicon.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png" />
   </head>
   <body>
+    <!-- Loading -->
     <div class="preload preload-container">
       <div class="preload-logo">
         <div class="spinner"></div>
@@ -40,7 +42,7 @@
       </div>
     </div>
     <!-- Header -->
-    <header id="header" class="header style-1 color-1">
+    <header id="header" class="header style-1 position-fixed color-1">
       <div class="container">
         <div class="header-wrap relative w-full">
           <div class="header-ct-left flex-left z-5">
@@ -56,13 +58,13 @@
                 <nav class="list-nav" id="menu-nav">
                   <ul class="menu-nav" id="menu-nav">
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./index.html" class="nav-link"
                         >Home <span class="icon icon-CaretDown"></span
                       ></a>
 
                       <ul class="sub-menu shadow-dropdown">
                         <li class="sub-item">
-                          <a href="/">HomePage 1</a>
+                          <a href="./index.html">HomePage 1</a>
                         </li>
                         <li class="sub-item">
                           <a href="./homepage2.html">HomePage 2</a>
@@ -79,7 +81,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link">
+                      <a href="./tourlist.html" class="nav-link">
                         Tour List <span class="icon icon-CaretDown"></span>
                       </a>
 
@@ -181,7 +183,7 @@
                     </li>
 
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./destination1.html" class="nav-link"
                         >Destination <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -200,7 +202,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./aboutus.html" class="nav-link"
                         >Pages <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -218,7 +220,7 @@
                       </ul>
                     </li>
                     <li class="menu-item flex-center gap-1 h-full">
-                      <a href="/" class="nav-link"
+                      <a href="./bloggrid.html" class="nav-link"
                         >Blog <span class="icon icon-CaretDown"></span
                       ></a>
                       <ul class="sub-menu shadow-dropdown">
@@ -245,7 +247,9 @@
             <div class="wrap-login-menu">
               <ul>
                 <li class="heart">
-                  <a href="#"><span class="icon icon-heart"></span></a>
+                  <a href="./wishlist.html"
+                    ><span class="icon icon-heart"></span
+                  ></a>
                 </li>
                 <li class="search">
                   <a
@@ -529,483 +533,43 @@
         </div>
       </div>
     </header>
-    <!-- Hero -->
-    <section class="page-title">
+
+    <!-- Section-404 -->
+    <section class="flat-section tf-nopage">
       <div class="container">
-        <h1
-          class="text-center title wow animate__animated animate__fadeInUp"
-          data-wow-duration="1s"
-          data-wow-delay="0.2s"
-        >
-          Wish List
-        </h1>
-        <div class="breadcrumb-content">
+        <div class="row">
           <div
-            class="breadcrumb breadcrumb-dynamic justify-content-center"
-          ></div>
-        </div>
-      </div>
-    </section>
-    <!-- End-Hero -->
-    <!-- Wish List  -->
-    <section class="flat-section flat-recommended">
-      <div class="container">
-        <div
-          class="box-title wow animate__animated animate__fadeInUp"
-          data-wow-duration="1s"
-          data-wow-delay="0.2s"
-        >
-          <h1 class="title">My Wishlist</h1>
-          <div class="subtitle text-color desc">
-            Here are the tours you have added to your wishlist.
-          </div>
-        </div>
-        <div class="flat-tab-recommend">
-          <div class="row">
-            <div
-              class="tf-grid-layout tf-col-3 lg-col-2 sm-col-1 wow animate__animated animate__fadeIn tf-wishlist"
-              data-wow-duration="1s"
-              data-wow-delay="0.4s"
-            >
-              <div class="item hover-img">
-                <div class="archive-top">
-                  <div class="images-group img-style">
-                    <a href="./toursingle1.html" class="image-link">
-                      <img
-                        src="./images/tours/tour-item/tour-1.png"
-                        alt="image"
-                      />
-                    </a>
-                    <div class="group-meta">
-                      <div class="tag-meta">
-                        <div class="flag-tag">Featured</div>
-                        <a
-                          href="javascript:void(0)"
-                          class="count image"
-                          data-fancybox="gallery1"
-                          data-src="https://plus.unsplash.com/premium_photo-1725408106567-a77bd9beff7c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9zJTIwYW5nZWxlc3xlbnwwfHwwfHx8MA%3D%3D"
-                        >
-                          <img
-                            src="./images/icons/picture.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                          <span class="total-image">5</span>
-                        </a>
-
-                        <a
-                          data-fancybox="gallery1"
-                          data-src="https://images.unsplash.com/photo-1580655653885-65763b2597d0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zJTIwYW5nZWxlc3xlbnwwfHwwfHx8MA%3D%3D"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery1"
-                          data-src="https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9zJTIwYW5nZWxlc3xlbnwwfHwwfHx8MA%3D%3D"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery1"
-                          data-src="https://images.pexels.com/photos/15516367/pexels-photo-15516367.jpeg?cs=srgb&dl=pexels-solyartphotos-15516367.jpg&fm=jpg"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery1"
-                          data-src="https://images6.alphacoders.com/551/551548.jpg"
-                          style="display: none"
-                        ></a>
-                        <a
-                          href="javascript:void(0)"
-                          class="count view-video"
-                          data-fancybox
-                          data-type="iframe"
-                          data-src="https://www.youtube.com/watch?v=vp2yiZnjK0w&t=20s"
-                        >
-                          <img
-                            src="./images/icons/camera.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                        </a>
-                      </div>
-
-                      <div class="btn-wished active">
-                        <img
-                          src="./images/icons/icon-wishlist.svg"
-                          alt="icon"
-                          class="icon"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="archive-bottom">
-                  <div class="content-top">
-                    <div class="rating">
-                      <ul class="list-star">
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                      </ul>
-                      <div class="rate">
-                        <div class="total-rate">5</div>
-                        <div class="review">(1.100)</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h5 class="tour-title">
-                    <a href="toursingle1.html" class="link"
-                      >Art and tradition: Exploring Bali’s cultural scene</a
-                    >
-                  </h5>
-
-                  <div class="content-info-middle">
-                    <div class="info person">
-                      <img
-                        src="images/icons/users.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-people">20 People</span>
-                    </div>
-                    <div class="info date">
-                      <img
-                        src="./images/icons/calendar.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-day">4 days</span>
-                    </div>
-                    <div class="info time">
-                      <img
-                        src="./images/icons/clock.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="day">04/12/2024</span>
-                    </div>
-                  </div>
-
-                  <div class="content-bottom">
-                    <div class="address">
-                      <img
-                        src="./images/icons/place.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="location">Las Vegas</span>
-                    </div>
-                    <h5 class="price">$265,00</h5>
-                  </div>
-                </div>
+            class="col-lg-12 d-flex justify-content-center align-items-center"
+          >
+            <div class="wg-404 text-center flex-center flex-column">
+              <div class="image">
+                <img
+                  src="./images/logo/404.png"
+                  data-src="./images/logo/404.png"
+                  alt="404"
+                  class="lazyload mb-4 aspect-4-3"
+                  style="width: 400px"
+                />
               </div>
-              <div class="item hover-img">
-                <div class="archive-top">
-                  <div class="images-group img-style">
-                    <a href="./toursingle1.html" class="image-link">
-                      <img
-                        src="./images/tours/tour-item/tour-2.png"
-                        alt="image"
-                      />
-                    </a>
-                    <div class="group-meta">
-                      <div class="tag-meta">
-                        <div class="flag-tag">Featured</div>
-                        <a
-                          href="javascript:void(0)"
-                          class="count image"
-                          data-fancybox="gallery2"
-                          data-src="https://media.gettyimages.com/id/1427352821/video/downtown-los-angeles.jpg?s=640x640&k=20&c=Jg_uReH030GeB0FvMlbui7pSOUjRkIeNRakhCCRHPag="
-                        >
-                          <img
-                            src="./images/icons/picture.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                          <span class="total-image">5</span>
-                        </a>
-
-                        <a
-                          data-fancybox="gallery2"
-                          data-src="https://media.istockphoto.com/id/459470819/photo/sun-shining-on-palm-trees.jpg?s=612x612&w=0&k=20&c=9tKMs0OVODWFaC7HEW6hm0b31_CWFxU4Q-mKJd7tWlA="
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery2"
-                          data-src="https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9zJTIwYW5nZWxlc3xlbnwwfHwwfHx8MA%3D%3D"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery2"
-                          data-src="https://t3.ftcdn.net/jpg/02/92/44/92/360_F_292449220_xCU9aUaBi5AwdnFGCaWQtMqeVuXSUHbI.jpg"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery2"
-                          data-src="https://media.gettyimages.com/id/532513422/photo/los-angeles-at-twilight.jpg?s=612x612&w=gi&k=20&c=fPHjVzE6NMtTY7Szzyy3akkmd7vjSM6yJWW-wlgJyCE="
-                          style="display: none"
-                        ></a>
-
-                        <a
-                          href="javascript:void(0)"
-                          class="count view-video"
-                          data-fancybox
-                          data-type="iframe"
-                          data-src="https://www.youtube.com/watch?v=vp2yiZnjK0w&t=20s"
-                        >
-                          <img
-                            src="./images/icons/camera.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                        </a>
-                      </div>
-
-                      <div class="btn-wished active">
-                        <img
-                          src="./images/icons/icon-wishlist.svg"
-                          alt="icon"
-                          class="icon"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="archive-bottom">
-                  <div class="content-top">
-                    <div class="rating">
-                      <ul class="list-star">
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                      </ul>
-                      <div class="rate">
-                        <div class="total-rate">5</div>
-                        <div class="review">(1.100)</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h5 class="tour-title">
-                    <a href="toursingle1.html" class="link"
-                      >Art and tradition: Exploring Bali’s cultural scene</a
-                    >
-                  </h5>
-
-                  <div class="content-info-middle">
-                    <div class="info person">
-                      <img
-                        src="images/icons/users.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-people">20 People</span>
-                    </div>
-                    <div class="info date">
-                      <img
-                        src="./images/icons/calendar.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-day">4 days</span>
-                    </div>
-                    <div class="info time">
-                      <img
-                        src="./images/icons/clock.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="day">04/12/2024</span>
-                    </div>
-                  </div>
-
-                  <div class="content-bottom">
-                    <div class="address">
-                      <img
-                        src="./images/icons/place.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="location">Las Vegas</span>
-                    </div>
-                    <h5 class="price">$265,00</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="item hover-img">
-                <div class="archive-top">
-                  <div class="images-group img-style">
-                    <a href="./toursingle1.html" class="image-link">
-                      <img
-                        src="./images/tours/tour-item/tour-3.png"
-                        alt="image"
-                      />
-                    </a>
-                    <div class="group-meta">
-                      <div class="tag-meta">
-                        <div class="flag-tag">Featured</div>
-                        <a
-                          href="javascript:void(0)"
-                          class="count image"
-                          data-fancybox="gallery3"
-                          data-src="https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg"
-                        >
-                          <img
-                            src="./images/icons/picture.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                          <span class="total-image">5</span>
-                        </a>
-
-                        <a
-                          data-fancybox="gallery3"
-                          data-src="https://res.cloudinary.com/dtljonz0f/image/upload/shutterstock_329662223_ss_non-editorial_3_csm8lw"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery3"
-                          data-src="https://cdn.sanity.io/images/nxpteyfv/goguides/dd05bddc197a1c9dba9ecb43e26b30af4dbcf4f9-1600x1066.jpg"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery3"
-                          data-src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2023/2/11/1146750/New-York-City-Sunset.jpg"
-                          style="display: none"
-                        ></a>
-                        <a
-                          data-fancybox="gallery3"
-                          data-src="https://image.newyork.co.uk/wp-content/uploads/2020/03/New-York-Helicopter-Tour-2.eric_both.bottom_right.jpg.webp"
-                          style="display: none"
-                        ></a>
-
-                        <a
-                          href="javascript:void(0)"
-                          class="count view-video"
-                          data-fancybox
-                          data-type="iframe"
-                          data-src="https://www.youtube.com/watch?v=SnB4M9ygl38"
-                        >
-                          <img
-                            src="./images/icons/camera.svg"
-                            alt="icon"
-                            class="icon"
-                          />
-                        </a>
-                      </div>
-
-                      <div class="btn-wished active">
-                        <img
-                          src="./images/icons/icon-wishlist.svg"
-                          alt="icon"
-                          class="icon"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="archive-bottom">
-                  <div class="content-top">
-                    <div class="rating">
-                      <ul class="list-star">
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                        <li class="icon icon-star"></li>
-                      </ul>
-                      <div class="rate">
-                        <div class="total-rate">5</div>
-                        <div class="review">(1.100)</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h5 class="tour-title">
-                    <a href="toursingle1.html" class="link"
-                      >Art and tradition: Exploring Bali’s cultural scene</a
-                    >
-                  </h5>
-
-                  <div class="content-info-middle">
-                    <div class="info person">
-                      <img
-                        src="images/icons/users.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-people">20 People</span>
-                    </div>
-                    <div class="info date">
-                      <img
-                        src="./images/icons/calendar.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="total-day">4 days</span>
-                    </div>
-                    <div class="info time">
-                      <img
-                        src="./images/icons/clock.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="day">04/12/2024</span>
-                    </div>
-                  </div>
-
-                  <div class="content-bottom">
-                    <div class="address">
-                      <img
-                        src="./images/icons/place.svg"
-                        alt="icon"
-                        class="icon"
-                      />
-                      <span class="location">Las Vegas</span>
-                    </div>
-                    <h5 class="price">$265,00</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row" id="empty-wishlist" style="display: none">
-              <div
-                class="col-12 d-flex justify-content-center align-items-center"
-                style="height: 50vh"
-              >
-                <div class="text-center flex-center flex-column">
-                  <img
-                    src="./images/logo/nofind.png"
-                    alt="Logo"
-                    class="mb-4 aspect-4-3"
-                    style="width: 400px"
-                  />
-
-                  <h4 class="text-muted mb-3">
-                    Sorry, GlobeTrek couldn't find any results for you!
-                  </h4>
-
-                  <a
-                    href="index.html"
-                    class="tf-btn hover-1 primary px-4 py-2 mt-5"
-                  >
-                    Back to Home
-                  </a>
-                </div>
+              <h1 class="text-muted mb-3">Whoops!</h1>
+              <p class="text-md sub text-muted">
+                We couldn’t find the page you were looking for.
+              </p>
+              <div class="bot">
+                <a
+                  href="index.html"
+                  class="tf-btn hover-1 primary px-4 py-2 mt-5"
+                >
+                  Back to Home
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--End- Wish List  -->
+    <!-- /.Section-404 -->
+
     <footer class="footer">
       <div class="top-footer">
         <div class="container">
@@ -1238,28 +802,6 @@
         </div>
       </div>
     </footer>
-    <!-- Modal Search -->
-    <div class="modal fade" id="modalSearch" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-4">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h4 class="m-0">Search Tours</h4>
-            <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
-          </div>
-
-          <div class="search-box">
-            <input
-              type="text"
-              id="searchInput"
-              class="form-control"
-              placeholder="Search by location, title, price..."
-            />
-          </div>
-
-          <div id="searchResults" class="mt-3"></div>
-        </div>
-      </div>
-    </div>
     <!-- Login -->
     <div
       class="modal modal-account fade"
@@ -1323,7 +865,7 @@
                 </fieldset>
               </div>
               <div class="box box-btn">
-                <a href="#" class="tf-btn primary w-100">Login</a>
+                <a href="#" class="tf-btn primary w-100">Sign In</a>
                 <div class="text text-center">
                   Don’t you have an account?
                   <a
@@ -1452,7 +994,6 @@
         </div>
       </div>
     </div>
-
     <!-- Forgot -->
     <div
       class="modal modal-account fade"
@@ -1717,10 +1258,32 @@
       </div>
     </div>
 
-    <!-- Menu Bottom -->
+    <!--  Search -->
+    <div class="modal fade" id="modalSearch" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="m-0">Search Tours</h4>
+            <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
+          </div>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search by location, title, price..."
+            />
+          </div>
+
+          <div id="searchResults" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Menubottom -->
     <div class="tf-toolbar-bottom">
       <ul class="toolbar-list flex-center">
-        <li class="toolbar-item">
+        <li class="toolbar-item active">
           <a href="/">
             <div class="toolbar-icon">
               <span class="icon-Home"></span>
@@ -1744,7 +1307,7 @@
             <div class="toolbar-label">Tour</div>
           </a>
         </li>
-        <li class="toolbar-item active">
+        <li class="toolbar-item">
           <a href="./wishlist.html">
             <div class="toolbar-icon">
               <span class="icon-Heart"></span>

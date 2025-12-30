@@ -1972,10 +1972,6 @@ h5 {
   aspect-ratio: 4/5;
 }
 
-.aspect-3-2 {
-  aspect-ratio: 3/2;
-}
-
 .aspect-16-9 {
   aspect-ratio: 16/9;
 }
@@ -1985,6 +1981,10 @@ h5 {
 }
 
 .aspect-2-3 {
+  aspect-ratio: 2/3;
+}
+
+.aspect-3-2 {
   aspect-ratio: 2/3;
 }
 
