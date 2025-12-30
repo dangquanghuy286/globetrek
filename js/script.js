@@ -80,15 +80,16 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
 // ============Auto load popup==============
 document.addEventListener("DOMContentLoaded", function () {
   const autoPopupEl = document.querySelector(".auto-popup");
   if (!autoPopupEl) return;
+  const pageKey = "autoPopupHidden_" + window.location.pathname;
 
-  const pageKey = "showPopup_" + window.location.pathname;
   const showPopup = sessionStorage.getItem(pageKey);
 
-  if (!JSON.parse(showPopup)) {
+  if (showPopup !== "true") {
     setTimeout(() => {
       const modal = new bootstrap.Modal(autoPopupEl);
       modal.show();
@@ -98,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hideBtn = document.querySelector(".close-modal");
   if (hideBtn) {
     hideBtn.addEventListener("click", () => {
-      sessionStorage.setItem(pageKey, true);
+      sessionStorage.setItem(pageKey, "true");
     });
   }
 });
