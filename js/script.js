@@ -2074,29 +2074,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const data = tour_data_detail;
   if (!data) return;
 
-  //  Max Guest
-  const tourTitle = document.querySelector(".tour-title-value");
-  if (tourTitle) tourTitle.textContent = data.title;
-  //  Max Guest
-  const maxGuestEl = document.querySelector(".max-guest-value");
-  if (maxGuestEl) maxGuestEl.textContent = data.maxGuest;
+  const bindText = (selector, value) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.textContent = value;
+    });
+  };
 
-  //  Min Age
-  const minAgeEl = document.querySelector(".min-age-value");
-  if (minAgeEl) minAgeEl.textContent = data.minAge;
-
-  //  Location
-  document.querySelectorAll(".location-value").forEach((el) => {
-    el.textContent = data.place;
-  });
-
-  //  Contact
-  const contactEl = document.querySelector(".contact-value");
-  if (contactEl) contactEl.textContent = data.contact;
-
-  //  Languages
-  const languagesEl = document.querySelector(".languages-value");
-  if (languagesEl) languagesEl.textContent = data.languages.join(", ");
+  bindText(".tour-title-value", data.title);
+  bindText(".max-guest-value", data.maxGuest);
+  bindText(".min-age-value", data.minAge);
+  bindText(".location-value", data.place);
+  bindText(".contact-value", data.contact);
+  bindText(".languages-value", data.languages.join(", "));
 });
 
 //==========Search=========================
