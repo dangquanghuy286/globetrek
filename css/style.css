@@ -6485,46 +6485,46 @@ input[type=checkbox]:checked {
   overflow: hidden;
 }
 
-.modal-newsletter .modal-dialog {
+.modal-welcome .modal-dialog {
   max-width: 540px;
 }
-.modal-newsletter .modal-content {
+.modal-welcome .modal-content {
   border-radius: 16px;
 }
-.modal-newsletter .form-newsletter input {
+.modal-welcome .form-welcome input {
   background-color: transparent;
 }
-.modal-newsletter .close-modal {
+.modal-welcome .close-modal {
   position: absolute;
   top: 16px;
   right: 16px;
 }
-.modal-newsletter .modal-top img {
+.modal-welcome .modal-top img {
   width: 100%;
   height: 100%;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
 }
-.modal-newsletter .modal-bottom {
+.modal-welcome .modal-bottom {
   padding: 40px;
   margin: 0 auto;
 }
-.modal-newsletter .modal-bottom .title-newsletter {
+.modal-welcome .modal-bottom .title-welcome {
   margin-bottom: 12px;
   font-size: 36px;
   font-family: "Lexend", sans-serif;
 }
-.modal-newsletter .modal-bottom .text {
+.modal-welcome .modal-bottom .text {
   margin-bottom: 40px;
 }
-.modal-newsletter .modal-bottom .form-newsletter,
-.modal-newsletter .modal-bottom .tf-social-icon {
+.modal-welcome .modal-bottom .form-welcome,
+.modal-welcome .modal-bottom .tf-social-icon {
   margin-bottom: 20px;
 }
-.modal-newsletter .form-newsletter fieldset input {
+.modal-welcome .form-welcome fieldset input {
   padding-left: 44px;
 }
-.modal-newsletter .form-newsletter fieldset .icon {
+.modal-welcome .form-welcome fieldset .icon {
   position: absolute;
   left: 20px;
   top: 50%;

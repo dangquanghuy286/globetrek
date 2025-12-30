@@ -466,8 +466,8 @@
     overflow: hidden;
 }
 
-// =============Modal-newsletter=================
-.modal-newsletter {
+// =============Modal-welcome=================
+.modal-welcome {
     .modal-dialog {
         max-width: 540px;
     }
@@ -476,7 +476,7 @@
         border-radius: 16px;
     }
 
-    .form-newsletter {
+    .form-welcome {
         input {
             background-color: transparent;
         }
@@ -505,7 +505,7 @@
         padding: 40px;
         margin: 0 auto;
 
-        .title-newsletter {
+        .title-welcome {
             margin-bottom: 12px;
             font-size: 36px;
             font-family: "Lexend", sans-serif;
@@ -515,14 +515,14 @@
             margin-bottom: 40px;
         }
 
-        .form-newsletter,
+        .form-welcome,
         .tf-social-icon {
             margin-bottom: 20px;
         }
     }
 
 
-    .form-newsletter {
+    .form-welcome {
         fieldset {
             input {
                 padding-left: 44px;
