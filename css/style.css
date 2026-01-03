@@ -9657,6 +9657,9 @@ input[type=checkbox]:checked {
     gap: 10px;
     margin-top: 100px;
   }
+  .sidebar-filter {
+    padding-bottom: 20px;
+  }
   .tf-vacation-hero-v2 .flat-img-with-map {
     flex-direction: column;
   }
