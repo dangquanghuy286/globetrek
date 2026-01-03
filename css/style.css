@@ -2073,6 +2073,10 @@ h5 {
   border-bottom: 1px solid var(--stoke-color);
 }
 
+.mobile-only {
+  display: none;
+}
+
 .avatar.round {
   border-radius: 50%;
   overflow: hidden;
@@ -10295,6 +10299,9 @@ input[type=checkbox]:checked {
   .property-calendar .wg-calendar .weekdays,
   .property-calendar .wg-calendar .days-grid {
     min-width: 500px;
+  }
+  .mobile-only {
+    display: block;
   }
 }
 @media (max-width: 575px) {

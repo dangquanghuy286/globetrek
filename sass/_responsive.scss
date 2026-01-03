@@ -1307,7 +1307,9 @@
       }
    }
 
-
+   .mobile-only {
+      display: block;
+   }
 }
 
 @media (max-width: 575px) {
