@@ -558,91 +558,219 @@
     <section class="flat-section">
       <div class="container">
         <div class="row">
-          <div class="col-xl-8">
-            <div class="wg-form-contact">
-              <div
-                class="box-title wow animate__animated animate__fadeInUp"
-                data-wow-duration="1s"
-                data-wow-delay="0.2s"
-              >
-                <h1 class="title tour-title-value"></h1>
-              </div>
-              <form
-                action="thankyou.html"
-                class="tf-payment-form tf-contact-form"
-                id="paymentform"
-              >
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                  />
-                </div>
+          <div class="col-xl-7">
+            <div class="tf-form-book checkout info-form shadow-form">
+              <!-- Phần Tour Information -->
+              <h3 class="form-topic">Tour Information</h3>
+              <h5 class="mt-8 mb-12">
+                Order <span class="id_checkout">#260106-145643157</span>
+              </h5>
+              <div class="tf-card-invoice-sum">
+                <div class="content-top">
+                  <div class="info-item img-tour">
+                    <img
+                      src="./images/tours/tour-1.png"
+                      alt="image"
+                      class="aspect-1-1 img-tour-value"
+                    />
+                  </div>
+                  <div class="info-item box-info-tour">
+                    <h5 class="tour-title-value mb-4"></h5>
+                    <div class="info-date">
+                      <label class="subtitle label">Tour Date:</label>
+                      <h5 class="value tour-date-value"></h5>
+                    </div>
+                    <div class="info-date">
+                      <label class="subtitle label">Tour Time:</label>
+                      <h5 class="value tour-time-value"></h5>
+                    </div>
+                    <div class="info-person">
+                      <label class="subtitle label">Total Persons:</label>
 
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Your email"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="phone">Phone number</label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="text"
-                    placeholder="Your phone number"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="address">Address</label>
-                  <input
-                    id="address"
-                    name="address"
-                    type="text"
-                    placeholder="Your address "
-                  />
-                </div>
-
-                <div class="form-group full">
-                  <label for="special_request">Special Requests</label>
-                  <textarea
-                    id="special_request"
-                    name="special_request"
-                    placeholder="Enter special requests (if any)"
-                  ></textarea>
-                </div>
-                <div class="form-group full">
-                  <label class="form-title">Payment Method</label>
-
-                  <ul class="payment-method-list">
-                    <!-- PayPal -->
-                    <li class="payment-item">
-                      <label class="tf-check-payment">
-                        <input
-                          type="radio"
-                          name="payment_method"
-                          value="paypal"
-                          class="tf-radio"
-                        />
-
-                        <span class="payment-content">
-                          <img
-                            src="./images/logo/paypal-preview.png"
-                            alt="PayPal"
-                            class="payment-logo"
-                          />
+                      <h5 class="value total-person-value">
+                        <span class="person-line">
+                          <span class="adults-value"></span>
+                          x
+                          <span class="adult-price-value"></span>
                         </span>
-                      </label>
-                    </li>
-                    <!-- <li class="payment-item">
+                        +
+                        <span class="person-line">
+                          <span class="children-value"></span>
+                          x
+                          <span class="children-price-value"></span>
+                        </span>
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="info-item total-item">
+                    <h5
+                      class="value total-amount-value text_primary fw-bold"
+                    ></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="tf-card-invoice-total">
+                <ul class="info-list">
+                  <li class="info-item">
+                    <label class="subtitle label">Total Guests:</label>
+                    <h5 class="value total-guests-value"></h5>
+                  </li>
+                  <li class="info-item">
+                    <label class="subtitle label">Service Per Booking:</label>
+                    <h5 class="value service-booking-value"></h5>
+                  </li>
+                  <li class="info-item">
+                    <label class="subtitle label">Service Per Person:</label>
+                    <h5 class="value service-person-value"></h5>
+                  </li>
+                  <li class="info-item">
+                    <div
+                      class="form-group d-flex align-items-center justify-content-between w-full"
+                    >
+                      <label for="discount_code" class="subtitle label"
+                        >Discount Code:</label
+                      >
+                      <div class="discount-input-wrapper">
+                        <input
+                          id="discount_code"
+                          name="discount_code"
+                          type="text"
+                          placeholder="Enter code"
+                          class="discount-input"
+                        />
+                        <button
+                          type="button"
+                          class="btn-apply-discount tf-btn primary hover-1 p-2"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="info-item total-item">
+                    <label class="subtitle label fw-bold">Subtotal:</label>
+                    <h5
+                      class="value total-amount-value text_primary fw-bold"
+                    ></h5>
+                  </li>
+
+                  <li class="info-item total-item">
+                    <label class="subtitle label fw-bold">Amount Paid:</label>
+                    <h5
+                      class="value total-amount-paid-value text_primary fw-bold"
+                    >
+                      $0
+                    </h5>
+                  </li>
+                  <li class="info-item total-item">
+                    <label class="subtitle label fw-bold">Amount Due:</label>
+                    <h5
+                      class="value total-amount-due-value text_primary fw-bold"
+                    >
+                      $0
+                    </h5>
+                  </li>
+                  <li class="info-item total-item">
+                    <label class="subtitle label fw-bold">Total Amount:</label>
+                    <h5
+                      class="value total-amount-value text_primary fw-bold"
+                    ></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5">
+            <div
+              class="sticky-sidebar sidebar-tour wow animate__animated animate__fadeInDown"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              <div class="tf-booking-sidebar">
+                <div class="wg-form-contact">
+                  <div
+                    class="box-title wow animate__animated animate__fadeInUp"
+                    data-wow-duration="1s"
+                    data-wow-delay="0.2s"
+                  >
+                    <h3 class="form-topic">Contact Information</h3>
+                  </div>
+                  <form
+                    action="thankyou.html"
+                    class="tf-payment-form tf-contact-form"
+                    id="paymentform"
+                  >
+                    <div class="form-group full">
+                      <label for="name">Name</label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                      />
+                    </div>
+
+                    <div class="form-group full">
+                      <label for="email">Email</label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Your email"
+                      />
+                    </div>
+
+                    <div class="form-group full">
+                      <label for="phone">Phone number</label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        placeholder="Your phone number"
+                      />
+                    </div>
+                    <div class="form-group full">
+                      <label for="address">Address</label>
+                      <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="Your address "
+                      />
+                    </div>
+
+                    <div class="form-group full">
+                      <label for="special_request">Special Requests</label>
+                      <textarea
+                        id="special_request"
+                        name="special_request"
+                        placeholder="Enter special requests (if any)"
+                      ></textarea>
+                    </div>
+                    <div class="form-group full">
+                      <label class="form-title">Payment Method</label>
+
+                      <ul class="payment-method-list">
+                        <!-- PayPal -->
+                        <li class="payment-item">
+                          <label class="tf-check-payment">
+                            <input
+                              type="radio"
+                              name="payment_method"
+                              value="paypal"
+                              class="tf-radio"
+                            />
+
+                            <span class="payment-content">
+                              <img
+                                src="./images/logo/paypal-preview.png"
+                                alt="PayPal"
+                                class="payment-logo"
+                              />
+                            </span>
+                          </label>
+                        </li>
+                        <!-- <li class="payment-item">
                       <label class="tf-radio">
                         <input
                           type="radio"
@@ -678,145 +806,41 @@
                         </span>
                       </label>
                     </li> -->
-                  </ul>
-                </div>
-                <div class="form-group full">
-                  <label class="d-flex gap-2 item-center">
-                    <input
-                      type="checkbox"
-                      name="agree_terms"
-                      class="tf-checkbox"
-                      required
-                    />
-                    <span class="checkbox-text subtitle">
-                      I agree to the
-                      <a
-                        href="./asqquestion.html"
-                        target="_blank"
-                        class="text_primary"
-                        >Terms & Conditions</a
-                      >
-                      and
-                      <a
-                        href="./asqquestion.html"
-                        target="_blank"
-                        class="text_primary"
-                        >Privacy Policy</a
-                      >
-                    </span>
-                  </label>
-                </div>
-
-                <div class="full">
-                  <button type="submit" class="tf-btn primary hover-1">
-                    Booking now
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-xl-4">
-            <div
-              class="sticky-sidebar sidebar-tour wow animate__animated animate__fadeInDown"
-              data-wow-duration="1s"
-              data-wow-delay="0.2s"
-            >
-              <div class="tf-booking-sidebar">
-                <div class="tf-form-book checkout info-form shadow-md">
-                  <!-- Phần Tour Information -->
-                  <h3 class="form-topic">Tour Information</h3>
-                  <ul class="info-list">
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Max Guest:</label>
-                      <h5 class="value max-guest-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Min Age:</label>
-                      <h5 class="value min-age-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Location:</label>
-                      <h5 class="value location-address location-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Contact:</label>
-                      <h5 class="value contact-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label for="" class="subtitle label">Language:</label>
-                      <h5 class="value languages-value"></h5>
-                    </li>
-                  </ul>
-
-                  <h3 class="form-topic mt-4">Booking Details</h3>
-                  <ul class="info-list">
-                    <li class="info-item">
-                      <label class="subtitle label">Tour Date:</label>
-                      <h5 class="value tour-date-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Tour Time:</label>
-                      <h5 class="value tour-time-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Adults:</label>
-                      <h5 class="value adults-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Children:</label>
-                      <h5 class="value children-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Total Guests:</label>
-                      <h5 class="value total-guests-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Adult Price:</label>
-                      <h5 class="value adult-price-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Children Price:</label>
-                      <h5 class="value children-price-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Service Per Booking:</label>
-                      <h5 class="value service-booking-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <label class="subtitle label">Service Per Person:</label>
-                      <h5 class="value service-person-value"></h5>
-                    </li>
-                    <li class="info-item">
-                      <div class="form-group">
-                        <label for="discount_code" class="subtitle label"
-                          >Discount Code:</label
-                        >
-                        <div class="discount-input-wrapper">
-                          <input
-                            id="discount_code"
-                            name="discount_code"
-                            type="text"
-                            placeholder="Enter code"
-                            class="discount-input"
-                          />
-                          <button
-                            type="button"
-                            class="btn-apply-discount tf-btn primary hover-1 p-2"
+                      </ul>
+                    </div>
+                    <div class="form-group full">
+                      <label class="d-flex gap-2 item-center">
+                        <input
+                          type="checkbox"
+                          name="agree_terms"
+                          class="tf-checkbox"
+                          required
+                        />
+                        <span class="checkbox-text subtitle">
+                          I agree to the
+                          <a
+                            href="./asqquestion.html"
+                            target="_blank"
+                            class="text_primary"
+                            >Terms & Conditions</a
                           >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="info-item total-item">
-                      <label class="subtitle label fw-bold"
-                        >Total Amount:</label
-                      >
-                      <h5
-                        class="value total-amount-value text_primary fw-bold"
-                      ></h5>
-                    </li>
-                  </ul>
+                          and
+                          <a
+                            href="./asqquestion.html"
+                            target="_blank"
+                            class="text_primary"
+                            >Privacy Policy</a
+                          >
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="full">
+                      <button type="submit" class="tf-btn primary hover-1">
+                        Booking now
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

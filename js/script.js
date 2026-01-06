@@ -2033,62 +2033,67 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function renderBookingInfo(data) {
-  const infoForm = document.querySelector(".tf-form-book.checkout.info-form");
-  if (!infoForm) return;
+  const infoForms = document.querySelectorAll(
+    ".tf-form-book.checkout.info-form"
+  );
 
-  // Tour Date
-  const tourDateEl = infoForm.querySelector(".tour-date-value");
-  if (tourDateEl) tourDateEl.textContent = data.tourDate || "N/A";
+  if (!infoForms.length) return;
 
-  // Tour Time
-  const tourTimeEl = infoForm.querySelector(".tour-time-value");
-  if (tourTimeEl) tourTimeEl.textContent = data.tourTime || "N/A";
+  infoForms.forEach((infoForm) => {
+    // Tour Date
+    const tourDateEl = infoForm.querySelector(".tour-date-value");
+    if (tourDateEl) tourDateEl.textContent = data.tourDate || "N/A";
 
-  // Adults
-  const adultsEl = infoForm.querySelector(".adults-value");
-  if (adultsEl) adultsEl.textContent = data.adults || 0;
+    // Tour Time
+    const tourTimeEl = infoForm.querySelector(".tour-time-value");
+    if (tourTimeEl) tourTimeEl.textContent = data.tourTime || "N/A";
 
-  // Children
-  const childrenEl = infoForm.querySelector(".children-value");
-  if (childrenEl) childrenEl.textContent = data.children || 0;
+    // Adults
+    const adultsEl = infoForm.querySelector(".adults-value");
+    if (adultsEl) adultsEl.textContent = data.adults || 0;
 
-  // Total Guests
-  const totalGuestsEl = infoForm.querySelector(".total-guests-value");
-  if (totalGuestsEl) totalGuestsEl.textContent = data.totalGuests || 0;
+    // Children
+    const childrenEl = infoForm.querySelector(".children-value");
+    if (childrenEl) childrenEl.textContent = data.children || 0;
 
-  // Adult Price
-  const adultPriceEl = infoForm.querySelector(".adult-price-value");
-  if (adultPriceEl) {
-    adultPriceEl.textContent = `$${data.adultTotal.toFixed(2)}`;
-  }
+    // Total Guests
+    const totalGuestsEl = infoForm.querySelector(".total-guests-value");
+    if (totalGuestsEl) totalGuestsEl.textContent = data.totalGuests || 0;
 
-  // Children Price
-  const childrenPriceEl = infoForm.querySelector(".children-price-value");
-  if (childrenPriceEl) {
-    childrenPriceEl.textContent = `$${data.childrenTotal.toFixed(2)}`;
-  }
+    // Adult Price
+    const adultPriceEl = infoForm.querySelector(".adult-price-value");
+    if (adultPriceEl) {
+      adultPriceEl.textContent = `$${(data.adultTotal || 0).toFixed(2)}`;
+    }
 
-  // Service Per Booking
-  const serviceBookingEl = infoForm.querySelector(".service-booking-value");
-  if (serviceBookingEl) {
-    serviceBookingEl.textContent = `$${(
-      data.servicePerBookingTotal || 0
-    ).toFixed(2)}`;
-  }
+    // Children Price
+    const childrenPriceEl = infoForm.querySelector(".children-price-value");
+    if (childrenPriceEl) {
+      childrenPriceEl.textContent = `$${(data.childrenTotal || 0).toFixed(2)}`;
+    }
 
-  // Service Per Person
-  const servicePersonEl = infoForm.querySelector(".service-person-value");
-  if (servicePersonEl) {
-    servicePersonEl.textContent = `$${(data.servicePerPersonTotal || 0).toFixed(
-      2
-    )}`;
-  }
+    // Service Per Booking
+    const serviceBookingEl = infoForm.querySelector(".service-booking-value");
+    if (serviceBookingEl) {
+      serviceBookingEl.textContent = `$${(
+        data.servicePerBookingTotal || 0
+      ).toFixed(2)}`;
+    }
 
-  // Total Amount
-  const totalAmountEl = infoForm.querySelector(".total-amount-value");
-  if (totalAmountEl) {
-    totalAmountEl.textContent = `$${data.totalAmount.toFixed(2)}`;
-  }
+    // Service Per Person
+    const servicePersonEl = infoForm.querySelector(".service-person-value");
+    if (servicePersonEl) {
+      servicePersonEl.textContent = `$${(
+        data.servicePerPersonTotal || 0
+      ).toFixed(2)}`;
+    }
+
+    // Total Amount (cả 2 chỗ)
+    const totalAmountEls = infoForm.querySelectorAll(".total-amount-value");
+    totalAmountEls.forEach((el) => {
+      el.textContent = `$${(data.totalAmount || 0).toFixed(2)}`;
+    });
+  });
 }
 
 // =================== Place Info Binding ===================

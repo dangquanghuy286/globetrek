@@ -1160,6 +1160,14 @@
    }
 
 
+   .tf-form-book {
+      .tf-card-invoice-sum {
+         .content-top {
+            flex-direction: column;
+            gap: 12px;
+         }
+      }
+   }
 
    .hero {
       .flat-hero {
@@ -1388,11 +1396,7 @@
       overflow-y: auto;
    }
 
-   .tf-booking-sidebar {
-      .tf-form-book {
-         padding: 24px;
-      }
-   }
+
 
    .flex-direction-nav {
       display: none;

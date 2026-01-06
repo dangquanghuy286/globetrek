@@ -1101,3 +1101,31 @@
         }
     }
 }
+
+// =================Card Invoice===========
+.tf-card-invoice-sum {
+    .content-top {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .img-tour {
+
+            .img-tour-value {
+                max-width: 140px;
+                border-radius: 12px;
+                object-fit: cover;
+            }
+        }
+
+        .info-date,
+        .info-person {
+            display: flex;
+
+            gap: 8px;
+
+            margin-bottom: 8px;
+        }
+    }
+}
