@@ -3339,20 +3339,32 @@ h5 {
 
 .tf-card-invoice-sum .content-top {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   justify-content: space-between;
   align-items: flex-start;
+}
+.tf-card-invoice-sum .content-top .img-tour {
+  flex-shrink: 0;
 }
 .tf-card-invoice-sum .content-top .img-tour .img-tour-value {
   max-width: 140px;
   border-radius: 12px;
   object-fit: cover;
 }
+.tf-card-invoice-sum .content-top .box-info-tour {
+  flex: 1;
+  min-width: 0;
+}
 .tf-card-invoice-sum .content-top .info-date,
 .tf-card-invoice-sum .content-top .info-person {
   display: flex;
   gap: 8px;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.tf-card-invoice-sum .content-top .total-item {
+  white-space: nowrap;
+  text-align: right;
 }
 
 .breadcrumb {
@@ -10220,9 +10232,16 @@ input[type=checkbox]:checked {
   .tf-vacation-hero .flat-img-with-text.style-04 .rotating-badge {
     display: none;
   }
-  .tf-form-book .tf-card-invoice-sum .content-top {
-    flex-direction: column;
-    gap: 12px;
+  .tf-card-invoice-sum .content-top {
+    flex-wrap: wrap;
+  }
+  .tf-card-invoice-sum .content-top .img-tour .img-tour-value {
+    max-width: 120px;
+  }
+  .tf-card-invoice-sum .content-top .total-item {
+    width: 100%;
+    text-align: right;
+    margin-top: 8px;
   }
   .hero .flat-hero .tab-content {
     bottom: -30%;

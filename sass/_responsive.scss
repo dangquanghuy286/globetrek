@@ -1160,11 +1160,20 @@
    }
 
 
-   .tf-form-book {
-      .tf-card-invoice-sum {
-         .content-top {
-            flex-direction: column;
-            gap: 12px;
+   .tf-card-invoice-sum {
+      .content-top {
+         flex-wrap: wrap;
+
+         .img-tour {
+            .img-tour-value {
+               max-width: 120px;
+            }
+         }
+
+         .total-item {
+            width: 100%;
+            text-align: right;
+            margin-top: 8px;
          }
       }
    }

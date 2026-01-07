@@ -1106,11 +1106,12 @@
 .tf-card-invoice-sum {
     .content-top {
         display: flex;
-        gap: 10px;
+        gap: 16px;
         justify-content: space-between;
         align-items: flex-start;
 
         .img-tour {
+            flex-shrink: 0;
 
             .img-tour-value {
                 max-width: 140px;
@@ -1119,13 +1120,22 @@
             }
         }
 
+        .box-info-tour {
+            flex: 1;
+            min-width: 0;
+        }
+
         .info-date,
         .info-person {
             display: flex;
-
             gap: 8px;
-
             margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .total-item {
+            white-space: nowrap;
+            text-align: right;
         }
     }
 }
