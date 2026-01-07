@@ -10234,14 +10234,25 @@ input[type=checkbox]:checked {
   }
   .tf-card-invoice-sum .content-top {
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .tf-card-invoice-sum .content-top .img-tour .img-tour-value {
-    max-width: 120px;
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 16/9;
   }
   .tf-card-invoice-sum .content-top .total-item {
     width: 100%;
     text-align: right;
     margin-top: 8px;
+  }
+  .tf-discount {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .tf-form-book,
+  .wg-form-contact {
+    padding: 24px;
   }
   .hero .flat-hero .tab-content {
     bottom: -30%;
