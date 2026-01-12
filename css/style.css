@@ -137,6 +137,10 @@ video {
   background: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -258,8 +262,13 @@ a:hover, a:focus {
   outline: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  scroll-behavior: auto !important;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
