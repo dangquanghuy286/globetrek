@@ -2492,3 +2492,52 @@ function mapLabelToKey(label) {
   };
   return map[label] || null;
 }
+// =================== OTP Input Handling ===================
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".otp-input");
+
+  // Focus first input modal shown
+  const modalOTP = document.getElementById("modalOTP");
+  modalOTP.addEventListener("shown.bs.modal", () => {
+    inputs[0].focus();
+  });
+
+  inputs.forEach((input, index) => {
+    // NumberOnly
+    input.addEventListener("input", (e) => {
+      const value = e.target.value.replace(/\D/g, "");
+      e.target.value = value;
+
+      if (value && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+    });
+
+    // Backspace
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && index > 0) {
+        inputs[index - 1].focus();
+      }
+    });
+  });
+
+  // Paste 6 auto fill
+  document.getElementById("otpForm").addEventListener("paste", (e) => {
+    const paste = e.clipboardData.getData("text").replace(/\D/g, "");
+    if (paste.length === inputs.length) {
+      inputs.forEach((input, i) => {
+        input.value = paste[i];
+      });
+      inputs[inputs.length - 1].focus();
+    }
+  });
+
+  // Get OTP value on submit
+  document.getElementById("btnOtpContinue").addEventListener("click", () => {
+    e.preventDefault();
+    const otp = Array.from(inputs)
+      .map((i) => i.value)
+      .join("");
+    console.log("OTP:", otp);
+  });
+});
