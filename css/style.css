@@ -2086,6 +2086,10 @@ h5 {
   border-bottom: 1px solid var(--stoke-color);
 }
 
+.border-top {
+  border-top: 1px solid var(--stoke-color);
+}
+
 .mobile-only {
   display: none;
 }
@@ -4146,6 +4150,17 @@ h5 {
 }
 .footer .inner-footer .widget-newseletter .action-download a:hover {
   border: 1px solid var(--primary-color);
+}
+.footer .inner-footer .input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.footer .inner-footer .input-wrapper .icon.pos-2 {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 .footer .content-bottom {
   padding: 25px 0;

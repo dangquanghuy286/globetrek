@@ -1332,14 +1332,30 @@
                   <p class="text-note">
                     Sign up to receive the latest articles
                   </p>
-                  <form action="#" method="post" class="footer-send mt-3">
-                    <input
-                      type="email"
-                      name="email-form"
-                      id="subscribe-email"
-                      placeholder="Your email address"
-                      class="input-send"
-                    />
+                  <form
+                    action="./sub.html"
+                    method="post"
+                    class="footer-send mt-3"
+                  >
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        name="email-form"
+                        id="subscribe-email"
+                        placeholder="Your email address"
+                        class="input-send"
+                        required
+                      />
+
+                      <button
+                        type="submit"
+                        class="icon pos-2"
+                        aria-label="Subscribe"
+                      >
+                        <img src="./images/icons/icon-send.svg" alt="" />
+                      </button>
+                    </div>
+
                     <label class="agree-terms mt-3">
                       <input
                         type="checkbox"
