@@ -4157,7 +4157,7 @@ h5 {
 }
 .footer .inner-footer .input-wrapper .icon.pos-2 {
   position: absolute;
-  right: 12px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -9542,6 +9542,28 @@ input[type=checkbox]:checked {
 .tf-image-slider .photo-box {
   aspect-ratio: 3/2;
   border-radius: 16px;
+}
+
+.divider-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--text-color);
+  font-weight: 400;
+}
+.divider-text::before, .divider-text::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--stoke-color);
+}
+.divider-text::before {
+  margin-right: 12px;
+}
+.divider-text::after {
+  margin-left: 12px;
 }
 
 /* --------------------------------------------------------------

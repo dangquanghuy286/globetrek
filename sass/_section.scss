@@ -4187,3 +4187,30 @@
 
     }
 }
+
+.divider-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--text-color);
+    font-weight: 400;
+
+    &::before,
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--stoke-color);
+        ;
+    }
+
+    &::before {
+        margin-right: 12px;
+    }
+
+    &::after {
+        margin-left: 12px;
+    }
+}
