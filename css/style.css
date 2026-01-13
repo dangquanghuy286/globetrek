@@ -2679,6 +2679,9 @@ h5 {
   width: 100%;
   min-width: 250px;
   font-size: 16px;
+  max-height: 320px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .form-search .inner-group .form-group .group-select .select-items .list.w-1 {
   top: calc(100% + 18px);
