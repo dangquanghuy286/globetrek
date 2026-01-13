@@ -7234,7 +7234,7 @@ input[type=checkbox]:checked {
   animation-delay: 0.9s;
 }
 .banner-section .content .tf-action .tf-btn .icon {
-  font-size: 28px;
+  color: #013C5A;
 }
 .banner-section .content .box-title {
   text-align: center;
