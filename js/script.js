@@ -2541,3 +2541,18 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("OTP:", otp);
   });
 });
+// =================== Login Modal Handling ===================
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("loginForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    alert("Login thành công ");
+
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById("modalLogin")
+    );
+    modal.hide();
+  });
+});

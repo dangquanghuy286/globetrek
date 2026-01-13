@@ -1308,12 +1308,15 @@
                 class="logo-overlay"
               />
             </div>
-            <form class="form-account">
+
+            <form class="form-account" id="loginForm">
               <div class="title-box">
                 <h1>Login</h1>
                 <span class="close-modal icon-X" data-bs-dismiss="modal"></span>
               </div>
+
               <div class="box">
+                <!-- Email -->
                 <fieldset class="box-fieldset">
                   <label>Email</label>
                   <div class="ip-field">
@@ -1325,10 +1328,13 @@
                     <input
                       type="email"
                       class="form-control"
+                      id="loginEmail"
                       placeholder="Your email"
                     />
                   </div>
                 </fieldset>
+
+                <!-- Password -->
                 <fieldset class="box-fieldset">
                   <label>Password</label>
                   <div class="ip-field">
@@ -1338,31 +1344,40 @@
                       class="icon"
                     />
                     <input
-                      type="text"
+                      type="password"
                       class="form-control"
+                      id="loginPassword"
                       placeholder="Your password"
                     />
                   </div>
+
                   <div class="text-forgot text-end">
-                    <a href="#modalForgot" data-bs-toggle="modal"
-                      >Forgot password?</a
-                    >
+                    <a href="#modalForgot" data-bs-toggle="modal">
+                      Forgot password?
+                    </a>
                   </div>
                 </fieldset>
               </div>
+
               <div class="box box-btn">
-                <a href="#" class="tf-btn primary w-100">Login</a>
+                <a href="#" id="btnLogin" class="tf-btn primary w-100">
+                  Login
+                </a>
+
                 <div class="text text-center subtitle">
                   Don’t you have an account?
                   <a
                     href="#modalRegister"
                     data-bs-toggle="modal"
                     class="text_primary"
-                    >Register</a
                   >
+                    Register
+                  </a>
                 </div>
               </div>
+
               <p class="box text-center divider-text">or login with</p>
+
               <div class="group-btn">
                 <a href="#" class="btn-social">
                   <img src="images/icons/gg.png" alt="img" />
@@ -1378,6 +1393,7 @@
         </div>
       </div>
     </div>
+
     <!-- Register -->
     <div class="modal modal-account fade" id="modalRegister">
       <div class="modal-dialog modal-dialog-centered">
