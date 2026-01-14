@@ -115,7 +115,7 @@ function generateTourBox(options) {
           </div>
 
           <h5 class="tour-title">
-            <a class="link" href="${mapURL}">${mapTitle}</a>
+            <a class="link multi-ellipsis" href="${mapURL}">${mapTitle}</a>
           </h5>
 
           <div class="content-info-middle">
@@ -393,7 +393,6 @@ function mainMap() {
   // Tạo locations
   var locations = createLocationsByType(selectedBoxType);
 
-  // Tự động center vào trung bình locations (với 1 item thì center luôn vào item đó)
   if (locations.length > 0) {
     var avgLat =
       locations.reduce((sum, loc) => sum + loc[1], 0) / locations.length;
