@@ -4603,20 +4603,24 @@ input[type=checkbox]:checked {
   margin-top: 12px;
   display: inline-flex;
   align-items: center;
-  flex-direction: row;
   gap: 6px;
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
 }
 .flat-blog-item.style-1 .content-box .read-more img {
-  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  will-change: filter, transform;
+  backface-visibility: hidden;
 }
 .flat-blog-item.style-1 .content-box .read-more:hover {
   color: var(--primary-color);
 }
 .flat-blog-item.style-1 .content-box .read-more:hover img {
   filter: brightness(0) saturate(100%) invert(95%) sepia(9%) saturate(5115%) hue-rotate(321deg) brightness(90%) contrast(90%);
+  transform: translateX(2px);
 }
 .flat-blog-item.style-1 .content-box.style-content-01 {
   background-color: var(--white);
@@ -6924,6 +6928,7 @@ input[type=checkbox]:checked {
 }
 .flat-recommended .item .archive-bottom {
   padding: 24px;
+  width: 100%;
 }
 .flat-recommended .item .archive-bottom .content-top {
   display: flex;
