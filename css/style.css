@@ -5397,7 +5397,7 @@ input[type=checkbox]:checked {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: url(../../images/backgronud/bg-blog.png);
+  background: url(../../images/backgrounds/bg-blog.jpg);
   background-color: var(--four-color);
 }
 .page-title h1,
@@ -8418,13 +8418,13 @@ input[type=checkbox]:checked {
 }
 
 .bg-first {
-  background: url("../images/backgronud/bg-transperent.png") no-repeat center center;
+  background: url("../images/backgrounds/bg-transparent.jpg") no-repeat center center;
   background-size: cover;
   background-color: var(--primary-color);
 }
 
 .bg-second {
-  background: url("../images/backgronud/transparent-2.png") no-repeat center center;
+  background: url("../images/backgrounds/bg-transparent-2.jpg") no-repeat center center;
   background-size: cover;
   background-color: var(--secondary-color);
   border-radius: 16px;
