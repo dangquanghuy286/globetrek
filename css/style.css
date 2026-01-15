@@ -1524,6 +1524,13 @@ h5 {
   border-bottom: 1px solid var(--stoke-color);
 }
 
+.single-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
 .multi-ellipsis {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -6451,6 +6458,14 @@ input[type=checkbox]:checked {
   padding: 16px;
   transition: all 0.3s ease;
 }
+.destination-post .content h4 {
+  flex: 1;
+  min-width: 0;
+}
+.destination-post .content .total-tour {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 .destination-post .group-meta {
   position: absolute;
   bottom: 24px;
@@ -6928,7 +6943,7 @@ input[type=checkbox]:checked {
 }
 .flat-recommended .item .archive-bottom {
   padding: 24px;
-  width: 100%;
+  flex-grow: 1;
 }
 .flat-recommended .item .archive-bottom .content-top {
   display: flex;
@@ -7095,6 +7110,7 @@ input[type=checkbox]:checked {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
 }
 .flat-recommended .item.list-style-02 .rate .total-rate {
   color: var(--white);

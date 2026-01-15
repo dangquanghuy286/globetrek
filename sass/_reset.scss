@@ -1475,6 +1475,14 @@ h5 {
     border-bottom: 1px solid var(--stoke-color);
 }
 
+.single-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+
 .multi-ellipsis {
     display: -webkit-box;
     -webkit-line-clamp: 2;

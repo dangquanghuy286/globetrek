@@ -343,6 +343,17 @@
         padding: 16px;
         transition: all 0.3s ease;
 
+        h4 {
+            flex: 1;
+            min-width: 0;
+        }
+
+
+
+        .total-tour {
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
     }
 
     .group-meta {
@@ -982,7 +993,7 @@
 
         .archive-bottom {
             padding: 24px;
-            width: 100%;
+            flex-grow: 1;
 
             .content-top {
                 display: flex;
@@ -1183,6 +1194,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                width: 100%;
             }
 
             .rate {
