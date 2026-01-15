@@ -7186,7 +7186,7 @@ input[type=checkbox]:checked {
 }
 
 .banner-section {
-  background: url("../images/backgrounds/bg-03.jpg") no-repeat center center;
+  background: url("../images/backgrounds/bg-01.jpg") no-repeat center center;
   background-size: cover;
   padding: 233px 0;
   display: flex;
@@ -7196,6 +7196,11 @@ input[type=checkbox]:checked {
 }
 .banner-section.banner-1 {
   background: url("../images/tours/bg-tour-2.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.banner-section.banner-2 {
+  background: url("../images/backgrounds/bg-03.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
