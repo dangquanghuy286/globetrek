@@ -184,7 +184,7 @@ function generateContactBox(options) {
             <div class="info-content">
               <a href="tel:${phone.replace(
                 /\s/g,
-                ""
+                "",
               )}" class="value info-phone">
                 ${phone}
               </a>
@@ -301,7 +301,7 @@ var allLocations = [
   {
     data: {
       boxType: "contact",
-      mapImg: "images/tours/tour-9.png",
+      mapImg: "images/locations/tour-89.jpg",
       mapURL: "contact-single2.html",
       mapTitle: "Office address",
       phone: "(229) 555-0109",
@@ -564,13 +564,13 @@ function mainMap() {
   for (i = 0; i < locations.length; i++) {
     var overlaypositions = new google.maps.LatLng(
         locations[i][1],
-        locations[i][2]
+        locations[i][2],
       ),
       overlay = new CustomMarker(
         overlaypositions,
         map,
         { marker_id: i },
-        markerIco
+        markerIco,
       );
     allMarkers.push(overlay);
 
@@ -596,7 +596,7 @@ function mainMap() {
                 e.preventDefault();
                 ib.close();
                 var mapMarkers = document.querySelectorAll(
-                  ".map-marker-container"
+                  ".map-marker-container",
                 );
                 mapMarkers.forEach(function (marker) {
                   marker.classList.remove("clicked", "infoBox-opened");
@@ -605,7 +605,7 @@ function mainMap() {
             });
           });
         };
-      })(overlay, i)
+      })(overlay, i),
     );
   }
 
@@ -675,7 +675,7 @@ function mainMap() {
       navigator.geolocation.getCurrentPosition(function (position) {
         var pos = new google.maps.LatLng(
           position.coords.latitude,
-          position.coords.longitude
+          position.coords.longitude,
         );
         map.setCenter(pos);
         map.setZoom(12);
