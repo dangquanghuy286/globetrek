@@ -142,8 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// =================Mobile===========================
 // =================Mobile===========================
 document.addEventListener("DOMContentLoaded", function () {
   const tfSwMobile = document.querySelector(".tf-sw-mobile");
@@ -595,6 +593,41 @@ document.addEventListener("DOMContentLoaded", function () {
         1200: {
           slidesPerView: parseInt(preview),
           spaceBetween: parseInt(spacing),
+        },
+      },
+    });
+  }
+});
+
+// =============PartNer=============
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperPartners = document.querySelector(".tf-partners");
+  if (swiperPartners) {
+    const spacing = swiperPartners.dataset.space;
+
+    const swiper = new Swiper(".tf-partners", {
+      slidesPerView: "auto",
+      spaceBetween: parseInt(spacing),
+      loop: true,
+
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+
+      speed: 5000,
+
+      on: {
+        init: function () {
+          const swiperEl = this.el;
+
+          swiperEl.addEventListener("mouseenter", () => {
+            this.autoplay.stop();
+          });
+
+          swiperEl.addEventListener("mouseleave", () => {
+            this.autoplay.start();
+          });
         },
       },
     });

@@ -869,7 +869,7 @@
     overflow: hidden;
     position: relative;
 
-    // Fade gradient bên trái - mặc định (trắng)
+
     &::before {
         content: '';
         position: absolute;
@@ -926,50 +926,45 @@
         }
     }
 
-    .partners-list {
-        display: flex;
-        gap: 40px;
-        width: max-content;
-        overflow: hidden;
-        animation: scroll 30s linear infinite;
-
-        &:hover {
-            animation-play-state: paused;
-        }
-
-        .partners-item {
-            width: 180px;
-            height: 76px;
-            object-fit: cover;
-            transition: filter 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
-            @include transition3;
-
-            &.partner-01 {
-                &:hover {
-                    filter: brightness(0) saturate(100%) invert(63%) sepia(33%) saturate(725%) hue-rotate(359deg) brightness(100%) contrast(94%);
-                    transform: scale(1.05);
-                }
-            }
-
-            &.partner-02 {
-                filter: brightness(0) invert(1);
-
-                &:hover {
-                    filter: brightness(0) invert(1);
-                    transform: scale(1.05);
-                }
-            }
-        }
+    // Swiper wrapper
+    .swiper-wrapper {
+        display: flex !important;
+        transition-timing-function: linear !important;
     }
 
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
+    // Partners link (swiper-slide)
+    .partners-link {
+        width: 180px;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    // Partners item (image)
+    .partners-item {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: filter 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        @include transition3;
+
+        &.partner-01 {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(63%) sepia(33%) saturate(725%) hue-rotate(359deg) brightness(100%) contrast(94%);
+                transform: scale(1.05);
+            }
         }
 
-        100% {
-            transform: translateX(-50%);
+        &.partner-02 {
+            filter: brightness(0) invert(1);
+
+            &:hover {
+                filter: brightness(0) invert(1);
+                transform: scale(1.05);
+            }
         }
     }
 }

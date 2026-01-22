@@ -1,3 +1,14 @@
+// =============Preload================
+window.addEventListener("load", function () {
+  const preload = document.querySelector(".preload");
+
+  setTimeout(() => {
+    preload.style.transition = "opacity 0.4s ease";
+    preload.style.opacity = "0";
+    setTimeout(() => preload.remove(), 400);
+  }, 400);
+});
+
 // =============Back To Top=================
 document.addEventListener("DOMContentLoaded", () => {
   const gotop = document.getElementById("backtotop");
@@ -263,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====================Active Nav menu=========================
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(
-    ".menu-nav .nav-link, .sub-menu a, .mega-menu a"
+    ".menu-nav .nav-link, .sub-menu a, .mega-menu a",
   );
 
   //  Remove active
@@ -1177,7 +1188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const todayStr = formatDate(
     today.getFullYear(),
     today.getMonth(),
-    today.getDate()
+    today.getDate(),
   );
 
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -1309,7 +1320,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   function hasTourOnDate(year, month, day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
-      day
+      day,
     ).padStart(2, "0")}`;
     return tour_data_detail.calendarData[dateStr] !== undefined;
   }
@@ -1317,7 +1328,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Lấy giá tour
   function getTourPrices(year, month, day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(
-      day
+      day,
     ).padStart(2, "0")}`;
     return tour_data_detail.calendarData[dateStr]?.prices || null;
   }
@@ -1712,7 +1723,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Update TIME PICKER sau khi chọn ngày
           const timePickerDropdown = document.querySelector(
-            '.select-items:has(.select-date[name="tour_time"])'
+            '.select-items:has(.select-date[name="tour_time"])',
           );
           if (timePickerDropdown) {
             updateTimePicker(timePickerDropdown);
@@ -1748,7 +1759,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ========== Advanced Form Toggle ==========
   const advancedBtns = document.querySelectorAll(
-    ".box-btn-filter .box-filter "
+    ".box-btn-filter .box-filter ",
   );
 
   advancedBtns.forEach((advancedBtn, index) => {
@@ -1822,16 +1833,16 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const adultInput = bookingForm.querySelector(
-    '.guest-item:nth-child(1) input[type="number"]'
+    '.guest-item:nth-child(1) input[type="number"]',
   );
   const childrenInput = bookingForm.querySelector(
-    '.guest-item:nth-child(2) input[type="number"]'
+    '.guest-item:nth-child(2) input[type="number"]',
   );
   const serviceBookingCheckbox = bookingForm.querySelector("#add_sv_booking");
   const servicePersonCheckbox = bookingForm.querySelector("#add_sv_person");
   const totalValueElement = bookingForm.querySelector(".tf-total-value");
   const totalHiddenInput = bookingForm.querySelector(
-    'input[name="total_amount"]'
+    'input[name="total_amount"]',
   );
 
   const valueAdultSpan = bookingForm.querySelector(".value-adult");
@@ -1897,16 +1908,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const adultPlusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(1) .plus"
+    ".guest-item:nth-child(1) .plus",
   );
   const adultMinusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(1) .minus"
+    ".guest-item:nth-child(1) .minus",
   );
   const childPlusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(2) .plus"
+    ".guest-item:nth-child(2) .plus",
   );
   const childMinusBtn = bookingForm.querySelector(
-    ".guest-item:nth-child(2) .minus"
+    ".guest-item:nth-child(2) .minus",
   );
 
   adultPlusBtn?.addEventListener("click", () => {
@@ -2034,7 +2045,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function renderBookingInfo(data) {
   const infoForms = document.querySelectorAll(
-    ".tf-form-book.checkout.info-form"
+    ".tf-form-book.checkout.info-form",
   );
 
   if (!infoForms.length) return;
@@ -2124,7 +2135,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get location
     const locationDropdown = form.querySelector(
-      ".form-group:nth-child(1) .current"
+      ".form-group:nth-child(1) .current",
     );
     const locationValue = locationDropdown?.getAttribute("data-value") || "";
 
@@ -2133,7 +2144,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get tour type
     const tourTypeDropdown = form.querySelector(
-      ".form-group:nth-child(3) .current"
+      ".form-group:nth-child(3) .current",
     );
     const tourType = tourTypeDropdown?.getAttribute("data-value") || "";
 
@@ -2339,7 +2350,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stars.forEach((s) => {
           s.classList.toggle(
             "active",
-            Number(s.dataset.value) <= Number(value)
+            Number(s.dataset.value) <= Number(value),
           );
         });
       });
@@ -2350,7 +2361,7 @@ document.addEventListener("DOMContentLoaded", () => {
           s.classList.remove("active");
           s.classList.toggle(
             "selected",
-            Number(s.dataset.value) <= Number(input.value)
+            Number(s.dataset.value) <= Number(input.value),
           );
         });
       });
@@ -2362,7 +2373,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stars.forEach((s) => {
           s.classList.toggle(
             "selected",
-            Number(s.dataset.value) <= Number(value)
+            Number(s.dataset.value) <= Number(value),
           );
         });
       });
@@ -2422,7 +2433,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fields.forEach((field) => {
     const total = tour_data_detail.reviewData.reduce(
       (sum, r) => sum + r[field],
-      0
+      0,
     );
     avgByField[field] = total / count;
   });
@@ -2438,7 +2449,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderStars(
     wrap.querySelector(".rating-summary .list-star"),
     Math.floor(totalAvg),
-    maxScore
+    maxScore,
   );
 
   // Avg Categories
@@ -2551,7 +2562,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Login thành công ");
 
     const modal = bootstrap.Modal.getInstance(
-      document.getElementById("modalLogin")
+      document.getElementById("modalLogin"),
     );
     modal.hide();
   });
