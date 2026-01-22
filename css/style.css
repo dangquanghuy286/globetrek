@@ -7111,6 +7111,9 @@ input[type=checkbox]:checked {
   left: 0;
   width: 100%;
 }
+.flat-recommended .item.list-style-02 .content-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
 .flat-recommended .item.list-style-02 .rate .total-rate {
   color: var(--white);
 }
@@ -7118,10 +7121,10 @@ input[type=checkbox]:checked {
   color: var(--white);
 }
 .flat-recommended .item.list-style-02 .content-info-middle .info {
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 .flat-recommended .item.list-style-02 .content-info-middle .info img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) opacity(0.8);
 }
 .flat-recommended .item.list-style-02 .content-bottom .price {
   color: var(--white);
