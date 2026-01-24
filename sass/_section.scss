@@ -4244,3 +4244,18 @@
         margin-left: 12px;
     }
 }
+
+.tab-content .tab-pane {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px);
+}
+
+.tab-content .tab-pane:not(.show) {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.tab-content .tab-pane.show {
+    opacity: 1;
+    transform: translateY(0);
+}
