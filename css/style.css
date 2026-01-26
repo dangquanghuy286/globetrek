@@ -3454,23 +3454,25 @@ h5 {
 .header .header-ct-right {
   flex-shrink: 0;
 }
-.header .header-ct-right .wrap-login-menu ul {
+.header .header-ct-right .wrap-login-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
-.header .header-ct-right .wrap-login-menu ul li {
+.header .header-ct-right .wrap-login-menu li {
   position: relative;
+  display: flex;
+  align-items: center;
 }
-.header .header-ct-right .wrap-login-menu ul a:hover {
+.header .header-ct-right .wrap-login-menu a:hover {
   color: var(--primary-color);
 }
-.header .header-ct-right .wrap-login-menu ul .icon {
+.header .header-ct-right .wrap-login-menu .icon {
   font-size: 24px;
 }
-.header .header-ct-right .wrap-login-menu ul .heart::after,
-.header .header-ct-right .wrap-login-menu ul .search::before {
+.header .header-ct-right .wrap-login-menu .heart::after,
+.header .header-ct-right .wrap-login-menu .search::before {
   position: absolute;
   content: "";
   width: 1px;
@@ -3479,7 +3481,7 @@ h5 {
   bottom: 5px;
   right: -15px;
 }
-.header .header-ct-right .wrap-login-menu ul .login {
+.header .header-ct-right .wrap-login-menu .login {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -9668,7 +9670,7 @@ input[type=checkbox]:checked {
   .header .menu-nav {
     gap: 20px;
   }
-  .header .header-ct-right .wrap-login-menu ul {
+  .header .header-ct-right .wrap-login-menu {
     gap: 20px;
   }
   .tf-best-trip .tf-scroll-text .heading {
@@ -9753,13 +9755,13 @@ input[type=checkbox]:checked {
   .header .menu-nav {
     gap: 10px;
   }
-  .header .header-ct-right .wrap-login-menu ul {
+  .header .header-ct-right .wrap-login-menu {
     gap: 15px;
   }
-  .header .header-ct-right .wrap-login-menu ul .heart::after {
+  .header .header-ct-right .wrap-login-menu .heart::after {
     right: -8px;
   }
-  .header .header-ct-right .wrap-login-menu ul .search::before {
+  .header .header-ct-right .wrap-login-menu .search::before {
     right: -8px;
   }
   .header.style-2 .list-nav {
@@ -9928,7 +9930,7 @@ input[type=checkbox]:checked {
   .header .list-nav {
     display: none;
   }
-  .header .header-ct-right .wrap-login-menu ul {
+  .header .header-ct-right .wrap-login-menu {
     gap: 20px;
   }
   .header .toggle-mobile {

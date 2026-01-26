@@ -84,9 +84,9 @@
 
       .header-ct-right {
          .wrap-login-menu {
-            ul {
-               gap: 20px;
-            }
+
+            gap: 20px;
+
          }
       }
    }
@@ -231,21 +231,21 @@
 
       .header-ct-right {
          .wrap-login-menu {
-            ul {
-               gap: 15px;
 
-               .heart {
-                  &::after {
-                     right: -8px;
-                  }
-               }
+            gap: 15px;
 
-               .search {
-                  &::before {
-                     right: -8px;
-                  }
+            .heart {
+               &::after {
+                  right: -8px;
                }
             }
+
+            .search {
+               &::before {
+                  right: -8px;
+               }
+            }
+
          }
       }
 
@@ -519,9 +519,9 @@
 
       .header-ct-right {
          .wrap-login-menu {
-            ul {
-               gap: 20px;
-            }
+
+            gap: 20px;
+
          }
       }
 

@@ -35,7 +35,7 @@
     .header-ct-right {
         flex-shrink: 0;
 
-        .wrap-login-menu ul {
+        .wrap-login-menu {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -43,6 +43,8 @@
 
             li {
                 position: relative;
+                display: flex;
+                align-items: center;
             }
 
             a {
