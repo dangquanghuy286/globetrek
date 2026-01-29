@@ -6194,6 +6194,11 @@ input[type=checkbox]:checked {
   padding-bottom: 100px;
 }
 
+.flat-section-v3 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .box-title {
   margin-bottom: 50px;
 }
