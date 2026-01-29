@@ -3460,6 +3460,9 @@ h5 {
   justify-content: center;
   gap: 30px;
 }
+.header .header-ct-right .wrap-login-menu.color-ic {
+  color: var(--white);
+}
 .header .header-ct-right .wrap-login-menu li {
   position: relative;
   display: flex;
@@ -3538,6 +3541,7 @@ h5 {
   border-bottom: 1px solid var(--border-header);
 }
 .style-1 .header-wrap {
+  display: flex;
   align-items: center;
 }
 .style-1 .header-wrap .header-ct-left {

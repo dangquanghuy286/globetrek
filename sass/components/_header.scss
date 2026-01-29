@@ -22,6 +22,7 @@
         flex-grow: 1;
         height: 100%;
 
+
     }
 
     .header-ct-center {
@@ -40,6 +41,10 @@
             align-items: center;
             justify-content: center;
             gap: 30px;
+
+            &.color-ic {
+                color: var(--white);
+            }
 
             li {
                 position: relative;
@@ -140,6 +145,7 @@
 
 
     .header-wrap {
+        display: flex;
         align-items: center;
 
         .header-ct-left {
