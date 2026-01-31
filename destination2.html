@@ -555,8 +555,9 @@
                                 data-bs-toggle="tab"
                                 aria-selected="true"
                                 role="tab"
-                                >View All</a
-                                >
+                                id="viewAll-tab"
+                                aria-controls="viewAll" 
+                                >View All</a>
                             <div class="total-tour">
                                 <span>20 Tours</span>
                             </div>
@@ -569,8 +570,9 @@
                                 aria-selected="false"
                                 tabindex="-1"
                                 role="tab"
-                                >Beach</a
-                                >
+                                aria-controls="beach"
+                                id="beach-tab"
+                                >Beach</a>
                             <div class="total-tour">
                                 <span>5 Tours</span>
                             </div>
@@ -578,13 +580,14 @@
                         <li class="nav-tab-item" role="presentation">
                             <a
                                 href="#cableCar"
+                                id="cableCar-tab"
                                 class="nav-link-item"
                                 data-bs-toggle="tab"
                                 aria-selected="false"
                                 tabindex="-1"
                                 role="tab"
-                                >Cable Car</a
-                                >
+                                aria-controls="cableCar"
+                                >Cable Car</a>
                             <div class="total-tour">
                                 <span>3 Tours</span>
                             </div>
@@ -597,8 +600,9 @@
                                 aria-selected="false"
                                 tabindex="-1"
                                 role="tab"
-                                >Sailboat</a
-                                >
+                                aria-controls="sailboat"
+                                id="sailboat-tab"
+                                >Sailboat</a>
                             <div class="total-tour">
                                 <span>4 Tours</span>
                             </div>
@@ -606,13 +610,14 @@
                         <li class="nav-tab-item" role="presentation">
                             <a
                                 href="#discovery"
+                                id="discovery-tab"
                                 class="nav-link-item"
                                 data-bs-toggle="tab"
                                 aria-selected="false"
                                 tabindex="-1"
                                 role="tab"
-                                >Discovery</a
-                                >
+                                aria-controls="discovery"
+                                >Discovery</a>
                             <div class="total-tour">
                                 <span>6 Tours</span>
                             </div>
@@ -620,274 +625,1602 @@
                         <li class="nav-tab-item" role="presentation">
                             <a
                                 href="#climbing"
+                                id="climbing-tab"
                                 class="nav-link-item"
                                 data-bs-toggle="tab"
                                 aria-selected="false"
                                 tabindex="-1"
                                 role="tab"
-                                >Climbing</a
-                                >
+                                aria-controls="climbing"
+                                >Climbing</a>
                             <div class="total-tour">
                                 <span>2 Tours</span>
                             </div>
                         </li>
                     </ul>
-                    <div
-                        class="tf-sw-mobile swiper wow animate__animated animate__fadeIn"
-                        data-wow-duration="1s"
-                        data-wow-delay="0.4s"
-                        data-screen="575"
-                        data-preview="1"
-                        data-space="15"
-                        >
-                        <div class="swiper-wrapper tf-destination grid-3">
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-11.jpg"
-                                            alt="Bali Beach Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Bali, Indonesia</a
+                    <div class="tab-content wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div 
+                            class="tab-pane fade show active" 
+                            id="viewAll" 
+                            role="tabpanel" 
+                            aria-labelledby="viewAll-tab" 
+                            >
+                            <div
+                                class="tf-sw-mobile swiper"
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
                                                     >
-                                            </h4>
-                                            <div class="total-tour subtitle">45 Tours</div>
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-12.jpg"
-                                            alt="Los Angeles Urban Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Los Angeles, USA</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">52 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-13.jpg"
-                                            alt="New York City Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >New York, USA</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">39 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-19.jpg"
-                                            alt="Paris Romantic Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Paris, France</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">61 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-25.jpg"
-                                            alt="Tokyo Modern Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Tokyo, Japan</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">47 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-26.jpg"
-                                            alt="London Historic Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >London, UK</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">55 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-27.jpg"
-                                            alt="Rome Ancient Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Rome, Italy</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">42 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-29.jpg"
-                                            alt="Sydney Harbor Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Sydney, Australia</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">38 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-21.jpg"
-                                            alt="Cape Town Scenic Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Cape Town, South Africa</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">29 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-36.jpg"
-                                            alt="Rio de Janeiro Vibrant Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Rio de Janeiro, Brazil</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">33 Tours</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="item hover-img">
-                                    <div class="destination-post">
-                                        <a href="destinationdetail.html" class="img-style">
-                                        <img
-                                            src="./images/locations/tour-39.jpg"
-                                            alt="Dubai Futuristic Destination"
-                                            >
-                                        </a>
-                                        <div class="content">
-                                            <h4 class="">
-                                                <a
-                                                    href="destinationdetail.html"
-                                                    class="link single-ellipsis"
-                                                    >Dubai, UAE</a
-                                                    >
-                                            </h4>
-                                            <div class="total-tour subtitle">51 Tours</div>
-                                        </div>
-                                    </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-control">
+                        <!-- Tabpanel Beach -->
+                        <div 
+                            class="tab-pane fade" 
+                            id="beach" 
+                            role="tabpanel" 
+                            aria-labelledby="beach-tab"
+                            >
                             <div
-                                class="sw-pagination sw-pagination-topchose text-center"
-                                ></div>
+                                class="tf-sw-mobile swiper "
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabpanel Cable Car -->
+                        <div 
+                            class="tab-pane fade" 
+                            id="cableCar" 
+                            role="tabpanel" 
+                            aria-labelledby="cableCar-tab"
+                            >
+                            <div
+                                class="tf-sw-mobile swiper "
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabpanel Sailboat -->
+                        <div 
+                            class="tab-pane fade" 
+                            id="sailboat" 
+                            role="tabpanel" 
+                            aria-labelledby="sailboat-tab"
+                            >
+                            <div
+                                class="tf-sw-mobile swiper "
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabpanel Discovery -->
+                        <div 
+                            class="tab-pane fade" 
+                            id="discovery" 
+                            role="tabpanel" 
+                            aria-labelledby="discovery-tab"
+                            >
+                            <div
+                                class="tf-sw-mobile swiper "
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabpanel Climbing -->
+                        <div 
+                            class="tab-pane fade" 
+                            id="climbing" 
+                            role="tabpanel" 
+                            aria-labelledby="climbing-tab"
+                            >
+                            <div
+                                class="tf-sw-mobile swiper"
+                                data-screen="575"
+                                data-preview="1"
+                                data-space="15"
+                                >
+                                <div class="swiper-wrapper tf-destination grid-3">
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-11.jpg"
+                                                    alt="Bali Beach Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Bali, Indonesia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">45 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-12.jpg"
+                                                    alt="Los Angeles Urban Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Los Angeles, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">52 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-13.jpg"
+                                                    alt="New York City Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >New York, USA</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">39 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-19.jpg"
+                                                    alt="Paris Romantic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Paris, France</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">61 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-25.jpg"
+                                                    alt="Tokyo Modern Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Tokyo, Japan</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">47 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-26.jpg"
+                                                    alt="London Historic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >London, UK</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">55 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-27.jpg"
+                                                    alt="Rome Ancient Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rome, Italy</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">42 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-29.jpg"
+                                                    alt="Sydney Harbor Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Sydney, Australia</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">38 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-21.jpg"
+                                                    alt="Cape Town Scenic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Cape Town, South Africa</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">29 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-36.jpg"
+                                                    alt="Rio de Janeiro Vibrant Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Rio de Janeiro, Brazil</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">33 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item hover-img">
+                                            <div class="destination-post">
+                                                <a href="destinationdetail.html" class="img-style">
+                                                <img
+                                                    src="./images/locations/tour-39.jpg"
+                                                    alt="Dubai Futuristic Destination"
+                                                    >
+                                                </a>
+                                                <div class="content">
+                                                    <h4 class="">
+                                                        <a
+                                                            href="destinationdetail.html"
+                                                            class="link single-ellipsis"
+                                                            >Dubai, UAE</a
+                                                            >
+                                                    </h4>
+                                                    <div class="total-tour subtitle">51 Tours</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div
+                                        class="sw-pagination sw-pagination-topchose text-center"
+                                        ></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
