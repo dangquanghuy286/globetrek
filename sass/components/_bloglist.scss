@@ -1,9 +1,6 @@
 @use "../abstracts/index.scss" as *;
 
-
-
 .flat-blog-list {
-
     .flat-blog-item {
         margin-bottom: 56px;
 
@@ -56,10 +53,7 @@
 }
 
 .flat-blog-item {
-
     display: block;
-
-
 
     .detail {
         z-index: 1;
@@ -74,8 +68,6 @@
         letter-spacing: 0.8px;
         font-weight: 600;
     }
-
-
 
     &.style-1 {
         position: relative;
@@ -385,7 +377,6 @@
     width: 100%;
     position: relative;
     background: url(../../images/backgrounds/bg-01.jpg) no-repeat center center;
-
     background-size: cover;
 
     &.banner-1 {
