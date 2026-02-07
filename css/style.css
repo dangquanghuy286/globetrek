@@ -3545,7 +3545,7 @@ h5 {
   align-items: center;
 }
 .style-1 .header-wrap .header-ct-left {
-  padding: 14px 0;
+  padding: 14px 70px 14px 0;
 }
 
 .style-2 {
@@ -3592,7 +3592,7 @@ h5 {
   color: var(--heading-color);
 }
 .menu-item .icon {
-  font-size: 16px;
+  font-size: 14px;
   transition: transform 0.3s ease;
 }
 .menu-item:hover > a .icon {
