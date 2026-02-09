@@ -3541,7 +3541,6 @@ h5 {
   border-bottom: 1px solid var(--border-header);
 }
 .style-1 .header-wrap {
-  display: flex;
   align-items: center;
 }
 .style-1 .header-wrap .header-ct-left {
