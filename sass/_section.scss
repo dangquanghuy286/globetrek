@@ -883,12 +883,7 @@
     }
 }
 
-.partner {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-
-
+.tf-sw-partners {
     &::before {
         content: '';
         position: absolute;
@@ -945,30 +940,14 @@
         }
     }
 
-    // Swiper wrapper
-    .swiper-wrapper {
-        display: flex !important;
-        transition-timing-function: linear !important;
-    }
-
-
-    .partners-link {
+    .partner-item {
         width: 180px;
         height: 76px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-    }
-
-
-    .partners-item {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        transition: filter 0.3s ease, transform 0.3s ease;
-        cursor: pointer;
-        @include transition3;
+        @include transition4;
 
         &.partner-01 {
             &:hover {

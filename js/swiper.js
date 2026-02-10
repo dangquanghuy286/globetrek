@@ -598,38 +598,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// =============PartNer=============
+// ============ Partner=====================
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperPartners = document.querySelector(".tf-partners");
-  if (swiperPartners) {
-    const spacing = swiperPartners.dataset.space;
+  const partnerEl = document.querySelector(".tf-sw-partners");
+  if (!partnerEl) return;
 
-    const swiper = new Swiper(".tf-partners", {
-      slidesPerView: "auto",
-      spaceBetween: parseInt(spacing),
-      loop: true,
+  // Lấy data-attribute
+  const preview = partnerEl.dataset.preview;
+  const tablet = partnerEl.dataset.tablet;
+  const mobile = partnerEl.dataset.mobile;
+  const mobileSm = partnerEl.dataset.mobileSm;
 
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
+  const spacing = partnerEl.dataset.space;
+  const spacingMd = partnerEl.dataset.spaceMd;
+  const spacingLg = partnerEl.dataset.spaceLg;
+
+  // Init Swiper
+  const swiper = new Swiper(".tf-sw-partners", {
+    autoplay: {
+      delay: 1, // Đổi từ 0 sang 1
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false, 
+    },
+    freeMode: true,
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    loop: true,
+    speed: 3000,
+    navigation: {
+      nextEl: ".nav-prev-partner",
+      prevEl: ".nav-next-partner",
+    },
+    pagination: {
+      el: ".sw-pagination-partner",
+      clickable: true,
+    },
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
       },
-
-      speed: 5000,
-
-      on: {
-        init: function () {
-          const swiperEl = this.el;
-
-          swiperEl.addEventListener("mouseenter", () => {
-            this.autoplay.stop();
-          });
-
-          swiperEl.addEventListener("mouseleave", () => {
-            this.autoplay.start();
-          });
-        },
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
       },
-    });
-  }
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
+      },
+    },
+  });
+
+  // Hover pause autoplay 
+  partnerEl.addEventListener("mouseenter", () => {
+    swiper.autoplay.stop();
+  });
+
+  partnerEl.addEventListener("mouseleave", () => {
+    swiper.autoplay.start();
+  });
 });
