@@ -426,11 +426,7 @@
       }
    }
 
-   .tf-partner {
-      &.home-2 {
-         margin-top: 300px !important;
-      }
-   }
+
 
    .tf-destination {
       grid-template-rows: 250px 250px !important;
@@ -640,17 +636,7 @@
       }
    }
 
-   .tf-partner {
-      .box-content {
-         flex-direction: column !important;
-         justify-content: flex-start !important;
 
-         .inner-left {
-            flex-direction: row;
-            width: 100%;
-         }
-      }
-   }
 
    .slider-default {
 
@@ -1088,11 +1074,7 @@
       }
    }
 
-   .tf-partner {
-      .home-2 {
-         margin-top: 450px !important;
-      }
-   }
+
 
    .tf-vacation-hero {
       .flat-img-with-text {
@@ -1850,11 +1832,7 @@
       right: 10px;
    }
 
-   .tf-partner {
-      &.home-2 {
-         margin-top: 200px !important;
-      }
-   }
+
 }
 
 @media (max-width: 425px) {

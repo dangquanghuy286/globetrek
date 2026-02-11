@@ -9882,9 +9882,6 @@ input[type=checkbox]:checked {
     width: 100% !important;
     padding: 0 20px !important;
   }
-  .tf-partner.home-2 {
-    margin-top: 300px !important;
-  }
   .tf-destination {
     grid-template-rows: 250px 250px !important;
   }
@@ -10017,14 +10014,6 @@ input[type=checkbox]:checked {
   .flat-blog-detail h1 {
     font-size: 30px;
     line-height: 100%;
-  }
-  .tf-partner .box-content {
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-  }
-  .tf-partner .box-content .inner-left {
-    flex-direction: row;
-    width: 100%;
   }
   .slider-default .home-3 .box-title {
     padding: 100px 0 250px !important;
@@ -10286,9 +10275,6 @@ input[type=checkbox]:checked {
   .header .header-ct-left a img {
     max-width: 176px;
     height: auto;
-  }
-  .tf-partner .home-2 {
-    margin-top: 450px !important;
   }
   .tf-vacation-hero .flat-img-with-text.style-05 .content-left {
     padding: 40px 0;
@@ -10758,9 +10744,6 @@ input[type=checkbox]:checked {
   }
   .close-btn {
     right: 10px;
-  }
-  .tf-partner.home-2 {
-    margin-top: 200px !important;
   }
 }
 @media (max-width: 425px) {
