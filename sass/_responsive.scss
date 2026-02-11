@@ -268,6 +268,9 @@
       }
    }
 
+
+
+
    .sidebar-filter {
       padding-bottom: 20px;
    }
@@ -636,7 +639,11 @@
       }
    }
 
-
+   .tf-partner {
+      &.home-2 {
+         margin-top: 300px;
+      }
+   }
 
    .slider-default {
 
@@ -1138,6 +1145,23 @@
    }
 
 
+   .tf-partner {
+      .box-content {
+         flex-direction: column;
+         gap: 20px;
+
+         .inner-left {
+            width: 100%;
+            justify-content: start;
+         }
+
+         .inner-right {
+            width: 100%;
+         }
+
+      }
+   }
+
    .tf-card-invoice-sum {
       .content-top {
          flex-wrap: wrap;
@@ -1330,6 +1354,14 @@
 
 @media (max-width: 575px) {
    .header {
+      &.style-1 {
+         .header-wrap {
+            .header-ct-left {
+               padding: 14px 30px 14px 0;
+            }
+         }
+      }
+
       .header-ct-right {
          gap: 10px;
 

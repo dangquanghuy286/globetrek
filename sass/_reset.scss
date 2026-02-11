@@ -2083,3 +2083,15 @@ h5 {
 .mobile-only {
     display: none;
 }
+
+.slider-layout-right {
+    width: calc(100vw - (100vw - 1310px) / 2 - 7px);
+    margin-right: unset;
+    max-width: 100%;
+    margin-left: auto;
+    padding: 0 15px;
+
+    .swiper:not(.tf-sw-right) {
+        margin-right: -15px;
+    }
+}

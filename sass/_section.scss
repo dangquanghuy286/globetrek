@@ -857,6 +857,7 @@
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
+        gap: 10px;
 
         .inner-left {
             width: 40%;
@@ -1593,9 +1594,6 @@
 
 
 .tf-tour-showcase {
-    overflow: visible;
-    clip-path: inset(0 -33% 0 0);
-
     .item {
         background-color: var(--white);
         border-radius: 16px;

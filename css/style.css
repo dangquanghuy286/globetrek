@@ -2101,6 +2101,17 @@ h5 {
   display: none;
 }
 
+.slider-layout-right {
+  width: calc(100vw - (100vw - 1310px) / 2 - 7px);
+  margin-right: unset;
+  max-width: 100%;
+  margin-left: auto;
+  padding: 0 15px;
+}
+.slider-layout-right .swiper:not(.tf-sw-right) {
+  margin-right: -15px;
+}
+
 .avatar.round {
   border-radius: 50%;
   overflow: hidden;
@@ -6855,6 +6866,7 @@ input[type=checkbox]:checked {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  gap: 10px;
 }
 .tf-partner .box-content .inner-left {
   width: 40%;
@@ -7415,10 +7427,6 @@ input[type=checkbox]:checked {
   top: 11%;
 }
 
-.tf-tour-showcase {
-  overflow: visible;
-  clip-path: inset(0 -33% 0 0);
-}
 .tf-tour-showcase .item {
   background-color: var(--white);
   border-radius: 16px;
@@ -10015,6 +10023,9 @@ input[type=checkbox]:checked {
     font-size: 30px;
     line-height: 100%;
   }
+  .tf-partner.home-2 {
+    margin-top: 300px;
+  }
   .slider-default .home-3 .box-title {
     padding: 100px 0 250px !important;
   }
@@ -10315,6 +10326,17 @@ input[type=checkbox]:checked {
   .tf-vacation-hero .flat-img-with-text.style-04 .rotating-badge {
     display: none;
   }
+  .tf-partner .box-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tf-partner .box-content .inner-left {
+    width: 100%;
+    justify-content: start;
+  }
+  .tf-partner .box-content .inner-right {
+    width: 100%;
+  }
   .tf-card-invoice-sum .content-top {
     flex-wrap: wrap;
     flex-direction: column;
@@ -10440,6 +10462,9 @@ input[type=checkbox]:checked {
   }
 }
 @media (max-width: 575px) {
+  .header.style-1 .header-wrap .header-ct-left {
+    padding: 14px 30px 14px 0;
+  }
   .header .header-ct-right {
     gap: 10px;
   }

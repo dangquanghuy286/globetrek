@@ -188,44 +188,47 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===================Find Wish========================
 document.addEventListener("DOMContentLoaded", () => {
   const tfSwLatest = document.querySelector(".tf-tour-showcase");
-  if (tfSwLatest) {
-    const preview = tfSwLatest.dataset.preview;
-    const tablet = tfSwLatest.dataset.tablet;
-    const mobile = tfSwLatest.dataset.mobile;
-    const mobileSm = tfSwLatest.dataset.mobileSm;
-    const spacingLg = tfSwLatest.dataset.spaceLg;
-    const spacingMd = tfSwLatest.dataset.spaceMd;
-    const spacing = tfSwLatest.dataset.space;
+  if (!tfSwLatest) return;
 
-    const swiper = new Swiper(".tf-tour-showcase", {
-      slidesPerView: parseInt(mobile),
-      spaceBetween: parseInt(spacing),
-      pagination: {
-        el: ".sw-pagination-wish",
-        clickable: true,
+  const preview   = parseFloat(tfSwLatest.dataset.preview);
+  const tablet    = parseInt(tfSwLatest.dataset.tablet);
+  const mobile    = parseInt(tfSwLatest.dataset.mobile);
+  const mobileSm  = parseInt(tfSwLatest.dataset.mobileSm);
+  const spacingLg = parseInt(tfSwLatest.dataset.spaceLg);
+  const spacingMd = parseInt(tfSwLatest.dataset.spaceMd);
+  const spacing   = parseInt(tfSwLatest.dataset.space);
+
+  const swiper = new Swiper(tfSwLatest, {
+    slidesPerView: mobile,
+    spaceBetween: spacing,
+    speed: 800,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".sw-pagination-wish",
+      clickable: true,
+    },
+
+    breakpoints: {
+      575: {
+        slidesPerView: mobileSm,
+        spaceBetween: spacing,
       },
-      navigation: {
-        clickable: true,
-        nextEl: ".nav-prev-latest",
-        prevEl: ".nav-next-latest",
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacingMd,
       },
-      breakpoints: {
-        575: {
-          slidesPerView: parseInt(mobileSm),
-          spaceBetween: parseInt(spacing),
-        },
-        768: {
-          slidesPerView: parseInt(tablet),
-          spaceBetween: parseInt(spacingMd),
-        },
-        1200: {
-          slidesPerView: parseInt(preview),
-          spaceBetween: parseInt(spacingLg),
-        },
+      1200: {
+        slidesPerView: preview,
+        spaceBetween: spacingLg,
       },
-    });
-  }
+    },
+  });
 });
+
 // ==================Type==============================
 document.addEventListener("DOMContentLoaded", () => {
   const swiperEl = document.querySelector(".tf-sw-types");
