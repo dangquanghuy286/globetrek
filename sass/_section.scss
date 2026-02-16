@@ -287,6 +287,7 @@
             "item1 item1 item3 item4 item5 item5";
     }
 
+    // Style 3
     &.grid-3 {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 330px);
