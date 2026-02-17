@@ -110,11 +110,7 @@
 
 }
 
-
-
 // ==============Form Select================
-
-
 .tab-content {
     &.pos-1 {
         position: absolute;
@@ -186,8 +182,6 @@
             flex: 1;
             min-width: 0;
 
-
-
             &.fg-1 {
                 background-color: var(--white);
                 border-radius: 16px;
@@ -227,16 +221,8 @@
                 }
             }
 
-
-
-
-
             .group-select {
-
-
                 .select-items {
-
-
                     .current {
                         font-weight: 400;
                         line-height: 140%;
@@ -592,8 +578,6 @@
         font-weight: 500;
         color: var(--heading-color);
     }
-
-
 
     button {
         background: none;
