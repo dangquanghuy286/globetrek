@@ -40,60 +40,60 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // =============== Hero Swiper ===========================
-document.addEventListener("DOMContentLoaded", () => {
-  const heroSwiperEl = document.querySelector(".mySwiper");
-  const indicatorEl = document.querySelector(".slide-number");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const heroSwiperEl = document.querySelector(".mySwiper");
+//   const indicatorEl = document.querySelector(".slide-number");
 
-  if (heroSwiperEl) {
-    const preview = parseInt(heroSwiperEl.dataset.preview) || 1;
-    const autoplay = heroSwiperEl.dataset.autoplay === "true";
-    const loop = heroSwiperEl.dataset.loop === "true";
-    const speed = parseInt(heroSwiperEl.dataset.speed) || 1000;
+//   if (heroSwiperEl) {
+//     const preview = parseInt(heroSwiperEl.dataset.preview) || 1;
+//     const autoplay = heroSwiperEl.dataset.autoplay === "true";
+//     const loop = heroSwiperEl.dataset.loop === "true";
+//     const speed = parseInt(heroSwiperEl.dataset.speed) || 1000;
 
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: preview,
-      spaceBetween: 0,
-      loop: loop,
-      speed: speed,
-      autoplay: autoplay
-        ? {
-            delay: 3000,
-            disableOnInteraction: false,
-          }
-        : false,
-      navigation: {
-        nextEl: ".flex-next",
-        prevEl: ".flex-prev",
-      },
-      simulateTouch: false,
-      allowTouchMove: false,
-      effect: "fade",
-      fadeEffect: { crossFade: true },
+//     const swiper = new Swiper(".mySwiper", {
+//       slidesPerView: preview,
+//       spaceBetween: 0,
+//       loop: loop,
+//       speed: speed,
+//       autoplay: autoplay
+//         ? {
+//             delay: 3000,
+//             disableOnInteraction: false,
+//           }
+//         : false,
+//       navigation: {
+//         nextEl: ".flex-next",
+//         prevEl: ".flex-prev",
+//       },
+//       simulateTouch: false,
+//       allowTouchMove: false,
+//       effect: "fade",
+//       fadeEffect: { crossFade: true },
 
-      on: {
-        init: function () {
-          updateSlideIndicator(this);
-        },
-        slideChange: function () {
-          updateSlideIndicator(this);
-        },
-      },
-    });
+//       on: {
+//         init: function () {
+//           updateSlideIndicator(this);
+//         },
+//         slideChange: function () {
+//           updateSlideIndicator(this);
+//         },
+//       },
+//     });
 
-    heroSwiperEl.addEventListener("mouseenter", () => {
-      swiper.autoplay?.stop();
-    });
+//     heroSwiperEl.addEventListener("mouseenter", () => {
+//       swiper.autoplay?.stop();
+//     });
 
-    heroSwiperEl.addEventListener("mouseleave", () => {
-      swiper.autoplay?.start();
-    });
-    function updateSlideIndicator(swiperInstance) {
-      if (!indicatorEl) return;
-      const current = swiperInstance.realIndex + 1;
-      indicatorEl.textContent = `${current} / 3`;
-    }
-  }
-});
+//     heroSwiperEl.addEventListener("mouseleave", () => {
+//       swiper.autoplay?.start();
+//     });
+//     function updateSlideIndicator(swiperInstance) {
+//       if (!indicatorEl) return;
+//       const current = swiperInstance.realIndex + 1;
+//       indicatorEl.textContent = `${current} / 3`;
+//     }
+//   }
+// });
 // =============== Testimonial =============================
 document.addEventListener("DOMContentLoaded", function () {
   const testimonialEl = document.querySelector(".tf-sw-testimonial");
@@ -190,13 +190,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const tfSwLatest = document.querySelector(".tf-tour-showcase");
   if (!tfSwLatest) return;
 
-  const preview   = parseFloat(tfSwLatest.dataset.preview);
-  const tablet    = parseInt(tfSwLatest.dataset.tablet);
-  const mobile    = parseInt(tfSwLatest.dataset.mobile);
-  const mobileSm  = parseInt(tfSwLatest.dataset.mobileSm);
+  const preview = parseFloat(tfSwLatest.dataset.preview);
+  const tablet = parseInt(tfSwLatest.dataset.tablet);
+  const mobile = parseInt(tfSwLatest.dataset.mobile);
+  const mobileSm = parseInt(tfSwLatest.dataset.mobileSm);
   const spacingLg = parseInt(tfSwLatest.dataset.spaceLg);
   const spacingMd = parseInt(tfSwLatest.dataset.spaceMd);
-  const spacing   = parseInt(tfSwLatest.dataset.space);
+  const spacing = parseInt(tfSwLatest.dataset.space);
 
   const swiper = new Swiper(tfSwLatest, {
     slidesPerView: mobile,
@@ -621,7 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: {
       delay: 1, // Đổi từ 0 sang 1
       disableOnInteraction: false,
-      pauseOnMouseEnter: false, 
+      pauseOnMouseEnter: false,
     },
     freeMode: true,
     slidesPerView: mobile,
@@ -652,7 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Hover pause autoplay 
+  // Hover pause autoplay
   partnerEl.addEventListener("mouseenter", () => {
     swiper.autoplay.stop();
   });

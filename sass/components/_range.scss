@@ -1,15 +1,11 @@
 /* ============ Updated noUiSlider CSS ============ */
-
-
-
 .noUi-target {
     direction: ltr;
     background: #5F6C5A26 !important;
     height: 4px !important;
 }
 
-
-/* Connects */
+//  Connects 
 .noUi-connects {
     position: relative;
     height: 100%;
@@ -22,7 +18,7 @@
     border-radius: 2px;
 }
 
-/* Handles */
+//  Handles 
 .noUi-handle {
     width: 24px !important;
     height: 24px !important;
@@ -42,10 +38,7 @@
     outline: none;
 }
 
-
-
-
-/* Disabled state */
+//Disabled state 
 .noUi-state-drag * {
     cursor: inherit !important;
 }
@@ -59,7 +52,6 @@
 [disabled] .noUi-handle {
     cursor: not-allowed;
 }
-
 
 .slider-labels .caption {
     font-weight: 500;

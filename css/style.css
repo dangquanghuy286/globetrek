@@ -5702,7 +5702,7 @@ input[type=checkbox]:checked {
   background-image: url("../images/banner/bg-slide-03.jpg");
 }
 .slider-default .swiper-slide.home-1 .box-title {
-  padding: 246px 0 373px;
+  padding: 226px 0 373px;
 }
 .slider-default .swiper-slide.home-1 .box-title h1 {
   font-size: 70px;
@@ -6055,7 +6055,6 @@ input[type=checkbox]:checked {
   height: 4px !important;
 }
 
-/* Connects */
 .noUi-connects {
   position: relative;
   height: 100%;
@@ -6068,7 +6067,6 @@ input[type=checkbox]:checked {
   border-radius: 2px;
 }
 
-/* Handles */
 .noUi-handle {
   width: 24px !important;
   height: 24px !important;
@@ -6088,7 +6086,6 @@ input[type=checkbox]:checked {
   outline: none;
 }
 
-/* Disabled state */
 .noUi-state-drag * {
   cursor: inherit !important;
 }
