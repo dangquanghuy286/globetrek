@@ -270,7 +270,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 // ====================Active Nav menu=========================
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(

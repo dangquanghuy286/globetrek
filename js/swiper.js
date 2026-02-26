@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const tfSwLatest = document.querySelector(".tf-tour-showcase");
   if (!tfSwLatest) return;
-
   const preview = parseFloat(tfSwLatest.dataset.preview);
   const tablet = parseInt(tfSwLatest.dataset.tablet);
   const mobile = parseInt(tfSwLatest.dataset.mobile);
@@ -228,7 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
-
 // ==================Type==============================
 document.addEventListener("DOMContentLoaded", () => {
   const swiperEl = document.querySelector(".tf-sw-types");
@@ -558,7 +556,6 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 40,
     loop: false,
     speed: 1000,
-
     navigation: {
       nextEl: ".nav-next-hero-title",
       prevEl: ".nav-prev-hero-title",
@@ -619,7 +616,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Init Swiper
   const swiper = new Swiper(".tf-sw-partners", {
     autoplay: {
-      delay: 1, // Đổi từ 0 sang 1
+      delay: 1,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
