@@ -1,5 +1,6 @@
 @use "../abstracts/index.scss" as *;
 
+// Blog List Styles
 .flat-blog-list {
     .flat-blog-item {
         margin-bottom: 56px;
@@ -52,6 +53,8 @@
     }
 }
 
+// ================= End Blog List Styles =======================
+// ================= Blog Detail Styles =======================
 .flat-blog-item {
     display: block;
 
@@ -191,6 +194,8 @@
     }
 }
 
+// ================= End Blog Detail Styles =======================
+// ================= Author Info Styles =======================
 .post-author {
     .icon {
         margin-right: 4px;
@@ -221,7 +226,8 @@
     }
 }
 
-
+// ================= End Author Info Styles =======================
+// ================= Recent Post Styles =======================
 .recent {
     ul {
         margin-top: 20px;
@@ -279,6 +285,7 @@
     }
 }
 
+//  ================= End Recent Post Styles =======================
 //================= Categories =======================
 .categories {
     ul {
