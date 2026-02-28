@@ -30,7 +30,7 @@
             grid-template-columns: repeat(7, 1fr);
         }
 
-        // item full width
+        // pagination and load more
         .wg-pagination,
         .wd-load {
             grid-column: 1 / 1;
