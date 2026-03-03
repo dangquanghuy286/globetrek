@@ -5276,6 +5276,10 @@ input[type=checkbox]:checked {
   margin: 0;
   gap: 12px;
 }
+.slider-control.style-02 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .slider-control .sw-pagination {
   width: auto !important;
   position: static !important;
@@ -5617,6 +5621,10 @@ input[type=checkbox]:checked {
   margin-bottom: 48px;
   font-size: 16px;
   line-height: 140%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #5F615E;
+  text-align: center;
 }
 .slider-default .swiper-slide .box-title .button-group {
   margin: 0;
@@ -6863,10 +6871,10 @@ input[type=checkbox]:checked {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
 }
 .tf-partner .box-content .inner-left {
-  width: 40%;
+  flex: 0 0 25%;
 }
 .tf-partner .box-content .inner-left span {
   color: var(--heading-color);
@@ -6879,6 +6887,10 @@ input[type=checkbox]:checked {
 }
 .tf-partner .box-content .inner-left ul li .box-icon:hover {
   color: var(--primary-color);
+}
+.tf-partner .box-content .inner-right {
+  flex: 0 0 75%;
+  min-width: 0;
 }
 
 .tf-sw-partners::before {
@@ -9683,6 +9695,10 @@ input[type=checkbox]:checked {
   }
   .header .header-ct-right .wrap-login-menu {
     gap: 20px;
+  }
+  .slider-control.style-02 {
+    margin-top: 48px;
+    margin-bottom: 2px;
   }
   .tf-best-trip .tf-scroll-text .heading {
     font-size: 120px;

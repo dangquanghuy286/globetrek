@@ -320,6 +320,7 @@
 }
 
 
+
 .destination-post {
     width: 100%;
     height: 100%;
@@ -842,10 +843,10 @@
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        gap: 10px;
+        gap: 20px;
 
         .inner-left {
-            width: 40%;
+            flex: 0 0 25%;
 
             span {
                 color: var(--heading-color);
@@ -865,6 +866,11 @@
                     }
                 }
             }
+        }
+
+        .inner-right {
+            flex: 0 0 75%;
+            min-width: 0;
         }
     }
 }

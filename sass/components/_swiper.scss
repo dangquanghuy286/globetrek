@@ -96,9 +96,13 @@
     margin-bottom: 2px;
 
     &.style-01 {
-
         margin: 0;
         gap: 12px;
+    }
+
+    &.style-02 {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .sw-pagination {
