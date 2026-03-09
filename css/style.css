@@ -5991,8 +5991,8 @@ input[type=checkbox]:checked {
 .flex-direction-nav {
   position: absolute;
   width: 100%;
-  top: 41%;
-  transform: translateY(-40%);
+  top: 46%;
+  transform: translateY(-45%);
   display: flex;
   z-index: 200;
 }
@@ -7667,7 +7667,7 @@ input[type=checkbox]:checked {
   display: flex;
   align-items: stretch;
   flex-direction: row;
-  gap: 78px;
+  gap: 72px;
   position: relative;
 }
 .tf-vacation-hero .flat-img-with-text.style-04 {
@@ -7804,8 +7804,8 @@ input[type=checkbox]:checked {
   width: 32%;
 }
 .tf-vacation-hero .flat-img-with-text .content-left .rotating-badge {
-  bottom: 30%;
-  left: 52%;
+  bottom: 33%;
+  left: 53%;
 }
 .tf-vacation-hero .flat-img-with-text .content-left .inner-right {
   display: flex;
@@ -7900,7 +7900,7 @@ input[type=checkbox]:checked {
 }
 .tf-vacation-hero .box-benefit {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   flex-direction: column;
 }
 .tf-vacation-hero .box-benefit .icon-box {
